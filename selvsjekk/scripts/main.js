@@ -28,11 +28,17 @@ switch (check) {
     secondLimit = 64;
     topLimit = 80;
     qbId = "wzy4jqo0hw";
+    if (lang == "nn") {
+      qbId = "562ajj0nzs";
+    }
     break;
   case "regnesjekk":
     testName = check;
     illustration = "calc";
     qbId = "nlsc2kyotz";
+    if (lang == "nn") {
+      qbId = "lsk0ohphbo";
+    }
     break;
   case "regnetest":
     testName = check;
@@ -43,12 +49,18 @@ switch (check) {
     secondLimit = 25;
     topLimit = 30;
     qbId = "ejelvlehqp";
+    if (lang == "nn") {
+      qbId = "hqivwkebty";
+    }
     break;
   case "muntligsjekk":
     testName = check;
     illustration = "calc";
     icon = "lightbulb";
-    qbId = 'hxvzxemb8o';
+    qbId = "hxvzxemb8o";
+    if (lang == "nn") {
+      qbId = "km768r0njo";
+    }
     var firstLimit = 24;
     var secondLimit = 48;
     var topLimit = 60;
@@ -56,6 +68,9 @@ switch (check) {
   default:
     testName = "datasjekk";
     qbId = "djwal03kgq";
+    if (lang == "nn") {
+      qbId = "rhpqt63iro";
+    }
 }
 switch (lang) {
   case "en":
