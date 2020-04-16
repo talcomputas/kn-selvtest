@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kntest timer="600000" version="datasjek">
+	<opgave id="1">
+		<overskrift>Innboforsikringen din settes opp med 4 % i det nye året.
+Før betalte du 1000 kr per år.
+Hvor mye koster innboforsikringen etter prisøkningen?</overskrift>
+<image>Insurance.png</image>
+		<option score="0">1004 kr</option>
+		<option score="1">1040 kr</option>
+		<option score="0">1100 kr</option>
+		<option score="0">1400 kr</option>
+	</opgave>
+
+</kntest>

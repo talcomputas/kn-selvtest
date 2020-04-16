@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<startest timer="600000" version="selvtest-n">
+	<!-- vælg ord udfra tekst -->
+	<opgave id="s-1">
+		<overskrift>En solskinnsdag</overskrift>
+		<p>
+			<tekst>De satt i shorts og bar overkropp på terrassen, og de hadde hentet drikke med isbiter. </tekst>
+			<tekst>De trengte skygge i den varme sommersola, så de bestemte seg for å finne frem</tekst>
+			<item id="s-1-1" svar="1">parasollen,bassenget,scenen,høyttaleren</item>
+			<tekst>.</tekst>
+		</p>		
+	</opgave>
+	<opgave id="s-2">
+		<overskrift>På kjøkkenet</overskrift>
+		<p>
+			<tekst>Bordet var allerede dekket. Det luktet litt brent, selv om klokka ikke hadde ringt. Senay skrudde ned varmen og fjernet</tekst>
+			<item id="s-2-1" svar="4">dyna,papirene,radioen,kjelen</item>
+			<tekst>.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-3">
+			<overskrift>Helgevasken</overskrift>
+		<p>
+			<tekst>Oskar gikk i boden og hentet langkosten. Han gikk grundig til verks før han ryddet bort bøtta og hengte kluten til tørk. Endelig ble leiligheten</tekst>
+			<item id="s-3-1" svar="4">skitten,malt,solgt,ren</item>
+			<tekst>.</tekst>			
+		</p>
+	</opgave>
+	<opgave id="s-4">
+			<overskrift>Kaos</overskrift>
+		<p>
+			<tekst>Det fløt med mel og sukker. Det ville ta hele pausen å rydde opp, tenkte læreren. Det var bra at alle brukte</tekst>
+			<item id="s-4-1" svar="3">papp,PCer,forklær,tannbørste</item>
+			<tekst>, ellers ville noen av foreldrene kanskje klage.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-5">
+		<overskrift>Havørnens unger</overskrift>
+		<p>
+			<tekst>Høyt oppe i det gamle treet har havørnparet bygget reiret sitt. Nå ligger det to egg der. Når de klekkes, blir ungene værende i reiret</tekst>
+			<item id="s-5-1" svar="2">og,til,så,hvis</item>
+			<tekst>de er klare til å fly. Deretter vil foreldrene mate dem et par måneder, men så snart ungene er klare, vil de fly ut på egen hånd for å finne</tekst>
+			<item id="s-5-2" svar="3">faren,ungen,maten,fuglen</item>
+			<tekst>sin.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-6">
+		<overskrift>Fotballkamp</overskrift>
+		<p>
+			<tekst>Det var mange stygge taklinger og amper stemning. Med jevne mellomrom måtte fløyta tas i bruk, og flere fikk gult kort. Da det var slutt, hadde ingen fått</tekst>
+			<item id="s-6-1" svar="4">kort,penger,straff,mål</item>
+			<tekst>.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-7">
+		<overskrift>Hetebølge</overskrift>
+		<p>
+			<tekst>Det hadde vært skyfritt og varmt i flere dager. Aida strevde med å ta på sønnen</tekst>
+			<item id="s-7-1" svar="2">regntøy,solkrem,støvler,ullsokker</item>
+			<tekst>, men det var vanskelig, for han ville ikke stå stille. De kom til å bli forsinket igjen.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-8">
+		<overskrift>Drømmen om en bondegård</overskrift>
+		<p>
+			<tekst>Henrik bladde fram til sidene med boligannonser. Leiligheten deres var</tekst>
+			<item id="s-8-1" svar="4">innredet,solgt,annonsert,blitt</item>
+			<tekst>for liten for dem, så </tekst>
+			<tekst>nå lette de etter</tekst>
+			<item id="s-8-2" svar="2">det,noe,annet,flere</item>
+			<tekst>større. De ville gjerne flytte ut på landet. </tekst>
+			<tekst>De lette etter en liten</tekst>
+			<item id="s-8-3" svar="3">altan,restaurant,gård,bil</item>
+			<tekst> hvor det var plass til </tekst>
+			<tekst>å ha et par</tekst>
+			<item id="s-8-4" svar="2">ferier,hester,år,foredrag</item>
+			<tekst>.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-9">
+		<overskrift>Musikk</overskrift>
+		<p>
+			<tekst>Elevens fingre beveget seg raskt og presist. Han satt og trampet mens han spilte. Læreren lyttet intenst for å forsikre seg om at han fulgte</tekst>
+			<item id="s-9-1" svar="4">oppskriften,strekene,reglene,notene</item>
+			<tekst>.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-10">
+		<overskrift>Reisen</overskrift>
+		<p>
+			<tekst>Hun skulle være klar om to timer, så hun hadde det litt travelt. Vesken lå allerede i bilen, og billetten, nøklene og kortholderen var i lomma. Samboeren løp etter henne med</tekst>
+			<item id="s-10-1" svar="1">passet,matpakken,innkjøpslisten,klokka</item>
+			<tekst>. Heldigvis for henne, ellers så hadde hun ikke kommet seg av gårde.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-11">
+		<overskrift>Beboere frykter pyroman</overskrift>
+		<p>
+			<tekst>Innbyggerne i bygda Berglund føler seg</tekst>
+			<item id="s-11-1" svar="3">late,heldige,utrygge,klønete</item>
+			<tekst>, for i forrige uke ble det rapportert om tre utbrente biler i området og to branner på boligfeltet. </tekst>
+			<tekst>De frykter at en pyroman er på ferde. Ifølge politiet tyder de foreløpige undersøkelsene på at brannene var påsatt,</tekst>
+			<item id="s-11-2" svar="1">men,ettersom,for,hvis</item>
+			<tekst>de trenger flere spor i saken før de kan konkludere.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-12">
+		<overskrift>Hos tannlegen</overskrift>
+		<p>
+			<tekst>Karl lå i stolen og lyset fra lampa skar ham i øyene. Han var litt nervøs. Tannlegen la fra seg det lille speilet. Han snudde på hodet og så at hun tok tak i</tekst>
+			<item id="s-12-1" svar="2">,sykkelen,boret,brevet,hammeren</item>
+			<tekst>.</tekst>
+		</p>	
+	</opgave>
+	<opgave id="s-13">
+		<overskrift>Flom</overskrift>
+		<p>
+			<tekst>Da ekteparet kom hjem fra helgeturen, fløt alle tingene rundt i kjelleren. De skyndte seg å sette sakene ut i sola. De ville kontakte</tekst>
+			<item id="s-13-1" svar="4">flyttebyrået,vitnene,legen,forsikringsselskapet</item>
+			<tekst>dagen etter. I nyhetene hørte de at mange områder i landet var rammet.</tekst>
+		</p>	
+	</opgave>
+	<opgave id="s-14">
+		<overskrift>Blomster og vanning</overskrift>
+		<p>
+			<tekst>Det er store forskjeller på hvor ofte planter skal vannes. Noen bør vannes hver dag,</tekst>
+			<item id="s-14-1" svar="2">fordi,mens,hvis,for</item>
+			<tekst>andre kan stå i flere uker uten vann. Det er en vanlig</tekst>
+			<item id="s-14-2" svar="3">plikt,bedrift,feil,forkjølelse</item>
+			<tekst>å gi alle blomster masse vann. Det kan føre til at røttene får problemer med å ta opp nok næring.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-15">
+		<overskrift>Innbrudd</overskrift>
+		<p>
+			<tekst>De hadde brukt flere uker på planleggingen, og de hadde valgt ut stedet nøye. Kameraten deres ventet i bilen rundt hjørnet. Pulsen steg da de snek seg fram. De håpet det ikke var noen</tekst>
+			<item id="s-15-1" svar="4">klager,boder,stoler,hunder</item>
+			<tekst>der.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-16">	
+		<overskrift>Bjørner på rømmen?</overskrift>
+		<p>
+			<tekst>En kraftig storm har veltet flere trær i dyreparken. To av trærne veltet </tekst>
+			<tekst>over gjerdet som var satt opp rundt bjørnenes område. </tekst>
+			<tekst>I</tekst>
+			<item id="s-16-1" svar="1">timene,dyrene,årene,burene</item>
+			<tekst>etterpå ble de ansatte redde for at bjørnene skulle</tekst>
+			<item id="s-16-2" svar="4">falle,slippe,hoppe,rømme</item>
+			<tekst>.</tekst>
+			<tekst> Dyrepasserne måtte straks lete gjennom hele dyrehagen og telle antall</tekst>
+			<item id="s-16-3" svar="1">bjørner,trær,unger,gjerder</item>
+			<tekst>for å forsikre seg om at ingen hadde rømt.</tekst>
+		</p>		
+	</opgave>		
+	<opgave id="s-17">
+		<overskrift>Bilulykke</overskrift>
+		<p>
+			<tekst>Man kunne høre lyden av</tekst>
+			<item id="s-17-1" svar="2">hundene,ambulansen,demonstrantene,torden</item>
+			<tekst>komme nærmere. Mange mennesker hadde samlet seg rundt de to bilene. Noen av dem sto og gråt.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-18">
+		<overskrift>Spleiselag</overskrift>
+		<p>
+			<tekst>De hadde kost seg med fredagstaco hele kvelden. Linda hadde lagt ut for</tekst>
+			<item id="s-18-1" svar="1">ingrediensene,bøkene,arbeidet,telefonene</item>
+			<tekst>og ventet på at alle skulle overføre</tekst>
+			<item id="s-18-2" svar="4">posten,nøkler,navn,penger</item>
+			<tekst>.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-19">
+		<overskrift>Sent ute</overskrift>
+		<p>
+			<tekst>”Vi får se å komme oss av sted”, sa Karim. Likevel tok det et kvarter før barna var klare til å sette seg i</tekst>
+			<item id="s-19-1" svar="2">sofaen,bilen,trappa,bagasjen</item>
+			<tekst>. Familien kjørte en</tekst>
+			<item id="s-19-2" svar="1">snarvei,omvei,blindvei,karusell</item>
+			<tekst>gjennom byen, så de kom heldigvis bare 10 minutter senere enn de andre til selskapet.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-20">
+		<overskrift>En mistenkelig e-post</overskrift>
+		<p>
+			<tekst>Maria hadde fått en e-post fra en avsender hun ikke kjente. Hun undersøkte derfor om det var en person hun kunne ringe eller skrive til</tekst>
+			<item id="s-20-1" svar="4">at,fordi,for,før</item>
+			<tekst>hun åpnet vedlegget, men hun fant ingen kontaktopplysninger. Det fikk henne til å</tekst>
+			<item id="s-20-2" svar="1">mistenke,benekte,planlegge,huske</item>
+			<tekst>at e-posten var fra en som forsøkte å lokke betalingsopplysninger fra henne,</tekst>
+			<item id="s-20-3" svar="3">fordi,da,så,når</item>
+			<tekst>hun slettet den.</tekst>
+		</p>
+	</opgave>
+</startest>

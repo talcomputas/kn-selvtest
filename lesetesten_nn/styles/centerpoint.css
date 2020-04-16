@@ -1,0 +1,118 @@
+.question-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid #c8d1db;
+}
+
+.question-navigation,
+.question-navigation-result {
+  display: none;
+}
+
+.question-wrapper .mark {
+  width: 20%;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  font-size: 40px;
+  text-align: center;
+  color: #4dae26;
+}
+
+.question-wrapper .mark.wrong-answer {
+  color: #ae2929;
+}
+
+.question-wrapper .question {
+  padding-right: 10px;
+  position: relative;
+  width: 70%;
+  border-bottom: 0;
+  margin: 0;
+}
+
+.question-wrapper .question h2 {
+  text-align: left;
+}
+
+.question-wrapper .question p .options span:hover {
+  cursor: auto;
+  border: 2px solid #d6e3f0;
+}
+
+.question-wrapper .question p .options span.correct {
+  cursor: auto;
+  border: 2px solid #4dae26;
+  color: #4dae26;
+}
+
+.question-wrapper .question p .options span.correct.chosen {
+  background: #4dae26;
+  color: #fff;
+}
+
+.question-wrapper .question p .options span.incorrect.chosen {
+  background: #ae2929;
+  color: #fff;
+  border: 2px solid #ae2929;
+}
+
+.question-wrapper.examination .question p {
+  margin: 0;
+}
+
+#answers .headlines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-wrapper .qnr {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.answers-buttons {
+  margin: 20px 0;
+}
+
+.back-wrapper {
+  width: 100%;
+  max-width: 1077px;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+
+.language-links {
+  float: right;
+  margin-top: 26px;
+  font-size: 16px;
+  padding-top: 0px;
+  -ms-transform: scale(1, 1); /* IE 9 */
+  -webkit-transform: scale(1, 1); /* Safari */
+  transform: scale(1, 1);
+  margin-left: 0px;
+  width: 240px;
+  text-align: right;
+}
+
+.language-links a {
+  margin-left: 20px;
+}
+@media (max-width: 600px) {
+  .language-links {
+    font-size: 14px;
+  }
+  .language-links a {
+    margin-left: 5px;
+  }
+
+  .back-wrapper {
+    padding: 20px 10px;
+  }
+}

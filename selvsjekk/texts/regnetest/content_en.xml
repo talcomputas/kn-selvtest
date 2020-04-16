@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kntest timer="600000" version="datasjek">
+	<opgave id="1">
+		<overskrift>Mario abonnerer på en avis og ett sportsblad. Avisen koster 900 kr for tre måneder. Sportsbladet koster 300 kr per halvår. Hva koster de to abonnementene til sammen per måned?</overskrift>
+		<option score="0">300</option>
+		<option score="1">350</option>
+		<option score="0">400</option>
+		<option score="0">450</option>
+	</opgave>
+</kntest>

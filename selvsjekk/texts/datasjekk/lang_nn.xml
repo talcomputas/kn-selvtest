@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+<string id="Headline"     text = "Datasjekken"/>
+<string id="LookAtSkills"     text = "Vurder dugleiken din"/>
+<string id="Info"     text = "Med Datasjekken vurderer du di eiga dataerfaring og får ein peikepinn om kva du er god til og kva du kan bli betre på."/>
+<string id="Close"     text = "Lukk"/>
+<string id="Change"     text = "Endre"/>
+<string id="Result"     text = "Resultat"/>
+<string id="Start"     text = "Start"/>
+<string id="ClickSound"     text = "Trykk for å høyre tekst"/>
+<string id="Back"     text = "Tilbake"/>
+<string id="Forward"     text = "Neste"/>
+<string id="Answers"     text = "Svara dine"/>
+<string id="Questions"     text = "Spørsmål"/>
+<string id="Answer"     text = "Svar"/>
+<string id="SeeResult"     text = "Sjå resultatet"/>
+<string id="TipBetter"     text = "Få råd og tips for å bli betre"/>
+<string id="LookTroughAnswer"     text = "Sjå gjennom svara dine i testen"/>
+<string id="BackToFrontPage"     text = "Tilbake til førre spørsmål"/>
+<string id="DownloadResult"     text = "Last ned resultatet"/>
+<string id="CheckDone"     text = "Testen er over"/>
+<string id="Overview"     text = "Sjå oversikt"/>
+<string id="Level"     text = "Nivå"/>
+<string id="Level31"     text = "Du har vurdert deg sjølv til nivå 3 av 3 i denne sjekken."/>
+<string id="Level32"     text = "Digital dugleik på nivå 3 inneber å vere ein reflektert brukar av samansette digitale verktøy og tenester. Fordi utviklinga går så fort innanfor digital dugleik, er det likevel slik at vi må rekne med å lære oss å bruke nye verktøy og tenester."/>
+<string id="Level21"     text = "Du har vurdert deg sjølv til nivå 2 av 3 i denne sjekken."/>
+<string id="Level22"     text = "Digital dugleik på nivå 2 inneber at ein kan orientere seg aktivt i digital informasjon og bruke informasjonen i nye samanhengar og situasjonar. På dette nivået kjenner ein til og brukar digitale verktøy og tenester."/>
+<string id="Level11"     text = "Du har vurdert deg sjølv til nivå 1 av 3 i denne sjekken."/>
+<string id="Level12"     text = "Digital dugleik på nivå 1 inneber at ein kan bruke enkle digitale verktøy og orientere seg i digital informasjon når det er naudsynt."/>
+<string id="CalcText"     text = "Du kan flytte kalkulatoren på skjermen ved å trykkje på &quot;Kalkulator&quot; i teksten over og dra."/>
+</strings>

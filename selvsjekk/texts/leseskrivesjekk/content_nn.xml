@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kntest timer="600000" version="lesingskrivesjek">
+	<opgave id="1">
+	<overskrift>Forstår du enkle matoppskrifter?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>	
+	</opgave>
+	<opgave id="2">
+	<overskrift>Forstår du oppslag på ei tavle?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>	
+	</opgave>
+	<opgave id="3">
+	<overskrift>Forstår du annonsar i aviser eller på nettet?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>		
+	</opgave>
+	<opgave id="4">
+		<overskrift>Kan du lese og forstå instruksjonane på ein billettautomat?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="5">
+		<overskrift>Kan du lese og forstå informasjon på skilt, t.d. i trafikken?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="6">
+		<overskrift>Kan du skrive eit svar på ei innbyding?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="7">
+		<overskrift>Kan du notere ein enkel beskjed?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="8">
+		<overskrift>Kan du skrive enkle handlelister?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="9">
+		<overskrift>Kan du skrive ein kort tekst der du fortel om deg sjølv?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>	
+	</opgave>
+	<opgave id="10">
+		<overskrift>Klarar du å finne fram til di eiga arbeidstid i ei turnusliste/vaktliste?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="11">
+		<overskrift>Kan du lese og forstå eit møtereferat?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="12">
+		<overskrift>Kan du lese omtalar av t.d. filmar og konsertar?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="13">
+		<overskrift>Forstår du informasjonsskriv, til dømes frå skulen eller kommunen?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="14">
+		<overskrift>Kan du lese ei møteinnkalling og finne ut kvar og når du skal møte opp?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="15">
+		<overskrift>Kan du lese og forstå faguttrykk som har med jobb eller hobbyar å gjere?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="16">
+		<overskrift>Kan du bruke innhaldslista for å finne fram i bøker?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="17">
+		<overskrift>Varierer du måten du les på, t.d. kor raskt og grundig du les?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="18">
+		<overskrift>Kan du skrive ned og forklare ein framgangsmåte, t.d. ei oppskrift?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="19">
+		<overskrift>Kan du fylle ut eit skjema med personopplysningar?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="20">
+		<overskrift>Kan du skrive korte innlegg på sosiale medium?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="21">
+		<overskrift>Kor mykje erfaring har du med å lese aviser eller magasin?</overskrift>
+		<option score="0">Inga erfaring</option>
+		<option score="1">Litt erfaring</option>
+		<option score="2">Mykje erfaring</option>	
+	</opgave>
+	<opgave id="22">
+		<overskrift>Kan du skrive ei melding, t.d. om uhell eller avvik på arbeidsplassen?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="23">
+		<overskrift>Kan du skrive ein enkel CV?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="24">
+		<overskrift>Kan du skrive ein e-post i jobbsamanheng?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+		</opgave>
+	<opgave id="25">
+		<overskrift>Kan du lese og forstå reglar, t.d. burettslagsreglar eller arbeidsrutinar?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="26">
+		<overskrift>Kan du hjelpe elevar på ungdomstrinnet med leselekser?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="27">
+		<overskrift>Kan du lese og orientere deg i nettaviser?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="28">
+		<overskrift>Kan du lese informasjon om ulike produkt for å vurdere kva du vil kjøpe?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="29">
+		<overskrift>Kan du lese og forstå vilkåra for ei vare eller teneste du har kjøpt?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>		
+	</opgave>
+	<opgave id="30">
+		<overskrift>Kan du lese pakningsvedlegg til medisinar?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="31">
+		<overskrift>Kan du lese og forstå brev frå styresmaktene, t.d. frå Nav eller kommunen?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="32">
+		<overskrift>Kan du lese og vurdere kontraktar, t.d. arbeids- eller bustadskontraktar?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="33">
+		<overskrift>Kan du lese og forstå tekstar som inneheld bilete, grafar og tabellar?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="34">
+		<overskrift>Kor mykje erfaring har du med å lese bøker?</overskrift>
+		<option score="0">Inga erfaring</option>
+		<option score="1">Litt erfaring</option>
+		<option score="2">Mykje erfaring</option>
+	</opgave>
+	<opgave id="35">
+		<overskrift>Kan du skrive ein enkel rapport om eit stykke arbeid du har gjort?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="36">
+		<overskrift>Kan du skrive eit møtereferat?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="37">
+		<overskrift>Kan du skrive ein jobbsøknad som passar til ein stillingsannonse?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="38">
+		<overskrift>Kan du skrive ei grunngjeven klage på eit produkt eller ei teneste?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="39">
+		<overskrift>Kan du skrive eit samandrag av ein fagtekst?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="40">
+		<overskrift>Kan du grunngje synspunktet ditt skriftleg, t.d. i eit lesarinnlegg eller ein blogg?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>	
+</kntest>

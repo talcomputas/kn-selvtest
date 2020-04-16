@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="75px" viewBox="0 0 53 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ribbon-puzzle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#62CEED" offset="0%"></stop>
+            <stop stop-color="#149DC4" offset="100%"></stop>
+        </linearGradient>
+        <path d="M2.00077316,0 C0.895776656,0 0,0.896421562 0,2.00254919 L0,61.4101294 C0,62.5161068 0.764491712,62.9457976 1.70871821,62.3691511 L18.7453115,51.964771 C19.6890105,51.3884467 21.2185214,51.3881245 22.1627479,51.964771 L39.1993412,62.3691511 C40.1430402,62.9454755 40.9080594,62.5162571 40.9080594,61.4101294 L40.9080594,2.00254919 C40.9080594,0.896571813 40.0155921,0 38.9072863,0 L2.00077316,0 Z" id="path-2"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="-1" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.117647059   0 0 0 0 0.149019608   0 0 0 0 0.176470588  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Endelig-design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Intro-Selvtest-i-lesing" transform="translate(-141.000000, -152.000000)">
+            <g id="ribbon-puzzle" transform="translate(148.000000, 154.000000)">
+                <g id="ribbon">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+                <path d="M14.8996749,23.0065843 C14.9085844,22.177723 14.5950539,21.3463437 13.9556892,20.7143108 C12.6952033,19.467032 10.6511031,19.467032 9.39104138,20.7143108 C8.13013112,21.9611699 8.13013112,23.9831717 9.39061712,25.2300308 C10.0295575,25.8624834 10.8704472,26.1726244 11.7079428,26.1633915 L7.1352339,30.6866657 C6.95492203,30.8654479 6.95492203,31.1546051 7.1352339,31.3333873 L19.8253707,43.8859138 C20.0056826,44.064696 20.2988485,44.064696 20.4791604,43.8859138 L33.1692972,31.3329676 C33.3496091,31.1546051 33.3496091,30.8654479 33.1692972,30.6866657 L28.5965883,26.1633915 C28.6050736,26.9918331 28.2915431,27.823632 27.6526027,28.455665 C26.3921167,29.7029438 24.3480166,29.7029438 23.0875306,28.455665 C21.8266203,27.2092255 21.8266203,25.1868041 23.0875306,23.9403647 C23.726471,23.307912 24.5673606,22.9977711 25.4048562,23.0061646 L20.4791604,18.1341392 C20.2988485,17.955357 20.0061069,17.955357 19.825795,18.1337195 L18.9955119,18.9550266 L15.2731761,22.6631499 L14.8996749,23.0065843 Z" id="puzzle" stroke="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

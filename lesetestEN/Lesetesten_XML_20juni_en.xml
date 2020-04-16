@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<startest timer="600000" version="selvtest-n"><!-- vælg ord udfra tekst --><opgave id="s-1">
+		<overskrift>A sunny day</overskrift>
+		<p>
+			<tekst>They had taken their shirts off and were sitting in shorts on the terrace, enjoying ice cold drinks.</tekst>
+			<tekst>They needed shade from the hot summer sun, so they decided to go and get the</tekst>
+			<item id="s-1-1" svar="1">parasol,swimming pool,stage,loudspeaker</item>
+			<tekst>.</tekst>
+		</p>		
+	</opgave>
+	<opgave id="s-2">
+		<overskrift>In the kitchen</overskrift>
+		<p>
+			<tekst>The table was already laid. There was a burning smell, even though the timer had not gone off. Senay turned down the temperature and removed the</tekst>
+			<item id="s-2-1" svar="4">duvet,papers,radio,casserole</item>
+			<tekst>.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-3">
+			<overskrift>The weekend cleaning</overskrift>
+		<p>
+			<tekst>Oskar opened the storeroom and took out the mop. He worked busily, then tidied the bucket away and stood the mop up to dry. At last, the apartment was</tekst>
+			<item id="s-3-1" svar="4">dirty,painted,sold,clean</item>
+			<tekst>.</tekst>			
+		</p>
+	</opgave>
+	<opgave id="s-4">
+			<overskrift>Chaos</overskrift>
+		<p>
+			<tekst>Flour and sugar were all over the place. It was going to take the entire break time to clean things up, thought the teacher. Thank goodness everyone had worn</tekst>
+			<item id="s-4-1" svar="3">cardboard,PCs,aprons,toothbrushes</item>
+			<tekst>, or else some of the parents might have complained.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-5">
+		<overskrift>The young sea eagles</overskrift>
+		<p>
+			<tekst>High up in the old tree, the pair of sea eagles have built their nest. There are two eggs in there now. When they hatch, the young birds will stay in the nest</tekst>
+			<item id="s-5-1" svar="2">and,until,then,if</item>
+			<tekst>they are ready to fly. Then the parents will feed them for a few months, but as soon as the young birds are ready, they will fly off to find their</tekst>
+			<item id="s-5-2" svar="3">father,young bird,food,bird</item>
+			<tekst>.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-6">
+		<overskrift>The football match</overskrift>
+		<p>
+			<tekst>There were lots of ugly tackles and an angry atmosphere. The whistle had been needed at regular intervals, and a lot of players had been given yellow cards. When it was full-time, neither team had got a</tekst>
+			<item id="s-6-1" svar="4">card,money,penalty,goal</item>
+			<tekst>.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-7">
+		<overskrift>Heat wave</overskrift>
+		<p>
+			<tekst>It had been cloudless and hot for many days. Aida was struggling to put</tekst>
+			<item id="s-7-1" svar="2">rain clothes,suncream,boots,woollen socks</item>
+			<tekst>on her son, but it was difficult, because he would not stand still. They were going to be late again.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-8">
+		<overskrift>The dream of a farm</overskrift>
+		<p>
+			<tekst>Henrik turned to the property ads. Their apartment had</tekst>
+			<item id="s-8-1" svar="4">furnished,sold,advertised,become</item>
+			<tekst>too small for them, so</tekst>
+			<tekst>now they were looking for</tekst>
+			<item id="s-8-2" svar="2">it,something,another,more</item>
+			<tekst>bigger. They wanted to move into the country.</tekst>
+			<tekst>They were looking for a small</tekst>
+			<item id="s-8-3" svar="3">balcony,restaurant,farm,car</item>
+			<tekst>where there would be room to</tekst>
+			<tekst>have a few</tekst>
+			<item id="s-8-4" svar="2">holidays,horses,years,lectures</item>
+			<tekst>.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-9">
+		<overskrift>Music</overskrift>
+		<p>
+			<tekst>The pupil’s fingers moved quickly and accurately. His feet tapped out the beat while he played. The teacher listened intently to make sure that he was following the</tekst>
+			<item id="s-9-1" svar="4">recipe,lines,rules,notes</item>
+			<tekst>.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-10">
+		<overskrift>The journey</overskrift>
+		<p>
+			<tekst>She needed to be ready in two hours, so she was quite busy. Her bag was already in the car, and the ticket, keys and card holder were in her pocket. Her boyfriend ran after her with her</tekst>
+			<item id="s-10-1" svar="1">passport,lunch,shopping list,watch</item>
+			<tekst>. That was lucky for her, or else she would not have got far.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-11">
+		<overskrift>Residents worried about arsonist</overskrift>
+		<p>
+			<tekst>The residents of Berglund village are feeling</tekst>
+			<item id="s-11-1" svar="3">lazy,lucky,unsafe,clumsy</item>
+			<tekst>, because last week three burnt-out cars were reported in the area, and two fires on a housing estate.</tekst>
+			<tekst>They are worried that an arsonist is in the area. According to the police, their preliminary investigations indicate that the fires were started deliberately,</tekst>
+			<item id="s-11-2" svar="1">but,since,because,if</item>
+			<tekst>they need more evidence before they can come to a conclusion.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-12">
+		<overskrift>At the dentist</overskrift>
+		<p>
+			<tekst>Karl lay in the chair, and the light from the lamp was shining in his eyes. He was a bit nervous. The dentist put down the little mirror. He turned his head and saw that she was picking up the</tekst>
+			<item id="s-12-1" svar="2">bicycle,drill,letter,hammer</item>
+			<tekst>.</tekst>
+		</p>	
+	</opgave>
+	<opgave id="s-13">
+		<overskrift>The flood</overskrift>
+		<p>
+			<tekst>When the couple got back home from the weekend trip, everything was floating around in the cellar. They hurried to put the things out in the sun. They would contact the</tekst>
+			<item id="s-13-1" svar="4">travel agency,witnesses,doctor,insurance company</item>
+			<tekst>the next day. On the news, they heard that many areas of the country had been affected.</tekst>
+		</p>	
+	</opgave>
+	<opgave id="s-14">
+		<overskrift>Watering flowers</overskrift>
+		<p>
+			<tekst>Plants vary a great deal in how often they need to be watered. Some should be watered every day,</tekst>
+			<item id="s-14-1" svar="2">because,while,if,for</item>
+			<tekst>others can go for several weeks without water. It is a common</tekst>
+			<item id="s-14-2" svar="3">duty,company,mistake,cold</item>
+			<tekst>to give all flowers a lot of water. This can make it difficult for the plants to absorb enough nutrients through their roots.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-15">
+		<overskrift>The burglary</overskrift>
+		<p>
+			<tekst>They had spent many weeks planning this, and had chosen the place carefully. Their accomplice was waiting in the car around the corner. Their pulses rose as they crept forward. They hoped that there would not be any</tekst>
+			<item id="s-15-1" svar="4">complaints,storerooms,chairs,dogs</item>
+			<tekst>there.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-16">	
+		<overskrift>Bears on the loose?</overskrift>
+		<p>
+			<tekst>A violent storm had uprooted several trees in the zoo. Two of the trees had toppled over</tekst>
+			<tekst>the fence which had been put up around the bears’ enclosure.</tekst>
+			<tekst>For the next few</tekst>
+			<item id="s-16-1" svar="1">hours,animals,years,cages</item>
+			<tekst>, the staff were afraid that the bears would</tekst>
+			<item id="s-16-2" svar="4">fall,slip,jump,escape</item>
+			<tekst>.</tekst>
+			<tekst>The zookeepers had to search through the whole zoo and count the number of</tekst>
+			<item id="s-16-3" svar="1">bears,trees,children,fences</item>
+			<tekst>to make sure that none of them had escaped.</tekst>
+		</p>		
+	</opgave>		
+	<opgave id="s-17">
+		<overskrift>The car accident</overskrift>
+		<p>
+			<tekst>You could hear the sound of the</tekst>
+			<item id="s-17-1" svar="2">dogs,ambulance,demonstrators,thunder</item>
+			<tekst>getting nearer. Many people had gathered round the two cars. Some of them were crying.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-18">
+		<overskrift>Splitting the bill</overskrift>
+		<p>
+			<tekst>They had spent all evening enjoying the Friday taco. Linda had bought all the</tekst>
+			<item id="s-18-1" svar="1">ingredients,books,work,telephones</item>
+			<tekst>and was waiting for everyone to transfer the</tekst>
+			<item id="s-18-2" svar="4">post,keys,names,money</item>
+			<tekst>.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-19">
+		<overskrift>A late start</overskrift>
+		<p>
+			<tekst>‘We really need to get going’, said Karim. But it was a quarter of an hour before the kids were ready to get in the</tekst>
+			<item id="s-19-1" svar="2">sofa,car,stairs,luggage</item>
+			<tekst>. The family took a</tekst>
+			<item id="s-19-2" svar="1">short cut,detour,dead end,roundabout</item>
+			<tekst>through the town, so fortunately they arrived at the party just ten minutes after everyone else.</tekst>
+		</p>
+	</opgave>
+	<opgave id="s-20">
+		<overskrift>A suspicious email</overskrift>
+		<p>
+			<tekst>Maria had received an email from a sender she did not know. So she tried to find out whether this was someone she could phone or write to</tekst>
+			<item id="s-20-1" svar="4">that,because,for,before</item>
+			<tekst>she opened the attachment, but she could not find any contact information. That made her</tekst>
+			<item id="s-20-2" svar="1">suspect,deny,plan,remember</item>
+			<tekst>that the email was from someone trying to trick her into revealing her payment information,</tekst>
+			<item id="s-20-3" svar="3">because,then,so,when</item>
+			<tekst>she deleted it.</tekst>
+		</p>
+	</opgave>
+</startest>

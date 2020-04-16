@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+<string id="Headline"     text = "Munnlegsjekken"/>
+<string id="LookAtSkills"     text = "Vurder dugleiken din"/>
+<string id="Info"     text = "Med Munnlegsjekken vurderer du den munnlege dugleiken din og får ein peikepinn om kva du er god til og kva du kan bli betre på."/>
+<string id="Close"     text = "Lukk"/>
+<string id="Change"     text = "Endre"/>
+<string id="Result"     text = "Resultat"/>
+<string id="Start"     text = "Start"/>
+<string id="ClickSound"     text = "Trykk for å høyre tekst"/>
+<string id="Back"     text = "Tilbake"/>
+<string id="Forward"     text = "Neste"/>
+<string id="Answers"     text = "Svara dine"/>
+<string id="Questions"     text = "Spørsmål"/>
+<string id="Answer"     text = "Svar"/>
+<string id="SeeResult"     text = "Sjå resultatet"/>
+<string id="TipBetter"     text = "Få råd og tips for å bli betre"/>
+<string id="LookTroughAnswer"     text = "Sjå gjennom svara dine i testen"/>
+<string id="BackToFrontPage"     text = "Tilbake til førre spørsmål"/>
+<string id="DownloadResult"     text = "Last ned resultatet"/>
+<string id="CheckDone"     text = "Testen er over"/>
+<string id="Overview"     text = "Sjå oversikt"/>
+<string id="Level"     text = "Nivå"/>
+<string id="Level31"     text = "Ut frå di eiga vurdering er du på nivå 3 av 3 i denne sjekken."/>
+<string id="Level32"     text = "Munnleg dugleik på nivå 3 inneber at ein kommuniserer fleksibelt og effektivt både i kjende og ukjende samanhengar. Ein kan ta aktivt del i meiningsutvekslingar i offentlege og private samanhengar og ta ansvar i kommunikasjonen."/>
+<string id="Level21"     text = "Ut frå di eiga vurdering er du på nivå 2 av 3 i denne sjekken."/>
+<string id="Level22"     text = "Munnleg dugleik på nivå 2 inneber at ein kommuniserer aktivt om tema som er av interesse, i kjende samanhengar. Ein kan ta seg av sine eigne interesser og behov i kvardagen og vidareutvikle den munnlege kommunikasjonen sin som det trengst."/>
+<string id="Level11"     text = "Ut frå di eiga vurdering er du på nivå 1 av 3 i denne sjekken."/>
+<string id="Level12"     text = "Munnleg dugleik på nivå 1 inneber at ein kommuniserer enkelt i kjende samanhengar. Ein forstår hovudinnhaldet i beskjedar og instruksar og brukar enkle strategiar for å kommunisere."/>
+<string id="CalcText"     text = "Du kan flytte kalkulatoren på skjermen ved å trykkje på &quot;Kalkulator&quot; i teksten over og dra."/>
+</strings>

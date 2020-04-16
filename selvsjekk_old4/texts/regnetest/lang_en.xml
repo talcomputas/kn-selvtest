@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+<string id="Headline"     text = "Computer skills check"/>
+<string id="LookAtSkills"     text = "Assess your skills"/>
+<string id="Info"     text = "This computer skills check helps you to assess your computer skills. You will get an indication on what you are capable of and what you can improve. "/>
+<string id="Close"     text = "Close"/>
+<string id="Change"     text = "Change"/>
+<string id="Result"     text = "Result"/>
+<string id="Start"     text = "Start"/>
+<string id="ClickSound"     text = "Click to listen to the text"/>
+<string id="Back"     text = "Back"/>
+<string id="Forward"     text = "Next"/>
+<string id="Answers"     text = "Your Answers"/>
+<string id="Questions"     text = "Question"/>
+<string id="Answer"     text = "Answer"/>
+<string id="SeeResult"     text = "See result"/>
+<string id="TipBetter"     text = "Advice and tips on how to get better"/>
+<string id="LookTroughAnswer"     text = "Look through your answers in the test"/>
+<string id="BackToFrontPage"     text = "Back to last question"/>
+<string id="DownloadResult"     text = "Download result"/>
+<string id="CheckDone"     text = "The test is over"/>
+<string id="Level"     text = "Level"/>
+<string id="Overview"     text = "See overview"/>
+<string id="Level31"     text = "You have assessed yourself on level 3 out of 3 in this check."/>
+<string id="Level32"     text = "Digital skills on level 3 mean that you are a reflected user of more complex digital tools and services. The development within digital skills is fast and it is wise to keep yourself updated."/>
+<string id="Level21"     text = "You have assessed yourself on level 2 out of 3 in this check."/>
+<string id="Level22"     text = "Digital skills on level 2 mean that you can relate actively to digital information and can use information in new contexts and situations. You know several digital tools and services and use them."/>
+<string id="Level11"     text = "You have assessed yourself on level 1 out of 3 levels in this check."/>
+<string id="Level12"     text = "Digital skills on level 1 mean that you can relate to digital information whenever this is necessary and use simple digital tools."/>
+<string id="CalcText"     text = "You can move the calculator on the screen by clicking on the 'calculator' text and then drag"/>
+</strings>

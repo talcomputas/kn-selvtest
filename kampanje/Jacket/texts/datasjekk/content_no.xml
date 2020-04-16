@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kntest timer="600000" version="datasjek">
+	<opgave id="1">
+		<overskrift>Du kjøper en jakke som er satt ned med 25% rabatt og sparer 600 kroner. 
+		Hva var før-prisen?</overskrift>
+<image>Insurance.png</image>
+		<option score="0">900 kr</option>
+		<option score="0">1200 kr</option>
+		<option score="0">1800 kr</option>
+		<option score="1">2400 kr</option>
+	</opgave>
+
+</kntest>

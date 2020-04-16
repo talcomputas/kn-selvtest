@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kntest timer="600000" version="regnesjek">
+	<opgave id="1">
+		<overskrift>Do you understand price stickers on products in the grocery store?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="2">
+		<overskrift>Can you find and compare the price per kilo of different products?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="3">
+		<overskrift>Can you check a payslip and find out how much you have been paid?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="4">
+		<overskrift>Can you find out how much of each ingredient you should use in a recipe?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>		
+	</opgave>
+	<opgave id="5">
+		<overskrift>Can you use weight and fluid measures when preparing food?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="6">
+		<overskrift>Can you measure lengths with a tape measure, yardstick or ruler?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="7">
+		<overskrift>Do you know what it means to double something or halve something?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Not sure</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="8">
+		<overskrift>Can you check a grocery receipt?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="9">
+		<overskrift>Can you write a doctor’s appointment on a calendar, with the right date and time?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>		
+	</opgave>
+	<opgave id="10">
+		<overskrift>Can you read a simple table, e.g. a bus timetable?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="11">
+		<overskrift>Can you extract simple information from a chart, e.g. the long-term forecast from a weather forecast?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Not sure</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="12">
+		<overskrift>Can you estimate how much you should pay for a small shopping basket of produce?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="13">
+		<overskrift>Can you compare prices in order to find the cheapest product?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="14">
+		<overskrift>Do you know how VAT affects the price of a product?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Not sure</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="15">
+		<overskrift>Can you convert from decilitres to litres?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="16">
+		<overskrift>Can you calculate travelling time on the basis of distance and speed?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="17">
+		<overskrift>Can you check a phone bill and evaluate your consumption?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="18">
+		<overskrift>Can you adapt a recipe to make more portions than the recipe specifies?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>	
+	</opgave>
+	<opgave id="19">
+		<overskrift>Can you calculate how many calories (kcal) there are in a product, based on the information on the packet?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="20">
+		<overskrift>Can you calculate the price of a sweater which has been reduced by 20%?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="21">
+		<overskrift>Can you read and understand different types of graphs and charts?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="22">
+		<overskrift>Can you read and understand a payment plan?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="23">
+		<overskrift>Can you calculate the average age of a group?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="24">
+		<overskrift>Can you prepare a monthly budget with an overview of income and expenditure?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="25">
+		<overskrift>A floor measures 3 metres by 4 metres. Can you work out how many square metres the floor is?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="26">
+		<overskrift>Do you know what bulk discount means?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="27">
+		<overskrift>Do you understand payment schemes for products?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Not sure</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="28">
+		<overskrift>Can you compare the nutritional content of different foods?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="29">
+		<overskrift>Can you work out how much it would cost you if you did not pay a bill on time?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Not sure</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="30">
+		<overskrift>Are you aware of the benefits and disadvantages of using a credit card?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Not sure</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="31">
+		<overskrift>Do you know the difference between fixed and variable interest?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Not sure</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="32">
+		<overskrift>Can you compile an overview of the annual consumption of a household, e.g. for food and clothing, and distribute the expenses evenly over the months in a budget?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="33">
+		<overskrift>Can you work out how much you need to save each month if you are planning to go on a long holiday?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="34">
+		<overskrift>Can you check your tax return?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+</kntest>

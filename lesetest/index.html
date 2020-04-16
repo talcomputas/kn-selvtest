@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
+    <title>Kompetanse Norge</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:700"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/hyper.css?v=2" />
+    <link rel="stylesheet" type="text/css" href="styles/tekstur.css?v=2" />
+    <link rel="stylesheet" type="text/css" href="styles/centerpoint.css?v=2" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="scripts/vendor/jquery-circle-progress-1.2.1.js"></script>
+    <script src="https://code.createjs.com/soundjs-0.6.2.min.js"></script>
+    <script src="https://web2.questback.com/Scripts/questback.popup-1.0.0.js"></script>
+    <script src="scripts/UrlSearchParams.js"></script>
+    <script src="scripts/examination.js"></script>
+    <script src="scripts/result.js"></script>
+    <script src="scripts/main.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="wrapper">
+        <h1
+          class="logo"
+          onclick="location.href='http://www.kompetansenorge.no/'"
+          style="cursor:pointer;"
+        >
+          Kompetanse Norge
+        </h1>
+        <div class="language-links">
+          <a href="#" onClick="changeLanguage(event, 'no')">Bokmål</a>
+          <a href="#" onClick="changeLanguage(event, 'nn')">Nynorsk</a>
+        </div>
+      </div>
+      <div class="back-wrapper">
+        <div class="back-link">
+          <a
+            style="text-decoration: none;color: #82cbdf;"
+            title="Til Test deg selv"
+            href="https://www.kompetansenorge.no/test-deg-selv/"
+          >
+            <img
+              style="vertical-align: -10px;-moz-transform: scaleX(-1);-o-transform: scaleX(-1);-webkit-transform: scaleX(-1);transform: scaleX(-1);"
+              alt="Til Test deg selv"
+              src="static/images/arrow-return.svg"
+            />
+            Til Test deg selv
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrapper wide">
+      <div id="throbber">
+        <svg
+          class="spinner"
+          width="65px"
+          height="65px"
+          viewBox="0 0 66 66"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            class="path"
+            fill="none"
+            stroke-width="6"
+            stroke-linecap="round"
+            cx="33"
+            cy="33"
+            r="30"
+          ></circle>
+        </svg>
+      </div>
+
+      <div class="box major" id="frontpage">
+        <h2 class="ribbon puzzle">Test dine ferdigheter</h2>
+        <!--<button class="close">Lukk</button>-->
+
+        <div class="wrapper">
+          <!-- Available CSS classes: reading, data, calc, read-write - check for svg-->
+          <div class="introduction reading">
+            <h1>Lesetesten</h1>
+
+            <p>
+              Dette er en kort lesetest som måler lesehastigheten din. Testen
+              stopper automatisk etter 10 minutter. Det er mange oppgaver, så
+              det er viktig å svare raskt og riktig.
+            </p>
+
+            <p>&nbsp;</p>
+            <!--<p>
+              Vil du vite mer om hvordan du tar testen? <a href="omtest.html">Se demo.</a>
+            </p>-->
+
+            <button
+              onclick="frontpageSoundTest()"
+              id="frontpage-soundtest"
+              class="text-to-speech"
+              disabled
+            >
+              Trykk for å høre tekst
+            </button>
+            <button
+              id="frontpage-startbtn"
+              class="action-btn"
+              onclick="startTestIntro()"
+              disabled
+            >
+              Start
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="box major" id="about">
+        <h2 class="ribbon puzzle">Test dine ferdigheter</h2>
+        <button class="close">Lukk</button>
+
+        <div class="wrapper">
+          <div class="exam-info">
+            <h1>Info om lesetest</h1>
+
+            <div class="illustrated">
+              <p>
+                Kanskje du synes det er vanskelig å lese? Mange tekster er
+                dårlig skrevet, eller de kan ha et vanskelig innhold. Du kan bli
+                bedre til å lese dersom du ønsker det.
+              </p>
+
+              <ul class="bullets">
+                <li>
+                  Å kunne lese godt gjør det enklere å utføre jobben
+                </li>
+
+                <li>
+                  Å lese godt gjør det enklere å gjennomføre en utdanning
+                </li>
+
+                <li>
+                  Å kunne lese godt gjør det lettere å hjelpe barna med leksene
+                </li>
+              </ul>
+            </div>
+
+            <h2>
+              Gjennomføringen
+            </h2>
+
+            <p>
+              Testen tar 10 minutter. Du leser en tekst hvor noen av setningene
+              må fullføres. For å fullføre disse setningene må du velge ett ord
+              blant flere svaralternativer. Du klikker med musen på det ordet du
+              mener er rett. Når du har besvart, klikker du på neste-knappen for
+              å gå videre.
+            </p>
+
+            <p>
+              De to første oppgavene skal vise hvordan du utfører testen. Du må
+              lytte til instruksjonen ved å trykke på avspillingsknappen. Du
+              kommer ikke videre før du har hørt hele instruksjonen. Når du går
+              i gang med selve testen, kan du ikke benytte lesehjelpemidler.
+            </p>
+
+            <p>
+              Når du har tatt testen kan du skrive ut resultatet, lagre det
+              eller sende det til deg selv eller andre.
+            </p>
+
+            <h2>
+              Resultat
+            </h2>
+
+            <p>
+              Testen forteller ikke noe om årsaken til et godt eller dårlig
+              resultat. På den siste siden i testen er det informasjon om
+              hvordan du kan ta kontakt dersom du ønsker mer hjelp med lesingen.
+            </p>
+
+            <p class="footnote">
+              Denne testen er oversatt fra danske. Test er utviklet av Senter
+              for leseforskning ved Københavns Universitet.
+            </p>
+
+            <button class="text-to-speech">Trykk for å høre tekst</button>
+            <button class="action-btn">Start</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="box major" id="testintro">
+        <!--<button class="close">Lukk</button>-->
+
+        <div class="wrapper">
+          <div class="examination">
+            <h1 class="default-heading">Lesetesten - eksempel</h1>
+            <p>Velg riktig ord</p>
+
+            <div id="intro-content">
+              <!--<span class="intro-sign"><p>Ønsker du denne teksten opplest, trykk på lydikonet.</p></span>
+           		<span class="intro-text">
+           			<p>I denne testen skal du lese noen korte tekster uten bruk av hjelpemidler. I tekstene er det setninger der fire ord står i hver sin ramme. Ett av disse ordene er riktig.</p>
+            		<p>Når du leser teksten, skal du klikke på det ordet du mener passer best i sammenhengen for at setningen skal bli korrekt.</p>
+				</span>
+				<div class="task intro">-->
+              <!--<h2>Peter</h2>
+				  <p>
+					Peter bor på landet.
+					<span class="options">
+					  <span>Det</span>
+					  <span>De</span>
+					  <span class="selected">Han</span>
+					  <span>Hun</span>
+					</span>
+					tager bussen på arbejde.
+				  </p>-->
+              <!--
+				</div>
+			
+				<span class="intro-text">
+					<p>Her står det fire ord i rammen og ordet Han, er markert. Det ordet er valgt fordi det er det ordet som passer best i sammenhengen. Da står det: Peter bor på landet. Han tar bussen til jobben.</p>
+					<p>Klikk på pilen i høyre hjørnet om du vil går rett til testen.</p>
+					<p>Dersom du ønsker å se et eksempel til, klikker du på knappen neste eksempel.</p>
+			  	</span>
+				<span class="intro-sign"><p>Ønsker du denne teksten opplest, trykk på lydikonet.</p></span>-->
+            </div>
+
+            <div id="intro-bottom"></div>
+            <button
+              onclick="introSoundPlay()"
+              id="intro-sound"
+              class="text-to-speech"
+            >
+              Trykk for å høre tekst
+            </button>
+            <button
+              onclick="introNext()"
+              id="intro-proceed-next"
+              class="proceed alt"
+            >
+              Neste eksempel
+            </button>
+            <button onClick="introToTest()" class="proceed">Ta testen</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="box major" id="test">
+        <!--<button class="close">Lukk</button>-->
+
+        <div class="wrapper">
+          <div class="examination">
+            <h1 class="default-heading">Lesetesten</h1>
+            <p>Velg riktig ord</p>
+
+            <div class="task"></div>
+
+            <!--<button class="proceed" disabled>Neste</button>-->
+            <button onClick="nextTask()" class="proceed">Neste</button>
+          </div>
+        </div>
+      </div>
+
+      <!--
+      <div class="box major" id="questions">
+        
+
+        <div class="wrapper">
+          <div class="questionnaire">
+            <h1 class="default-heading">Datasjekken</h1>
+
+            <div class="progression">
+              <span class="steps">20/40</span>
+              <div class="bar">
+                <div class="inner" style="left: 50%;"></div>
+              </div>
+            </div>
+
+            <div class="task">
+              <p class="question">
+                <em>Hvilken erfaring har du med:</em> å bruke søkemotorer på internett (f.eks. Google, Yahoo m.fl.)?
+              </p>
+
+              <ul class="answers">
+                <li>Vet ikke</li>
+                <li>Bruker ikke/kan ikke</li>
+                <li>Begrenset erfaring</li>
+                <li>Stor erfaring</li>
+              </ul>
+            </div>
+
+            <button class="text-to-speech">Trykk for å høre tekst</button>
+
+            <button class="return" disabled>Tilbake</button>
+            <button class="proceed" disabled>Neste</button>
+          </div>
+        </div>
+      </div>
+      -->
+
+      <div class="box major" id="result">
+        <!--<button class="close">Lukk</button>-->
+
+        <div class="wrapper">
+          <div class="result">
+            <h1 class="default-heading centered">Lesetesten er fullført</h1>
+
+            <div class="gauge-wrapper">
+              <div class="gauge for-exam">
+                <div id="circle-progress"></div>
+                <!--<div class="level-seperators"></div>-->
+
+                <!--<label class="level first">Resultat<span>0 - 3,5</span></label>
+                <label class="level second">Resultat<span>3,5 - 4</span></label>
+                <label class="level third">Resultat<span>4 - 7+</span></label>
+                -->
+                <div class="score">Ditt resultat:<span>3,2</span></div>
+              </div>
+            </div>
+
+            <!-- Available CSS classes: reading, data, calc, read-write -->
+            <div class="feedback reading">
+              <h2>Du er nivå 3 av 3!</h2>
+
+              <p>
+                Du er en ganske god bruker med god oversikt over de mulighetene
+                som ligger i å bruke data. Du kan likevel ha stort utbytte av å
+                bli bedre.
+              </p>
+
+              <a
+                class="btn"
+                href="https://www.kompetansenorge.no/kompetanseporten/rad-og-tips-for-a-bli-bedre"
+                >Få råd og tips for å bli bedre</a
+              >
+              <a class="btn inverted" href="#" onClick="SeeAnswers()"
+                >Se gjennom dine svar</a
+              >
+              <a class="btn inverted" href="http://www.kompetanseporten.no"
+                >Tilbake til forsiden</a
+              >
+              <div class="options">
+                <a id="printbtn" class="btn inverted" href="" target="_blank"
+                  >Last ned resultatet</a
+                >
+                <!--<a class="btn inverted" href="#">Send</a>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box major" id="resulttoosoon">
+        <h2 class="ribbon puzzle">Du har brukt for lite tid</h2>
+        <!--<button class="close">Lukk</button>-->
+
+        <div class="wrapper">
+          <div class="exam-info">
+            <h1>Du har brukt for lite tid</h1>
+
+            <div class="illustrated">
+              <p>
+                Du har brukt for lite tid til å besvare oppgavene for at dine
+                leseferdigheter kan vurderes. Du kan eventuelt prøve testen
+                igjen.
+              </p>
+
+              <p class="footnote">
+                <a href="index.html">TILBAKE TIL FORSIDEN</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box major" id="tempendpage" style="display:none;">
+        <h2 class="ribbon puzzle">Lesetesten er fullført</h2>
+        <div class="wrapper">
+          <div class="exam-info">
+            <h1>Lesetesten er fullført</h1>
+
+            <div class="illustrated">
+              <p>
+                Takk
+              </p>
+
+              <p class="footnote">
+                <a href="index.html">TILBAKE TIL FORSIDEN</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box major" id="answers">
+        <button onClick="closeAnswers()" class="close">Lukk</button>
+        <div class="wrapper">
+          <div class="result">
+            <h1 class="default-heading centered">Svar</h1>
+          </div>
+          <div class="answers-buttons">
+            <a class="btn inverted" href="#" onClick="closeAnswers()"
+              >Se resultat</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="wrapper">
+        <h1
+          class="logo"
+          onclick="location.href='http://www.kompetansenorge.no/'"
+          style="cursor:pointer;"
+        >
+          Kompetanse Norge
+        </h1>
+
+        <div class="contact">
+          <a href="http://www.kompetansenorge.no">www.kompetansenorge.no</a>
+          <a href="mailto:webmaster@kompetansenorge.no"
+            >webmaster@kompetansenorge.no</a
+          >
+        </div>
+
+        <div class="eu-logo">
+          Co-founded by the Erasmus+ Programme of the European Union
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

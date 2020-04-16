@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+<string id="Headline"     text = "Reknetest"/>
+<string id="LookAtSkills"     text = "Test dugleiken din"/>
+<string id="Info"     text = "Dette er ein kortare reknetest med 30 oppgåver. Ta deg tid og ro til å gjennomføre testen slik at resultatet viser kva du kan! Det kan ta mellom 10 og 15 minutt å ta reknetesten. Vi rår deg til å berre bruke kalkulator der den er tilgjengeleg i oppgåvene. Bruk penn og papir for å ta notat eller gjere enkle utrekningar."/>
+<string id="Close"     text = "Lukk"/>
+<string id="Change"     text = "Endre"/>
+<string id="Result"     text = "Resultat"/>
+<string id="Start"     text = "Start"/>
+<string id="ClickSound"     text = "Trykk for å høyre tekst"/>
+<string id="Back"     text = "Tilbake"/>
+<string id="Forward"     text = "Neste"/>
+<string id="Answers"     text = "Svara dine"/>
+<string id="Questions"     text = "Spørsmål"/>
+<string id="Answer"     text = "Svar"/>
+<string id="SeeResult"     text = "Sjå resultatet"/>
+<string id="TipBetter"     text = "Få råd og tips for å bli betre"/>
+<string id="LookTroughAnswer"     text = "Sjå gjennom svara dine i testen"/>
+<string id="BackToFrontPage"     text = "Tilbake til førre spørsmål"/>
+<string id="DownloadResult"     text = "Last ned resultatet"/>
+<string id="CheckDone"     text = "Testen er over"/>
+<string id="Overview"     text = "Sjå oversikt"/>
+<string id="YouAnswered"     text = "Ditt svar"/>
+<string id="RightAnswer"     text = "Rett svar"/>
+<string id="Level"     text = "Nivå"/>
+<string id="Calculator"     text = "Kalkulator"/>
+<string id="Level31"     text = "Ut frå svara dine er du på nivå 3 av 3 i denne testen."/>
+<string id="Level32"     text = "Å rekne på nivå 3 inneber å gjere bruk av samansett matematisk informasjon og kunnskap i kvardagssituasjonar der det er naudsynt."/>
+<string id="Level21"     text = "Ut frå svara dine er du på nivå 2 av 3 i denne testen."/>
+<string id="Level22"     text = "Å rekne på nivå 2 inneber å bruke rekning i ulike situasjonar, bearbeide informasjon som inneheld tal og vere medviten om ulike rekneoperasjonar."/>
+<string id="Level11"     text = "Ut frå svara dine er du på nivå 1 av 3 i denne testen."/>
+<string id="Level12"     text = "Å rekne på nivå 1 inneber å bruke enkel rekning i kjende samanhengar og forstå enkel informasjon som inneheld tal."/>
+<string id="CalcText"     text = "Du kan flytte kalkulatoren på skjermen ved å trykkje på &quot;Kalkulator&quot; i teksten over og dra."/>
+</strings>

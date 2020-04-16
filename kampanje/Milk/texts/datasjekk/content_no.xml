@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kntest timer="600000" version="datasjek">
+	<opgave id="1">
+		<overskrift>I en melkekartong er det 1,5 liter melk. Det er det samme som:</overskrift>
+<image>Insurance.png</image>
+		<option score="0">0,15 dl melk</option>
+		<option score="0">5 dl melk</option>
+		<option score="1">15 dl melk</option>
+		<option score="0">150 dl melk</option>
+	</opgave>
+
+</kntest>

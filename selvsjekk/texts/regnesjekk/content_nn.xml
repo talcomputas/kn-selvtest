@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kntest timer="600000" version="regnesjek">
+	<opgave id="1">
+		<overskrift>Forstår du prislappar på varer i matbutikken?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="2">
+		<overskrift>Kan du finne og samanlikne kiloprisen på ulike varer?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="3">
+		<overskrift>Kan du kontrollere ein lønsslipp og finne ut kor mykje som blir utbetalt?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="4">
+		<overskrift>Kan du finne ut kor mykje av kvar ingrediens du skal bruke i ei oppskrift?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>		
+	</opgave>
+	<opgave id="5">
+		<overskrift>Kan du bruke vekt og litermål når du lagar mat?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="6">
+		<overskrift>Kan du måle lengder med måleband, tommestokk eller linjal?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="7">
+		<overskrift>Veit du kva det tyder å doble og å halvere?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Usikker</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="8">
+		<overskrift>Kan du kontrollere kvitteringa frå matbutikken?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="9">
+		<overskrift>Kan du skrive inn ein legetime med rett dato og klokkeslett i ein kalender?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>		
+	</opgave>
+	<opgave id="10">
+		<overskrift>Kan du lese ein enkel tabell, t.d. ein busstabell?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="11">
+		<overskrift>Kan du hente ut enkel informasjon frå eit diagram, t.d. langtidsvarselet i ei vêrmelding?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Usikker</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="12">
+		<overskrift>Kan du seie om lag kor mykje du skal betale for ei lita handlekorg med varer?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="13">
+		<overskrift>Kan du samanlikne prisar for å finne den billigaste vara?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="14">
+		<overskrift>Veit du korleis moms (mva.) påverkar prisen på eit produkt?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Usikker</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="15">
+		<overskrift>Kan du rekne om frå desiliter til liter?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="16">
+		<overskrift>Kan du rekne ut reisetider ut frå avstand og fart?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="17">
+		<overskrift>Kan du kontrollere ei telefonrekning og vurdere forbruket ditt?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="18">
+		<overskrift>Kan du tilpasse ei matoppskrift for å lage fleire porsjonar enn det som er oppgjeve?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>	
+	</opgave>
+	<opgave id="19">
+		<overskrift>Kan du rekne ut kor mange kaloriar (kcal) det er i ei matvare ut frå opplysningane på pakken?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="20">
+		<overskrift>Kan du rekne ut prisen på ein genser som er sett ned med 20 %?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="21">
+		<overskrift>Kan du lese og forstå ulike typar grafar og diagram?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="22">
+		<overskrift>Kan du lese og forstå ein nedbetalingsplan?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="23">
+		<overskrift>Kan du rekne ut gjennomsnittsalderen i ei gruppe?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="24">
+		<overskrift>Kan du setje opp eit månadsbudsjett med oversikt over inntekter og utgifter?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="25">
+		<overskrift>Eit golv måler 3 meter gongar 4 meter. Kan du finne ut kor mange kvadratmeter golvet er?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="26">
+		<overskrift>Veit du kva kvantumsrabatt tyder?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="27">
+		<overskrift>Forstår du nedbetalingsordningar i samband med varekjøp?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Usikker</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="28">
+		<overskrift>Klarar du å samanlikne næringsinnhaldet i ulike matvarer?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="29">
+		<overskrift>Kan du rekne ut kor mykje det vil koste deg dersom du ikkje betalar ei rekning i tide?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Usikker</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="30">
+		<overskrift>Kjenner du til føremonene og ulempene ved å bruke kredittkort?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Usikker</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="31">
+		<overskrift>Veit du skilnaden på flytande og fast rente?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Usikker</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="32">
+		<overskrift>Kan du setje opp ei oversikt over årsforbruket i eit hushald, til dømes for mat og klede, og fordele utgiftene jamt over månadene i eit budsjett?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="33">
+		<overskrift>Kan du rekne ut kor mykje du må spare kvar månad når du planlegg å reise på ein lang tur?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="34">
+		<overskrift>Klarar du å kontrollere skattemeldinga (sjølvmeldinga) di?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, med litt hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+</kntest>

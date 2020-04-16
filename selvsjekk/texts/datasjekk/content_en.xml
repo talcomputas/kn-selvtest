@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kntest timer="600000" version="datasjek">
+	<opgave id="1">
+		<overskrift>How much experience do you have of using e-mail?</overskrift>
+		<option score="0">No experience</option>
+		<option score="1">A little experience</option>
+		<option score="2">A lot of experience</option>
+	</opgave>
+	<opgave id="2">
+		<overskrift>How much experience do you have of word-processing programs (e.g. Word)?</overskrift>
+		<option score="0">I have never used them</option>
+		<option score="1">I have used them a little</option>
+		<option score="2">I have used them a lot</option>
+	</opgave>
+	<opgave id="3">
+		<overskrift>Could you manage to change your GP online?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Not sure</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="4">
+		<overskrift>Do you install apps on your smartphone or tablet?</overskrift>
+		<option score="0">I have no experience with this</option>
+		<option score="1">I need help to install apps</option>
+		<option score="2">I install apps whenever I need them</option>
+	</opgave>
+	<opgave id="5">
+		<overskrift>Do you use digital map services (e.g. Google Maps and GPS)?</overskrift>
+		<option score="0">I have never used digital maps</option>
+		<option score="1">I use simple navigation features</option>
+		<option score="2">I use whatever I need to and am comfortable with numerous functions</option>
+	</opgave>
+	<opgave id="6">
+		<overskrift>Do you use online banking/mobile banking?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="7">
+		<overskrift>Do you use cloud storage (e.g. iCloud, Dropbox or OneDrive)?</overskrift>
+		<option score="0">I do not use cloud storage</option>
+		<option score="1">Yes, I use it for storage</option>
+		<option score="2">Yes, I use it for storage and sharing</option>
+	</opgave>
+	<opgave id="8">
+		<overskrift>Do you organise your e-mail?</overskrift>
+		<option score="0">I do not use e-mail</option>
+		<option score="1">No, I have no system</option>
+		<option score="2">Yes, I use folders/rules/search functions</option>
+	</opgave>
+	<opgave id="9">
+		<overskrift>Would you ask permission before you post photos of other people on social media?</overskrift>
+		<option score="0">No, never</option>
+		<option score="1">Sometimes</option>
+		<option score="2">Yes, always</option>
+	</opgave>
+	<opgave id="10">
+		<overskrift>Do you have a proactive approach to your profile and security settings on social media (e.g. Facebook, Snapchat or LinkedIn)?</overskrift>
+		<option score="0">I do not use social media</option>
+		<option score="1">I know some basic settings</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="11">
+		<overskrift>Do you protect your smartphone with a setting like a PIN code or fingerprint?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+		</opgave>
+	<opgave id="12">
+		<overskrift>Do you have any experience of buying products or tickets online?</overskrift>
+		<option score="0">No, no experience</option>
+		<option score="1">Yes, a little experience</option>
+		<option score="2">Yes, a lot of experience</option>
+	</opgave>
+	<opgave id="13">
+		<overskrift>Do you use secure login features on online services where these are available (e.g. two-step confirmation or BankID)?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+			</opgave>
+	<opgave id="14">
+		<overskrift>How often do you use the Internet to find information?</overskrift>
+		<option score="0">Never</option>
+		<option score="1">Occasionally</option>
+		<option score="2">Regularly</option>
+	</opgave>
+	<opgave id="15">
+		<overskrift>Do you think about whether the information you find online is trustworthy, biased or outdated?</overskrift>
+		<option score="0">No, never</option>
+		<option score="1">Sometimes</option>
+		<option score="2">Yes, always</option>
+	</opgave>
+	<opgave id="16">
+		<overskrift>Have you written anything derogatory about a person online (e.g. on social media or in a comment)?</overskrift>
+		<option score="0">Yes</option>
+		<option score="0">I haven’t thought about it</option>
+		<option score="2">No</option>
+	</opgave>
+	<opgave id="17">
+		<overskrift>How much experience do you have of using presentation tools (e.g. PowerPoint)?</overskrift>
+		<option score="0">I have never used them</option>
+		<option score="1">I have used them a little</option>
+		<option score="2">I have used them a lot</option>
+	</opgave>
+	<opgave id="18">
+		<overskrift>How much experience do you have of using spreadsheets (e.g. Excel)?</overskrift>
+		<option score="0">I have never used them</option>
+		<option score="1">I have used them a little</option>
+		<option score="2">I have used them a lot</option>
+	</opgave>
+	<opgave id="19">
+		<overskrift>What experience do you have of sharing photos with other people using a mobile phone?</overskrift>
+		<option score="0">I have no experience with this</option>
+		<option score="1">Can send them via MMS</option>
+		<option score="2">I use a variety of apps</option>
+	</opgave>
+	<opgave id="20">
+		<overskrift>Can you connect to wireless devices or networks using e.g. WiFi, Bluetooth or Smart TV?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+		</opgave>
+	<opgave id="21">
+		<overskrift>What experience do you have of using digital calendars to organise appointments and meetings?</overskrift>
+		<option score="0">No experience</option>
+		<option score="1">A little experience</option>
+		<option score="2">A lot of experience</option>
+	</opgave>
+	<opgave id="22">
+		<overskrift>Do you name or organise files and documents so that they are easy to find again?</overskrift>
+		<option score="0">Never</option>
+		<option score="1">Occasionally</option>
+		<option score="2">Always</option>
+	</opgave>
+	<opgave id="23">
+		<overskrift>Do you use government services online (e.g. Altinn or NAV)?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, but I need help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="24">
+		<overskrift>What experience do you have of streaming services for watching TV or listening to music (e.g. Netflix or Spotify)?</overskrift>
+		<option score="0">No experience</option>
+		<option score="1">A little experience</option>
+		<option score="2">A lot of experience</option>
+	</opgave>
+	<opgave id="25">
+		<overskrift>Can you navigate online and find the information you need?</overskrift>
+		<option score="0">No, I think it is difficult</option>
+		<option score="1">Yes, but it can take a long time</option>
+		<option score="2">Yes, I can find information easily</option>
+	</opgave>
+	<opgave id="26">
+		<overskrift>What experience do you have of installing and uninstalling programs on a computer?</overskrift>
+		<option score="0">No experience</option>
+		<option score="1">A little experience</option>
+		<option score="2">A lot of experience</option>
+	</opgave>
+	<opgave id="27">
+		<overskrift>Can you check how much mobile data you are using?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+		</opgave>
+	<opgave id="28">
+		<overskrift>Can you restore data from a backup copy on a computer or smart phone?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Not sure</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="29">
+		<overskrift>Are you cautious about opening links which you are sent in emails from unknown senders?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="30">
+		<overskrift>Do you change the settings on your mobile phone and/or computer (e.g. language, sound and display)?</overskrift>
+		<option score="0">I do not change settings</option>
+		<option score="1">I make some simple changes</option>
+		<option score="2">I customise settings actively</option>
+	</opgave>
+	<opgave id="31">
+		<overskrift>Would you be able to post an advert online using an app or online service?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="32">
+		<overskrift>Do you use digital payment systems on a smart phone (e.g. Vipps or PayPal)?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="33">
+		<overskrift>Do you generally abide by copyright rules when you use content (e.g. text, video or images) that you find online?</overskrift>
+		<option score="0">Never</option>
+		<option score="1">Occasionally</option>
+		<option score="2">Always</option>
+	</opgave>
+	<opgave id="34">
+		<overskrift>What experience do you have of writing posts online (e.g. Facebook or comments?</overskrift>
+		<option score="0">I have no experience</option>
+		<option score="1">I only post text</option>
+		<option score="2">I post text and images</option>
+	</opgave>
+	<opgave id="35">
+		<overskrift>Are you aware of the risk of Internet fraud?</overskrift>
+		<option score="0">No, I never think about it</option>
+		<option score="1">Yes, I think about it a little</option>
+		<option score="2">Yes, I am very conscious about it</option>
+	</opgave>
+</kntest>

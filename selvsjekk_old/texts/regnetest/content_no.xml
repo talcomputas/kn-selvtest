@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kntest timer="600000" version="regnetest">
+	<opgave id="1">
+		<image>Busstabell.png</image>
+		<overskrift>Se på denne tabellen. Du har tenkt å ta bussen fra Hvaler til Oslo.
+
+Hvor ofte går bussen?</overskrift>
+		<option score="0">Hvert 15. minutt </option>
+		<option score="0">Hver halve time </option>
+		<option score="0">Hver time </option>
+		<option score="1">Hver 2. time </option>
+		</opgave>
+	<opgave id="2">
+		<image>Skala_tall2.png</image>
+		<overskrift>Hvilket tall peker pilen på? </overskrift>
+		<slider from="100" to="150" correctAnswer="130" score="1"></slider>
+		</opgave>
+	<opgave id="3">
+		<overskrift>Oles bil bruker gjennomsnittlig 8 liter bensin per 100 km. 
+		
+Hvor mange liter blir det på 350 km?</overskrift>
+		<slider from="0" to="50" correctAnswer="28" score="1"></slider>
+		<calculator />
+	</opgave>
+	<opgave id="4">
+		<image>Tonne.png</image>
+		<overskrift>I ei tønne er det plass til 120 liter. Tønna er bare ¾ full.
+
+Hvor mange liter er det i tønna?</overskrift>
+		<slider from="50" to="120" correctAnswer="90" score="1"></slider>
+		</opgave>
+	<opgave id="5">
+		<overskrift>Velg riktig svar:
+112112 : 112 =    </overskrift>
+		<option score="0">11</option>
+		<option score="0">101</option>
+		<option score="0">111</option>
+		<option score="1">1001</option>
+	</opgave>
+	<opgave id="6">
+		<image>Størrelse.png</image>
+		<overskrift>Anita er 1,60 m høy.
+
+Hvor høy er Wilhelm?</overskrift>
+		<option score="0">0,80 m </option>
+		<option score="0">1,00 m </option>
+		<option score="1">1,20 m </option>
+		<option score="0">1,40 m </option>
+		</opgave>
+	<opgave id="7">
+		<overskrift>En kokk har laget åtte liter suppe. Han heller
+¼ liter suppe i hver bolle.
+		
+Hvor mange suppeboller kan han fylle? </overskrift>
+		<slider from="8" to="50" correctAnswer="32" score="1"></slider>
+		</opgave>
+	<opgave id="8">
+		<overskrift>Velg riktig svar: 
+25 • 72 =   </overskrift>
+		<option score="0">180</option>
+		<option score="1">1 800</option>
+		<option score="0">18 000</option>
+	</opgave>
+	<opgave id="9">
+		<overskrift>1/8 av 2650 kr er det samme som </overskrift>
+		<option score="0">0,08 • 2650 kr</option>
+		<option score="1">0,125 • 2650 kr</option>
+		<option score="0">0,8 • 2650 kr</option>
+		<option score="0">1,025 • 2650 kr</option>
+	</opgave>
+	<opgave id="10">
+		<overskrift> Alle kursdeltakerne i en gruppe ble spurt om alderen sin. Resultatet ble slik:
+
+1 person er 28 år
+
+2 personer er 30 år
+
+1 person er 40 år
+
+Hva var gjennomsnittsalderen i gruppa?
+	</overskrift>
+		<slider from="20" to="50" correctAnswer="32" score="1"></slider>
+		<calculator />
+		</opgave>
+	<opgave id="11">
+		<image source="Kilde: Statistisk sentralbyrå">Avfall.png</image>
+		<overskrift>Se på diagrammet. I hvilket år var mengden av husholdningsavfall per innbygger 430 kg? </overskrift>
+		<option score="0">2011 </option>
+		<option score="1">2012 </option>
+		<option score="0">2016 </option>
+	</opgave>
+	<opgave id="12">
+		<overskrift>Det tar én og en halv time å steke en fruktkake. Kaken settes i ovnen kl. 14.15.
+Når skal kaken tas ut av ovnen? </overskrift>
+		<option score="0">14.45</option>
+		<option score="0">15.00</option>
+		<option score="0">15.15</option>
+		<option score="1">15.45</option>	
+	</opgave>	
+	<opgave id="13">
+		<overskrift>Gunnar og Ahmed skal male huset utvendig. De trenger syv malingsspann. Hvert spann koster 250 kr.
+
+De betaler kontant med to '1000-kronesedler.'
+
+Hvor mye får de igjen? </overskrift>
+		<slider from="200" to="300" correctAnswer="250" score="1"></slider>
+		<calculator />
+	</opgave>	
+		<opgave id="14">
+		<overskrift>6 m  og 8 cm er det samme som </overskrift>
+		<option score="0">68 cm</option>
+		<option score="1">608 cm</option>
+		<option score="0">6008 cm</option>
+	</opgave>
+	<opgave id="15">
+		<overskrift>Ada har en reiseforsikring som koster 
+1200 kr per år. Forsikringen settes opp med 5 %.
+
+Hvor mye koster reiseforsikringen etter prisøkningen? </overskrift>
+		<slider from="1200" to="1300" correctAnswer="1260" score="1"></slider>
+		<calculator />
+	</opgave>
+	<opgave id="16">
+		<image>Skala_1.png</image>
+		<overskrift>Hvilken verdi peker pilen på?</overskrift>
+		<option score="0">7,307 </option>
+		<option score="1">7,37 </option>
+		<option score="0">7,52 </option>
+		<option score="0">7,7 </option>
+	</opgave>	
+		<opgave id="17">
+	<overskrift>Velg riktig svar:
+0,03 • 1000 = </overskrift> 
+		<option score="1">30 </option>
+		<option score="0">300 </option>
+		<option score="0">3000 </option>
+ 	</opgave>
+	<opgave id="18">
+		<overskrift>Thomas jobber deltid på en fabrikk. På fabrikken tjener han '187 791,55 kroner.' Han går også med avisen og tjener '20 400 kroner.'
+Kona hans jobber deltid som renholder. Hun tjener '59 233 kroner'.
+
+Gjør overslag. Omtrent hvor mye tjener Thomas og kona til sammen?</overskrift>
+		<option score="0">240 000 </option>
+		<option score="1">270 000 </option>
+		<option score="0">300 000 </option>
+	</opgave>
+	<opgave id="19">
+		<overskrift>Jan tjener 1200 kr per 2 ½ time. Nora tjener 2100 kr på fire timer.
+		
+Hvem tjener mest per time?</overskrift>
+		<option score="0">Jan tjener mest per time. </option>
+		<option score="1">Nora tjener mest per time. </option>
+		<option score="0">Begge tjener like mye. </option>
+		<calculator />
+		</opgave>
+	<opgave id="20">
+		<overskrift>Mario abonnerer på en avis og et sportsblad. Avisen koster 900 kr for tre måneder. Sportsbladet koster 300 kr per halvår.
+		
+Hva koster de to abonnementene til sammen per måned?</overskrift>
+		<option score="0">300</option>
+		<option score="1">350</option>
+		<option score="0">400</option>
+		<option score="0">450</option>
+		<calculator />
+		</opgave>	
+	<opgave id="21">
+		<image source="Kilde: Medietilsynet 2018">Dataspill.png</image>
+		<overskrift>I hvilken alder spiller dobbelt så mange gutter som jenter dataspill? </overskrift>
+		<option score="0">10 år </option>
+		<option score="0">13 år </option>
+		<option score="1">16 år </option>
+		<option score="0">18 år </option>
+		</opgave>
+	<opgave id="22">
+		<overskrift>I en melkekartong er det 1,5 liter melk. Det er det samme som</overskrift>
+		<option score="0">0,15 dl melk </option>
+		<option score="0">5 dl melk </option>
+		<option score="1">15 dl melk </option>
+		<option score="0">150 dl melk </option>
+		</opgave>
+	<opgave id="23">
+		<overskrift>200 % av 500 er det samme som </overskrift>
+		<option score="0">500:2 </option>
+		<option score="0">100 % av 200 </option>
+		<option score="0">500 - 200 </option>
+		<option score="1">2 • 500 </option>
+		</opgave>
+	<opgave id="24">
+		<overskrift>Are kjøpte en lue på salg. Han fikk 40 % avslag og betalte 90 kr.
+		
+Hva kostet lua før prisen ble satt ned? </overskrift>
+		<option score="0">90</option>
+		<option score="0">130 </option>
+		<option score="1">150 </option>
+		<option score="0">180 </option>
+		<calculator />
+		</opgave>
+	<opgave id="25">
+		<overskrift>Velg riktig svar: 
+4,16 : 4 =   </overskrift>
+		<option score="1">1,04</option>
+		<option score="0">1,25</option>
+		<option score="0">1,8</option>
+	</opgave>
+	<opgave id="26">
+		<overskrift>Are, Bosse og Chris fordeler 210 kroner i forholdet 2 : 3 : 5.
+		
+Hvor mange kroner får Bosse? </overskrift>
+		<slider from="1" to="150" correctAnswer="63" score="1"></slider>
+		<calculator />
+		</opgave>
+	<opgave id="27">
+		<image>Temperatur.png</image>
+		<overskrift>Se på diagrammet.
+Hva var makstemperaturen i perioden?  </overskrift>
+		<slider from="18" to="23" correctAnswer="22" score="1"></slider>
+		</opgave>
+	<opgave id="28">
+		<image>Terasse.png</image>
+		<overskrift>Tegningen viser en hage med gress og terrasse.
+		
+Hvor stort er arealet som er dekket av gress? </overskrift>
+		<slider from="20" to="50" correctAnswer="44" score="1"></slider>
+		<calculator />
+		</opgave>
+	<opgave id="29">
+		<overskrift>En kilo torsk koster 160,00 kr.
+		
+Hvor mye koster 1,25 kg torsk? </overskrift>
+		<slider from="160" to="240" correctAnswer="200" score="1"></slider>
+		<calculator />
+		</opgave>
+	<opgave id="30">
+		<image source="Kilde: Statistisk sentralbyrå">Radio.png</image>
+		<overskrift>Hva ble det lyttet mer til i 2016 enn i 2014?</overskrift>
+		<option score="1">P4-gruppen</option>
+		<option score="0">Bauer Media</option>
+		<option score="0">NRK P1</option>
+		<option score="0">NRK P3</option>
+		<option score="0">Radio Norge</option>
+	</opgave>
+	</kntest>

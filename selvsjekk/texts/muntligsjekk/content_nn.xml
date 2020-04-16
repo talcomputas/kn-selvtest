@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kntest timer="600000" version="muntligsjekken">
+	<opgave id="1">
+		<overskrift>Kan du følgje ein enkel arbeidsinstruks som blir gjeven munnleg?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ikkje alltid</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="2">
+		<overskrift>Har du erfaring med å forklare når ein kollega ber om hjelp til å løyse ei arbeidsoppgåve?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Litt</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="3">
+		<overskrift>Deltek du aktivt i pauseprat?</overskrift>
+		<option score="0">Sjeldan</option>
+		<option score="1">Det kjem an på temaet</option>
+		<option score="2">Ja, som regel</option>		
+	</opgave>
+	<opgave id="4">
+		<overskrift>Får du med deg hovudinnhaldet i eit møte?</overskrift>
+		<option score="0">Sjeldan</option>
+		<option score="1">Ikkje alltid</option>
+		<option score="2">Ja, som regel</option>
+	</opgave>
+	<opgave id="5">
+		<overskrift>Brukar du å be andre personar om å gjenta dersom du ikkje forstår?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, dersom eg kjenner personen godt</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="6">
+		<overskrift>Forstår du alltid hovudinnhaldet i ein reportasje på TV?</overskrift>
+		<option score="0">Eg tykkjer ofte det er vanskeleg</option>
+		<option score="1">Ja, dersom eg kjenner temaet</option>
+		<option score="2">Ja, alltid</option>
+	</opgave>
+	<opgave id="7">
+		<overskrift>Kan du vidareformidle relevant informasjon frå møte?</overskrift>
+		<option score="0">Sjeldan</option>
+		<option score="1">Ikkje alltid</option>
+		<option score="2">Ja, som regel</option>
+	</opgave>
+	<opgave id="8">
+		<overskrift>Forstår du instruksjonar over telefon frå kundeservice?</overskrift>
+		<option score="0">Sjeldan</option>
+		<option score="1">Ikkje alltid</option>
+		<option score="2">Ja, som regel</option>		
+	</opgave>
+	<opgave id="9">
+		<overskrift>Stiller du oppfølgingsspørsmål til seljarar dersom det trengst?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ikkje alltid</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="10">
+		<overskrift>Kan du oppfatte meiningar, forventingar og haldningar som ikkje blir uttrykte direkte?</overskrift>
+		<option score="0">Nei, det er vanskeleg</option>
+		<option score="1">Ja, med folk eg kjenner</option>
+		<option score="2">Ja, alltid</option>
+	</opgave>
+		<opgave id="11">
+		<overskrift>Tek du imot kritiske kommentarar om din eigen arbeidsinnsats på ein profesjonell måte?</overskrift>
+		<option score="0">Nei, det er vanskeleg</option>
+		<option score="1">Det tykkjer eg er vanskeleg</option>
+		<option score="2">Ja, som regel</option>
+	</opgave>
+		<opgave id="12">
+		<overskrift>Kan du klage på ei vare i ein butikk på ein konstruktiv måte?</overskrift>
+		<option score="0">Nei, det er for vanskeleg</option>
+		<option score="1">Ikkje alltid</option>
+		<option score="2">Ja, vanlegvis</option>
+	</opgave>
+	<opgave id="13">
+		<overskrift>Kan du fremje dine eigne interesser på møte på jobben eller på fritida?</overskrift>
+		<option score="0">Nei, det er for vanskeleg</option>
+		<option score="1">Ikkje alltid</option>
+		<option score="2">Ja, vanlegvis</option>
+	</opgave>
+	<opgave id="14">
+		<overskrift>Kan du gje ei kort skildring av hendingar knytte til arbeidet over telefon?</overskrift>
+		<option score="0">Nei, det er for vanskeleg på telefonen</option>
+		<option score="1">Ikkje alltid</option>
+		<option score="2">Ja, vanlegvis</option>
+	</opgave>
+	<opgave id="15">
+		<overskrift>Kan du gjere ei avtale med ein handverkar om ein naudsynt reparasjon i bustaden din?</overskrift>
+		<option score="0">Nei, det er for vanskeleg</option>
+		<option score="1">Ikkje alltid</option>
+		<option score="2">Ja, vanlegvis</option>
+	</opgave>
+	<opgave id="16">
+		<overskrift>Brukar du å be om hjelp til å løyse oppgåver som du tykkjer er vanskelege på jobben?</overskrift>
+		<option score="0">Nei, det er for vanskeleg</option>
+		<option score="1">Ikkje alltid</option>
+		<option score="2">Ja, vanlegvis</option>
+	</opgave>
+	<opgave id="17">
+		<overskrift>Kan du tilpasse din eigen språkbruk i samtalar med forskjellige folk i ulike situasjonar?</overskrift>
+		<option score="0">Nei, det er for vanskeleg</option>
+		<option score="1">Nokre gonger</option>
+		<option score="2">Ja, vanlegvis</option>
+	</opgave>
+	<opgave id="18">
+		<overskrift>Har du erfaring med å gje både positive og negative tilbakemeldingar til den næraste leiaren din?</overskrift>
+		<option score="0">Inga erfaring</option>
+		<option score="1">Berre positive</option>
+		<option score="2">Ja, begge delar</option>	
+	</opgave>
+	<opgave id="19">
+		<overskrift>Kan du halde ein kort tale framfor ei gruppe menneske?</overskrift>
+		<option score="0">Nei, det er for vanskeleg</option>
+		<option score="1">Ikkje alltid</option>
+		<option score="2">Ja, vanlegvis</option>
+	</opgave>
+	<opgave id="20">
+		<overskrift>I ein samtale med leiaren din, kan du forklare kva du treng opplæring i?</overskrift>
+		<option score="0">Nei, det er for vanskeleg</option>
+		<option score="1">Nokre gonger</option>
+		<option score="2">Ja, vanlegvis</option>
+	</opgave>
+	<opgave id="21">
+		<overskrift>Kan du på ein konstruktiv måte grunngje kvifor du er usamd i ei avgjerd?</overskrift>
+		<option score="0">Nei, det er for vanskeleg</option>
+		<option score="1">Nokre gonger</option>
+		<option score="2">Ja, vanlegvis</option>
+	</opgave>
+	<opgave id="22">
+		<overskrift>Kan du snakke med folk på ein høfleg måte sjølv om du er usamd i synspunkta deira?</overskrift>
+		<option score="0">Nei, det er for vanskeleg</option>
+		<option score="1">Nokre gonger</option>
+		<option score="2">Ja, vanlegvis</option>
+	</opgave>
+	<opgave id="23">
+		<overskrift>Er du van med å diskutere for å finne kompromiss?</overskrift>
+		<option score="0">Nei, det er for vanskeleg</option>
+		<option score="1">Nokre gonger</option>
+		<option score="2">Ja, vanlegvis</option>
+	</opgave>
+	<opgave id="24">
+		<overskrift>Kan du beklage ein feil du har gjort?</overskrift>
+		<option score="0">Nei, det er for vanskeleg</option>
+		<option score="1">Nokre gonger</option>
+		<option score="2">Ja, vanlegvis</option>
+	</opgave>
+	<opgave id="25">
+		<overskrift>Har du erfaring med å gje munnleg varsel om avvik eller brot på ein rutine?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="26">
+		<overskrift>Kan du halde eit førebudd munnleg innlegg på eit møte?</overskrift>
+		<option score="0">Nei, det er for vanskeleg</option>
+		<option score="1">Nokre gonger</option>
+		<option score="2">Ja, vanlegvis</option>
+	</opgave>
+	<opgave id="27">
+		<overskrift>Kan du starte ein samtale om vêret/naboskap/forseinking?</overskrift>
+		<option score="0">Nei, det er for vanskeleg</option>
+		<option score="1">Nokre gonger</option>
+		<option score="2">Ja, vanlegvis</option>
+	</opgave>
+	<opgave id="28">
+		<overskrift>Kan du halde i gang ein samtale i ein daglegdags situasjon?</overskrift>
+		<option score="0">Nei, det er for vanskeleg</option>
+		<option score="1">Det kjem an på kven eg snakkar med</option>
+		<option score="2">Ja, vanlegvis</option>
+	</opgave>
+	<opgave id="29">
+		<overskrift>Er du medviten om bruk av kroppsspråk i ein samtale?</overskrift>
+		<option score="0">Nei, det er for vanskeleg</option>
+		<option score="1">Nokre gonger</option>
+		<option score="2">Ja, vanlegvis</option></opgave>
+	<opgave id="30">
+		<overskrift>Har du erfaring med å forklare dersom nokon ikkje skjønar det du seier?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, i kjende situasjonar</option>
+		<option score="2">Ja</option>
+	</opgave>
+</kntest>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kntest timer="600000" version="lesingskrivesjek">
+	<opgave id="1">
+	<overskrift>Can you understand simple food recipes?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>	
+	</opgave>
+	<opgave id="2">
+	<overskrift>Can you understand posters on a noticeboard?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>	
+	</opgave>
+	<opgave id="3">
+	<overskrift>Can you understand adverts in the newspapers or on the Internet?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>		
+	</opgave>
+	<opgave id="4">
+		<overskrift>Can you read and understand instructions on a ticket machine?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="5">
+		<overskrift>Can you read and understand information on signs, e.g. road signs?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="6">
+		<overskrift>Can you write a reply to an invitation?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="7">
+		<overskrift>Can you jot down a simple message?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="8">
+		<overskrift>Can you write simple shopping lists?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="9">
+		<overskrift>Can you write a short text about yourself?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>	
+	</opgave>
+	<opgave id="10">
+		<overskrift>Can you figure out your working hours on a rota/duty roster?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="11">
+		<overskrift>Can you read and understand the minutes of a meeting?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="12">
+		<overskrift>Can you read reviews of e.g. films or concerts?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="13">
+		<overskrift>Can you understand newsletters from an authority like a school or municipality?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="14">
+		<overskrift>Can you read an invitation to a meeting and find out where and when you should attend?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="15">
+		<overskrift>Can you read and understand specialist terms relating to your work or hobby?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="16">
+		<overskrift>Can you use the table of contents to navigate through a book?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="17">
+		<overskrift>Do you vary the way you read, e.g. speed and thoroughness?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="18">
+		<overskrift>Can you write and explain a procedure, e.g. a recipe?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="19">
+		<overskrift>Can you enter your personal details onto a form?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="20">
+		<overskrift>Can you write a short post on social media?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="21">
+		<overskrift>How much experience do you have of reading newspapers or magazines?</overskrift>
+		<option score="0">No experience</option>
+		<option score="1">Some experience</option>
+		<option score="2">A lot of experience</option>	
+	</opgave>
+	<opgave id="22">
+		<overskrift>Can you write an account of something like an accident or nonconformity at work?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="23">
+		<overskrift>Can you write a simple CV?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="24">
+		<overskrift>Can you write an email in a work context?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+		</opgave>
+	<opgave id="25">
+		<overskrift>Can you read and understand rules, such as the rules of a housing association or rules about procedures at work?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="26">
+		<overskrift>Can you help students at lower secondary level with their reading homework?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="27">
+		<overskrift>Can you read and find your way around online newspapers?</overskrift>
+		<option score="0">No</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="28">
+		<overskrift>Can you read information about various products in order to decide which one to buy?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="29">
+		<overskrift>Can you read and understand the terms and conditions that apply to a product or service you have bought?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>		
+	</opgave>
+	<opgave id="30">
+		<overskrift>Can you read the patient information leaflet for a medicine?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="31">
+		<overskrift>Can you read and understand a letter from the authorities, e.g. NAV or the municipality?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="32">
+		<overskrift>Can you read and evaluate contracts, e.g. for work or accommodation?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="33">
+		<overskrift>Can you read and understand texts which contain pictures, graphs and tables?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="34">
+		<overskrift>How much experience do you have of reading books?</overskrift>
+		<option score="0">No experience</option>
+		<option score="1">Some experience</option>
+		<option score="2">A lot of experience</option>
+	</opgave>
+	<opgave id="35">
+		<overskrift>Can you write a simple report about a job you have done?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="36">
+		<overskrift>Can you write the minutes of a meeting?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="37">
+		<overskrift>Can you write a job application in response to a job advert?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="38">
+		<overskrift>Can you write a justified complaint about a product or service?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="39">
+		<overskrift>Can you write a summary of a specialised text?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>
+	<opgave id="40">
+		<overskrift>Can you present your point of view in writing, e.g. in a letter to the editor or a blog?</overskrift>
+		<option score="0">No</option>
+		<option score="1">Yes, with a little help</option>
+		<option score="2">Yes</option>
+	</opgave>	
+</kntest>
