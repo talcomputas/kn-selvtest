@@ -99,9 +99,6 @@ $(document).ready(function () {
   $(".ribbon").addClass(icon);
   $(".introduction").addClass(illustration);
 
-  showPopupQuestback();
-
-  // return;
   $.ajax({
     type: "GET",
     url: submitString,
@@ -902,5 +899,3 @@ function checkCompletion() {
     $(".examination .proceed").prop("disabled", true);
   }
 }
-
-showResult();
