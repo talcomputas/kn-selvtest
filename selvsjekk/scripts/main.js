@@ -822,22 +822,41 @@ function showResult() {
 }
 
 function showPopupQuestback() {
-  questback.popup.create("https://response.questback.com/vox/" + qbId, {
-    title: "Vinn et gavekort",
-    text:
-      "Din tilbakemelding er viktig for at produktene våre skal bli så gode som mulig. Vil du hjelpe oss med å forbedre denne testen? Du kan være med i trekningen av tre gavekort på 500 kroner. Det er mulig å gå fram og tilbake i undersøkelsen, og det tar cirka to minutter å svare på den.",
-    delay: 2,
-    buttons: [
-      {
-        type: "participate",
-        text: "Ja, jeg vil vinne",
-      },
-      {
-        type: "decline",
-        text: "Nei takk",
-      },
-    ],
-  });
+  if (lang == "nn") {
+    questback.popup.create("https://response.questback.com/vox/" + qbId, {
+      title: "Vinn et gavekort",
+      text:
+        "Tilbakemeldinga di er viktig for at produkta våre skal bli så gode som mogleg. Vil du hjelpe oss med å gjere Datasjekken betre? Du kan vere med i trekkinga av tre gåvekort på 500 kroner i juni 2020. Det er mogleg å gå fram og tilbake i undersøkinga, og det tek cirka to minutt å svare på ho.",
+      delay: 2,
+      buttons: [
+        {
+          type: "participate",
+          text: "Ja, jeg vil vinne",
+        },
+        {
+          type: "decline",
+          text: "Nei takk",
+        },
+      ],
+    });
+  } else {
+    questback.popup.create("https://response.questback.com/vox/" + qbId, {
+      title: "Vinn et gavekort",
+      text:
+        "Din tilbakemelding er viktig for at produktene våre skal bli så gode som mulig. Vil du hjelpe oss med å forbedre denne testen? Du kan være med i trekningen av tre gavekort på 500 kroner. Det er mulig å gå fram og tilbake i undersøkelsen, og det tar cirka to minutter å svare på den.",
+      delay: 2,
+      buttons: [
+        {
+          type: "participate",
+          text: "Ja, jeg vil vinne",
+        },
+        {
+          type: "decline",
+          text: "Nei takk",
+        },
+      ],
+    });
+  }
 }
 
 function scaleScore() {

@@ -7,10 +7,9 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class ContentService {
   private readonly changes$ = new BehaviorSubject<void>(null);
   private readonly contentMap = new Map<string, object>();
-  private ctx: string;
+  private ctx: string; // nn or nb
 
-  constructor(private parser: ContentParser) {
-  }
+  constructor(private parser: ContentParser) {}
 
   get changes(): Observable<void> {
     return this.changes$.asObservable();
