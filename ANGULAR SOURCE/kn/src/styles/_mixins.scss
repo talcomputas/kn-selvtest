@@ -1,0 +1,72 @@
+@import 'variables';
+
+@mixin breakpoint($size) {
+  @media only screen and (max-width: $size + px) {
+    @content;
+  }
+}
+
+@mixin breakpointFrom($size) {
+  @media only screen and (min-width: $size + px) {
+    @content;
+  }
+}
+
+@mixin directionButton($direction, $icon-indention) {
+  @if ($direction == 'next') {
+    .svg-icon {
+      margin-left: $icon-indention;
+    }
+  } @else if ($direction == 'prev') {
+    .svg-icon {
+      margin-right: $icon-indention;
+    }
+  }
+}
+
+@mixin buttonColor($background-color, $color) {
+  background-color: $background-color;
+  color: $color;
+}
+
+@mixin strokedButtonColor($color) {
+  border-color: $color;
+  color: $color;
+}
+
+@mixin dialogItem($max-width, $backgroundColor, $borderColor, $borderWidth) {
+  border-radius: 4px;
+  max-width: $max-width;
+  background: $backgroundColor;
+  border: $borderWidth solid $borderColor;
+  padding: 10px 15px;
+}
+
+@mixin triangle($width, $height, $left, $color) {
+  content: '';
+  position: absolute;
+  bottom: -$height;
+  left: $left;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 $width $height 0;
+  border-color: transparent $color transparent transparent;
+}
+
+@mixin bubble($max-width, $backgroundColor, $borderColor, $borderWidth) {
+  $triangle-width: 20px;
+  $triangle-height: 15px;
+  $triangle-left: 20px;
+
+  position: relative;
+  @include dialogItem($max-width, $backgroundColor, $borderColor, $borderWidth);
+
+  &:before {
+    @include triangle($triangle-width, $triangle-height, $triangle-left, $borderColor)
+  }
+
+  &:after {
+    @include triangle(($triangle-width - $borderWidth * 2), ($triangle-height - $borderWidth * 2), $triangle-left + $borderWidth, $backgroundColor)
+  }
+}

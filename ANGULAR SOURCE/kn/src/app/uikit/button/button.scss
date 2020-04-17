@@ -1,0 +1,126 @@
+@import 'buttons';
+
+.button {
+  @extend %button;
+
+  &.primary {
+    @extend %button--primary;
+
+    &.cdk-focused {
+      @extend %button--primary-focused;
+    }
+  }
+
+  &.secondary {
+    @extend %button--secondary;
+
+    &.cdk-focused {
+      @extend %button--secondary-focused;
+    }
+  }
+
+  &.accent {
+    @extend %button--accent;
+
+    &.cdk-focused {
+      @extend %button--accent-focused;
+    }
+  }
+
+  .warn {
+    @extend %button--warn;
+
+    &.cdk-focused {
+      @extend %button--warn-focused;
+    }
+  }
+
+
+  &.button-disabled {
+    @extend %disabled-button;
+  }
+}
+
+.stroked-button {
+  @extend %stroked-button;
+}
+
+.raised-button {
+  @extend %raised-button;
+
+  &.primary {
+    @extend %raised-button--primary;
+
+    &.cdk-focused {
+      @extend %button--primary-focused;
+    }
+  }
+
+  &.secondary {
+    @extend %raised-button--secondary;
+
+    &.cdk-focused {
+      @extend %button--secondary-focused;
+    }
+  }
+
+  &.accent {
+    @extend %raised-button--accent;
+
+    &.cdk-focused {
+      @extend %button--accent-focused;
+    }
+  }
+
+  .warn {
+    @extend %raised-button--warn;
+
+    &.cdk-focused {
+      @extend %button--warn-focused;
+    }
+  }
+}
+
+.icon-button {
+  @extend %icon-button;
+
+  &.primary {
+    @extend %icon-button--primary;
+    background-color: transparent;
+
+    &.cdk-focused {
+      @extend %icon-button--primary-focused;
+      background-color: transparent;
+    }
+  }
+
+  &.secondary {
+    @extend %icon-button--secondary;
+    background-color: transparent;
+
+    &.cdk-focused {
+      @extend %icon-button--secondary-focused;
+      background-color: transparent;
+    }
+  }
+
+  &.accent {
+    @extend %icon-button--accent;
+    background-color: transparent;
+
+    &.cdk-focused {
+      @extend %icon-button--accent-focused;
+      background-color: transparent;
+    }
+  }
+
+  &.warn {
+    @extend %icon-button--warn;
+    background-color: transparent;
+
+    &.cdk-focused {
+      @extend %icon-button--warn-focused;
+      background-color: transparent;
+    }
+  }
+}

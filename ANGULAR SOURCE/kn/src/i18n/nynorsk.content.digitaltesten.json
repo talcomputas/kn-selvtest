@@ -1,0 +1,1806 @@
+{
+  "intro": {
+    "label": "Test dugleiken din",
+    "title": "Digitaltesten",
+    "image": "data-check.svg",
+    "text": "<p>Digitaltesten består av 30-32 oppgåver og inkluderer oppgåvetypar som fleirvalsoppgåver, dra og slepp, sorteringsoppgåver og dialogar. Det tek om lag 10–15 minutt å gjennomføre testen.</p><p>Testen er sett saman av to delar, ein innleiande del og ein hovuddel. Resultatet ditt på den innleiande delen avgjer om du får ein enkel eller vanskelegare hovuddel. Sluttresultatet viser det samla nivået ditt ut frå læringsmåla for grunnleggjande dugleikar.</p> <p>Digitaltesten er på eit overordna nivå, og temaa for testen er:</p><ul><li>Inn- og utlogging av offentlege tenester</li><li>Å bruke søkjemotorar for å finne informasjon, produkt og tenester</li><li>Datatryggleik og nettvett</li><li>Digital kommunikasjon</li><li>Medium og underhaldning</li><li>Sosiale medium</li></ul>"
+  },
+  "result": {
+    "image": "data-check.svg",
+    "levels": {
+      "1": {
+        "id": "1",
+        "title": "Ut frå svara dine er du på nivå 1 av 3 i denne testen.",
+        "text": "Digital dugleik på nivå 1 inneber at ein kan bruke enkle digitale verktøy og orientere seg i digital informasjon når det er naudsynt.",
+        "minScore": 0
+      },
+      "2": {
+        "id": "2",
+        "title": "Ut frå svara dine er du på nivå 2 av 3 i denne testen.",
+        "text": "Digital dugleik på nivå 2 inneber at ein kan orientere seg aktivt i digital informasjon og bruke informasjonen i nye samanhengar og situasjonar. På dette nivået kjenner ein til og brukar digitale verktøy og tenester.",
+        "minScore": 12
+      },
+      "3": {
+        "id": "3",
+        "title": "Ut frå svara dine er du på nivå 3 av 3 i denne testen.",
+        "text": "Digital dugleik på nivå 3 inneber å vere ein reflektert brukar av samansette digitale verktøy og tenester. Fordi utviklinga går så fort innanfor digital dugleik, er det likevel slik at vi må rekne med å lære oss å bruke nye verktøy og tenester.",
+        "minScore": 24
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "questions": [
+        {
+          "id": 1,
+          "type": "single",
+          "text": "Kvar er det <b>IKKJE</b> mogleg å kjøpe dataspel?",
+          "image": "8M2yA4GoH0iDztqRhbR37Q.png",
+          "answer": {
+            "value": 4,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "På internett"
+            },
+            {
+              "id": 2,
+              "text": "I elektronikkbutikkar"
+            },
+            {
+              "id": 3,
+              "text": "På App Store/Google Play"
+            },
+            {
+              "id": 4,
+              "text": "På YouTube"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "type": "single",
+          "text": "Korleis vil du raskast søkje etter ein bestemd butikk?",
+          "image": "OaKxjogjUm6I56Jih5g.png",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Bruke søkjefeltet på nettsida"
+            },
+            {
+              "id": 2,
+              "text": "Skrive i adressefeltet"
+            },
+            {
+              "id": 3,
+              "text": "Gå til Google.no"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "type": "hotspot",
+          "text": "Kvar trykkjer du for å sjå videoen i fullskjerm?",
+          "image": "z7WfmFaSAEa3mvLpD2GdrA.png",
+          "answer": {
+            "value": 7,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "x": 4.78,
+              "y": 80.3,
+              "width": 8.5,
+              "height": 15
+            },
+            {
+              "id": 2,
+              "x": 15,
+              "y": 80.3,
+              "width": 8.5,
+              "height": 15
+            },
+            {
+              "id": 3,
+              "x": 25,
+              "y": 80.3,
+              "width": 8.5,
+              "height": 15
+            },
+            {
+              "id": 4,
+              "x": 56,
+              "y": 80.3,
+              "width": 8.5,
+              "height": 15
+            },
+            {
+              "id": 5,
+              "x": 66,
+              "y": 80.3,
+              "width": 8.5,
+              "height": 15
+            },
+            {
+              "id": 6,
+              "x": 76.18,
+              "y": 80.3,
+              "width": 8.5,
+              "height": 15
+            },
+            {
+              "id": 7,
+              "x": 86.2,
+              "y": 80.3,
+              "width": 8.5,
+              "height": 15
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "type": "single",
+          "text": "Det står «Kanskje desse er interessante?» på Facebook. Betyr det at vener har tilrådd innlegget?",
+          "image": "UmPZJ7Jow02YxAkY0hNsQ.png",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ja"
+            },
+            {
+              "id": 2,
+              "text": "Nei"
+            },
+            {
+              "id": 3,
+              "text": "Ikkje alltid"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "type": "single",
+          "text": "Kva for eit program er minst eigna for å videochatte?",
+          "image": "tRxH7Lp5X0qoMOHoA2FOHA.png",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "image": "youtube-logo-png-hd-1.png"
+            },
+            {
+              "id": 2,
+              "image": "As6ZtHJ8FUqBa8S7QAw9Mg.png"
+            },
+            {
+              "id": 3,
+              "image": "q4okYgtKQEydNSHomjHMcA.png"
+            },
+            {
+              "id": 4,
+              "image": "14ZdCMiTrEmSFTqSMrcw.png"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "type": "hotspot",
+          "text": "Trykk på e-posten som har eit vedlegg.",
+          "image": "Y74JJ4Ra9U6lv20BqZZiPg.png",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "x": 0,
+              "y": 9.5,
+              "width": 100,
+              "height": 18
+            },
+            {
+              "id": 2,
+              "x": 0,
+              "y": 27.5,
+              "width": 100,
+              "height": 18
+            },
+            {
+              "id": 3,
+              "x": 0,
+              "y": 45.5,
+              "width": 100,
+              "height": 18
+            },
+            {
+              "id": 4,
+              "x": 0,
+              "y": 63.9,
+              "width": 100,
+              "height": 18
+            },
+            {
+              "id": 5,
+              "x": 0,
+              "y": 81.8,
+              "width": 100,
+              "height": 18
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "type": "ranking",
+          "text": "Dra og slepp passorda i rett rekkjefølgje. Set det sikraste passordet øvst.",
+          "image": "7nwRTybRAEy2bzXj4kT4g.png",
+          "options": [
+            {
+              "id": 1,
+              "text": "hemmelig123"
+            },
+            {
+              "id": 2,
+              "text": "Kebab1Lompe2Med3Grønnsaker4"
+            },
+            {
+              "id": 3,
+              "text": "passord"
+            },
+            {
+              "id": 4,
+              "text": "BatWoman62"
+            }
+          ],
+          "answer": {
+            "value": [
+              2,
+              4,
+              1,
+              3
+            ],
+            "points": 1
+          }
+        },
+        {
+          "id": 8,
+          "type": "single",
+          "text": "Kva er funksjonen til ein slik captcha-test?",
+          "image": "MTzfFDnnw0GN75wOW1jTw.jpg",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Å finne ut om du er ein robot"
+            },
+            {
+              "id": 2,
+              "text": "Å finne ut om du har vore på nettsida før"
+            },
+            {
+              "id": 3,
+              "text": "Å sjekke om sida er sikker"
+            },
+            {
+              "id": 4,
+              "text": "Å sjekke om du har eit tastatur"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "type": "single",
+          "title": "Sant eller usant",
+          "text": "Nettbutikken sin URL startar med https://. Det tyder at all informasjonen du legg inn, blir kryptert slik at den ikkje kan fangast opp av andre.",
+          "image": "Oppgave168.png",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ja"
+            },
+            {
+              "id": 2,
+              "text": "Nei"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "type": "hotspot",
+          "text": "Trykk på søkjeresultatet som IKKJE er reklame.",
+          "image": "gsvkTaB0MEWxBYowPYF7A.png",
+          "answer": {
+            "value": 5,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "x": 0,
+              "y": 0,
+              "width": 100,
+              "height": 15
+            },
+            {
+              "id": 2,
+              "x": 0,
+              "y": 29,
+              "width": 100,
+              "height": 15
+            },
+            {
+              "id": 3,
+              "x": 0,
+              "y": 48,
+              "width": 100,
+              "height": 15
+            },
+            {
+              "id": 4,
+              "x": 0,
+              "y": 65,
+              "width": 100,
+              "height": 15
+            },
+            {
+              "id": 5,
+              "x": 0,
+              "y": 80,
+              "width": 100,
+              "height": 15
+            }
+          ]
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "base"
+      }
+    },
+    {
+      "id": 2,
+      "questions": [
+        {
+          "id": 11,
+          "type": "single",
+          "transition": {
+            "title": "Oppgåvene vidare.",
+            "text": "No er du ferdig med den første delen av testen. Du vil no få fleire oppgåver som er tilpassa ditt nivå."
+          },
+          "text": "Kva er ein URL?",
+          "image": "CSWK9t5tg0KAUpMFF1XtSA.png",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Adressa til ei nettside"
+            },
+            {
+              "id": 2,
+              "text": "Ein privat søkjemotor"
+            },
+            {
+              "id": 3,
+              "text": "Eit bevis på at ei side er påliteleg"
+            },
+            {
+              "id": 4,
+              "text": "Ei forkorting for Unreliable Resource Links"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "type": "single",
+          "title": "Sant eller usant",
+          "text": "All e-post som blir flytta til papirkorga, blir sletta med det same.",
+          "image": "iVE4AzBpdk2hkQxSoQZ6Jw.png",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Sant"
+            },
+            {
+              "id": 2,
+              "text": "Usant"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "type": "single",
+          "text": "Du får høyre at nokon har sendt ein e-post til deg, men du finn den ikkje i innboksen din. Kva for ei mappe bør du leite i?",
+          "image": "Oppgave69.png",
+          "answer": {
+            "value": 4,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ny e-post"
+            },
+            {
+              "id": 2,
+              "text": "Sletta element"
+            },
+            {
+              "id": 3,
+              "text": "Utboks"
+            },
+            {
+              "id": 4,
+              "text": "Søppelpost"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "type": "single",
+          "text": "Kva for lover og reglar gjeld for ytringsfridom på internett?",
+          "image": "6kYJ7qSj0Uuxcm6F15e6A.png",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Det gjeld eigne lover og reglar på internett. "
+            },
+            {
+              "id": 2,
+              "text": "Det er dei same lovene og reglane som i samfunnet elles."
+            },
+            {
+              "id": 3,
+              "text": "Det er retningslinjene på nettsida som avgjer kva ein kan skrive."
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "type": "single",
+          "text": "På nettsidene til nokre butikkar kan kundane bruke chat. Er det trygt å sende personopplysningar via denne chat-funksjonen?",
+          "image": "3G872EArNUqDwMdx2jxS4Q.png",
+          "answer": {
+            "value": 3,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ja"
+            },
+            {
+              "id": 2,
+              "text": "Nei"
+            },
+            {
+              "id": 3,
+              "text": "Ikkje alltid"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "type": "single",
+          "text": "Kva består ein PIN-kode av?",
+          "image": "UsZAUXNOcU3Mkus8X1Xlw.png",
+          "answer": {
+            "value": 3,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ulike tal og bokstavar"
+            },
+            {
+              "id": 2,
+              "text": "Ulike bokstavar og eitt tal"
+            },
+            {
+              "id": 3,
+              "text": "Ulike tal"
+            },
+            {
+              "id": 4,
+              "text": "Ulike bokstavar"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "type": "single",
+          "title": "Sant eller usant",
+          "text": "Dersom det visest ei raud linje under eit ord, tyder det at programmet meiner at ordet er skrive feil.",
+          "image": "j83ASUhkwkOdlHlG0r1Zg.png",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Sant"
+            },
+            {
+              "id": 2,
+              "text": "Usant"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "type": "single",
+          "text": "Kva kjenneteiknar sosiale medium?",
+          "image": "CxLu8DbJn0ixwVDtigYQyw.png",
+          "options": [
+            {
+              "id": 1,
+              "text": "Det er mogleg å dele innhald."
+            },
+            {
+              "id": 2,
+              "text": "Det er mogleg å sende e-post."
+            },
+            {
+              "id": 3,
+              "text": "Det er mogleg å sjekke klokka."
+            }
+          ],
+          "answer": {
+            "value": 1,
+            "points": 1
+          }
+        },
+        {
+          "id": 19,
+          "type": "single",
+          "text": "Kva må ein passe på når ein legg ut bilete av ein person på sosiale medium?",
+          "image": "Oppgave120.png",
+          "options": [
+            {
+              "id": 1,
+              "text": "At ein har teke biletet sjølv"
+            },
+            {
+              "id": 2,
+              "text": "At ein har fått løyve frå personen"
+            },
+            {
+              "id": 3,
+              "text": "At biletet har rett format"
+            },
+            {
+              "id": 4,
+              "text": "At ein er kopla til internett"
+            }
+          ],
+          "answer": {
+            "value": 2,
+            "points": 1
+          }
+        },
+        {
+          "id": 20,
+          "type": "single",
+          "title": "Sant eller usant",
+          "text": "Søkjeresultata som du får opp, til dømes i Google, er tilpassa etter søk du har gjort tidlegare.",
+          "image": "Oppgave214.png",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Sant"
+            },
+            {
+              "id": 2,
+              "text": "Usant"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "type": "single",
+          "title": "Sant eller usant",
+          "text": "Mange nettsider let deg logge inn med Facebook-brukaren din slik at du slepp å lage nye brukarnamn og passord.",
+          "image": "GDCJJfMqEqVMUPxw4K23w.png",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Sant"
+            },
+            {
+              "id": 2,
+              "text": "Usant"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "type": "dialogue",
+          "image": "esha.jpg",
+          "answer": {
+            "value": [
+              "D2F5",
+              "D2F9"
+            ],
+            "points": 1
+          },
+          "speech": [
+            {
+              "id": "D2F2",
+              "person": "Esha",
+              "text": "Du skal hjelpe kollegaen din med å bestille ein time hos fastlegen.",
+              "type": "intro",
+              "next": "D2F1"
+            },
+            {
+              "id": "D2F1",
+              "person": "Esha",
+              "text": "Hei, veit du om det er mogleg å bestille legetimar på nettet?",
+              "type": "question",
+              "options": [
+                "D2F4",
+                "D2F5",
+                "D2F26"
+              ]
+            },
+            {
+              "id": "D2F4",
+              "person": "Player",
+              "text": "Nei, det går ikkje.",
+              "type": "option",
+              "next": "D2F16"
+            },
+            {
+              "id": "D2F5",
+              "person": "Player",
+              "text": "Ja, dersom legekontoret støttar digital timebestilling.",
+              "type": "option",
+              "next": "D2F7"
+            },
+            {
+              "id": "D2F26",
+              "person": "Player",
+              "text": "Ja, men berre dersom du brukar Safari.",
+              "type": "option",
+              "next": "D2F27"
+            },
+            {
+              "id": "D2F16",
+              "person": "Esha",
+              "text": "Eg har høyrt at det går an, men korleis finn eg raskt nettsida ein gjer det på?",
+              "type": "question",
+              "options": [
+                "D2F8",
+                "D2F9",
+                "D2F10"
+              ]
+            },
+            {
+              "id": "D2F7",
+              "person": "Esha",
+              "text": "Herleg, tusen takk. Korleis kan eg raskast finne ut av kvar eg kan bestille time?",
+              "type": "question",
+              "options": [
+                "D2F8",
+                "D2F9",
+                "D2F10"
+              ]
+            },
+            {
+              "id": "D2F27",
+              "person": "Esha",
+              "text": "Men eg har ikkje Safari. Korleis kan eg raskast finne ut kvar eg kan bestille time då?",
+              "type": "question",
+              "options": [
+                "D2F8",
+                "D2F9",
+                "D2F10"
+              ]
+            },
+            {
+              "id": "D2F8",
+              "person": "Player",
+              "text": "Ved å besøkje legekontoret",
+              "type": "option",
+              "next": "D2F24"
+            },
+            {
+              "id": "D2F9",
+              "person": "Player",
+              "text": "Ved å søkje det opp på internett",
+              "type": "option",
+              "next": "D2F13"
+            },
+            {
+              "id": "D2F10",
+              "person": "Player",
+              "text": "Ved å sende ein e-post til legekontoret",
+              "type": "option",
+              "next": "D2F24"
+            },
+            {
+              "id": "D2F24",
+              "person": "Esha",
+              "text": "Åja... Greitt. Eg trudde at ein kunne bruke nettet. Lat oss sjå om det fungerer først.",
+              "type": "completion"
+            },
+            {
+              "id": "D2F13",
+              "person": "Esha",
+              "text": "God idé, vi får gjere det.",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "type": "single",
+          "text": "Kva for ein nettstad kan du bruke for å søkje opp nettsider?",
+          "image": "J0zH1jt8Dku7RaoZEmYQ.png",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "image": "9ud7SIajrkOORkPXl54bjA.png"
+            },
+            {
+              "id": 2,
+              "image": "mFjIibRFbkmJQ4mj4S9A2w.png"
+            },
+            {
+              "id": 3,
+              "image": "995jUjvV0uWqjvkxk9LQ.png"
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "type": "single",
+          "text": "Du vil logge inn på helsenorge.no og får beskjed om å bruke BankID. Kva er det for noko?",
+          "image": "zofdxjhAD0ScGo0f2KGFjg.png",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ei form for elektronisk legitimasjon"
+            },
+            {
+              "id": 2,
+              "text": "Pass og bankkort med bilete"
+            },
+            {
+              "id": 3,
+              "text": "Identifikasjon for banktilsette"
+            },
+            {
+              "id": 4,
+              "text": "Eit chat-program for kundar i banken"
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "type": "single",
+          "text": "Du skal logge inn med Bank-ID utan mobil. Kva anna enn kode frå banken treng du då?",
+          "image": "8LHbBvjWKUGnGWFlNBPYQ.png",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Fødselsnummer og passord"
+            },
+            {
+              "id": 2,
+              "text": "Bankkort med bilete og passord"
+            },
+            {
+              "id": 3,
+              "text": "E-post og fødselsnummer"
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "type": "dialogue",
+          "image": "esha.jpg",
+          "answer": {
+            "value": [
+              "D3F4"
+            ],
+            "points": 1
+          },
+          "speech": [
+            {
+              "id": "D3F1",
+              "person": "Esha",
+              "text": "Takk for hjelpa med å bestille legetime. Veit du korleis eg kan lage ein brukar på ei strøymeteneste òg?",
+              "type": "question",
+              "options": [
+                "D3F2",
+                "D3F3",
+                "D3F4"
+              ]
+            },
+            {
+              "id": "D3F2",
+              "person": "Player",
+              "text": "Du kan sende ein e-post til strøymenettsida.",
+              "type": "option",
+              "next": "D3F8"
+            },
+            {
+              "id": "D3F3",
+              "person": "Player",
+              "text": "Då må du besøkje kontoret til selskapet.",
+              "type": "option",
+              "next": "D3F8"
+            },
+            {
+              "id": "D3F4",
+              "person": "Player",
+              "text": "Det kan du enkelt gjere på mobilen din.",
+              "type": "option",
+              "next": "D3F5"
+            },
+            {
+              "id": "D3F8",
+              "person": "Esha",
+              "text": "Hmmm, det høyrest litt rart ut. Eg trur at eg kan gjere det på mobilen min. Kan vi gå gjennom det i lag?",
+              "type": "completion"
+            },
+            {
+              "id": "D3F5",
+              "person": "Esha",
+              "text": "Flott! Kan vi gå gjennom det i lag?",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "type": "single",
+          "text": "Kva for ein app blir brukt for å opprette ein profil hjå ei strøymeteneste?",
+          "image": "noen_nytt1.png",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "image": "ZdXIYRextku2YaJ5jqzv8g.png"
+            },
+            {
+              "id": 2,
+              "image": "6WzlrJFrKUK3YrczswoQ.png"
+            },
+            {
+              "id": 3,
+              "image": "14ZdCMiTrEmSFTqSMrcw.png"
+            },
+            {
+              "id": 4,
+              "image": "re61rm1ENUajXSyrztD9g.png"
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "type": "code",
+          "text": "Kor mange av felta er det obligatorisk å fylle ut?",
+          "image": "U5mlJh904U6Zev981wk1jQ.png?v=2",
+          "answer": {
+            "value": 2,
+            "points": 1
+          }
+        },
+        {
+          "id": 29,
+          "type": "hotspot",
+          "text": "Kvar trykkjer du for å søkje etter ein bestemd TV-serie?",
+          "image": "CbJojWjnkuqk6OK9Jgg.png?v=2",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "x": 2,
+              "y": 79,
+              "width": 15,
+              "height": 17
+            },
+            {
+              "id": 2,
+              "x": 29,
+              "y": 79,
+              "width": 15,
+              "height": 17
+            },
+            {
+              "id": 3,
+              "x": 56,
+              "y": 79,
+              "width": 15,
+              "height": 17
+            },
+            {
+              "id": 4,
+              "x": 83,
+              "y": 79,
+              "width": 15,
+              "height": 17
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "type": "single",
+          "text": "Kva for eit ikon må du trykkje på for å få varsel når det kjem noko nytt?",
+          "image": "",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "image": "VG4Op84ZuEW45314whab5A.png"
+            },
+            {
+              "id": 2,
+              "image": "3gw5IFfk2KV0fpxNG5Q.png"
+            },
+            {
+              "id": 3,
+              "image": "B7ddHtR3E6gD8UvTGs1fA.png"
+            },
+            {
+              "id": 4,
+              "image": "zDcKwobFtkygVJTGlGzV4Q.png"
+            }
+          ]
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "advanced"
+      }
+    },
+    {
+      "id": 3,
+      "questions": [
+        {
+          "id": 31,
+          "type": "single",
+          "transition": {
+            "title": "Oppgåvene vidare.",
+            "text": "No er du ferdig med den første delen av testen. Du vil no få fleire oppgåver som er tilpassa ditt nivå."
+          },
+          "text": "Du vil slette eit innlegg du har lagt ut på sosiale medium. Korleis kan du vere sikker på at det blir borte for alltid?",
+          "image": "AKBBDBhkBEe4IOWiVWh4Q.png",
+          "answer": {
+            "value": 3,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ved å erstatte innlegget med eit nytt"
+            },
+            {
+              "id": 2,
+              "text": "Ved å slette innlegget "
+            },
+            {
+              "id": 3,
+              "text": "Det kan du aldri vere sikker på"
+            },
+            {
+              "id": 4,
+              "text": "Ved å kontakte administrator via e-post"
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "type": "single",
+          "title": "Sant eller usant",
+          "text": "Denne lenkja vil sende deg til nettsida til Skatteetaten.",
+          "image": "3oI23VXLfUuJcGd11WWUg.png",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Sant"
+            },
+            {
+              "id": 2,
+              "text": "Usant"
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "type": "hotspot",
+          "text": "Kvar trykkjer du for å starte deling av skjerm?",
+          "image": "fhXaEJTR0WzB6AtLNnKQ.png",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "x": 5,
+              "y": 84,
+              "width": 15,
+              "height": 12
+            },
+            {
+              "id": 2,
+              "x": 25,
+              "y": 84,
+              "width": 15,
+              "height": 12
+            },
+            {
+              "id": 3,
+              "x": 46.3,
+              "y": 84,
+              "width": 15,
+              "height": 12
+            },
+            {
+              "id": 4,
+              "x": 64.7,
+              "y": 84,
+              "width": 15,
+              "height": 12
+            },
+            {
+              "id": 5,
+              "x": 82.3,
+              "y": 84.5,
+              "width": 15,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "type": "ranking",
+          "text": "Ranger nettsidene etter kor påliteleg informasjon dei inneheld.",
+          "image": "JOPGaNKBGUWPGv20iHebIA.png",
+          "answer": {
+            "value": [
+              3,
+              1,
+              2
+            ],
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Aftenposten"
+            },
+            {
+              "id": 2,
+              "text": "Wikipedia"
+            },
+            {
+              "id": 3,
+              "text": "Statistisk sentralbyrå"
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "type": "hotspot",
+          "text": "Kvar vil du klikke for å berre få opp treff frå den siste månaden?",
+          "image": "rentesok.jpg",
+          "answer": {
+            "value": 3,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "x": 87,
+              "y": 7.1,
+              "width": 4.7,
+              "height": 5.7
+            },
+            {
+              "id": 2,
+              "x": 70,
+              "y": 20,
+              "width": 5.5,
+              "height": 5.5
+            },
+            {
+              "id": 3,
+              "x": 91.5,
+              "y": 19.3,
+              "width": 6.8,
+              "height": 5.3
+            },
+            {
+              "id": 4,
+              "x": 78.5,
+              "y": 20,
+              "width": 9.3,
+              "height": 5.7
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "type": "single",
+          "text": "To personar søkjer på \"Nyheter\". Dette er toppresultata dei får opp. Kvifor er resultata ulike?",
+          "image": "Oppgave214.png",
+          "answer": {
+            "value": 3,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Dei søkte på nøyaktig same tid."
+            },
+            {
+              "id": 2,
+              "text": "Den eine søkte på mobil."
+            },
+            {
+              "id": 3,
+              "text": "Resultata er tilpassa etter tidlegare søk."
+            },
+            {
+              "id": 4,
+              "text": "Det er noko feil med nettlesaren."
+            }
+          ]
+        },
+        {
+          "id": 37,
+          "type": "single",
+          "text": "Kva burde du gjere dersom ein ukjend person trakasserer deg på sosiale medium?",
+          "image": "W1c4vO83HUSeLS7N87jg5A.png",
+          "options": [
+            {
+              "id": 1,
+              "text": "Blokkere personen"
+            },
+            {
+              "id": 2,
+              "text": "Be personen om å slutte"
+            },
+            {
+              "id": 3,
+              "text": "Slette profilen din"
+            }
+          ],
+          "answer": {
+            "value": 1,
+            "points": 1
+          }
+        },
+        {
+          "id": 38,
+          "type": "single",
+          "text": "Korleis kan ein hindre at denne annonsen kjem opp igjen?",
+          "image": "ae.jpg",
+          "answer": {
+            "value": 3,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ved å leggje att ein kommentar til annonsøren."
+            },
+            {
+              "id": 2,
+              "text": "Ved å late vere å klikke på annonsen."
+            },
+            {
+              "id": 3,
+              "text": "Ved å gå til menyval og velje bort annonsen."
+            },
+            {
+              "id": 4,
+              "text": "Det let seg ikkje gjere å hindre det."
+            }
+          ]
+        },
+        {
+          "id": 39,
+          "type": "multiple",
+          "text": "Korleis kan sosiale medium vise målretta reklame som er tilpassa den enkelte? <b>(vel to alternativ)</b>",
+          "image": "LELQTPLlHU22QRdBWfFlsA.png",
+          "options": [
+            {
+              "id": 1,
+              "text": "Dei sjekkar kvar mobilen din har vore."
+            },
+            {
+              "id": 2,
+              "text": "Dei sjekkar språket på mobilen din."
+            },
+            {
+              "id": 3,
+              "text": "Dei sjekkar kvar mobilen blei kjøpt."
+            }
+          ],
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": 1
+          }
+        },
+        {
+          "id": 40,
+          "type": "single",
+          "text": "Kva for ein metode kan du bruke for å logge deg inn på offentlege tenester med høgste tryggleiksnivå?",
+          "image": "yC8vhAGII0OIaaubeOsslg.png",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "BankID"
+            },
+            {
+              "id": 2,
+              "text": "Pass og bankkort med bilete"
+            },
+            {
+              "id": 3,
+              "text": "MinID"
+            },
+            {
+              "id": 4,
+              "text": "Eit sjølvvalt brukarnamn og passord"
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "type": "dialogue",
+          "image": "sebastian.jpg",
+          "answer": {
+            "value": [
+              "D17F5",
+              "D17F10"
+            ],
+            "points": 1
+          },
+          "speech": [
+            {
+              "id": "D17F2",
+              "person": "Sebastian",
+              "text": "Du skal hjelpe venen din med å lage ein Instagram-profil slik at han kan delta på sosiale medium.",
+              "type": "intro",
+              "next": "D17F1"
+            },
+            {
+              "id": "D17F1",
+              "person": "Sebastian",
+              "text": "Hei, eg skal opprette ein Instagram-profil. Kva slags passord er det best å ha?",
+              "type": "question",
+              "options": [
+                "D17F3",
+                "D17F4",
+                "D17F5"
+              ]
+            },
+            {
+              "id": "D17F3",
+              "person": "Player",
+              "text": "Eit som består av fleire tilfeldige tal og bokstavar",
+              "type": "option",
+              "next": "D17F8"
+            },
+            {
+              "id": "D17F4",
+              "person": "Player",
+              "text": "Eit som består av ulike teikn og tal",
+              "type": "option",
+              "next": "D17F8"
+            },
+            {
+              "id": "D17F5",
+              "person": "Player",
+              "text": "Eit som består av ulike ord etter kvarandre som heng saman",
+              "type": "option",
+              "next": "D17F6"
+            },
+            {
+              "id": "D17F8",
+              "person": "Sebastian",
+              "text": "Det er ikkje det eg har høyrt, men du veit når det står \"hugs meg\"? Når burde ein IKKJE bruke denne funksjonen?",
+              "type": "question",
+              "options": [
+                "D17F10",
+                "D17F11",
+                "D17F12"
+              ]
+            },
+            {
+              "id": "D17F6",
+              "person": "Sebastian",
+              "text": "Jøss, det visste eg ikkje! Her står det òg at eg kan trykkje på \"hugs meg\". Når burde ein IKKJE bruke denne funksjonen?",
+              "type": "question",
+              "options": [
+                "D17F10",
+                "D17F11",
+                "D17F12"
+              ]
+            },
+            {
+              "id": "D17F10",
+              "person": "Player",
+              "text": "Dersom fleire brukar den same eininga",
+              "type": "option",
+              "next": "D17F13"
+            },
+            {
+              "id": "D17F11",
+              "person": "Player",
+              "text": "Når ein har dårleg tid",
+              "type": "option",
+              "next": "D17F17"
+            },
+            {
+              "id": "D17F12",
+              "person": "Player",
+              "text": "Dersom ein har lett for å gløyme passord",
+              "type": "option",
+              "next": "D17F17"
+            },
+            {
+              "id": "D17F13",
+              "person": "Sebastian",
+              "text": "Eg skjønar. Kan du hjelpe meg med å opprette ein profil på Instagram?",
+              "type": "completion"
+            },
+            {
+              "id": "D17F17",
+              "person": "Sebastian",
+              "text": "Det høyrest ikkje logisk ut, men greitt. Kan du hjelpe meg med å opprette ein profil på Instagram?",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": 42,
+          "type": "single",
+          "text": "Venen din viser deg at han sit fast på registreringssida. Han har trykt på \"Registrer\", men ingenting skjer. Kva kan ha skjedd?",
+          "video": {
+            "url": "i1Pbc7jN0KMAYIYfcXn5g2.mp4",
+            "loop": true,
+            "autoplay": true
+          },
+          "answer": {
+            "value": 3,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Passordet er for dårleg."
+            },
+            {
+              "id": 2,
+              "text": "Telefonnummeret har allereie ein brukar."
+            },
+            {
+              "id": 3,
+              "text": "Telefonen har dårleg internett-tilkopling."
+            },
+            {
+              "id": 4,
+              "text": "Venen din har teke ein omstart av telefonen."
+            }
+          ]
+        },
+        {
+          "id": 43,
+          "type": "hotspot",
+          "text": "De har oppretta ein profil og vil finne nokon å følgje. Kvar trykkjer du for å finne dei?",
+          "image": "zbGVrL9tESPXzgt9fuo6A.jpg",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "x": 2.2,
+              "y": 91.2,
+              "width": 15.5,
+              "height": 8
+            },
+            {
+              "id": 2,
+              "x": 22.2,
+              "y": 91.2,
+              "width": 15.5,
+              "height": 8
+            },
+            {
+              "id": 3,
+              "x": 42.2,
+              "y": 91.2,
+              "width": 15.5,
+              "height": 8
+            },
+            {
+              "id": 4,
+              "x": 62,
+              "y": 91.2,
+              "width": 15.5,
+              "height": 8
+            },
+            {
+              "id": 5,
+              "x": 82,
+              "y": 91.2,
+              "width": 15.5,
+              "height": 8
+            },
+            {
+              "id": 6,
+              "x": 1,
+              "y": 1,
+              "width": 10,
+              "height": 7
+            },
+            {
+              "id": 7,
+              "x": 78.2,
+              "y": 1,
+              "width": 10,
+              "height": 7
+            },
+            {
+              "id": 8,
+              "x": 88.5,
+              "y": 1,
+              "width": 10,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "id": 44,
+          "type": "multiple",
+          "text": "Venen din får ein veneførespurnad, men er redd for at den er falsk. Kva er kjenneteikna de skal sjå etter for å vurdere om den er falsk? <b>(Vel to rette svar)</b>",
+          "image": "UmPZJ7Jow02YxAkY0hNsQ.png",
+          "options": [
+            {
+              "id": 1,
+              "text": "Profil-biografien er på engelsk. "
+            },
+            {
+              "id": 2,
+              "text": "Profilen følgjer mange utan å ha eigne følgjarar."
+            },
+            {
+              "id": 3,
+              "text": "Alle innlegga er lagde ut på same tid."
+            },
+            {
+              "id": 4,
+              "text": "Profilen er fleire år gammal."
+            }
+          ],
+          "answer": {
+            "value": [
+              2,
+              3
+            ],
+            "points": 1
+          }
+        },
+        {
+          "id": 45,
+          "type": "dialogue",
+          "image": "sebastian.jpg",
+          "answer": {
+            "value": [
+              "D18F2"
+            ],
+            "points": 1
+          },
+          "speech": [
+            {
+              "id": "D18F1",
+              "person": "Sebastian",
+              "text": "Tusen takk for hjelpa! Kva hender dersom ein set kontoen til privat?",
+              "type": "question",
+              "options": [
+                "D18F2",
+                "D18F3",
+                "D18F4"
+              ]
+            },
+            {
+              "id": "D18F2",
+              "person": "Player",
+              "text": "Innhaldet ditt blir berre synleg for dei du vel.",
+              "type": "option",
+              "next": "D18F5"
+            },
+            {
+              "id": "D18F3",
+              "person": "Player",
+              "text": "Berre dei du følgjer kan sjå kontoen din.",
+              "type": "option",
+              "next": "D18F6"
+            },
+            {
+              "id": "D18F4",
+              "person": "Player",
+              "text": "Alle aktivitetane dine blir skjulte.",
+              "type": "option",
+              "next": "D18F6"
+            },
+            {
+              "id": "D18F5",
+              "person": "Sebastian",
+              "text": "Ja vel, ja. Tusen takk for hjelpa!",
+              "type": "completion"
+            },
+            {
+              "id": "D18F6",
+              "person": "Sebastian",
+              "text": "Hmmm, det høyrest rart ut. Er du sikker på det? Takk for hjelpa.",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": 46,
+          "type": "multiple",
+          "text": "Kva teikn kan du sjå etter for å finne ut om det er trygt å bruke ei nettside til netthandel? Vel to alternativ.",
+          "image": "Oppgave168.png",
+          "options": [
+            {
+              "id": 1,
+              "text": "At den har https i adressefeltet"
+            },
+            {
+              "id": 2,
+              "text": "At det er eit hengelås-ikon i adressefeltet"
+            },
+            {
+              "id": 3,
+              "text": "At det står at sida er kryptert"
+            }
+          ],
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": 1
+          }
+        },
+        {
+          "id": 47,
+          "type": "single",
+          "title": "Sant eller usant",
+          "text": "Desse logoane tyder at det er trygt å handle på ei nettside.",
+          "image": "Oppgave170.png",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Sant"
+            },
+            {
+              "id": 2,
+              "text": "Usant"
+            }
+          ]
+        },
+        {
+          "id": 48,
+          "type": "single",
+          "text": "Kva seier lova om angrerett i norske nettbutikkar?",
+          "image": "Oppgave171.png",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Angreretten gjeld ikkje i nettbutikkar."
+            },
+            {
+              "id": 2,
+              "text": "Du kan bruke angreretten opp til 14 dagar etter at du har fått vara."
+            },
+            {
+              "id": 3,
+              "text": "Du har rett til å byte vara i løpet av 30 dagar frå kjøpet blir handsama."
+            },
+            {
+              "id": 4,
+              "text": "Bytereglane til butikken gjeld."
+            }
+          ]
+        },
+        {
+          "id": 49,
+          "type": "single",
+          "info": {
+            "title": "INFO",
+            "text": "Du fekk eit e-postvarsel medan du snakka med venen din. Sjekk kva som står i e-posten."
+          },
+          "text": "Du opnar innboksen din og ser at du har fått to nye e-postar frå Danske Bank. Kva for ein av e-postane kjem frå ein <b>falsk konto</b> som gjev seg ut for å vere Danske Bank?",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "image": "YvEeAbJaxUegJQHPKgygEw2.png"
+            },
+            {
+              "id": 2,
+              "image": "tY0JW80F0O4BJcibN3UUg2.png"
+            }
+          ]
+        },
+        {
+          "id": 50,
+          "type": "single",
+          "title": "Sant eller usant",
+          "text": "Dersom du svarer på ein falsk e-post, får du virus.",
+          "image": "zDUHI9E31EWZh40yvP5g.png",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Sant"
+            },
+            {
+              "id": 2,
+              "text": "Usant"
+            }
+          ]
+        },
+        {
+          "id": 51,
+          "type": "single",
+          "text": "Du er framleis ikkje heilt sikker på at e-posten kjem frå ein falsk brukar. Korleis kan du finne ut meir om avsendaren?",
+          "image": "iVE4AzBpdk2hkQxSoQZ6Jw.png",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ved å søkje opp avsendaren sin e-post på nettet "
+            },
+            {
+              "id": 2,
+              "text": "Ved å trykkje på avsendaren sin e-post og gå til info"
+            },
+            {
+              "id": 3,
+              "text": "Ved å spørje avsendaren kven det er"
+            },
+            {
+              "id": 4,
+              "text": "Ved å vidaresende e-posten til politiet"
+            }
+          ]
+        },
+        {
+          "id": 52,
+          "type": "single",
+          "text": "Du får ein e-post frå Helsenorge der du blir beden om å oppdatere personopplysningane dine. Dei ber deg om å sende svaret på e-post. Er dette trygt?",
+          "image": "helsenorgelogo_mage_319832n.jpg",
+          "answer": {
+            "value": 4,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Det er trygt sidan det kjem frå Helsenorge."
+            },
+            {
+              "id": 2,
+              "text": "Det er trygt fordi eg ikkje skal gje opp bankinformasjon."
+            },
+            {
+              "id": 3,
+              "text": "Ein skal aldri sende fødsels- og personnummeret sitt via e-post."
+            },
+            {
+              "id": 4,
+              "text": "Ein skal aldri sende personopplysningar via e-post."
+            }
+          ]
+        }
+      ],
+      "funnel": {
+        "baseScore": 8,
+        "type": "advanced"
+      }
+    }
+  ]
+}

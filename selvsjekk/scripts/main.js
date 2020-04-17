@@ -101,7 +101,7 @@ $(document).ready(function () {
 
   showPopupQuestback();
 
-  return;
+  // return;
   $.ajax({
     type: "GET",
     url: submitString,

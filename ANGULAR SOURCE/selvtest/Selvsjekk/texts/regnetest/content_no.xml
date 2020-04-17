@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kntest timer="600000" version="datasjek">
+	<opgave id="1">
+		<overskrift>Mario abonnerer på en avis og ett sportsblad. Avisen koster 900 kr for tre måneder. Sportsbladet koster 300 kr per halvår. Hva koster de to abonnementene til sammen per måned?</overskrift>
+		<option score="0">300</option>
+		<option score="1">350</option>
+		<option score="0">400</option>
+		<option score="0">450</option>
+		<calculator />
+	</opgave>
+	<opgave id="2">
+		<image source="Kilde: Statistisk sentralbyrå">Barnehage.jpg</image>
+		<overskrift>Figuren viser andelen barn som gikk i barnehage i perioden ?? til ??.Hvor mange prosent av alle 3-5 åringer gikk i barnehage i 2008? (Oppdatere grafikk)</overskrift>
+		<option score="0">Ca 75%</option>
+		<option score="1">Ca 90%</option>
+		<option score="0">Ca 95%</option>
+	</opgave>
+	<opgave id="3">
+		<overskrift>Oles bil bruker gjennomsnittlig 8 liter bensin per 100 km. Hvor mange liter blir det på 350 km?</overskrift>
+		<slider from="0" to="100" correctAnswer="28" score="1"></slider>
+	</opgave>
+	<opgave id="4">
+		<overskrift>I en tønne er det 120 liter. Tønna er bare ¾ fullt.Hvor mange liter er det i tønna?</overskrift>
+		<slider from="1" to="120" correctAnswer="90" score="1"></slider>
+		<calculator />
+	</opgave>
+	<opgave id="5">
+		<overskrift>Regn ut: 112112 : 112 =    </overskrift>
+		<option score="0">11</option>
+		<option score="0">101</option>
+		<option score="0">111</option>
+		<option score="1">1001</option>
+	</opgave>
+	<opgave id="6">
+		<overskrift>Regn ut: 4,16 : 4 =   </overskrift>
+		<option score="1">1,04</option>
+		<option score="0">1,25</option>
+		<option score="0">1,8</option>
+	</opgave>
+	<opgave id="7">
+		<overskrift>Are, Bosse og Chris fordeler 210 kroner i forholdet 2 : 3 : 5. Hvor mange kroner får Bosse? (Evt. MC, lenger ut i testen) </overskrift>
+		<slider from="1" to="210" correctAnswer="63" score="1"></slider>
+	</opgave>
+</kntest>

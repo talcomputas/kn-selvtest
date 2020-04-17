@@ -1,0 +1,63 @@
+@import 'variables';
+@import 'mixins';
+
+$indent: 40px;
+$mobile-indent: $indent / 2;
+
+.card {
+  display: block;
+  background-color: $white;
+  border-radius: 10px;
+  padding: $indent;
+  box-shadow: 0 9px 20px 0 rgba($grey-dark, 0.17);
+  position: relative;
+
+  .card-label {
+    position: absolute;
+    top: 0;
+    left: $indent;
+    color: $grey-dark;
+    text-transform: uppercase;
+  }
+
+  .card-header {
+    font-size: $font-size-large;
+    text-transform: uppercase;
+    border-bottom: 1px solid $grey;
+    padding-bottom: $indent;
+
+    @include breakpoint($tablet-large) {
+      text-align: center;
+    }
+  }
+
+  .card-content {
+    padding: $indent 0;
+  }
+
+  .card-footer {
+    border-top: 1px solid $grey;
+    padding-top: $indent;
+  }
+
+  @include breakpoint($tablet-large) {
+    border-radius: 0;
+    padding: $mobile-indent;
+
+    .card-label {
+      left: $mobile-indent;
+    }
+
+    .card-header {
+      padding-bottom: $mobile-indent;
+    }
+
+    .card-content {
+      padding: $mobile-indent 0;
+    }
+
+    .card-footer {
+      padding-top: $mobile-indent;
+    }
+  }
+}

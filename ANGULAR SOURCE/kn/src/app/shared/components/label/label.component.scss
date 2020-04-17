@@ -1,0 +1,11 @@
+@import 'variables';
+
+:host {
+  display: flex;
+  align-items: center;
+  font-size: $font-size-regular;
+
+  .text {
+    padding-left: 10px;
+  }
+}

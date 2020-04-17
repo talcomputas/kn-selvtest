@@ -1,0 +1,29 @@
+<div *ngIf="!question?.video && question?.image as imageUrl" class="image">
+  <img [src]="'assets/images/' + imageUrl" alt="{{question?.text}}">
+</div>
+
+<div *ngIf="!question?.image && question?.video as video" class="video">
+  <video [src]="'assets/videos/' + video.url"
+         [autoplay]="video.autoplay"
+         [controls]="video.controls"
+         [loop]="video.loop">
+  </video>
+</div>
+
+<div class="content" [class.no-media]="!question?.image && !question?.video">
+  <div class="content-inner">
+    <h2 *ngIf="question?.title as title" class="title">{{title}}</h2>
+    <p *ngIf="question?.text as text" [innerHTML]="text" class="text"></p>
+    <p *ngIf="question?.info as info" [innerHTML]="info?.text"></p>
+  </div>
+
+  <span class="flex-spacer"></span>
+
+  <div *ngIf="question?.options as options" [formGroup]="form">
+    <div app-button-toggle-group class="options" [limit]="limit" [formControl]="control">
+      <div app-button-toggle *ngFor="let option of options" [value]="option?.id">
+        <div class="option" [innerHTML]="option?.text"></div>
+      </div>
+    </div>
+  </div>
+</div>

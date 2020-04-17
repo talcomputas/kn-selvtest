@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'mixins';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  padding: 20px;
+
+  @include breakpoint($screen-small) {
+    background-size: cover;
+  }
+
+  .bubble {
+    @include bubble(300px, $white, $black, 2px);
+  }
+
+  .intro {
+    @include dialogItem(300px, $white, $black, 2px);
+  }
+
+  .dialogue-answer {
+    @include dialogItem(300px, $white, $black, 2px);
+    width: 100%;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.cdk-focused {
+      background: darken($grey, 10%);
+    }
+
+    &:active {
+      background: darken($grey, 5%);
+    }
+  }
+}

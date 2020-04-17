@@ -1,0 +1,58 @@
+.button-toggle-standalone,
+.button-toggle-group {
+  position: relative;
+  display: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button-toggle {
+  position: relative;
+
+  &.cdk-keyboard-focused {
+    .button-toggle-focus-overlay {
+      opacity: 1;
+    }
+  }
+}
+
+.button-toggle-label-content {
+  display: inherit;
+  // Prevents IE from shifting the content on click.
+  position: relative;
+  width: 100%;
+
+  > * {
+    vertical-align: middle;
+  }
+}
+
+// Overlay to be used as a tint.
+.button-toggle-focus-overlay {
+  border-radius: inherit;
+
+  // Disable pointer events to prevent it from hijacking user events.
+  pointer-events: none;
+  opacity: 0;
+}
+
+.button-toggle {
+  display: inherit;
+  border: 0;
+  background: none;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  outline: none;
+  width: 100%; // Stretch the button in case the consumer set a custom width.
+  cursor: pointer;
+
+  .button-toggle-disabled & {
+    cursor: default;
+  }
+
+  // Remove the extra focus outline that is added by Firefox on native buttons.
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}

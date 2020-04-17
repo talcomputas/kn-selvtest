@@ -1,0 +1,22 @@
+@import "variables";
+@import "mixins";
+
+:host {
+  display: block;
+  background-color: $white;
+  padding: 10px;
+  height: 90px;
+  border-bottom: 1px solid $grey-light;
+
+  @include breakpoint($tablet-large) {
+    height: 56px;
+    padding: 0 15px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}

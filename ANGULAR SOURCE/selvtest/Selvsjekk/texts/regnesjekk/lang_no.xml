@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+<string id="Headline"     text = "Regnesjekken"/>
+<string id="LookAtSkills"     text = "Vurder dine ferdigheter"/>
+<string id="Info"     text = "Med regnesjekken vurderer du dine egne regneferdigheter, og får en pekepinn på hva du er god til og hva du kan bli bedre på."/>
+<string id="Close"     text = "Lukk"/>
+<string id="Change"     text = "Endre"/>
+<string id="Result"     text = "Resultat"/>
+<string id="Start"     text = "Start"/>
+<string id="ClickSound"     text = "Trykk for å høre tekst"/>
+<string id="Back"     text = "Tilbake"/>
+<string id="Forward"     text = "Neste"/>
+<string id="Answers"     text = "Dine svar"/>
+<string id="Questions"     text = "Spørsmål"/>
+<string id="Answer"     text = "Svar"/>
+<string id="SeeResult"     text = "Se resultatet"/>
+<string id="TipBetter"     text = "Få råd og tips for å bli bedre"/>
+<string id="LookTroughAnswer"     text = "Se gjennom dine svar i testen"/>
+<string id="BackToFrontPage"     text = "Tilbake til forsiden"/>
+<string id="DownloadResult"     text = "Last ned resultatet"/>
+<string id="CheckDone"     text = "Testen er over"/>
+<string id="Overview"     text = "Se oversikt"/>
+<string id="Level"     text = "Nivå"/>
+<string id="Level31"     text = "Du har vurdert deg selv til nivå 3 av 3 i denne sjekken."/>
+<string id="Level32"     text = "Å regne på nivå 3 innebærer å anvende sammensatt matematisk informasjon og kunnskap  i nødvendige situasjoner i hverdagen."/>
+<string id="Level21"     text = "Du har vurdert deg selv til nivå 2 av 3 i denne sjekken."/>
+<string id="Level22"     text = "Å regne på nivå 2 innebærer å bruke regning i forskjellige situasjoner, bearbeide informasjon som inneholder tall og å ha et bevisst forhold til ulike regneoperasjoner."/>
+<string id="Level11"     text = "Du har vurdert deg selv til nivå 1 av 3 i denne sjekken."/>
+<string id="Level12"     text = "Å regne på nivå 1 innebærer å bruke enkel regning i kjente sammenhenger og forstå enkel informasjon som inneholder tall."/>
+</strings>

@@ -1,0 +1,29 @@
+@import '../../styles/question.export';
+
+:host {
+  @extend %question-two-columns;
+
+  .image {
+    @extend %image;
+  }
+
+  .video {
+    @extend %video;
+  }
+
+  .content {
+    @extend %content;
+  }
+
+  .text {
+    @extend %text;
+  }
+
+  .code {
+    input {
+      width: 100%;
+      max-width: 40px;
+      text-align: center;
+    }
+  }
+}

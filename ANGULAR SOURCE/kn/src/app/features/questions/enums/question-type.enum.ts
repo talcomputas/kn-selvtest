@@ -1,0 +1,8 @@
+export enum QuestionType {
+  SINGLE = 'single',
+  MULTIPLE = 'multiple',
+  CODE = 'code',
+  HOTSPOT = 'hotspot',
+  RANKING = 'ranking',
+  DIALOGUE = 'dialogue'
+}

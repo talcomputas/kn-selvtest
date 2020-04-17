@@ -1,0 +1,25 @@
+<div *ngIf="question?.image as imageUrl" class="image" [formGroup]="form">
+  <span class="image-inner">
+    <img [src]="'assets/images/' + imageUrl" alt="{{question?.text}}">
+
+    <span *ngIf="question?.options as options" [formGroup]="form" class="options">
+      <span app-radio-group [formControl]="control">
+        <span app-radio-button *ngFor="let option of options" [value]="option?.id">
+          <span class="point"
+                [style.top.%]="option?.y"
+                [style.left.%]="option?.x"
+                [style.width.%]="option?.width"
+                [style.height.%]="option?.height">
+          </span>
+        </span>
+      </span>
+    </span>
+  </span>
+</div>
+
+<div class="content">
+  <h2 *ngIf="question?.title as title" class="title">{{title}}</h2>
+  <audio *ngIf="question?.audio as audioUrl" controls src="assets/audios/{{audioUrl}}"></audio>
+  <p *ngIf="question?.text as text" [innerHTML]="text" class="text"></p>
+  <p *ngIf="question?.info as info" [innerHTML]="info?.text"></p>
+</div>

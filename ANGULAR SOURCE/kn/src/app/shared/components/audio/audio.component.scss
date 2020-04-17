@@ -1,0 +1,12 @@
+:host {
+  position: relative;
+  z-index: 1;
+
+  .svg-icon {
+    pointer-events: none;
+    position: relative;
+    z-index: -1;
+    width: 80px;
+    height: 80px;
+  }
+}

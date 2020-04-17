@@ -1,0 +1,24 @@
+<ng-container [ngSwitch]="speech.type">
+  <ng-container *ngSwitchCase="SpeechType.INTRO">
+    <span class="intro">{{speech.text}}</span>
+
+    <span class="flex-spacer"></span>
+
+    <button app-button class="dialogue-answer" (click)="next(speech?.next)">Ok</button>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="SpeechType.QUESTION">
+    <span class="bubble">{{speech?.text}}</span>
+
+    <span class="flex-spacer"></span>
+
+    <ng-container *ngFor="let id of speech?.options">
+      <button *ngIf="getById(id) as option" app-button class="dialogue-answer"
+              (click)="onSelectOption(option)">{{option.text}}</button>
+    </ng-container>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="SpeechType.COMPLETION">
+    <span class="bubble">{{speech.text}}</span>
+  </ng-container>
+</ng-container>

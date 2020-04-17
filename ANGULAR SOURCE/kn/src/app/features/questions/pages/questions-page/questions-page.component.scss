@@ -1,0 +1,40 @@
+@import 'mixins';
+
+:host {
+  display: block;
+
+  .top-nav {
+    margin: -20px 0 0;
+    padding: 0 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    app-progress {
+      width: 48%;
+    }
+
+    @include breakpoint($tablet-large) {
+      flex-direction: column;
+      margin: -10px 0 0;
+
+      app-progress {
+        width: 100%;
+      }
+    }
+  }
+
+  .actions {
+    overflow: hidden;
+
+    .prev {
+      @include directionButton('prev', 10px);
+      float: left;
+    }
+
+    .next {
+      @include directionButton('next', 10px);
+      float: right;
+    }
+  }
+}

@@ -660,7 +660,7 @@ function closeAnswers() {
 function setupResult() {
   var resultScore = Math.round(finalScore * 10) / 10;
 
-  questback.popup.create("https://response.questback.com/vox/inhgrsufwt", {
+  questback.popup.create("https://response.questback.com/vox/inhgrsufwt", { //inhgrsufwt
     title: "Vinn et gavekort",
     text:
       "Din tilbakemelding er viktig for at produktene våre skal bli så gode som mulig. Vil du hjelpe oss med å forbedre denne testen? Du kan være med i trekningen av tre gavekort på 500 kroner. Det er mulig å gå fram og tilbake i undersøkelsen, og det tar cirka to minutter å svare på den.",

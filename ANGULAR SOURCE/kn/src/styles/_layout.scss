@@ -1,0 +1,65 @@
+@import 'variables';
+@import 'mixins';
+
+a,
+.link {
+  color: $aqua;
+  cursor: pointer;
+
+  &.cdk-focused,
+  &:focus,
+  &:hover {
+    color: $red;
+  }
+}
+
+body {
+  background-color: $grey;
+  font-size: $font-size-x-regular;
+  color: $grey-dark-deep;
+  line-height: 1.5;
+}
+
+* {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+
+  @include breakpointFrom($screen-large) {
+    max-width: 1140px;
+  }
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
+  flex-grow: 1;
+}
+
+.question-answers {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex: auto;
+  @media (min-width: 768px) {
+    padding-left: 30px;
+  }
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='number'] {
+  border-radius: 4px;
+  -webkit-appearance: none;
+  outline: none;
+  border: 1px solid $aqua-light;
+  padding: 10px;
+}
+
+#PAFTOOLBAR,
+#vFact_audioFrame {
+  display: none !important;
+}

@@ -1,0 +1,60 @@
+@import 'variables';
+@import '../../styles/question.export';
+
+:host {
+  @extend %question-two-columns;
+
+  @include breakpoint($tablet-large) {
+    flex-direction: column-reverse;
+  }
+
+  .image {
+    @extend %image;
+
+    &-inner {
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+  .content {
+    @extend %content;
+    justify-content: center;
+  }
+
+  .text {
+    @extend %text;
+  }
+
+  .options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    .radio-checked {
+      .point {
+        border-color: $grey-dark;
+        background-color: rgba($grey-dark, .4);
+        transition: all 200ms;
+      }
+    }
+
+    .cdk-focused {
+      .point {
+        border-color: $grey-dark;
+      }
+    }
+
+    .point {
+      position: absolute;
+      cursor: pointer;
+      display: block;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      transition: all 200ms;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "language": {
+    "nn": "Nynorsk",
+    "nb": "Bokmål"
+  },
+  "actions": {
+    "start": "Start",
+    "back": "Tilbake",
+    "next": "Neste",
+    "reviewAnswers": "Se gjennom dine svar i testen",
+    "getAdvice": "Få råd og tips for å bli bedre",
+    "backToResult": "Se resultatet",
+    "backToTests": "Til Test deg selv",
+    "print": "Her kan du skrive ut svara"
+  },
+  "placeholders": {
+    "code": "Skriv inn et nummer..."
+  },
+  "level": "Nivå",
+  "questions": "Spørsmål",
+  "answers": "Svar",
+  "answersTitle": "Dine svar",
+  "testIsOver": "Testen er over"
+}

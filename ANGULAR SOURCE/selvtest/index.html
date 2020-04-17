@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <title>Kompetanse Norge - Regnesjekken</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+
+    <!-- Use minified versions in production: *.min.js/css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/hyper.css">
+    <link rel="stylesheet" type="text/css" href="styles/tekstur.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="scripts/vendor/jquery-circle-progress-1.2.1.js"></script>
+    <script src="https://code.createjs.com/soundjs-0.6.2.min.js"></script>
+    <script src="scripts/examination.js"></script>
+    <script src="scripts/result.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <script type="text/javascript">
+        (function() {
+        var lwfile = '1pxj1j9vcfl2tmlmfp8a.js';
+        var lw = document.createElement('script');
+        lw.type = 'text/javascript';
+        lw.async = true;
+        lw.src = ('https:' == document.location.protocol ? 'https://' : 'http://') +'speech.leseweb.dk/script/'+lwfile;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(lw, s);
+        })
+        ();
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="wrapper">
+        <h1 class="logo" onclick="location.href='http://www.kompetansenorge.no/'" style="cursor:pointer;">Kompetanse Norge</h1>
+        <div id="kompetanseport-link">
+            <a style="text-decoration: none;color: #82cbdf;" href="http://www.kompetanseporten.no/">
+                <img style="vertical-align: -10px;-moz-transform: scaleX(-1);-o-transform: scaleX(-1);-webkit-transform: scaleX(-1);transform: scaleX(-1);" src="static/images/arrow-return.svg"> Til kompetanseporten
+            </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrapper wide">
+
+      <div id="throbber">
+        <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+		      <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+		    </svg>
+      </div>
+     
+      <div class="box major" id="frontpage">
+        <h2 class="ribbon lightbulb">Vurder dine ferdigheter</h2>
+
+        <div class="wrapper">
+          <!-- Available CSS classes: reading, data, calc, read-write -->
+          <div class="introduction calc">
+            <h1>Regnesjekken</h1>
+
+            <p>
+              Med regnesjekken vurderer du dine egne regneferdigheter, og får en pekepinn på hva du er god til og hva du kan bli bedre på.
+            </p>
+
+           <p>&nbsp;</p>
+
+            <button onclick="frontpageSoundTest();" id="frontpage-soundtest" class="text-to-speech" disabled>Trykk for å høre tekst</button>
+            <button onclick="frontpageSoundStop();" id="frontpage-soundstop" class="text-to-speech-stop" ><img src="static/images/stopbtn.png" /></button>
+            <button onclick="frontpageSoundHelp();" id="frontpage-soundhelp" class="text-to-speech-help" ><img src="static/images/helpbtn.png" /></button>
+            <button onclick="frontpageSoundSettings();" id="frontpage-soundsettings" class="text-to-speech-settings" ><img src="static/images/settingsbtn.png" /></button>
+            <button id="frontpage-startbtn" class="action-btn" onclick="startQuestions()" disabled>Start</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="box major" id="about">
+        <h2 class="ribbon lightbulb">Vurder dine ferdigheter</h2>
+        <button class="close">Lukk</button>
+
+        <div class="wrapper">
+          <div class="exam-info">
+            <h1>Info om lesetest</h1>
+
+            <div class="illustrated">
+              <p>
+                Kanskje du synes det er vanskelig å lese? Mange tekster er dårlig skrevet, eller de kan ha et vanskelig innhold. Du kan bli bedre til å lese dersom du ønsker det.
+              </p>
+
+              <ul class="bullets">
+                <li>
+                  Å kunne lese godt gjør det enklere å utføre jobben
+                </li>
+
+                <li>
+                  Å lese godt gjør det enklere å gjennomføre en utdanning
+                </li>
+
+                <li>
+                  Å kunne lese godt gjør det lettere å hjelpe barna med leksene
+                </li>
+              </ul>
+            </div>
+
+            <h2>
+              Gjennomføringen
+            </h2>
+
+            <p>
+              Testen tar 10 minutter. Du leser en tekst hvor noen av setningene må fullføres. For å fullføre disse setningene må du velge ett ord blant flere svaralternativer. Du klikker med musen på det ordet du mener er rett. Når du har besvart, klikker du på neste-knappen for å gå videre.
+            </p>
+
+            <p>
+              De to første oppgavene skal vise hvordan du utfører testen. Du må lytte til instruksjonen ved å trykke på avspillingsknappen. Du kommer ikke videre før du har hørt hele instruksjonen. Når du går i gang med selve testen, kan du ikke benytte lesehjelpemidler.
+            </p>
+
+            <p>
+              Når du har tatt testen kan du skrive ut resultatet, lagre det eller sende det til deg selv eller andre.
+            </p>
+
+            <h2>
+              Resultat
+            </h2>
+
+            <p>
+              Testen forteller ikke noe om årsaken til et godt eller dårlig resultat. På den siste siden i testen er det informasjon om hvordan du kan ta kontakt dersom du ønsker mer hjelp med lesingen.
+            </p>
+
+            <p class="footnote">Denne testen er oversatt fra danske. Test er utviklet av Senter for leseforskning ved Københavns Universitet.</p>
+
+            <button class="text-to-speech">Trykk for å høre tekst</button>
+            <button class="action-btn">Start</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="box major" id="questions">
+        <div class="wrapper">
+          <div class="questionnaire">
+            <h1 class="default-heading">Regnesjekken</h1>
+
+            <div class="progression">
+              <span class="steps">20/40</span>
+              <div class="bar">
+                <div class="inner" style="left: 50%;"></div>
+              </div>
+            </div>
+
+            <div class="task">
+              <p class="question">
+                <em>Hvilken erfaring har du med:</em> å bruke søkemotorer på internett (f.eks. Google, Yahoo m.fl.)?
+              </p>
+
+              <ul class="answers">
+                <li>Vet ikke</li>
+                <li>Bruker ikke/kan ikke</li>
+                <li>Begrenset erfaring</li>
+                <li>Stor erfaring</li>
+              </ul>
+            </div>
+
+            <button onclick="frontpageSoundTest();" class="text-to-speech">Trykk for å høre tekst</button>
+            <button onclick="frontpageSoundStop();" class="text-to-speech-stop" ><img src="static/images/stopbtn.png" /></button>
+            <button onclick="frontpageSoundHelp();" class="text-to-speech-help" ><img src="static/images/helpbtn.png" /></button>
+            <button onclick="frontpageSoundSettings();" class="text-to-speech-settings" ><img src="static/images/settingsbtn.png" /></button>
+
+            <button onClick="prevQuestion()" class="return" disabled>Tilbake</button>
+            <button onClick="nextQuestion()" class="proceed">Neste</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="box major" id="result">
+        <!--<button class="close">Lukk</button>-->
+
+        <div class="wrapper">
+          <div class="result">
+            <h1 class="default-heading centered">Regnesjekken er fullført</h1>
+
+            <div class="gauge-wrapper">
+              <div class="gauge for-exam">
+                <div id="circle-progress"></div>
+                <div class="level-seperators"></div>
+
+                <label class="level first">Nivå<span>1</span></label>
+                <label class="level second">Nivå<span>2</span></label>
+                <label class="level third">Nivå<span>3</span></label>
+
+                <div class="score">NIVÅ:<span>0</span></div>
+              </div>
+            </div>
+
+            <!-- Available CSS classes: reading, data, calc, read-write -->
+            <div class="feedback calc">
+              <h2>Du er nivå 3 av 3!</h2>
+
+              <p>
+                Du er en ganske god bruker med god oversikt over de mulighetene som ligger i å bruke data. Du kan likevel ha stort utbytte av å bli bedre.
+              </p>
+
+              <a class="btn" href="https://www.kompetansenorge.no/kompetanseporten/rad-og-tips-for-a-bli-bedre">Få råd og tips for å bli bedre</a>
+              <a class="btn inverted" href="http://www.kompetanseporten.no">Tilbake til forsiden</a>
+              <div class="options">
+                <div id="printbtn" class="btn inverted" onclick="getPDF()">Last ned resultatet</div>
+                <!--<div class="btn inverted" href="#">Send</div>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    
+ </div>   
+
+    <footer>
+      <div class="wrapper">
+        <h1 class="logo" onclick="location.href='http://www.kompetansenorge.no/'" style="cursor:pointer;">Kompetanse Norge</h1>
+
+        <div class="contact">
+          <a href="http://www.kompetansenorge.no">www.kompetansenorge.no</a>
+          <a href="mailto:webmaster@kompetansenorge.no">webmaster@kompetansenorge.no</a>
+        </div>
+
+        <div class="eu-logo">Co-founded by the Erasmus+ Programme of the European Union</div>
+      </div>
+    </footer>
+  </body>
+</html>

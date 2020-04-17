@@ -1,0 +1,11 @@
+.radio-label {
+  cursor: pointer;
+  display: inherit;
+  width: inherit;
+
+  &-content {
+    display: inherit;
+    order: 0;
+    line-height: inherit;
+  }
+}

@@ -1,0 +1,241 @@
+@import 'variables';
+@import 'mixins';
+
+$primary-color: $aqua-light;
+$primary-color-action: $aqua;
+
+$secondary-color: $grey-light;
+$secondary-color-action: $grey-dark;
+
+$accent-color: $green-light;
+$accent-color-action: $green;
+
+$warn-color: $red-light;
+$warn-color-action: $red;
+
+$stroke-width: 1px;
+$button-height: 46px;
+$icon-height: $button-height - 13px;
+
+%button {
+  padding: 0 15px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin: 0;
+  min-width: 80px;
+  border-radius: 4px;
+  border: none;
+  overflow: visible;
+  min-height: $button-height;
+  font-size: $font-size-medium;
+  transform: translate3d(0, 0, 0);
+  background: transparent;
+  transition: background .4s cubic-bezier(.25, .8, .25, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+
+  // IE 11 flex align center fix
+  &:after {
+    content: '';
+    min-height: inherit;
+    font-size: 0;
+  }
+}
+
+%button--primary {
+  @extend %button;
+  @include buttonColor($primary-color, $white);
+
+  &:active {
+    @include buttonColor($primary-color-action, $white);
+  }
+}
+
+%button--primary-focused {
+  @include buttonColor(darken($primary-color, 10%), $white);
+}
+
+%button--secondary {
+  @extend %button;
+  @include buttonColor($secondary-color, $white);
+
+  &:active {
+    @include buttonColor($secondary-color-action, $white);
+  }
+}
+
+%button--secondary-focused {
+  @include buttonColor(darken($secondary-color-action, 10%), $white);
+}
+
+%button--accent {
+  @extend %button;
+  @include buttonColor($accent-color, $grey-dark-deep);
+
+  &:active {
+    @include buttonColor($accent-color-action, $grey-dark-deep);
+  }
+}
+
+%button--accent-focused {
+  @include buttonColor(darken($accent-color, 10%), $grey-dark-deep);
+}
+
+%button--warn {
+  @extend %button;
+  @include buttonColor($warn-color, $white);
+
+  &:active {
+    @include buttonColor($warn-color-action, $white);
+  }
+}
+
+%button--warn-focused {
+  @include buttonColor(darken($warn-color, 10%), $white);
+}
+
+%stroked-button {
+  @extend %button;
+  border: $stroke-width solid;
+  min-height: $button-height - $stroke-width;
+  background-color: transparent;
+}
+
+%stroked-button--primary {
+  @extend %stroked-button;
+  @include strokedButtonColor($primary-color);
+
+  &:active {
+    @include strokedButtonColor($primary-color-action);
+  }
+}
+
+%stroked-button--primary-focused {
+  @include strokedButtonColor(darken($primary-color, 15%));
+}
+
+%stroked-button--secondary {
+  @extend %stroked-button;
+  @include strokedButtonColor($secondary-color);
+
+  &:active {
+    @include strokedButtonColor($secondary-color-action);
+  }
+}
+
+%stroked-button--secondary-focused {
+  @include strokedButtonColor(darken($secondary-color, 15%));
+}
+
+%stroked-button--accent {
+  @extend %stroked-button;
+  @include strokedButtonColor($accent-color);
+
+  &:active {
+    @include strokedButtonColor($accent-color-action);
+  }
+}
+
+%stroked-button--accent-focused {
+  @include strokedButtonColor(darken($accent-color, 15%));
+}
+
+%stroked-button--warn {
+  @extend %stroked-button;
+  @include strokedButtonColor($warn-color);
+
+  &:active {
+    @include strokedButtonColor($warn-color-action);
+  }
+}
+
+%stroked-button--warn-focused {
+  @include strokedButtonColor(darken($warn-color, 15%));
+}
+
+%raised-button {
+  @extend %button;
+  box-shadow: 0 3px 1px -2px rgba($black, .2), 0 2px 2px 0 rgba($black, .14), 0 1px 5px 0 rgba($black, .12);
+
+  &:active {
+    box-shadow: 0 5px 5px -3px rgba($black, .2), 0 8px 10px 1px rgba($black, .14), 0 3px 14px 2px rgba($black, .12);
+  }
+}
+
+%raised-button--primary {
+  @extend %raised-button;
+  @extend %button--primary;
+}
+
+%raised-button--secondary {
+  @extend %raised-button;
+  @extend %button--secondary;
+}
+
+%raised-button--accent {
+  @extend %raised-button;
+  @extend %button--accent;
+}
+
+%raised-button--warn {
+  @extend %raised-button;
+  @extend %button--warn;
+}
+
+%disabled-button {
+  color: rgba($black, .4) !important;
+  cursor: default;
+  pointer-events: none;
+}
+
+%icon-button {
+  @extend %button;
+  display: flex;
+  align-items: center;
+
+  .svg-icon {
+    display: inline-block;
+    height: $icon-height;
+    width: $icon-height;
+    line-height: $icon-height;
+  }
+}
+
+%icon-button--primary {
+  color: $primary-color;
+}
+
+%icon-button--primary-focused {
+  color: darken($primary-color, 15%);
+}
+
+%icon-button--secondary {
+  color: $secondary-color;
+}
+
+%icon-button--secondary-focused {
+  color: darken($secondary-color, 15%);
+}
+
+%icon-button--accent {
+  color: $accent-color;
+}
+
+%icon-button--accent-focused {
+  color: darken($accent-color, 15%);
+}
+
+%icon-button--warn {
+  color: $warn-color;
+}
+
+%icon-button--warn-focused {
+  color: darken($warn-color, 15%);
+}

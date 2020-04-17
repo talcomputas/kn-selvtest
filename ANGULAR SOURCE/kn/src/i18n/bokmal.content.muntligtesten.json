@@ -1,0 +1,884 @@
+{
+  "intro": {
+    "label": "Tekster til Muntligtesten",
+    "title": "Muntligtesten",
+    "image": "muntligeferdigheter.svg",
+    "text": "<p>Dette er en kort test som består av 30 oppgaver. Det kan ta 10-15 minutter å ta Muntligtesten.</p><p>Muntligtesten inneholder hovedsakelig to oppgavetyper. Det er flervalgsoppgaver og rangeringsoppgaver. I noen få oppgaver finnes det lyd- eller filmklipp som man må høre på for å kunne besvare oppgaven.</p>"
+  },
+  "result": {
+    "image": "muntligeferdigheter.svg",
+    "levels": {
+      "1": {
+        "id": "1",
+        "title": "Basert på dine svar er du på nivå 1 av 3 i denne testen.",
+        "text": "Muntlige ferdigheter på nivå 1 innebærer at en kommuniserer enkelt i kjente sammenhenger. En oppfatter hovedinnholdet i beskjeder og instruksjoner, og bruker enkle strategier for kommunikasjon.",
+        "minScore": 0
+      },
+      "2": {
+        "id": "2",
+        "title": "Basert på dine svar er du på nivå 2 av 3 i denne testen.",
+        "text": "Muntlige ferdigheter på nivå 2 innebærer at en kommuniserer aktivt om temaer av interesse i kjente sammenhenger. En kan ivareta egne interesser og behov i hverdagen og videreutvikle egen muntlig kommunikasjon ut fra behov.",
+        "minScore": 10
+      },
+      "3": {
+        "id": "3",
+        "title": "Basert på dine svar er du på nivå 3 av 3 i denne testen.",
+        "text": "Muntlige ferdigheter på nivå 3 innebærer at en kommuniserer fleksibelt og effektivt både i kjente og ukjente sammenhenger. En kan delta aktivt i meningsutveksling i offentlige og private sammenhenger, og ta ansvar i kommunikasjonen.",
+        "minScore": 24
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "questions": [
+        {
+          "id": 1,
+          "type": "ranking",
+          "text": "Klikk på svaralternativene og ranger presentasjonene etter følgende situasjoner:<ol><li>Ny på jobb</li><li>Ny i prosjektgruppen</li><li>Ny bekjent på fest</li><li>Ny på fotballlaget</li></ol>",
+          "image": "Frans-tegning.png",
+          "options": [
+            {
+              "id": 2,
+              "text": "Hei. Mitt navn er Frans Kristiansen og jeg er ansvarlig for regnskap i prosjektet."
+            },
+            {
+              "id": 4,
+              "text": "Hei. Jeg heter Frans og er ny på laget, men har spilt i mange år."
+            },
+            {
+              "id": 3,
+              "text": "Hei. Jeg heter Frans og er barndomskompis med verten."
+            },
+            {
+              "id": 1,
+              "text": "Hei, jeg heter Frans Kristiansen og skal jobbe med regnskap fremover."
+            }
+          ],
+          "answer": {
+            "value": [1, 2, 3, 4],
+            "points": 1
+          }
+        },
+        {
+          "id": 2,
+          "type": "ranking",
+          "text": "Du skal overrekke en gave til avdelingslederen i anledning 50-årsdagen. <p>Hva vil du si når du overrekker gaven? Ranger kommentarene etter hvor passende de er.</p>",
+          "options": [
+            {
+              "id": 2,
+              "text": "Værsågod, den er til deg!"
+            },
+            {
+              "id": 4,
+              "text": "Pakk opp da!"
+            },
+            {
+              "id": 1,
+              "text": "Gratulerer med dagen på vegne av avdelingen!"
+            },
+            {
+              "id": 3,
+              "text": "Du kan bytte den!"
+            }
+          ],
+          "answer": {
+            "value": [1, 2, 3, 4],
+            "points": 1
+          }
+        },
+        {
+          "id": 3,
+          "type": "single",
+          "text": "Ola står fast med en omfattende arbeidsoppgave. <p>Hvilket av alternativene passer best for å spørre en kollega om hjelp?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 2,
+              "text": "Jeg får det ikke til, jeg. Kan du gjøre det for meg?"
+            },
+            {
+              "id": 1,
+              "text": "Jeg får det ikke til. Kan du hjelpe meg å komme i gang?"
+            },
+            {
+              "id": 3,
+              "text": "Kunne vi to gjøre denne jobben sammen?"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "type": "single",
+          "text": "Samuel føler at han ikke får brukt kompetansen sin på jobben og det gjør han frustrert. Han skal snakke med sjefen sin og be om å få oppgaver som passer han bedre. <p>Hva bør han si?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Jeg har tatt flere kurs i kundebehandling og vil gjerne bidra i mer utfordrende oppgaver."
+            },
+            {
+              "id": 2,
+              "text": "Jeg er lei av at jeg ikke får være med på de mest spennende oppgavene på jobb."
+            },
+            {
+              "id": 3,
+              "text": "Jeg tror at jeg kanskje vil være med på andre typer oppgaver fremover. "
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "type": "single",
+          "text": "Ola prater med Sara på jobben.<p>Klikk på det bildet hvor hun virker mest interessert i samtalen.</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "optionSize": "l",
+          "options": [
+            {
+              "id": 2,
+              "image": "Bilder_2.jpg"
+            },
+            {
+              "id": 3,
+              "image": "Bildet_3.jpg"
+            },
+            {
+              "id": 1,
+              "image": "Bildet_1.jpg"
+            },
+            {
+              "id": 4,
+              "image": "Bildet_4.jpg"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "type": "single",
+          "text": "Sarah er hos legen og får informasjon om sin videre behandling.<p>Hva bør hun gjøre?<p>",
+          "video": {
+            "url": "Kink i ryggen film 18.mp4",
+            "controls": true
+          },
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 2,
+              "text": "Vente og håpe at legen gjentar"
+            },
+            {
+              "id": 3,
+              "text": "Notere ned de ordene hun får med seg"
+            },
+            {
+              "id": 1,
+              "text": "Be legen snakke saktere"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "type": "single",
+          "text": "Linn møter Samuel ved kaffemaskinen mandag morgen. Samuel forteller at han har hatt en kjempespennende helg. <p>Hva bør Linn følge opp med for å fortsette samtalen?</p> ",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Så gøy! Hva gjorde du?"
+            },
+            {
+              "id": 2,
+              "text": "Så kult! Jeg var på badeland."
+            },
+            {
+              "id": 3,
+              "text": "Å, ja. Hvordan går det med moren din?"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "type": "hotspot",
+          "text": " Lytt på lydklippet og klikk på brødavdelingen på kartet. Du kan lytte til lydklippet flere ganger om du ønsker.",
+          "image": "kart.png",
+          "audio": "Opp8Nivå1.mp3",
+          "answer": {
+            "value": 5,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "x": 50,
+              "y": 10,
+              "width": 35,
+              "height": 10
+            },
+            {
+              "id": 2,
+              "x": 50,
+              "y": 30,
+              "width": 35,
+              "height": 10
+            },
+            {
+              "id": 3,
+              "x": 12.5,
+              "y": 0,
+              "width": 35,
+              "height": 10
+            },
+            {
+              "id": 4,
+              "x": 12.5,
+              "y": 30,
+              "width": 35,
+              "height": 10
+            },
+            {
+              "id": 5,
+              "x": 50,
+              "y": 0,
+              "width": 35,
+              "height": 10
+            },
+            {
+              "id": 6,
+              "x": 50,
+              "y": 10,
+              "width": 35,
+              "height": 10
+            },
+            {
+              "id": 7,
+              "x": 12,
+              "y": 10,
+              "width": 35,
+              "height": 10
+            },
+            {
+              "id": 8,
+              "x": 88,
+              "y": 10,
+              "width": 12.5,
+              "height": 30
+            },
+            {
+              "id": 9,
+              "x": 88,
+              "y": 40,
+              "width": 12.5,
+              "height": 30
+            },
+            {
+              "id": 10,
+              "x": 75,
+              "y": 40,
+              "width": 12.5,
+              "height": 30
+            },
+            {
+              "id": 11,
+              "x": 50,
+              "y": 40,
+              "width": 12.5,
+              "height": 30
+            },
+            {
+              "id": 12,
+              "x": 37,
+              "y": 40,
+              "width": 12.5,
+              "height": 30
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "type": "single",
+          "text": "Sara er brannvernansvarlig og HR-sjefen, Hanne, forteller om nye brannvernrutiner som skal innføres umiddelbart. <p>Hvilket spørsmål bør Sara stille?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Hvordan blir jeg påvirket av dette?"
+            },
+            {
+              "id": 2,
+              "text": "Får vi bedre betaling nå?"
+            },
+            {
+              "id": 3,
+              "text": "Har vi ikke nok rutiner nå?"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "type": "single",
+          "text": "Linn skal ut og spise lunsj med noen kollegaer. En av dem foreslår pizza. Linn liker ikke pizza. <p>Hva bør Linn gjøre?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Foreslå et annet sted å spise med flere valgmuligheter."
+            },
+            {
+              "id": 2,
+              "text": "Ingenting. Hun melder avbud i siste liten."
+            },
+            {
+              "id": 3,
+              "text": "Spørre om hvorfor de må gå ut å spise lunsj igjen."
+            }
+          ]
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "base"
+      }
+    },
+    {
+      "id": 2,
+      "questions": [
+        {
+          "id": 11,
+          "type": "single",
+          "text": "Sarah sitter ved siden av en kollega på kontoret som stabler noe i en hylle. Kollegaen er tydelig frustrert og banner mye. <p>Hvordan bør Sarah reagere?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 2,
+              "text": "Oj, det ser kjipt ut. Lykke til!"
+            },
+            {
+              "id": 3,
+              "text": "Du, ikke bann så mye, da."
+            },
+            {
+              "id": 1,
+              "text": "Trenger du hjelp kanskje?"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "type": "dialogue",
+          "image": "modern-businessman-in-india.jpg",
+          "answer": {
+            "value": ["D2F26", "D2F8"],
+            "points": 1
+          },
+          "speech": [
+            {
+              "id": "D2F2",
+              "person": "Leader",
+              "text": "Du har et møte med lederen din.",
+              "type": "intro",
+              "next": "D2F1"
+            },
+            {
+              "id": "D2F1",
+              "person": "Leader",
+              "text": "Hvordan går det om dagen?",
+              "type": "question",
+              "options": ["D2F26"]
+            },
+            {
+              "id": "D2F26",
+              "person": "Player",
+              "text": "Jo, det går fint med meg.",
+              "type": "option",
+              "next": "D2F16"
+            },
+            {
+              "id": "D2F16",
+              "person": "Esha",
+              "text": "Ja jeg syns du har gjort en bra innsats i det siste. Men jeg har fått tilbakemeldinger på at du ofte kommer for sent på jobb.",
+              "type": "question",
+              "options": ["D2F8", "D2F9", "D2F10"]
+            },
+            {
+              "id": "D2F8",
+              "person": "Player",
+              "text": "Beklager. Jeg skal komme i tide fremover.",
+              "type": "option",
+              "next": "D2F13"
+            },
+            {
+              "id": "D2F9",
+              "person": "Player",
+              "text": "Beklager, men bussen min er alltid for sen.",
+              "type": "option",
+              "next": "D2F24"
+            },
+            {
+              "id": "D2F10",
+              "person": "Player",
+              "text": "Beklager, men det viktigste er vel at jeg får jobben gjort?",
+              "type": "option",
+              "next": "D2F24"
+            },
+            {
+              "id": "D2F24",
+              "person": "Esha",
+              "text": "Å ja.... ok.",
+              "type": "completion"
+            },
+            {
+              "id": "D2F13",
+              "person": "Esha",
+              "text": "Flott!",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "type": "single",
+          "text": "Sjefen har holdt en presentasjon på et møte, og du synes at den ikke var særlig god. <p>Hvilken tilbakemelding passer best?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 2,
+              "text": "Det var bra at alt det tekniske fungerte så bra i dag."
+            },
+            {
+              "id": 1,
+              "text": "Du hadde flere gode poeng, men vil du ha noen innspill?"
+            },
+            {
+              "id": 3,
+              "text": "Jeg skjønte ikke helt hva du prøvde å si, jeg."
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "type": "single",
+          "text": "Sjefen til Espen ber han lage 30 rundstykker, i tillegg til lunsj for 150 ansatte. Espen ser på klokken og forstår at det er for lite tid. <p>Hvordan bør han svare sjefen?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Beklager, det er for kort varsel. Kan vi finne en annen løsning?"
+            },
+            {
+              "id": 2,
+              "text": "Du kan ikke komme med dette nå. Det er altfor lite tid. Det vil aldri gå!"
+            },
+            {
+              "id": 3,
+              "text": "Kan du ikke spørre noen andre? Jeg har ikke tid."
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "type": "single",
+          "text": "Du er på jobbarrangement og vil starte en samtale med noen du ikke kjenner.  <p>Hvordan ville du åpnet samtalen?<br> Klikk på lydfilen som viser en god måte på å åpne samtalen.</p>",
+          "options": [
+            {
+              "id": 2,
+              "audio": "Opp5Nivå2_2Alternativ.mp3"
+            },
+            {
+              "id": 1,
+              "audio": "Opp5Nivå2_1Alternativ.mp3"
+            },
+            {
+              "id": 3,
+              "audio": "Opp5Nivå2_3Alternativ.mp3"
+            }
+          ],
+          "answer": {
+            "value": 1,
+            "points": 1
+          }
+        },
+        {
+          "id": 16,
+          "type": "single",
+          "text": "Hva bør du gjøre for å være en god lytter i en samtale?",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Be samtalepartneren utdype."
+            },
+            {
+              "id": 2,
+              "text": "Respondere med egne erfaringer."
+            },
+            {
+              "id": 3,
+              "text": "La samtalepartneren styre samtalen."
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "type": "ranking",
+          "text": "Ola og en kollega snakker om det nye datasystemet som skal innføres. Ola har vært på kurs og likte det ikke.<p> Sorter tilbakemeldingene fra mest til minst konstruktivt.</p>",
+          "options": [
+            {
+              "id": 2,
+              "text": "Jeg tror ikke jeg kommer til å bruke det noe særlig, det var ganske dårlig."
+            },
+            {
+              "id": 1,
+              "text": "Det har mye potensiale, men vi må få til noen justeringer før det blir bra."
+            },
+            {
+              "id": 3,
+              "text": "Har sett det, men det virker helt ubrukelig. Passer ikke for oss i det hele tatt."
+            }
+          ],
+          "answer": {
+            "value": [1, 2, 3],
+            "points": 1
+          }
+        },
+        {
+          "id": 18,
+          "type": "single",
+          "text": "Bedriften der Anne jobber skal omorganisere. Hun snakker med en kollega som er redd for omorganiseringen.<p>Hvilket utsagn passer det at Anne kommer med i slik situasjon?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 3,
+              "text": "Omorganiseringen skjer uansett. Det er ikke noen vits i å klage."
+            },
+            {
+              "id": 2,
+              "text": "Omorganisering er kjempebra, men det er jo typisk at noen er negative til fremskritt."
+            },
+            {
+              "id": 1,
+              "text": "Omorganisering kan være vanskelig, men det blir også mange spennende muligheter."
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "type": "single",
+          "text": "Fredrik forklarer over telefon hvordan den nye induksjonsovnen fungerer til barnevakten. <p>Hvilken instruks er enklest å forstå?</p>",
+          "options": [
+            {
+              "id": 2,
+              "audio": "Opp9Nivå2_2Alternativ.mp3"
+            },
+            {
+              "id": 1,
+              "audio": "Opp9Nivå2_1Alternativ.mp3"
+            },
+            {
+              "id": 3,
+              "audio": "Opp9Nivå2_3Alternativ.mp3"
+            }
+          ],
+          "answer": {
+            "value": 1,
+            "points": 1
+          }
+        },
+        {
+          "id": 20,
+          "type": "single",
+          "text": "Linn, Hanne og Sarah spiser lunsj i kantina på jobben. Linn og Hanne prater så mye at det er vanskelig for Sarah å ta ordet.<p>Hvordan kan Sarah ta del i samtalen, på en hyggelig måte?</p>",
+          "options": [
+            {
+              "id": 2,
+              "text": "Hun kan rekke opp hånda, og si med et smil: “Nå er det min tur, jeg har noe morsomt å fortelle!” "
+            },
+            {
+              "id": 1,
+              "text": "Hun kan bryte inn i en pause, smile og si “ikke meningen å avbryte”, før hun leder samtalen over på noe annet."
+            }
+          ],
+          "answer": {
+            "value": 1,
+            "points": 1
+          }
+        },
+        {
+          "id": 21,
+          "type": "single",
+          "text": "En arbeidsgruppe Hanne er med i, har en formell diskusjon om en eventuell endring av leverandør av verneutstyr.<p>Hvilket utsagn passer det at Hanne kommer med i denne situasjonen?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Hva er argumentene for å bytte løsning? Det fungerer godt slik det er i dag."
+            },
+            {
+              "id": 2,
+              "text": "Skal vi bli sånne folk som bare følger trender og ikke har egne meninger?"
+            },
+            {
+              "id": 3,
+              "text": "Jeg er uenig. Jeg har ingen planer om å bruke noe annet enn hva jeg gjør i dag."
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "type": "single",
+          "text": "Jenny er ansatt som vikar med fast timelønn i kontrakten. Hun synes hun fortjener høyere lønn og ber om lønnsøkning. <p>Hvordan vil du som leder respondere i denne situasjonen for å unngå en konflikt?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 3,
+              "text": "Vi ønsker ikke å betale mer for den jobben du gjør, du får heller se etter en annen jobb."
+            },
+            {
+              "id": 2,
+              "text": "Du kan ikke bare spørre om mer penger hele tiden. Du får ta på deg ekstraoppdrag hvis du tjener for lite."
+            },
+            {
+              "id": 1,
+              "text": "Vi kan ikke forhandle om lønn nå, men vi kan ta det opp når kontrakten går ut."
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "type": "single",
+          "text": "Ola er på et prosjektmøte hvor alle deltar i samtalen. En av kollegaene, Linn, har ikke sagt så mye.<p>Hva bør Ola si for å inkludere henne i møtet?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 2,
+              "text": "Dere, nå er det Linn sin tur å prate."
+            },
+            {
+              "id": 1,
+              "text": "Hva er dine tanker rundt temaet, Linn?"
+            },
+            {
+              "id": 3,
+              "text": "Linn har vel ikke noen innspill til dette."
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "type": "single",
+          "text": "Hanne (leder) og Sarah (medarbeider) har statusmøte. Sarah får en melding på telefonen som ligger på bordet, hvor det står: <p>“Det er krise! Kan du ringe meg nå?” <p>Hvordan bør Sarah håndtere situasjonen?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Beklage seg og forklare situasjonen, og at hun bare må ta en rask telefon."
+            },
+            {
+              "id": 2,
+              "text": "Vise Hanne meldingen og spørre hva hun ville gjort."
+            },
+            {
+              "id": 3,
+              "text": "Gå raskt vekk fra samtalen og ringe, det er tross alt en krise."
+            }
+          ]
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "base"
+      }
+    },
+    {
+      "id": 3,
+      "questions": [
+        {
+          "id": 25,
+          "type": "single",
+          "text": "Du sitter sammen med noen kollegaer i lunsjpausen og de snakker stygt om sjefen. Du synes ikke dette passer seg og ønsker å endre emne. <p>Hva bør du si for å stoppe samtalen?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Jeg synes ikke vi skal snakke om noen som ikke er til stede."
+            },
+            {
+              "id": 2,
+              "text": "Jeg synes vi skal snakke om fotball, det er hyggeligere."
+            },
+            {
+              "id": 3,
+              "text": "Dere kan si hva dere vil, vi får ikke gjort noe med sjefen likevel."
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "type": "single",
+          "text": "<p>Josef er i butikken og vil avslutte samtalen med en selger som er veldig pågående. Hvilket ord bør han velge for å vise at han ikke ønsker å kjøpe flere varer?</p><p>Jeg ________ at jeg har alt jeg trenger nå. Takk for hjelpen.</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 2,
+              "text": "tror"
+            },
+            {
+              "id": 3,
+              "text": "tenker"
+            },
+            {
+              "id": 1,
+              "text": "vet"
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "type": "single",
+          "text": "Du skal lede et møte. På veien dit blir du stoppet av sjefen din som vil ha noen ord med deg angående en annen sak. <p>Hvordan håndterer du best denne situasjonen?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 2,
+              "text": "Ja, selvfølgelig. De andre kan sikkert vente."
+            },
+            {
+              "id": 3,
+              "text": "Jeg må løpe til et møte og har ikke tid til å snakke med deg nå."
+            },
+            {
+              "id": 1,
+              "text": "Beklager, men jeg skal lede et møte nå. Kan vi ta denne samtalen etterpå?"
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "type": "single",
+          "text": "<p><b>Eline:</b> “Ja, det var et skikkelig bra kurs vi arrangerte nå ... ”</p><p><b>Kathrine:</b> “Gøy at så mange deltok aktivt og ikke meldte seg ut.”</p><p><b>Eline:</b> “Vi valgte en utrolig dyktig kursholder, heldigvis!”</p><p>Hvordan kan Kathrine avslutte denne samtalen på en høflig måte?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 2,
+              "text": "Ja, jeg lurer på hvem som skal holdet kurset neste gang."
+            },
+            {
+              "id": 3,
+              "text": "Vi snakkes da! "
+            },
+            {
+              "id": 1,
+              "text": "Nå kan vi bare glede oss til neste gang. Ha det bra!"
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "type": "single",
+          "text": "Hva mener personen som sier dette?",
+          "audio": "Opp5Nivå3.mp3",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "At hun ikke rekker møtet."
+            },
+            {
+              "id": 2,
+              "text": "At hun rekker møtet."
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "type": "single",
+          "text": "Siris gode kollega er uvanlig stille i dag. Siri ser at hun er rød i øynene og tydeligvis har grått. Når Siri spør hvordan det går, svarer kollegaen kort med et lite smil: “Det går bra”, og fortsetter å jobbe. <p>Hva bør Siri si?</p>",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "“Ok, du får si ifra hvis du trenger noe”."
+            },
+            {
+              "id": 2,
+              "text": "“Jeg ser at du har grått, er du sikker på at alt er greit med deg?”."
+            },
+            {
+              "id": 3,
+              "text": "“Ja ja, gleder meg til lunsj”."
+            }
+          ]
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "base"
+      }
+    }
+  ]
+}

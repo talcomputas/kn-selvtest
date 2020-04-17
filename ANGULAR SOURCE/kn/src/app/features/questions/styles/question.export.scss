@@ -1,0 +1,268 @@
+@import 'variables';
+@import 'buttons';
+@import 'mixins';
+
+%question-two-columns {
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint($tablet-large) {
+    flex-direction: column;
+  }
+
+  > * {
+    max-width: 48%;
+    width: 100%;
+
+    @include breakpoint($tablet-large) {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+%image {
+  text-align: center;
+  line-height: 0;
+
+  @include breakpoint($tablet-large) {
+    padding-bottom: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 520px;
+  }
+}
+
+%video {
+  text-align: center;
+  line-height: 0;
+
+  @include breakpoint($tablet-large) {
+    padding-bottom: 20px;
+  }
+
+  video {
+    max-width: 100%;
+    max-height: 400px;
+  }
+}
+
+%img-secondary {
+  img {
+    max-height: 40vh;
+
+    @include breakpoint($tablet-large) {
+      max-height: 100px;
+    }
+  }
+}
+
+%content {
+  display: flex;
+  flex-direction: column;
+
+  &.no-media {
+    max-width: none;
+    flex-direction: row;
+
+    > * {
+      max-width: 48%;
+    }
+
+    @include breakpoint($tablet-large) {
+      flex-direction: column;
+
+      > * {
+        max-width: none;
+      }
+    }
+  }
+
+  audio {
+    width: 100%;
+  }
+}
+
+%text {
+  font-size: $font-size-large;
+  margin-bottom: 20px;
+}
+
+%text-options {
+  display: flex;
+  flex-direction: column;
+
+  .button-toggle,
+  .radio-button {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-disabled {
+      .option {
+        @extend %disabled-button;
+      }
+    }
+  }
+
+  .cdk-focused {
+    .option {
+      @extend %stroked-button--primary-focused;
+    }
+  }
+
+  .option {
+    @extend %stroked-button--primary;
+    width: 100%;
+  }
+
+  .button-toggle-checked,
+  .radio-checked {
+    &.cdk-focused {
+      .option {
+        @extend %button--primary-focused;
+      }
+    }
+
+    .option {
+      @extend %raised-button--primary;
+    }
+  }
+}
+
+%image-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .radio-checked {
+    .option {
+      border-color: $grey-dark;
+      transition: all 200ms;
+
+      &:before {
+        background-color: transparent;
+        transition: all 200ms;
+      }
+    }
+  }
+
+  .cdk-focused {
+    .option {
+      border-color: $grey-dark;
+    }
+  }
+
+  .option {
+    height: 100px;
+    min-width: 100px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    position: relative;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($white, .1);
+      transition: all 200ms;
+    }
+
+    img {
+      height: auto;
+      max-height: 80px;
+      max-width: 80px;
+    }
+  }
+
+  &.xl {
+    flex-direction: column;
+
+    .option {
+      height: auto;
+
+      img {
+        max-height: none;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &.l {
+    > * {
+      max-width: 49%;
+    }
+
+    .option {
+      height: auto;
+      width: 100%;
+
+      img {
+        max-height: none;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+%audio-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .button-toggle,
+  .radio-button {
+    width: 100%;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-disabled {
+      .option {
+        @extend %disabled-button;
+      }
+    }
+  }
+
+  .cdk-focused {
+    .option {
+      @extend %stroked-button--primary-focused;
+    }
+  }
+
+  .option {
+    @extend %stroked-button--primary;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .button-toggle-checked,
+  .radio-checked {
+    &.cdk-focused {
+      .option {
+        @extend %button--primary-focused;
+      }
+    }
+
+    .option {
+      @extend %raised-button--primary;
+    }
+  }
+}

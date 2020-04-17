@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kntest timer="600000" version="datasjek">
+	<opgave id="1">
+		<overskrift>Hvor mye erfaring har du med å bruke e-post?</overskrift>
+		<option score="0">Ingen erfaring</option>
+		<option score="1">Litt erfaring</option>
+		<option score="2">Mye erfaring</option>
+	</opgave>
+	<opgave id="2">
+		<overskrift>Hvor mye erfaring har du med tekstbehandling (f.eks. Word)?</overskrift>
+		<option score="0">Har ikke brukt det</option>
+		<option score="1">Har brukt det litt</option>
+		<option score="2">Har brukt det mye</option>
+	</opgave>
+	<opgave id="3">
+		<overskrift>Vil du klare å bytte fastlege på nett?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Usikker</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="4">
+		<overskrift>Installerer du apper på smarttelefon eller nettbrett?</overskrift>
+		<option score="0">Har ingen erfaring med dette</option>
+		<option score="1">Trenger hjelp til å installere apper</option>
+		<option score="2">Installerer apper etter behov</option>
+	</opgave>
+	<opgave id="5">
+		<overskrift>Bruker du digitale karttjenester (f.eks. Google Maps og GPS)?</overskrift>
+		<option score="0">Har aldri brukt digitale kart</option>
+		<option score="1">Bruker enkel navigasjon</option>
+		<option score="2">Bruker ved behov, og kan mange funksjoner</option>
+	</opgave>
+	<opgave id="6">
+		<overskrift>Bruker du nettbank/mobilbank?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="7">
+		<overskrift>Bruker du skylagring (f.eks. iCloud, Dropbox eller OneDrive)?</overskrift>
+		<option score="0">Bruker ikke skylagring</option>
+		<option score="1">Ja, bruker lagring</option>
+		<option score="2">Ja, bruker lagring og deling</option>
+	</opgave>
+	<opgave id="8">
+		<overskrift>Organiserer du e-post?</overskrift>
+		<option score="0">Bruker ikke e-post</option>
+		<option score="1">Nei, har ikke noe system</option>
+		<option score="2">Ja, bruker mapper/regler/søkefunksjon</option>
+	</opgave>
+	<opgave id="9">
+		<overskrift>Ville du ha spurt om lov før du legger ut bilder av andre på sosiale medier?</overskrift>
+		<option score="0">Nei, aldri</option>
+		<option score="1">Noen ganger</option>
+		<option score="2">Ja, alltid</option>
+	</opgave>
+	<opgave id="10">
+		<overskrift>Har du et bevisst forhold til profil- og sikkerhetsinnstillinger på sosiale medier (f.eks. Facebook, Snapchat eller LinkedIn)?</overskrift>
+		<option score="0">Bruker ikke sosiale medier</option>
+		<option score="1">Kjenner til enkel bruk</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="11">
+		<overskrift>Sikrer du smarttelefonen din med f.eks. pinkode eller fingeravtrykk?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+		</opgave>
+	<opgave id="12">
+		<overskrift>Har du erfaring med å kjøpe varer eller billetter på nett?</overskrift>
+		<option score="0">Nei, ingen erfaring</option>
+		<option score="1">Ja, litt erfaring</option>
+		<option score="2">Ja, mye erfaring</option>
+	</opgave>
+	<opgave id="13">
+		<overskrift>Bruker du sikker innlogging på nettbaserte tjenester der det finnes (f.eks. to-trinnsbekreftelse eller Bank-ID)?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+			</opgave>
+	<opgave id="14">
+		<overskrift>Hvor ofte bruker du nettet for å finne informasjon?</overskrift>
+		<option score="0">Aldri</option>
+		<option score="1">Av og til</option>
+		<option score="2">Regelmessig</option>
+	</opgave>
+	<opgave id="15">
+		<overskrift>Vurderer du om informasjon du finner på nett er troverdig, ensidig eller utdatert?</overskrift>
+		<option score="0">Nei, aldri</option>
+		<option score="1">Noen ganger</option>
+		<option score="2">Ja, alltid</option>
+	</opgave>
+	<opgave id="16">
+		<overskrift>Har du skrevet noe nedsettende om en person på nett (f.eks. i sosiale medier eller kommentarfelt?)</overskrift>
+		<option score="0">Ja</option>
+		<option score="1">Har ikke tenkt over</option>
+		<option score="2">Nei</option>
+	</opgave>
+	<opgave id="17">
+		<overskrift>Hvor mye erfaring har du med å bruke presentasjonsverktøy (f.eks. PowerPoint)?</overskrift>
+		<option score="0">Har ikke brukt det</option>
+		<option score="1">Har brukt det litt</option>
+		<option score="2">Har brukt det mye</option>
+	</opgave>
+	<opgave id="18">
+		<overskrift>Hvor mye erfaring har du med å bruke regneark (f.eks. Excel)?</overskrift>
+		<option score="0">Har ikke brukt det</option>
+		<option score="1">Har brukt det litt</option>
+		<option score="2">Har brukt det mye</option>
+	</opgave>
+	<opgave id="19">
+		<overskrift>Hvilken erfaring har du med å dele bilder med andre ved hjelp av mobiltelefon?</overskrift>
+		<option score="0">Har ingen erfaring med dette</option>
+		<option score="1">Kan sende via MMS</option>
+		<option score="2">Bruker flere ulike apper</option>
+	</opgave>
+	<opgave id="20">
+		<overskrift>Kan du koble til trådløse enheter eller nettverk gjennom f.eks. WiFi, Bluetooth eller Smart TV? </overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+		</opgave>
+	<opgave id="21">
+		<overskrift>Hvilken erfaring har du med bruk av digital kalender for å organisere avtaler og møter?</overskrift>
+		<option score="0">Ingen erfaring</option>
+		<option score="1">Litt erfaring</option>
+		<option score="2">Mye erfaring</option>
+	</opgave>
+	<opgave id="22">
+		<overskrift>Navngir eller organiserer du filer og dokumenter slik at de er enkle å finne igjen?</overskrift>
+		<option score="0">Aldri</option>
+		<option score="1">Av og til</option>
+		<option score="2">Alltid</option>
+	</opgave>
+	<opgave id="23">
+		<overskrift>Bruker du offentlige tjenester på nett (f.eks. Altinn eller Nav)?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Ja, men må ha hjelp</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="24">
+		<overskrift>Hvilken erfaring har du med strømmetjenester for å se på tv eller høre på musikk (f.eks. Netflix eller Spotify)?</overskrift>
+		<option score="0">Ingen erfaring</option>
+		<option score="1">Litt erfaring</option>
+		<option score="2">Mye erfaring</option>
+	</opgave>
+	<opgave id="25">
+		<overskrift>Klarer du å orientere deg og finne informasjonen du trenger på nett?</overskrift>
+		<option score="0">Nei, jeg synes det er vanskelig</option>
+		<option score="1">Ja, men det kan ta lang tid</option>
+		<option score="2">Ja, jeg finner lett informasjon</option>
+	</opgave>
+	<opgave id="26">
+		<overskrift>Hvilken erfaring har du med å installere og avinstallere programmer på datamaskin?</overskrift>
+		<option score="0">Ingen erfaring</option>
+		<option score="1">Litt erfaring</option>
+		<option score="2">Mye erfaring</option>
+	</opgave>
+	<opgave id="27">
+		<overskrift>Kan du sjekke hvor mye mobildata du bruker?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+		</opgave>
+	<opgave id="28">
+		<overskrift>Kan du gjenopprette data fra en sikkerhetskopi på datamaskin eller smarttelefon?</overskrift>
+		<option score="0">Nei</option>
+		<option score="1">Usikker</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="29">
+		<overskrift>Er du kritisk til å åpne en lenke som du får tilsendt i en epost fra ukjent avsender?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="30">
+		<overskrift>Endrer du innstillinger på mobil og/eller datamaskin (f.eks. språk, lyd og skjerm)?</overskrift>
+		<option score="0">Endrer ikke innstillinger</option>
+		<option score="1">Gjør enkle endringer</option>
+		<option score="2">Tilpasser aktivt</option>
+	</opgave>
+	<opgave id="31">
+		<overskrift>Ville du kunne lagt ut en annonse på nett ved hjelp av app eller nettjeneste?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="32">
+		<overskrift>Bruker du digitale betalingsløsninger på smarttelefon (f. eks. Vipps eller PayPal)?</overskrift>
+		<option score="0">Nei</option>
+		<option score="2">Ja</option>
+	</opgave>
+	<opgave id="33">
+		<overskrift>Forholder du deg til regler for opphavsrett når du tar i bruk innhold (f.eks. tekst, video eller bilder) som du finner på nett?</overskrift>
+		<option score="0">Aldri</option>
+		<option score="1">Av og til</option>
+		<option score="2">Alltid</option>
+	</opgave>
+	<opgave id="34">
+		<overskrift>Hvilken erfaring har du med å skrive innlegg på nett (f.eks. Facebook eller kommentarfelt)? </overskrift>
+		<option score="0">Har ingen erfaring</option>
+		<option score="1">Kun innlegg med tekst</option>
+		<option score="2">Innlegg med tekst og bilder</option>
+	</opgave>
+	<opgave id="35">
+		<overskrift>Er du bevisst på risikoen for nettsvindel?</overskrift>
+		<option score="0">Nei, tenker ikke over det</option>
+		<option score="1">Ja, vurderer noe</option>
+		<option score="2">Ja, vurderer nøye</option>
+	</opgave>
+</kntest>

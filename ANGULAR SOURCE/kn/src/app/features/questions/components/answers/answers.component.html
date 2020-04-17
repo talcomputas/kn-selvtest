@@ -1,0 +1,202 @@
+<div class="controls">
+  <button app-icon-button app-stroked-button app-color="primary" class="print" (click)="onPrint()">
+    <i app-svg-icon="print"></i>
+    {{'actions.print' | content}}
+  </button>
+</div>
+
+<div class="list">
+  <div class="header">
+    <span>{{'questions' | content}}</span>
+    <span>{{'answers' | content}}</span>
+  </div>
+
+  <div *ngFor="let item of data; let i = index;" class="item">
+    <div class="counter">{{i + 1}}/{{data?.length}}</div>
+    <ng-container [ngSwitch]="true">
+      <div class="question-single"
+           *ngSwitchCase="QuestionType.SINGLE === item.type">
+        <span class="correct-mark" *ngIf="item.isCorrect">✔</span>
+        <span class="incorrect-mark" *ngIf="!item.isCorrect">✖</span>
+
+        <p class="text" [innerHTML]="item.text"></p>
+
+
+        <div *ngIf="item.correct.image" class="value image">
+          <ng-container *ngIf="item.isCorrect">
+            <span class="correct">
+              <img [src]="'assets/images/' + item.correct.image">
+            </span>
+          </ng-container>
+
+          <ng-container *ngIf="!item.isCorrect">
+            <span class="answer">
+              <img [src]="'assets/images/' + item.correct.image">
+            </span>
+
+            <span class="selected">
+              <img [src]="'assets/images/' + item.selected.image">
+            </span>
+          </ng-container>
+        </div>
+
+        <div *ngIf="item.correct.audio" class="value audio">
+          <ng-container *ngIf="item.isCorrect">
+            <app-audio class="correct" url="assets/audios/{{item.correct.audio}}"></app-audio>
+          </ng-container>
+
+          <ng-container *ngIf="!item.isCorrect">
+            <span class="answer">
+              <app-audio url="assets/audios/{{item.correct.audio}}"></app-audio>
+            </span>
+
+            <span class="selected">
+              <app-audio url="assets/audios/{{item.selected.audio}}"></app-audio>
+            </span>
+          </ng-container>
+        </div>
+
+        <div *ngIf="item.correct.text" class="value">
+          <ng-container *ngIf="item.isCorrect">
+            <span class="correct" [innerHTML]="item.correct.text"></span>
+          </ng-container>
+
+          <ng-container *ngIf="!item.isCorrect">
+            <span class="answer" [innerHTML]="item.correct.text"></span>
+            <span class="selected" [innerHTML]="item.selected.text"></span>
+          </ng-container>
+        </div>
+      </div>
+
+      <div class="question-code"
+           *ngSwitchCase="QuestionType.CODE === item.type">
+        <span class="correct-mark" *ngIf="item.isCorrect">✔</span>
+        <span class="incorrect-mark" *ngIf="!item.isCorrect">✖</span>
+
+        <p class="text" [innerHTML]="item.text"></p>
+
+        <div class="value">
+          <ng-container *ngIf="item.isCorrect">
+            <span class="correct" [innerHTML]="item.correct"></span>
+          </ng-container>
+
+          <ng-container *ngIf="!item.isCorrect">
+            <span class="answer" [innerHTML]="item.correct"></span>
+            <span class="selected" [innerHTML]="item.selected"></span>
+          </ng-container>
+        </div>
+      </div>
+
+      <div class="question-multiple"
+           *ngSwitchCase="QuestionType.RANKING === item.type || QuestionType.MULTIPLE === item.type">
+        <span class="correct-mark" *ngIf="item.isCorrect">✔</span>
+        <span class="incorrect-mark" *ngIf="!item.isCorrect">✖</span>
+
+        <p class="text" [innerHTML]="item.text"></p>
+
+        <div class="value">
+          <ng-container *ngIf="item.isCorrect">
+            <div class="correct">
+              <span *ngFor="let option of item.correct" [innerHTML]="option.text"></span>
+            </div>
+          </ng-container>
+
+          <ng-container *ngIf="!item.isCorrect">
+            <div class="answer">
+              <span *ngFor="let option of item.selected" [innerHTML]="option.text"></span>
+            </div>
+
+            <div class="selected">
+              <span *ngFor="let option of item.correct" [innerHTML]="option.text"></span>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+      <div class="question-hotspot"
+           *ngSwitchCase="QuestionType.HOTSPOT === item.type">
+        <span class="correct-mark" *ngIf="item.isCorrect">✔</span>
+        <span class="incorrect-mark" *ngIf="!item.isCorrect">✖</span>
+
+        <p class="text" [innerHTML]="item.text"></p>
+
+        <div class="value">
+          <span class="image">
+            <img [src]="'assets/images/' + item.image">
+
+            <span class="points">
+              <ng-container *ngIf="item.isCorrect">
+                <span class="correct"
+                      [style.top.%]="item.correct?.y"
+                      [style.left.%]="item.correct?.x"
+                      [style.width.%]="item.correct?.width"
+                      [style.height.%]="item.correct?.height">
+                </span>
+              </ng-container>
+
+              <ng-container *ngIf="!item.isCorrect">
+                <span class="answer"
+                      [style.top.%]="item.correct?.y"
+                      [style.left.%]="item.correct?.x"
+                      [style.width.%]="item.correct?.width"
+                      [style.height.%]="item.correct?.height">
+                </span>
+                <span class="selected"
+                      [style.top.%]="item.selected?.y"
+                      [style.left.%]="item.selected?.x"
+                      [style.width.%]="item.selected?.width"
+                      [style.height.%]="item.selected?.height">
+                </span>
+              </ng-container>
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="question-dialogue"
+           *ngSwitchCase="QuestionType.DIALOGUE === item.type">
+        <span class="correct-mark" *ngIf="item.isCorrect">✔</span>
+        <span class="incorrect-mark" *ngIf="!item.isCorrect">✖</span>
+
+        <div class="value" [style.justify-content]="item.isCorrect? 'center' : 'space-between'">
+          <ng-container *ngIf="item.isCorrect">
+            <div class="correct">
+              <span *ngFor="let option of item.selected"
+                    [ngClass]="{
+                      question: option.type === SpeechType.QUESTION,
+                      option: option.type === SpeechType.OPTION,
+                      completion: option.type === SpeechType.COMPLETION
+                    }"
+                    [innerHTML]="option.text">
+              </span>
+            </div>
+          </ng-container>
+
+          <ng-container *ngIf="!item.isCorrect">
+            <div class="answer">
+              <span *ngFor="let option of item.correct"
+                    [ngClass]="{
+                      question: option.type === SpeechType.QUESTION,
+                      option: option.type === SpeechType.OPTION,
+                      completion: option.type === SpeechType.COMPLETION
+                    }"
+                    [innerHTML]="option.text">
+              </span>
+            </div>
+
+            <div class="selected">
+              <span *ngFor="let option of item.selected"
+                    [ngClass]="{
+                      question: option.type === SpeechType.QUESTION,
+                      option: option.type === SpeechType.OPTION,
+                      completion: option.type === SpeechType.COMPLETION
+                    }"
+                    [innerHTML]="option.text">
+              </span>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

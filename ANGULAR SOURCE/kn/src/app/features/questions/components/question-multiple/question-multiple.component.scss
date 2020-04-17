@@ -1,0 +1,26 @@
+@import '../../styles/question.export';
+
+:host {
+  @extend %question-two-columns;
+
+  .image {
+    @extend %image;
+    @extend %img-secondary;
+  }
+
+  .video {
+    @extend %video;
+  }
+
+  .content {
+    @extend %content;
+  }
+
+  .text {
+    @extend %text;
+  }
+
+  .options {
+    @extend %text-options;
+  }
+}

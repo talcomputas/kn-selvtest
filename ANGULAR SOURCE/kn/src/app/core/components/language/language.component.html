@@ -1,0 +1,6 @@
+<div app-radio-group [value]="content.getCtx()">
+  <span app-radio-button *ngFor="let ctx of content.getCtxList()"
+        class="link"
+        [value]="ctx"
+        (change)="select(ctx)">{{'language.' + ctx | content}}</span>
+</div>

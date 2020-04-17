@@ -1,0 +1,17 @@
+@import "mixins";
+
+:host {
+  .logo {
+    display: block;
+    max-width: 175px;
+    text-decoration: none;
+
+    @include breakpoint($tablet-large) {
+      max-width: 135px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

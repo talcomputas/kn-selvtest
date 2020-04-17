@@ -1,0 +1,141 @@
+@import 'variables';
+@import 'mixins';
+
+:host {
+  .card-header {
+    position: relative;
+  }
+
+  .close {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    padding: 0;
+    min-width: 24px;
+    min-height: 24px;
+    color: $grey-dark;
+
+    @include breakpoint($tablet-large) {
+      top: -10px;
+      right: -10px;
+    }
+
+    .svg-icon {
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+
+    .start {
+      min-width: 180px;
+    }
+  }
+
+  .level {
+    display: flex;
+    align-items: center;
+
+    app-level {
+      width: 50%;
+      padding-right: 10px;
+    }
+
+    .description {
+      position: relative;
+      padding-left: 40px;
+      width: 50%;
+
+      .image {
+        text-align: center;
+        padding: 0 0 20px;
+      }
+
+      h3 {
+        padding: 0 0 10px;
+      }
+
+      .buttons {
+        margin-top: 30px;
+
+        > * {
+          width: 100%;
+          margin-bottom: 15px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &:before {
+        content: '';
+        height: 95%;
+        width: 0;
+        position: absolute;
+        border-left: 1px solid $grey;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+
+    @include breakpoint($tablet-large) {
+      flex-direction: column;
+
+      app-level,
+      .description {
+        width: 100%;
+      }
+
+      app-level {
+        padding: 0;
+      }
+
+      .description {
+        padding: 0;
+        text-align: center;
+
+        .image,
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .print-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    page-break-after: always;
+
+    app-answers {
+      page-break-before: always;
+    }
+  }
+}
+
+::ng-deep {
+  @media print {
+    .print-content {
+      display: flex !important;
+    }
+
+    .card {
+      box-shadow: none;
+    }
+
+    .card-footer,
+    .close,
+    app-language,
+    .controls {
+      display: none !important;
+    }
+  }
+}

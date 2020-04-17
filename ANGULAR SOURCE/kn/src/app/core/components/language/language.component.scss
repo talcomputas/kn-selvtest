@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+
+  .link {
+    margin-left: 10px;
+    cursor: pointer;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &.radio-checked {
+      text-decoration: underline;
+    }
+  }
+}

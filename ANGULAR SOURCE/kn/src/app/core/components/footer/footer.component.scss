@@ -1,0 +1,41 @@
+@import 'variables';
+@import 'mixins';
+
+:host {
+  display: block;
+  background-color: $white;
+  padding: 20px;
+  border-top: 1px solid $grey-light;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+
+    @include breakpoint($tablet-large) {
+      min-height: 200px;
+      flex-direction: column;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .eu-logo {
+    overflow: hidden;
+    width: 200px;
+    font-size: 11px;
+    line-height: 1.2;
+    color: #254588;
+    cursor: default;
+
+    img {
+      float: left;
+      width: 60px;
+      margin-right: 10px;
+    }
+  }
+}
