@@ -32,16 +32,24 @@ export class ResultPageComponent implements OnInit, OnDestroy {
     private questionsService: QuestionsService,
     public content: ContentService,
   ) {
-    this.result = this.questionsService.result();
-    this.questionsService.attach();
-    this.questionsService.changes$
-      .pipe(takeUntil(this.destroyed$))
-      .subscribe(() => (this.result = this.questionsService.result()));
+    // this.result = this.questionsService.result();
+    // this.questionsService.attach();
+    // this.questionsService.changes$
+    //   .pipe(takeUntil(this.destroyed$))
+    //   .subscribe(() => (this.result = this.questionsService.result()));
   }
 
   ngOnInit() {
-    this.qbIdNb = environment.qbId_nb;
-    this.qbIdNn = environment.qbId_nn;
+    // enviorment not working
+    if (window.location.href.indexOf('muntligtesten') > -1) {
+      this.qbIdNb = 'wf7hoxw7vh';
+      this.qbIdNn = 'wmsg3i4nxj';
+    } else if (window.location.href.indexOf('digitaltesten') > -1) {
+      this.qbIdNb = '5qbzulst5d';
+      this.qbIdNn = 'gnkzckfbbp';
+    } else {
+      console.warn('unknown questback ID');
+    }
 
     if (this.content.getCtx() === 'nb') {
       this.openNbPopup();
@@ -51,6 +59,7 @@ export class ResultPageComponent implements OnInit, OnDestroy {
   }
 
   openNbPopup() {
+    console.log('popup', this.qbIdNb);
     questback.popup.create(
       'https://response.questback.com/vox/' + this.qbIdNb,
       {

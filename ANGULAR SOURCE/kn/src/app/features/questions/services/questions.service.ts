@@ -81,7 +81,7 @@ export class QuestionsService {
 
   result(): Result {
     if (!this.answers || !this.questions) {
-      this.router.navigateByUrl('/');
+      // this.router.navigateByUrl('/');
       return null;
     }
 
