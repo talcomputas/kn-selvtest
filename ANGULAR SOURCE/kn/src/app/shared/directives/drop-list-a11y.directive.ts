@@ -1,4 +1,12 @@
-import { AfterContentInit, ContentChildren, Directive, ElementRef, forwardRef, Inject, QueryList } from '@angular/core';
+import {
+  AfterContentInit,
+  ContentChildren,
+  Directive,
+  ElementRef,
+  forwardRef,
+  Inject,
+  QueryList,
+} from '@angular/core';
 import { FocusableOption, FocusKeyManager } from '@angular/cdk/a11y';
 import { DOWN_ARROW, UP_ARROW } from '@angular/cdk/keycodes';
 import { CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
@@ -11,10 +19,11 @@ import { CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
   },
 })
 export class DragA11yDirective implements FocusableOption {
-  constructor(private elRef: ElementRef<HTMLElement>,
-              @Inject(forwardRef(() => DropListA11yDirective))
-              private selectionList: DropListA11yDirective) {
-  }
+  constructor(
+    private elRef: ElementRef<HTMLElement>,
+    @Inject(forwardRef(() => DropListA11yDirective))
+    private selectionList: DropListA11yDirective,
+  ) {}
 
   /**
    * Returns the list item's text label. Implemented as a part of the FocusKeyManager.
@@ -32,7 +41,6 @@ export class DragA11yDirective implements FocusableOption {
   }
 }
 
-
 @Directive({
   selector: '[appDropListA11y]',
   host: {
@@ -40,20 +48,19 @@ export class DragA11yDirective implements FocusableOption {
     '(keydown)': 'keydown($event)',
   },
 })
-export class DropListA11yDirective implements AfterContentInit, FocusableOption {
+export class DropListA11yDirective
+  implements AfterContentInit, FocusableOption {
   private keyManager: FocusKeyManager<DragA11yDirective>;
 
   @ContentChildren(DragA11yDirective, { descendants: true })
   private options: QueryList<DragA11yDirective>;
 
-  constructor(private elRef: ElementRef,
-              private cdkDropList: CdkDropList) {
-  }
+  constructor(private elRef: ElementRef, private cdkDropList: CdkDropList) {}
 
   ngAfterContentInit(): void {
     this.keyManager = new FocusKeyManager<DragA11yDirective>(this.options)
-    // Allow disabled items to be focusable. For accessibility reasons, there must be a way for
-    // screenreader users, that allows reading the different options of the list.
+      // Allow disabled items to be focusable. For accessibility reasons, there must be a way for
+      // screenreader users, that allows reading the different options of the list.
       .skipPredicate(() => false);
   }
 
@@ -71,7 +78,7 @@ export class DropListA11yDirective implements AfterContentInit, FocusableOption 
     const keyCode = event.keyCode;
     const manager = this.keyManager;
     const data = this.cdkDropList.data;
-    const lastDataIndex = data && data.length - 1 || 0;
+    const lastDataIndex = (data && data.length - 1) || 0;
 
     const currIndex = manager.activeItemIndex;
     const prevIndex = currIndex > 0 ? currIndex - 1 : 0;

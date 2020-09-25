@@ -6,22 +6,26 @@ import { takeUntil } from 'rxjs/operators';
 
 @Directive({
   selector: '[cdkDropList][cdkDropListData][appDropListControlValueAccessor]',
-  providers: [{
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => DropListControlValueAccessorDirective),
-    multi: true,
-  }],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => DropListControlValueAccessorDirective),
+      multi: true,
+    },
+  ],
 })
-export class DropListControlValueAccessorDirective<T = { id: any }> implements ControlValueAccessor, OnInit, OnDestroy {
+export class DropListControlValueAccessorDirective<T = { id: any }>
+  implements ControlValueAccessor, OnInit, OnDestroy {
   private readonly destroy$ = new Subject();
 
-  constructor(private cdkDropList: CdkDropList) {
-  }
+  constructor(private cdkDropList: CdkDropList) {}
 
   ngOnInit(): void {
     this.cdkDropList.dropped
       .pipe(takeUntil(this.destroy$))
-      .subscribe(() => this.onChange(this.cdkDropList.data.map(item => item.id)));
+      .subscribe(() =>
+        this.onChange(this.cdkDropList.data.map((item) => item.id)),
+      );
   }
 
   ngOnDestroy(): void {
@@ -41,17 +45,17 @@ export class DropListControlValueAccessorDirective<T = { id: any }> implements C
     this.onTouched = fn;
   }
 
-  private onChange = (value: T[]) => {
-  };
+  private onChange = (value: T[]) => {};
 
-  private onTouched = () => {
-  };
+  private onTouched = () => {};
 
   private sortList(value: T[]): void {
     if (!(this.cdkDropList && this.cdkDropList.data && value)) {
       return;
     }
 
-    this.cdkDropList.data.sort((a, b) => value.indexOf(a.id) - value.indexOf(b.id));
+    this.cdkDropList.data.sort(
+      (a, b) => value.indexOf(a.id) - value.indexOf(b.id),
+    );
   }
 }
