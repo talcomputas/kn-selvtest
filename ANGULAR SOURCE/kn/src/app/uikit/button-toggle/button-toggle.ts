@@ -27,31 +27,19 @@ let uniqueIdCounter = 0;
 
 /** Change event object emitted by ButtonToggleComponent. */
 export class ButtonToggleChange {
-  constructor(public source: ButtonToggleComponent, public value: any) {}
+  constructor(public source: ButtonToggleComponent, public value: any) {
+  }
 }
 
 @Directive({
   selector: '[app-button-toggle-group]',
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => ButtonToggleGroupDirective),
-      multi: true,
-    },
-  ],
-  host: {
-    role: 'group',
-    class: 'button-toggle-group',
-    '[attr.aria-disabled]': 'disabled',
-  },
+  providers: [{ provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => ButtonToggleGroupDirective), multi: true }],
+  host: { role: 'group', class: 'button-toggle-group', '[attr.aria-disabled]': 'disabled' },
   exportAs: 'appButtonToggleGroup',
 })
-export class ButtonToggleGroupDirective
-  implements ControlValueAccessor, AfterContentInit {
+export class ButtonToggleGroupDirective implements ControlValueAccessor, AfterContentInit {
   @Output()
-  public readonly change: EventEmitter<ButtonToggleChange> = new EventEmitter<
-    ButtonToggleChange
-  >();
+  public readonly change: EventEmitter<ButtonToggleChange> = new EventEmitter<ButtonToggleChange>();
 
   @Output()
   public readonly valueChange = new EventEmitter<any>();
@@ -76,21 +64,23 @@ export class ButtonToggleGroupDirective
     this.innerName = value;
 
     if (this.buttonToggles) {
-      this.buttonToggles.forEach((toggle) => {
+      this.buttonToggles.forEach(toggle => {
         toggle.name = this.innerName;
         toggle.markForCheck();
       });
     }
   }
 
-  onChange: (value: any) => void = () => {};
+  onChange: (value: any) => void = () => {
+  };
 
-  onTouched: () => any = () => {};
+  onTouched: () => any = () => {
+  };
 
   @Input()
   get value(): any {
     const selected = this.selectionModel ? this.selectionModel.selected : [];
-    return selected.map((toggle) => toggle.value);
+    return selected.map(toggle => toggle.value);
   }
 
   set value(newValue: any) {
@@ -111,24 +101,18 @@ export class ButtonToggleGroupDirective
     this.isDisabled = coerceBooleanProperty(value);
 
     if (this.buttonToggles) {
-      this.buttonToggles.forEach((toggle) => toggle.markForCheck());
+      this.buttonToggles.forEach(toggle => toggle.markForCheck());
     }
   }
 
   constructor(private cdRef: ChangeDetectorRef) {
     this.innerName = `button-toggle-group-${uniqueIdCounter++}`;
     this.isDisabled = false;
-    this.selectionModel = new SelectionModel<ButtonToggleComponent>(
-      true,
-      undefined,
-      false,
-    );
+    this.selectionModel = new SelectionModel<ButtonToggleComponent>(true, undefined, false);
   }
 
   ngAfterContentInit(): void {
-    this.selectionModel.select(
-      ...this.buttonToggles.filter((toggle) => toggle.checked),
-    );
+    this.selectionModel.select(...this.buttonToggles.filter(toggle => toggle.checked));
     this.handleLimit();
   }
 
@@ -149,12 +133,7 @@ export class ButtonToggleGroupDirective
     this.disabled = isDisabled;
   }
 
-  syncButtonToggle(
-    toggle: ButtonToggleComponent,
-    select: boolean,
-    isUserInput = false,
-    deferEvents = false,
-  ) {
+  syncButtonToggle(toggle: ButtonToggleComponent, select: boolean, isUserInput = false, deferEvents = false) {
     if (select) {
       this.selectionModel.select(toggle);
     } else {
@@ -183,17 +162,13 @@ export class ButtonToggleGroupDirective
     }
 
     if (Array.isArray(this.rawValue)) {
-      return this.rawValue.some(
-        (value) => toggle.value != null && value === toggle.value,
-      );
+      return this.rawValue.some(value => toggle.value != null && value === toggle.value);
     }
   }
 
   private emitChangeEvent(): void {
     const selected = this.selected;
-    const source = Array.isArray(selected)
-      ? selected[selected.length - 1]
-      : selected;
+    const source = Array.isArray(selected) ? selected[selected.length - 1] : selected;
     const event = new ButtonToggleChange(source!, this.value);
     this.onChange(event.value);
     this.change.emit(event);
@@ -218,14 +193,13 @@ export class ButtonToggleGroupDirective
   /** Clears the selected toggles. */
   private clearSelection() {
     this.selectionModel.clear();
-    this.buttonToggles.forEach((toggle) => (toggle.checked = false));
+    this.buttonToggles.forEach(toggle => toggle.checked = false);
   }
 
   /** Selects a value if there's a toggle that corresponds to it. */
   private selectValue(value: any) {
-    const correspondingOption = this.buttonToggles.find(
-      (toggle) => toggle.value != null && toggle.value === value,
-    );
+    const correspondingOption = this.buttonToggles
+      .find(toggle => toggle.value != null && toggle.value === value);
 
     if (correspondingOption) {
       correspondingOption.checked = true;
@@ -252,19 +226,20 @@ export class ButtonToggleGroupDirective
       return;
     }
 
-    const selectedItemsCount = this.buttonToggles.filter(
-      (toggle) => toggle.checked === true,
-    ).length;
+    const selectedItemsCount = this.buttonToggles.filter(toggle => toggle.checked === true).length;
 
     if (selectedItemsCount < this.limit) {
-      this.buttonToggles.forEach((toggle) => (toggle.disabled = false));
+      this.buttonToggles.forEach(toggle => toggle.disabled = false);
       return;
+
     }
 
-    this.buttonToggles.forEach((toggle) => (toggle.disabled = !toggle.checked));
+    this.buttonToggles.forEach(toggle => toggle.disabled = !toggle.checked);
     this.cdRef.detectChanges();
+
   }
 }
+
 
 @Component({
   /* tslint:disable:component-selector */
@@ -290,11 +265,9 @@ export class ButtonToggleGroupDirective
 export class ButtonToggleComponent implements OnInit, OnDestroy {
   /** Event emitted when the group value changes. */
   @Output()
-  public readonly change: EventEmitter<ButtonToggleChange> = new EventEmitter<
-    ButtonToggleChange
-  >();
+  public readonly change: EventEmitter<ButtonToggleChange> = new EventEmitter<ButtonToggleChange>();
 
-  @ViewChild('button')
+  @ViewChild('button', { static: true })
   public readonly buttonElement: ElementRef<HTMLButtonElement>;
 
   /**
@@ -334,9 +307,7 @@ export class ButtonToggleComponent implements OnInit, OnDestroy {
   /** Whether the button is checked. */
   @Input()
   get checked(): boolean {
-    return this.buttonToggleGroup
-      ? this.buttonToggleGroup.isSelected(this)
-      : this.isChecked;
+    return this.buttonToggleGroup ? this.buttonToggleGroup.isSelected(this) : this.isChecked;
   }
 
   set checked(value: boolean) {
@@ -356,10 +327,7 @@ export class ButtonToggleComponent implements OnInit, OnDestroy {
   /** Whether the button is disabled. */
   @Input()
   get disabled(): boolean {
-    return (
-      this.isDisabled ||
-      (this.buttonToggleGroup && this.buttonToggleGroup.disabled)
-    );
+    return this.isDisabled || (this.buttonToggleGroup && this.buttonToggleGroup.disabled);
   }
 
   set disabled(value: boolean) {
@@ -369,13 +337,11 @@ export class ButtonToggleComponent implements OnInit, OnDestroy {
   private isDisabled: boolean;
   private isChecked: boolean;
 
-  constructor(
-    @Optional()
-    public buttonToggleGroup: ButtonToggleGroupDirective,
-    private cdRef: ChangeDetectorRef,
-    private elRef: ElementRef<HTMLElement>,
-    private focusMonitor: FocusMonitor,
-  ) {
+  constructor(@Optional()
+              public buttonToggleGroup: ButtonToggleGroupDirective,
+              private cdRef: ChangeDetectorRef,
+              private elRef: ElementRef<HTMLElement>,
+              private focusMonitor: FocusMonitor) {
     this.isDisabled = false;
     this.isChecked = false;
   }

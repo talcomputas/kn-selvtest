@@ -19,6 +19,8 @@ import { ProgressComponent } from './components/progress/progress.component';
 import { ScreenReaderComponent } from './components/screen-reader/screen-reader.component';
 import { ButtonModule } from '../uikit/button/button.module';
 import { AudioComponent } from './components/audio/audio.component';
+import { CalculatorComponent } from './components/calculator/calculator.component';
+import { AngularDraggableModule } from 'angular2-draggable';
 
 @NgModule({
   declarations: [
@@ -37,10 +39,12 @@ import { AudioComponent } from './components/audio/audio.component';
     ProgressComponent,
     ScreenReaderComponent,
     AudioComponent,
+    CalculatorComponent,
   ],
   imports: [
     CommonModule,
     ButtonModule,
+    AngularDraggableModule,
   ],
   exports: [
     CardComponent,
@@ -58,6 +62,7 @@ import { AudioComponent } from './components/audio/audio.component';
     ProgressComponent,
     ScreenReaderComponent,
     AudioComponent,
+    CalculatorComponent,
   ],
 })
 export class SharedModule {
@@ -75,7 +80,7 @@ export class SharedModule {
     iconRegistry.addSvgIcon(`print`, domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/print.svg`));
   }
 
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<SharedModule> {
     return {
       ngModule: SharedModule,
       providers: [IconRegistryService],

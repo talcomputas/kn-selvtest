@@ -1,0 +1,730 @@
+{
+  "intro": {
+    "label": "Test dine ferdigheter",
+    "title": "Regnetest",
+    "image": "data-check.svg",
+    "text": "Dette er en kortere regnetest som består av 30 oppgaver. Ta deg tid og ro til å gjennomføre testen for at resultatet skal vise dine ferdigheter! Det kan ta 10-15 minutter å ta regnetesten.\nVi anbefaler at du kun bruke kalkulator der den er tilgjengelig i oppgavene. Bruk penn og papir for å notere eller gjøre enkle utregninger."
+  },
+  "result": {
+    "image": "data-check.svg",
+    "levels": {
+      "1": {
+        "id": "1",
+        "title": "Basert på dine svar er du på nivå 1 av 3 i denne testen.",
+        "text": "Å regne på nivå 1 innebærer å bruke enkel regning i kjente sammenhenger og forstå enkel informasjon som inneholder tall.",
+        "minScore": 0
+      },
+      "2": {
+        "id": "2",
+        "title": "Basert på dine svar er du på nivå 2 av 3 i denne testen.",
+        "text": "Å regne på nivå 2 innebærer å bruke regning i forskjellige situasjoner, bearbeide informasjon som inneholder tall og å ha et bevisst forhold til ulike regneoperasjoner.",
+        "minScore": 12
+      },
+      "3": {
+        "id": "3",
+        "title": "Basert på dine svar er du på nivå 3 av 3 i denne testen.",
+        "text": "Å regne på nivå 3 innebærer å anvende sammensatt matematisk informasjon og kunnskap i nødvendige situasjoner i hverdagen.",
+        "minScore": 24
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "questions": [
+        {
+          "id": 1,
+          "type": "single",
+          "text": "Se på denne tabellen. Du har tenkt å ta bussen fra Hvaler til Oslo.\n\nHvor ofte går bussen?",
+          "image": "Busstabell.png",
+          "answer": {
+            "value": 4,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Hvert 15. minutt "
+            },
+            {
+              "id": 2,
+              "text": "Hver halve time "
+            },
+            {
+              "id": 3,
+              "text": "Hver time "
+            },
+            {
+              "id": 4,
+              "text": "Hver 2. time"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "type": "slider",
+          "text": "Hvilket tall peker pilen på?",
+          "image": "Skala_tall2.png",
+          "answer": {
+            "value": 130,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 100,
+            "ceil": 150
+          }
+        },
+        {
+          "id": 3,
+          "type": "slider",
+          "text": "Oles bil bruker gjennomsnittlig 8 liter bensin per 100 km. \n\t\t\nHvor mange liter blir det på 350 km?",
+          "image": null,
+          "calculator": true,
+          "answer": {
+            "value": 28,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 0,
+            "ceil": 50
+          }
+        },
+        {
+          "id": 4,
+          "type": "slider",
+          "text": "I ei tønne er det plass til 120 liter. Tønna er bare ¾ full.\n\nHvor mange liter er det i tønna?",
+          "image": "Tonne.png",
+          "answer": {
+            "value": 90,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 0,
+            "ceil": 50
+          }
+        },
+        {
+          "id": 5,
+          "type": "single",
+          "text": "Velg riktig svar:\n112112 : 112 =    ",
+          "image": null,
+          "answer": {
+            "value": 4,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "11"
+            },
+            {
+              "id": 2,
+              "text": "101"
+            },
+            {
+              "id": 3,
+              "text": "111"
+            },
+            {
+              "id": 4,
+              "text": "1001"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "type": "single",
+          "text": "Anita er 1,60 m høy.\n\nHvor høy er Wilhelm?",
+          "image": "Størrelse.png",
+          "answer": {
+            "value": 3,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "0,80 m"
+            },
+            {
+              "id": 2,
+              "text": "1,00 m"
+            },
+            {
+              "id": 3,
+              "text": "1,20 m"
+            },
+            {
+              "id": 4,
+              "text": "1,40 m"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "type": "slider",
+          "text": "En kokk har laget åtte liter suppe. Han heller\n¼ liter suppe i hver bolle.\n\t\t\nHvor mange suppeboller kan han fylle?",
+          "image": null,
+          "answer": {
+            "value": 32,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 8,
+            "ceil": 50
+          }
+        },
+        {
+          "id": 8,
+          "type": "single",
+          "text": "Velg riktig svar: \n25 • 72 =   ",
+          "image": null,
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "180"
+            },
+            {
+              "id": 2,
+              "text": "1 800"
+            },
+            {
+              "id": 3,
+              "text": "18 000"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "type": "single",
+          "text": "1/8 av 2650 kr er det samme som ",
+          "image": null,
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "0,08 • 2650 kr"
+            },
+            {
+              "id": 2,
+              "text": "0,125 • 2650 kr"
+            },
+            {
+              "id": 3,
+              "text": "0,8 • 2650 kr"
+            },
+            {
+              "id": 4,
+              "text": "1,025 • 2650 kr"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "type": "slider",
+          "text": " Alle kursdeltakerne i en gruppe ble spurt om alderen sin. Resultatet ble slik:\n\n1 person er 28 år\n\n2 personer er 30 år\n\n1 person er 40 år\n\nHva var gjennomsnittsalderen i gruppa?",
+          "image": null,
+          "calculator": true,
+          "answer": {
+            "value": 32,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 20,
+            "ceil": 50
+          }
+        },
+        {
+          "id": 11,
+          "type": "single",
+          "text": "Se på diagrammet. I hvilket år var mengden av husholdningsavfall per innbygger 430 kg? ",
+          "image": "Avfall.png",
+          "source": "Statistisk sentralbyrå",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "2011"
+            },
+            {
+              "id": 2,
+              "text": "2012"
+            },
+            {
+              "id": 3,
+              "text": "2016"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "type": "single",
+          "text": "Det tar én og en halv time å steke en fruktkake. Kaken settes i ovnen kl. 14.15.\nNår skal kaken tas ut av ovnen? ",
+          "image": null,
+          "answer": {
+            "value": 4,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "14.45"
+            },
+            {
+              "id": 2,
+              "text": "15.00"
+            },
+            {
+              "id": 3,
+              "text": "15.15"
+            },
+            {
+              "id": 4,
+              "text": "15.45"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "type": "slider",
+          "text": "Gunnar og Ahmed skal male huset utvendig. De trenger syv malingsspann. Hvert spann koster 250 kr.\n\nDe betaler kontant med to '1000-kronesedler.'\n\nHvor mye får de igjen?",
+          "image": null,
+          "calculator": true,
+          "answer": {
+            "value": 250,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 200,
+            "ceil": 300
+          }
+        },
+        {
+          "id": 14,
+          "type": "single",
+          "text": "6 m  og 8 cm er det samme som ",
+          "image": null,
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "68 cm"
+            },
+            {
+              "id": 2,
+              "text": "608 cm"
+            },
+            {
+              "id": 3,
+              "text": "6008 cm"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "type": "slider",
+          "text": "Ada har en reiseforsikring som koster \n1200 kr per år. Forsikringen settes opp med 5 %.\n\nHvor mye koster reiseforsikringen etter prisøkningen?",
+          "image": null,
+          "calculator": true,
+          "answer": {
+            "value": 1260,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 1200,
+            "ceil": 1300
+          }
+        },
+        {
+          "id": 16,
+          "type": "single",
+          "text": "Hvilken verdi peker pilen på?",
+          "image": "Skala_1.png",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "7,307"
+            },
+            {
+              "id": 2,
+              "text": "7,37"
+            },
+            {
+              "id": 3,
+              "text": "7,52"
+            },
+            {
+              "id": 4,
+              "text": "7,7"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "type": "single",
+          "text": "Velg riktig svar:\n0,03 • 1000 = ",
+          "image": null,
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "30"
+            },
+            {
+              "id": 2,
+              "text": "300"
+            },
+            {
+              "id": 3,
+              "text": "3000"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "type": "single",
+          "text": "Thomas jobber deltid på en fabrikk. På fabrikken tjener han '187 791,55 kroner.' Han går også med avisen og tjener '20 400 kroner.'\nKona hans jobber deltid som renholder. Hun tjener '59 233 kroner'.\n\nGjør overslag. Omtrent hvor mye tjener Thomas og kona til sammen?",
+          "image": null,
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "240 000"
+            },
+            {
+              "id": 2,
+              "text": "270 000"
+            },
+            {
+              "id": 3,
+              "text": "300 000"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "type": "single",
+          "text": "Jan tjener 1200 kr per 2 ½ time. Nora tjener 2100 kr på fire timer.\n\t\t\nHvem tjener mest per time?",
+          "image": null,
+          "calculator": true,
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Jan tjener mest per time."
+            },
+            {
+              "id": 2,
+              "text": "Nora tjener mest per time. "
+            },
+            {
+              "id": 3,
+              "text": "Begge tjener like mye. "
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "type": "single",
+          "text": "Mario abonnerer på en avis og et sportsblad. Avisen koster 900 kr for tre måneder. Sportsbladet koster 300 kr per halvår.\n\t\t\nHva koster de to abonnementene til sammen per måned?",
+          "image": null,
+          "source": "Statistisk sentralbyrå",
+          "calculator": true,
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "300"
+            },
+            {
+              "id": 2,
+              "text": "350"
+            },
+            {
+              "id": 3,
+              "text": "400"
+            },
+            {
+              "id": 4,
+              "text": "450"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "type": "single",
+          "text": "I hvilken alder spiller dobbelt så mange gutter som jenter dataspill? ",
+          "image": "Dataspill.png",
+          "source": "Medietilsynet 2018",
+          "answer": {
+            "value": 3,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "10 år"
+            },
+            {
+              "id": 2,
+              "text": "13 år"
+            },
+            {
+              "id": 3,
+              "text": "16 år"
+            },
+            {
+              "id": 4,
+              "text": "18 år"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "type": "single",
+          "text": "I en melkekartong er det 1,5 liter melk. Det er det samme som",
+          "image": null,
+          "answer": {
+            "value": 3,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "0,15 dl melk "
+            },
+            {
+              "id": 2,
+              "text": "5 dl melk "
+            },
+            {
+              "id": 3,
+              "text": "15 dl melk "
+            },
+            {
+              "id": 4,
+              "text": "150 dl melk "
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "type": "single",
+          "text": "200 % av 500 er det samme som ",
+          "image": null,
+          "answer": {
+            "value": 4,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "500:2"
+            },
+            {
+              "id": 2,
+              "text": "100 % av 200"
+            },
+            {
+              "id": 3,
+              "text": "500 - 200"
+            },
+            {
+              "id": 4,
+              "text": "2 • 500 "
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "type": "single",
+          "text": "Are kjøpte en lue på salg. Han fikk 40 % avslag og betalte 90 kr.\n\t\t\nHva kostet lua før prisen ble satt ned?",
+          "image": null,
+          "calculator": true,
+          "answer": {
+            "value": 3,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "90"
+            },
+            {
+              "id": 2,
+              "text": "130"
+            },
+            {
+              "id": 3,
+              "text": "150"
+            },
+            {
+              "id": 4,
+              "text": "180"
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "type": "single",
+          "text": "Velg riktig svar: \n4,16 : 4 =   ",
+          "image": null,
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "1,04"
+            },
+            {
+              "id": 2,
+              "text": "1,25"
+            },
+            {
+              "id": 3,
+              "text": "1,8"
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "type": "slider",
+          "text": "Are, Bosse og Chris fordeler 210 kroner i forholdet 2 : 3 : 5.\n\t\t\nHvor mange kroner får Bosse? ",
+          "image": null,
+          "calculator": true,
+          "answer": {
+            "value": 63,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 1,
+            "ceil": 150
+          }
+        },
+        {
+          "id": 27,
+          "type": "slider",
+          "text": "Se på diagrammet.\nHva var makstemperaturen i perioden?",
+          "image": "Temperatur.png",
+          "answer": {
+            "value": 22,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 18,
+            "ceil": 23
+          }
+        },
+        {
+          "id": 28,
+          "type": "slider",
+          "text": "Tegningen viser en hage med gress og terrasse.\n\t\t\nHvor stort er arealet som er dekket av gress?",
+          "image": "Terasse.png",
+          "calculator": true,
+          "answer": {
+            "value": 44,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 20,
+            "ceil": 50
+          }
+        },
+        {
+          "id": 29,
+          "type": "slider",
+          "text": "En kilo torsk koster 160,00 kr.\n\t\t\nHvor mye koster 1,25 kg torsk?",
+          "image": null,
+          "calculator": true,
+          "answer": {
+            "value": 200,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 160,
+            "ceil": 240
+          }
+        },
+        {
+          "id": 30,
+          "type": "single",
+          "text": "Hva ble det lyttet mer til i 2016 enn i 2014?",
+          "image": "Radio.png",
+          "source": "Statistisk sentralbyrå",
+          "answer": {
+            "value": 1,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "P4-gruppen"
+            },
+            {
+              "id": 2,
+              "text": "Bauer Media"
+            },
+            {
+              "id": 3,
+              "text": "NRK P1"
+            },
+            {
+              "id": 4,
+              "text": "NRK P3"
+            },
+            {
+              "id": 5,
+              "text": "Radio Norge"
+            }
+          ]
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "base"
+      }
+    }
+  ]
+}
+

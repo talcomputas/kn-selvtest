@@ -70,6 +70,7 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
       return;
     }
 
+
     this.questions.addControl(key, new FormControl(null, [Validators.required]));
   }
 }

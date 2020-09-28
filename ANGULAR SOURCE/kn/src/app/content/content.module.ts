@@ -12,7 +12,7 @@ import { ContentPipe } from './pipes/content.pipe';
   ],
 })
 export class ContentModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<ContentModule> {
     return {
       ngModule: ContentModule,
       providers: [

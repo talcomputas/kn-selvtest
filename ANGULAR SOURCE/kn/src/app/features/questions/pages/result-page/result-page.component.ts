@@ -47,6 +47,9 @@ export class ResultPageComponent implements OnInit, OnDestroy {
     } else if (window.location.href.indexOf('digitaltesten') > -1) {
       this.qbIdNb = '5qbzulst5d';
       this.qbIdNn = 'gnkzckfbbp';
+    } else if (window.location.href.indexOf('regnetesten') > -1) {
+      this.qbIdNb = 'ejelvlehqp';
+      this.qbIdNn = 'hqivwkebty';
     } else {
       console.warn('unknown questback ID');
     }

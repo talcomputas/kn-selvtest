@@ -4,6 +4,7 @@ import { QuestionHotspot } from '@features/questions/interfaces/question-hotspot
 import { QuestionMultiple } from '@features/questions/interfaces/question-multiple.interface';
 import { QuestionRanking } from '@features/questions/interfaces/question-ranking.interface';
 import { QuestionSingle } from '@features/questions/interfaces/question-single.interface';
+import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
 
 export type QuestionsUnionType
   = QuestionCode
@@ -11,4 +12,5 @@ export type QuestionsUnionType
   | QuestionHotspot
   | QuestionMultiple
   | QuestionRanking
-  | QuestionSingle;
+  | QuestionSingle
+  | QuestionSlider;

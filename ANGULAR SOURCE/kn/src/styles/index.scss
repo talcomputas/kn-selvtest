@@ -1,15 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext');
-@import '~@angular/cdk/a11y';
-@import '~normalize-scss/sass/_normalize.scss';
-
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import "~@angular/cdk/a11y";
+@import "~normalize-scss/sass/_normalize.scss";
 
 @include normalize();
 @include cdk-a11y();
-
-@import 'font';
-@import 'variables';
-@import 'mixins';
-@import 'layout';
-@import 'reset';
+@import "variables";
+@import "mixins";
+@import "layout";
+@import "reset";

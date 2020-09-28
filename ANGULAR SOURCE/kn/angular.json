@@ -57,14 +57,51 @@
                 "output": "assets/videos/"
               }
             ],
-            "styles": ["src/styles/index.scss"],
+            "styles": [
+              "src/styles/index.scss"
+            ],
             "stylePreprocessorOptions": {
-              "includePaths": ["src/styles"]
+              "includePaths": [
+                "src/styles"
+              ]
             },
             "scripts": [],
-            "es5BrowserSupport": true
           },
           "configurations": {
+            "regnetesten": {
+              "baseHref": "/regnetesten/",
+              "outputPath": "dist/regnetesten/",
+              "assets": [
+                "src/favicon.png",
+                "src/web.config",
+                "src/assets/icons",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/images/regnetesten/",
+                  "output": "assets/images/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/audios/regnetesten/",
+                  "output": "assets/audios/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/videos/regnetesten/",
+                  "output": "assets/videos/"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/i18n/bokmal.content.json",
+                  "with": "src/i18n/bokmal.content.regnetesten.json"
+                },
+                {
+                  "replace": "src/web.config",
+                  "with": "src/web.config.regnetesten"
+                }
+              ]
+            },
             "digitaltesten": {
               "baseHref": "/digitaltesten/",
               "outputPath": "dist/digitaltesten/",
@@ -100,10 +137,6 @@
                 {
                   "replace": "src/web.config",
                   "with": "src/web.config.digitaltesten"
-                },
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.digitaltesten.prod.ts"
                 }
               ]
             },
@@ -142,10 +175,6 @@
                 {
                   "replace": "src/web.config",
                   "with": "src/web.config.muntligtesten"
-                },
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.muntligtesten.prod.ts"
                 }
               ]
             },
@@ -278,6 +307,12 @@
             },
             "muntligtesten": {
               "browserTarget": "self-check:build:muntligtesten"
+            },
+            "regnetesten": {
+              "browserTarget": "self-check:build:regnetesten"
+            },
+            "production-digitaltesten": {
+              "browserTarget": "self-check:build:production-digitaltesten"
             }
           }
         },
@@ -294,16 +329,26 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": [],
-            "assets": ["src/favicon.png", "src/assets"]
+            "assets": [
+              "src/favicon.png",
+              "src/assets"
+            ]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
+            "tsConfig": [
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
@@ -329,7 +374,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

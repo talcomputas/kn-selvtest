@@ -4,5 +4,6 @@ export enum QuestionType {
   CODE = 'code',
   HOTSPOT = 'hotspot',
   RANKING = 'ranking',
-  DIALOGUE = 'dialogue'
+  DIALOGUE = 'dialogue',
+  SLIDER = 'slider'
 }

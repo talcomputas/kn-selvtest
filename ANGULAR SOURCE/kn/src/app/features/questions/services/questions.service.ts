@@ -21,6 +21,7 @@ import { SpeechFunnel } from '@features/questions/interfaces/speech-funnel.inter
 import { SpeechSelect } from '@features/questions/interfaces/speech-select.interface';
 import { Result } from '@features/questions/interfaces/result.interface';
 import { StatisticsService } from '@features/questions/services/statistics.service';
+import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
 
 @Injectable()
 export class QuestionsService {
@@ -231,6 +232,12 @@ export class QuestionsService {
           score += this.multipleChoicePoints<string>(answer, selection, false);
           break;
         }
+
+        case QuestionType.SLIDER: {
+          const { answer } = question as QuestionSlider;
+          score += this.singleChoicePoints<number>(answer, selection);
+          break;
+        }
       }
     });
 
@@ -330,6 +337,14 @@ export class QuestionsService {
         const correct = values.map(v => selectOption(v, options));
         const selected = selectedValue.map(v => selectOption(v, options));
         const isCorrect = compareMultiple(selectedValue, values, false);
+        return { id, type, text, correct, selected, isCorrect };
+      }
+
+      case QuestionType.SLIDER: {
+        const { text } = question as QuestionSlider;
+        const correct = selectOption(answer.value, this.answers[id]);
+        const selected = selectOption(selectedValue, this.answers[id]);
+        const isCorrect = compareSingle(selectedValue, answer.value);
         return { id, type, text, correct, selected, isCorrect };
       }
     }

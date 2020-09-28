@@ -28,36 +28,26 @@ let nextUniqueId = 0;
 
 /** Change event object emitted by Radio and RadioGroup. */
 export class RadioChange {
-  constructor(public source: RadioButtonComponent, public value: any) {}
+  constructor(public source: RadioButtonComponent, public value: any) {
+  }
 }
 
 @Directive({
   selector: '[app-radio-group]',
   exportAs: 'appRadioGroup',
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => RadioGroupDirective),
-      multi: true,
-    },
-  ],
+  providers: [{ provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => RadioGroupDirective), multi: true }],
   host: { role: 'radiogroup', class: 'radio-group' },
 })
-export class RadioGroupDirective
-  implements AfterContentInit, ControlValueAccessor {
+export class RadioGroupDirective implements AfterContentInit, ControlValueAccessor {
   /**
    * Event emitted when the group value changes.
    * Change events are only emitted when the value changes due to user interaction with
    * a radio button (the same behavior as `<input type-"radio">`).
    */
   @Output()
-  public readonly change: EventEmitter<RadioChange> = new EventEmitter<
-    RadioChange
-  >();
+  public readonly change: EventEmitter<RadioChange> = new EventEmitter<RadioChange>();
 
-  @ContentChildren(forwardRef(() => RadioButtonComponent), {
-    descendants: true,
-  })
+  @ContentChildren(forwardRef(() => RadioButtonComponent), { descendants: true })
   public radios: QueryList<RadioButtonComponent>;
 
   private innerValue: any;
@@ -67,9 +57,11 @@ export class RadioGroupDirective
   private isDisabled: boolean;
   private isRequired: boolean;
 
-  onChange: (value: any) => void = () => {};
+  onChange: (value: any) => void = () => {
+  };
 
-  onTouched: () => any = () => {};
+  onTouched: () => any = () => {
+  };
 
   /** Name of the radio button group. All radio buttons inside this group will use this name. */
   @Input()
@@ -187,7 +179,7 @@ export class RadioGroupDirective
 
   private updateRadioButtonNames(): void {
     if (this.radios) {
-      this.radios.forEach((radio) => {
+      this.radios.forEach(radio => {
         radio.name = this.name;
         radio.markForCheck();
       });
@@ -197,13 +189,11 @@ export class RadioGroupDirective
   /** Updates the `selected` radio button from the internal innerValue state. */
   private updateSelectedRadioFromValue(): void {
     // If the value already matches the selected radio, do nothing.
-    const isSelected =
-      this.innerSelected !== null &&
-      this.innerSelected.value === this.innerValue;
+    const isSelected = this.innerSelected !== null && this.innerSelected.value === this.innerValue;
 
     if (this.radios && !isSelected) {
       this.innerSelected = null;
-      this.radios.forEach((radio) => {
+      this.radios.forEach(radio => {
         radio.checked = this.value === radio.value;
         if (radio.checked) {
           this.innerSelected = radio;
@@ -223,9 +213,10 @@ export class RadioGroupDirective
       return;
     }
 
-    this.radios.forEach((radio) => radio.markForCheck());
+    this.radios.forEach(radio => radio.markForCheck());
   }
 }
+
 
 @Component({
   /* tslint:disable:component-selector */
@@ -255,9 +246,7 @@ export class RadioButtonComponent implements OnInit, AfterViewInit, OnDestroy {
    * the radio button (the same behavior as `<input type-"radio">`).
    */
   @Output()
-  public readonly change: EventEmitter<RadioChange> = new EventEmitter<
-    RadioChange
-  >();
+  public readonly change: EventEmitter<RadioChange> = new EventEmitter<RadioChange>();
 
   @Input()
   public id: string;
@@ -279,7 +268,7 @@ export class RadioButtonComponent implements OnInit, AfterViewInit, OnDestroy {
   public ariaDescribedby: string;
 
   /** The native `<input type=radio>` element */
-  @ViewChild('input')
+  @ViewChild('input', { static: true })
   public inputElement: ElementRef<HTMLInputElement>;
 
   /** Whether this radio button is checked. */
@@ -293,17 +282,10 @@ export class RadioButtonComponent implements OnInit, AfterViewInit, OnDestroy {
 
     if (this.isChecked !== newCheckedState) {
       this.isChecked = newCheckedState;
-      if (
-        newCheckedState &&
-        this.radioGroup &&
-        this.radioGroup.value !== this.value
-      ) {
+      if (newCheckedState && this.radioGroup && this.radioGroup.value !== this.value) {
         this.radioGroup.selected = this;
-      } else if (
-        !newCheckedState &&
-        this.radioGroup &&
-        this.radioGroup.value === this.value
-      ) {
+      } else if (!newCheckedState && this.radioGroup && this.radioGroup.value === this.value) {
+
         // When unchecking the selected radio button, update the selected radio
         // property on the group.
         this.radioGroup.selected = null;
@@ -343,9 +325,7 @@ export class RadioButtonComponent implements OnInit, AfterViewInit, OnDestroy {
   /** Whether the radio button is disabled. */
   @Input()
   get disabled(): boolean {
-    return (
-      this.isDisabled || (this.radioGroup !== null && this.radioGroup.disabled)
-    );
+    return this.isDisabled || (this.radioGroup !== null && this.radioGroup.disabled);
   }
 
   set disabled(value: boolean) {
@@ -378,27 +358,24 @@ export class RadioButtonComponent implements OnInit, AfterViewInit, OnDestroy {
   private innerValue: any;
 
   /** Unregister function for radioDispatcher */
-  private removeUniqueSelectionListener: () => void = () => {};
+  private removeUniqueSelectionListener: () => void = () => {
+  };
 
-  constructor(
-    @Optional()
-    public radioGroup: RadioGroupDirective,
-    public elRef: ElementRef,
-    private cdRef: ChangeDetectorRef,
-    private focusMonitor: FocusMonitor,
-    private radioDispatcher: UniqueSelectionDispatcher,
-  ) {
+  constructor(@Optional()
+              public radioGroup: RadioGroupDirective,
+              public elRef: ElementRef,
+              private cdRef: ChangeDetectorRef,
+              private focusMonitor: FocusMonitor,
+              private radioDispatcher: UniqueSelectionDispatcher) {
     this.id = this.uniqueId;
     this.isChecked = false;
     this.innerValue = null;
 
-    this.removeUniqueSelectionListener = radioDispatcher.listen(
-      (id: string, name: string) => {
-        if (id !== this.id && name === this.name) {
-          this.checked = false;
-        }
-      },
-    );
+    this.removeUniqueSelectionListener = radioDispatcher.listen((id: string, name: string) => {
+      if (id !== this.id && name === this.name) {
+        this.checked = false;
+      }
+    });
   }
 
   ngOnInit(): void {
@@ -411,11 +388,13 @@ export class RadioButtonComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    this.focusMonitor.monitor(this.elRef, true).subscribe((focusOrigin) => {
-      if (!focusOrigin && this.radioGroup) {
-        this.radioGroup.touch();
-      }
-    });
+    this.focusMonitor
+      .monitor(this.elRef, true)
+      .subscribe(focusOrigin => {
+        if (!focusOrigin && this.radioGroup) {
+          this.radioGroup.touch();
+        }
+      });
   }
 
   ngOnDestroy(): void {
@@ -453,8 +432,7 @@ export class RadioButtonComponent implements OnInit, AfterViewInit, OnDestroy {
     // emit its event object to the `change` output.
     event.stopPropagation();
 
-    const groupValueChanged =
-      this.radioGroup && this.value !== this.radioGroup.value;
+    const groupValueChanged = this.radioGroup && this.value !== this.radioGroup.value;
     this.checked = true;
     this.emitChangeEvent();
 

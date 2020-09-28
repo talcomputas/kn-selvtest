@@ -26,6 +26,8 @@ import { ButtonModule } from '../../uikit/button/button.module';
 import { ButtonToggleModule } from '../../uikit/button-toggle/button-toggle.module';
 import nnContent from '@i18n/nynorsk.content.json';
 import nbContent from '@i18n/bokmal.content.json';
+import { QuestionSliderComponent } from './components/question-slider/question-slider.component';
+import { Ng5SliderModule } from 'ng5-slider';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import nbContent from '@i18n/bokmal.content.json';
     ResultPageComponent,
     AnswersComponent,
     TransitionComponent,
+    QuestionSliderComponent,
   ],
   imports: [
     CommonModule,
@@ -51,6 +54,7 @@ import nbContent from '@i18n/bokmal.content.json';
     RadioModule,
     ButtonModule,
     ButtonToggleModule,
+    Ng5SliderModule,
   ],
   providers: [
     QuestionsService,

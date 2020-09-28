@@ -5,25 +5,22 @@ import {
   ElementRef,
   OnDestroy,
   ViewEncapsulation,
-  Input,
-  Directive,
+  Input, Directive,
 } from '@angular/core';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 
-@Directive({
-  selector: '[app-stroked-button]',
-  host: { class: 'stroked-button' },
-})
-export class StrokedButtonDirective {}
 
-@Directive({
-  selector: '[app-raised-button]',
-  host: { class: 'raised-button' },
-})
-export class RaisedButtonDirective {}
+@Directive({ selector: '[app-stroked-button]', host: { class: 'stroked-button' } })
+export class StrokedButtonDirective {
+}
+
+@Directive({ selector: '[app-raised-button]', host: { class: 'raised-button' } })
+export class RaisedButtonDirective {
+}
 
 @Directive({ selector: '[app-icon-button]', host: { class: 'icon-button' } })
-export class IconButtonDirective {}
+export class IconButtonDirective {
+}
 
 @Component({
   /* tslint:disable:component-selector */
@@ -34,7 +31,9 @@ export class IconButtonDirective {}
     '[attr.disabled]': 'disabled || null',
     '[class.button-disabled]': 'disabled',
   },
-  template: ` <ng-content></ng-content> `,
+  template: `
+    <ng-content></ng-content>
+  `,
   styleUrls: ['button.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -51,7 +50,8 @@ export class ButtonComponent implements OnDestroy {
 
   private isDisabled: boolean;
 
-  constructor(private elRef: ElementRef, private focusMonitor: FocusMonitor) {
+  constructor(private elRef: ElementRef,
+              private focusMonitor: FocusMonitor) {
     this.isDisabled = false;
     this.focusMonitor.monitor(this.elRef, true);
   }
@@ -69,6 +69,7 @@ export class ButtonComponent implements OnDestroy {
   }
 }
 
+
 @Component({
   selector: `a[app-button], a[app-stroked-button], a[app-raised-button], a[app-icon-button]`,
   exportAs: 'button, a',
@@ -83,7 +84,9 @@ export class ButtonComponent implements OnDestroy {
     '[class.button-disabled]': 'disabled',
     '(click)': 'haltDisabledEvents($event)',
   },
-  template: ` <ng-content></ng-content> `,
+  template: `
+    <ng-content></ng-content>
+  `,
   styleUrls: ['button.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,

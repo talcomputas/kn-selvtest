@@ -1,15 +1,14 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  /* box-sizing default not inherited, force inheritance*/
+html, body {
+  box-sizing: border-box;
+}
+
+* {
   box-sizing: inherit;
 }
 
-body {
-  /* All elements under body will inherit this*/
-  box-sizing: border-box;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
 }
 
 a,

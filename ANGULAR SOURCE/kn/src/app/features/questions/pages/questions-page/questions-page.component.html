@@ -13,6 +13,11 @@
                            [form]="questions">
       </app-question-single>
 
+      <app-question-slider *ngSwitchCase="QuestionType.SLIDER"
+                           [question]="question"
+                           [form]="questions">
+      </app-question-slider>
+
       <app-question-multiple *ngSwitchCase="QuestionType.MULTIPLE"
                              [question]="question"
                              [limit]="question?.answer?.value?.length"
