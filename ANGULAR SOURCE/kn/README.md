@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `npm run start:digital-test` for a dev server in digital-test environment. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run start:digitaltesten` or `npm run start:muntligtesten` for a dev server in digital-test environment. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 Run `npm run start:oral-test` for a dev server in oral-test environment. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
