@@ -14,7 +14,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `npm run build:prod:digital-test` to build the project in digital-test environment. The build artifacts will be stored in the `dist/` directory.
+Run `npm run build:prod` to build the project in digital-test environment. The build artifacts will be stored in the `dist/` directory.
 
 Run `npm run build:prod:oral-test` to build the project in oral-test environment. The build artifacts will be stored in the `dist/` directory.
 
