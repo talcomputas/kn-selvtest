@@ -7,6 +7,7 @@ trigger:
 - master
 
 variables:
+  uiWorkDir: "ANGULAR SOURCE/kn"
   uiSource: 'ANGULAR SOURCE/kn/src'
   uiBuild: 'ANGULAR SOURCE/kn/dist/digitaltesten'
 
@@ -23,6 +24,7 @@ steps:
     npm install -g @angular/cli
     npm install
     ng build --configuration=production-digitaltesten
+  workingDirectory: "$(uiWorkDir)"
   displayName: 'npm install and build'
 - task: ArchiveFiles@2
   inputs:
