@@ -21,14 +21,18 @@ steps:
       ng build --configuration=production-digitaltesten
     workingDirectory: "$(uiWorkDir)"
     displayName: "npm install and build"
+
   - task: ArchiveFiles@2
+    displayName: "Archive files"
     inputs:
       rootFolderOrFile: "$(uiBuild)"
       includeRootFolder: false
       archiveType: "zip"
       archiveFile: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip"
       replaceExistingArchive: true
+
   - task: PublishBuildArtifacts@1
+    displayName: Publish artifact
     inputs:
       PathtoPublish: "$(Build.ArtifactStagingDirectory)"
       ArtifactName: "drop"
