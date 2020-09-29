@@ -16,4 +16,4 @@ def hello():
 
 @app.route("/foo")
 def test():
-    return "Foo value"
+    return "Foo value 2"
