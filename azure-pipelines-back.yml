@@ -5,15 +5,25 @@
 
 trigger:
   - master
+  - python
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
   azureServiceConnectionId: "8fc31c22-8bfe-4dc6-bbfe-81c10568bd15"
+
+  # Web app name
   webAppName: "dataoppsamling"
+
+  # Agent VM image name
   vmImageName: "ubuntu-latest"
+
+  # Environment name
   environmentName: "dataoppsamling"
+
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)/dataoppsamling
+
+  # Python version: 3.8
   pythonVersion: "3.8"
 
 pool:
@@ -43,6 +53,9 @@ steps:
       archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       replaceExistingArchive: true
 
-  - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-    displayName: "Upload package"
-    artifact: drop
+  - task: PublishBuildArtifacts@1
+    displayName: Publish artifact
+    inputs:
+      PathtoPublish: "$(Build.ArtifactStagingDirectory)"
+      ArtifactName: "drop"
+      publishLocation: "Container"
