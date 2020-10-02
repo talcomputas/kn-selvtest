@@ -140,6 +140,40 @@
                 }
               ]
             },
+            "lesetesten": {
+              "baseHref": "/lesetesten/",
+              "outputPath": "dist/lesetesten/",
+              "assets": [
+                "src/favicon.png",
+                "src/web.config",
+                "src/assets/icons",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/images/lesetesten/",
+                  "output": "assets/images/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/audios/lesetesten/",
+                  "output": "assets/audios/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/videos/lesetesten/",
+                  "output": "assets/videos/"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/i18n/bokmal.content.json",
+                  "with": "src/i18n/bokmal.content.lesetesten.json"
+                },
+                {
+                  "replace": "src/web.config",
+                  "with": "src/web.config.lesetesten"
+                }
+              ]
+            },
             "muntligtesten": {
               "baseHref": "/muntligtesten/",
               "outputPath": "dist/muntligtesten/",
@@ -304,6 +338,9 @@
           "configurations": {
             "digitaltesten": {
               "browserTarget": "self-check:build:digitaltesten"
+            },
+            "lesetesten": {
+              "browserTarget": "self-check:build:lesetesten"
             },
             "muntligtesten": {
               "browserTarget": "self-check:build:muntligtesten"

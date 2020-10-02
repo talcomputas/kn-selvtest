@@ -1,0 +1,8 @@
+{
+  "intro": {
+    "label": "Test dine ferdigheter",
+    "title": "Lesetesten",
+    "image": "reading-exam.svg",
+    "text": "Dette er en kort lesetest som måler lesehastigheten din. Testen stopper automatisk etter 10 minutter. Det er mange oppgaver, så det er viktig å svare raskt og riktig."
+  }
+}
