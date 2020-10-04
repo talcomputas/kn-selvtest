@@ -1,0 +1,53 @@
+{
+  "intro": {
+    "label": "Lesetesten",
+    "title": "Lesetesten",
+    "text": "Dette er en kort lesetest som måler lesehastigheten din. Testen stopper automatisk etter 10 minutter. Det er mange oppgaver, så det er viktig å svare raskt og riktig.",
+    "image": "reading-exam.svg"
+  },
+  "modules": [{
+    "id": 1,
+    "questions": [
+      {
+        "id": 1,
+        "type": "questionnaire",
+        "title": "En solskinnsdag",
+        "text": "De satt i shorts og bar overkropp på terrassen, og de hadde hentet drikke med isbiter. De trengte skygge i den varme sommersola, så de bestemte seg for å finne frem",
+        "options": [
+          {"id": 1, "text":"parasollen"},
+          {"id": 2, "text": "bassenget"},
+          {"id": 3, "text": "scenen"},
+          {"id": 4, "text": "høytaleren"}
+        ],
+        "answer": {
+            "value": 1,
+            "points": 1
+          }
+
+      },
+      {
+        "id": 1,
+        "type": "questionnaire",
+        "title": "På kjøkkenet",
+        "text": "Bordet var allerede dekket. Det luktet litt brent, selv om klokka ikke hadde ringt. Senay skrudde ned varmen og fjernet",
+        "options": [
+          {"id": 1, "text":"dyna"},
+          {"id": 2, "text": "papirene"},
+          {"id": 3, "text": "radioen"},
+          {"id": 4, "text": "kjelen"}
+        ],
+        "answer": {
+            "value": 4,
+            "points": 1
+          }
+
+      }
+    ],
+    "funnel": {
+      "baseScore": 0,
+      "type": "base"
+    }
+  }]
+}
+
+
