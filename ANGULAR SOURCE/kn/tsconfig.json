@@ -1,25 +1,45 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./src/app",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "module": "es2015",
+    "downlevelIteration": true,
+    "module": "es2020",
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "target": "es2015",
     "lib": [
       "es2018",
       "dom"
     ],
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@assets/*": [
+        "assets/*"
+      ],
+      "@core/*": [
+        "core/*"
+      ],
+      "@content/*": [
+        "content/*"
+      ],
+      "@i18n/*": [
+        "../i18n/*"
+      ],
+      "@shared/*": [
+        "shared/*"
+      ],
+      "@features/*": [
+        "features/*"
+      ],
+      "@env/*": [
+        "../environments/*"
+      ]
+    }
   }
 }
