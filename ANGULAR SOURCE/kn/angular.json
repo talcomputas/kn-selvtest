@@ -43,6 +43,12 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
+            "allowedCommonJsDependencies": [
+              "rxjs/operators",
+              "rxjs/Subject",
+              "rxjs/Subscription",
+              "fast-xml-parser"
+            ],
             "assets": [
               "src/favicon.png",
               "src/web.config",
