@@ -5,12 +5,14 @@ import { QuestionMultiple } from '@features/questions/interfaces/question-multip
 import { QuestionRanking } from '@features/questions/interfaces/question-ranking.interface';
 import { QuestionSingle } from '@features/questions/interfaces/question-single.interface';
 import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
+import { QuestionMultipleChoice } from '../interfaces/question-multiplechoice.interface';
 
 export type QuestionsUnionType
   = QuestionCode
   | QuestionDialogue
   | QuestionHotspot
   | QuestionMultiple
+  | QuestionMultipleChoice
   | QuestionRanking
   | QuestionSingle
   | QuestionSlider;

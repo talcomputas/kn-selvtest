@@ -1,86 +1,125 @@
 <app-card *ngIf="question$ | async as question">
-  <div app-card-header>{{'intro.title' | content}}</div>
+  <div app-card-header>{{ 'intro.title' | content }}</div>
 
   <div app-card-content [formGroup]="questions">
     <div class="top-nav">
       <app-screen-reader></app-screen-reader>
-      <app-progress *ngIf="!showTransition" [value]="(index$ | async) / (length$ | async) * 100"></app-progress>
+      <app-progress
+        *ngIf="!showTransition"
+        [value]="((index$ | async) / (length$ | async)) * 100"
+      ></app-progress>
     </div>
 
     <ng-container *ngIf="!showTransition" [ngSwitch]="question.type">
-      <app-question-single *ngSwitchCase="QuestionType.SINGLE"
-                           [question]="question"
-                           [form]="questions">
+      <app-question-single
+        *ngSwitchCase="QuestionType.SINGLE"
+        [question]="question"
+        [form]="questions"
+      >
       </app-question-single>
 
-      <app-question-slider *ngSwitchCase="QuestionType.SLIDER"
-                           [question]="question"
-                           [form]="questions">
+      <app-question-slider
+        *ngSwitchCase="QuestionType.SLIDER"
+        [question]="question"
+        [form]="questions"
+      >
       </app-question-slider>
 
-      <app-question-multiple *ngSwitchCase="QuestionType.MULTIPLE"
-                             [question]="question"
-                             [limit]="question?.answer?.value?.length"
-                             [form]="questions">
+      <app-question-multiple
+        *ngSwitchCase="QuestionType.MULTIPLE"
+        [question]="question"
+        [limit]="question?.answer?.value?.length"
+        [form]="questions"
+      >
       </app-question-multiple>
 
-      <app-question-hotspot *ngSwitchCase="QuestionType.HOTSPOT"
-                            [question]="question"
-                            [form]="questions">
+      <app-question-multiplechoice
+        *ngSwitchCase="QuestionType.MULTIPLECHOICE"
+        [question]="question"
+        [limit]="question?.answer?.value?.length"
+        [form]="questions"
+      >
+      </app-question-multiplechoice>
+
+      <app-question-hotspot
+        *ngSwitchCase="QuestionType.HOTSPOT"
+        [question]="question"
+        [form]="questions"
+      >
       </app-question-hotspot>
 
-      <app-question-ranking *ngSwitchCase="QuestionType.RANKING"
-                            [question]="question"
-                            [form]="questions">
+      <app-question-ranking
+        *ngSwitchCase="QuestionType.RANKING"
+        [question]="question"
+        [form]="questions"
+      >
       </app-question-ranking>
 
-      <app-question-code *ngSwitchCase="QuestionType.CODE"
-                         [question]="question"
-                         [form]="questions">
+      <app-question-code
+        *ngSwitchCase="QuestionType.CODE"
+        [question]="question"
+        [form]="questions"
+      >
       </app-question-code>
 
-      <app-question-dialogue *ngSwitchCase="QuestionType.DIALOGUE"
-                             [question]="question"
-                             [form]="questions">
+      <app-question-dialogue
+        *ngSwitchCase="QuestionType.DIALOGUE"
+        [question]="question"
+        [form]="questions"
+      >
       </app-question-dialogue>
     </ng-container>
 
-    <app-transition *ngIf="showTransition" [transition]="question?.transition"></app-transition>
+    <app-transition
+      *ngIf="showTransition"
+      [transition]="question?.transition"
+    ></app-transition>
   </div>
 
   <footer app-card-footer>
     <div *ngIf="page$ | async as page" class="actions">
       <ng-container *ngIf="!showTransition">
-        <button *ngIf="page > 1 && !question?.transition"
-                routerLink="../{{page - 1}}"
-                app-icon-button
-                app-color="primary"
-                class="prev">
+        <button
+          *ngIf="page > 1 && !question?.transition"
+          routerLink="../{{ page - 1 }}"
+          app-icon-button
+          app-color="primary"
+          class="prev"
+        >
           <i app-svg-icon="arrow-back"></i> {{ 'actions.back' | content }}
         </button>
 
-        <button *ngIf="page < (length$ | async)"
-                routerLink="../{{page + 1}}"
-                app-icon-button
-                app-color="primary"
-                class="next"
-                [disabled]="questions?.controls[question.id]?.invalid">
+        <button
+          *ngIf="page < (length$ | async)"
+          routerLink="../{{ page + 1 }}"
+          app-icon-button
+          app-color="primary"
+          class="next"
+          [disabled]="questions?.controls[question.id]?.invalid"
+        >
           {{ 'actions.next' | content }} <i app-svg-icon="arrow-forward"></i>
         </button>
 
-        <button *ngIf="page === (length$ | async)" routerLink="../../resultat" app-icon-button app-color="primary"
-                class="next"
-                (click)="finish()"
-                [disabled]="questions?.controls[question.id]?.invalid">
+        <button
+          *ngIf="page === (length$ | async)"
+          routerLink="../../resultat"
+          app-icon-button
+          app-color="primary"
+          class="next"
+          (click)="finish()"
+          [disabled]="questions?.controls[question.id]?.invalid"
+        >
           {{ 'actions.next' | content }} <i app-svg-icon="arrow-forward"></i>
         </button>
       </ng-container>
 
-      <button *ngIf="showTransition"
-              (click)="showTransition = false"
-              app-icon-button
-              app-color="primary"
-              class="next">
+      <button
+        *ngIf="showTransition"
+        (click)="showTransition = false"
+        app-icon-button
+        app-color="primary"
+        class="next"
+      >
         {{ 'actions.next' | content }} <i app-svg-icon="arrow-forward"></i>
       </button>
     </div>

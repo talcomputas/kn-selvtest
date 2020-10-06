@@ -20,6 +20,7 @@ import { QuestionDialogueComponent } from './components/question-dialogue/questi
 import { TransitionComponent } from './components/transition/transition.component';
 import { QuestionSingleComponent } from './components/question-single/question-single.component';
 import { QuestionMultipleComponent } from './components/question-multiple/question-multiple.component';
+import { QuestionMultipleChoiceComponent } from './components/question-multiplechoice/question-multiplechoice.component';
 import { QuestionHotspotComponent } from './components/question-hotspot/question-hotspot.component';
 import { RadioModule } from '../../uikit/radio/radio.module';
 import { ButtonModule } from '../../uikit/button/button.module';
@@ -39,6 +40,7 @@ import { Ng5SliderModule } from 'ng5-slider';
     QuestionCodeComponent,
     QuestionMultipleComponent,
     QuestionDialogueComponent,
+    QuestionMultipleChoiceComponent,
     ResultPageComponent,
     AnswersComponent,
     TransitionComponent,
