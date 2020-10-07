@@ -29,6 +29,7 @@ import nnContent from '@i18n/nynorsk.content.json';
 import nbContent from '@i18n/bokmal.content.json';
 import { QuestionSliderComponent } from './components/question-slider/question-slider.component';
 import { Ng5SliderModule } from 'ng5-slider';
+import { MultipleChoiceComponent } from '@features/questions/components/multiplechoice/multiplechoice.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { Ng5SliderModule } from 'ng5-slider';
     AnswersComponent,
     TransitionComponent,
     QuestionSliderComponent,
+    MultipleChoiceComponent
   ],
   imports: [
     CommonModule,
@@ -66,8 +68,8 @@ import { Ng5SliderModule } from 'ng5-slider';
 })
 export class QuestionsModule {
   constructor(contentService: ContentService,
-              statisticsService: StatisticsService,
-              titleService: Title) {
+    statisticsService: StatisticsService,
+    titleService: Title) {
     contentService.set('nb', nbContent);
     contentService.set('nn', nnContent);
     statisticsService.initUser();

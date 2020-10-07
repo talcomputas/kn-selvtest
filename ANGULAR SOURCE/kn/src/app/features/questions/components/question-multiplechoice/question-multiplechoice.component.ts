@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit } from '@angular/core';
 import { QuestionComponentBase } from '@features/questions/components/question-component-base';
 import { QuestionMultipleChoice } from '@features/questions/interfaces/question-multiplechoice.interface';
+import { Option, Options } from '@features/questions/interfaces/option.interface';
 
 @Component({
   selector: 'app-question-multiplechoice',
@@ -8,16 +9,37 @@ import { QuestionMultipleChoice } from '@features/questions/interfaces/question-
   styleUrls: ['./question-multiplechoice.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class QuestionMultipleChoiceComponent extends QuestionComponentBase<QuestionMultipleChoice> {
+export class QuestionMultipleChoiceComponent extends QuestionComponentBase<QuestionMultipleChoice> implements OnChanges {
   @Input()
   public readonly limit: number;
 
+  ngOnChanges(): void {
+    super.ngOnChanges();
+  }
+
   getOptions(text: string) {
-    var options = ["<h4>Trond<h4>", "<h4>sir!<h4>", "<h4>Foo<h4>", "<h4>bar<h4>"]
-    for (var i = 0; i < options.length; i++) {
-      text = text.replace('%s', options[i]);
-    }
+
     return text
   }
 
+  getSplitText(value: string) {
+    const ary = value.split('%s')
+
+    let result = [];
+
+    for (let i = 0; i < ary.length; i++) {
+      if (ary[i] === '' && i < ary.length - 1) {
+        result.push('%s')
+      } else {
+        result.push(ary[i])
+        if (i < ary.length - 1) {
+          result.push('%s')
+        }
+      }
+    }
+
+    result = result.filter((e) => { return e === 0 || e });
+
+    return result;
+  }
 }
