@@ -58,13 +58,9 @@
                 "output": "assets/videos/"
               }
             ],
-            "styles": [
-              "src/styles/index.scss"
-            ],
+            "styles": ["src/styles/index.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/styles"
-              ]
+              "includePaths": ["src/styles"]
             },
             "scripts": []
           },
@@ -113,17 +109,17 @@
                 {
                   "glob": "**/*",
                   "input": "src/assets/images/digitaltesten/",
-                  "output": "assets/images/"
+                  "output": "/assets/images/"
                 },
                 {
                   "glob": "**/*",
                   "input": "src/assets/audios/digitaltesten/",
-                  "output": "assets/audios/"
+                  "output": "/assets/audios/"
                 },
                 {
                   "glob": "**/*",
                   "input": "src/assets/videos/digitaltesten/",
-                  "output": "assets/videos/"
+                  "output": "/assets/videos/"
                 }
               ],
               "fileReplacements": [
@@ -330,26 +326,16 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "styles": [
-              "src/styles/index.scss"
-            ],
+            "styles": ["src/styles/index.scss"],
             "scripts": [],
-            "assets": [
-              "src/favicon.png",
-              "src/assets"
-            ]
+            "assets": ["src/favicon.png", "src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -375,9 +361,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
