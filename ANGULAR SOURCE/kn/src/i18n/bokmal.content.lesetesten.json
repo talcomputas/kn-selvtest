@@ -133,7 +133,7 @@
           "id": 5,
           "type": "multiplechoice",
           "title": "Havørnens unger",
-          "text": "Høyt oppe i det gamle treet har havørnparet bygget reiret sitt. Nå ligger det to egg der. Når de klekkes, blir ungene værende i reiret %s de er klare til å fly. Deretter vil foreldrene mate dem et par måneder, men så snart ungene er klare, vil de fly ut på egen hånd for å finne %s",
+          "text": "Høyt oppe i det gamle treet har havørnparet bygget reiret sitt. Nå ligger det to egg der. Når de klekkes, blir ungene værende i reiret %s de er klare til å fly. Deretter vil foreldrene mate dem et par måneder, men så snart ungene er klare, vil de fly ut på egen hånd for å finne %s sin.",
           "options": [
             [
               {
@@ -463,7 +463,7 @@
           "id": 13,
           "type": "multiplechoice",
           "title": "Flom",
-          "text": "Da ekteparet kom hjem fra helgeturen, fløt alle tingene rundt i kjelleren. De skyndte seg å sette sakene ut i sola. De ville kontakte $s dagen etter. I nyhetene hørte de at mange områder i landet var rammet.",
+          "text": "Da ekteparet kom hjem fra helgeturen, fløt alle tingene rundt i kjelleren. De skyndte seg å sette sakene ut i sola. De ville kontakte %s dagen etter. I nyhetene hørte de at mange områder i landet var rammet.",
           "options": [
             [
               {
