@@ -40,7 +40,7 @@ export class ResultPageComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    // enviorment not working
+    // environment not working
     if (window.location.href.indexOf('muntligtesten') > -1) {
       this.qbIdNb = 'wf7hoxw7vh';
       this.qbIdNn = 'wmsg3i4nxj';
@@ -51,8 +51,8 @@ export class ResultPageComponent implements OnInit, OnDestroy {
       this.qbIdNb = 'ejelvlehqp';
       this.qbIdNn = 'hqivwkebty';
     } else if (window.location.href.indexOf('lesetesten') > -1) {
-      this.qbIdNb = 'ejelvlehqp';
-      this.qbIdNn = 'hqivwkebty';
+      this.qbIdNb = 'wzy4jqo0hw';
+      this.qbIdNn = '562ajj0nzs';
     } else {
       console.warn('unknown questback ID');
     }
