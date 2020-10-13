@@ -6,10 +6,8 @@ import {
   OnInit,
   SimpleChanges,
 } from '@angular/core';
-import {
-  Options,
-  Option,
-} from '@features/questions/interfaces/option.interface';
+import { Option } from '@features/questions/interfaces/option.interface';
+import { Options } from '@features/questions/interfaces/options.interface';
 
 @Component({
   selector: 'app-multiplechoice',
