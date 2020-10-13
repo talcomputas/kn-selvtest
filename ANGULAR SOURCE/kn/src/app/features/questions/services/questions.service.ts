@@ -13,7 +13,11 @@ import { QuestionMultiple } from '@features/questions/interfaces/question-multip
 import { QuestionDialogue } from '@features/questions/interfaces/question-dialogue.interface';
 import { QuestionsUnionType } from '@features/questions/types/questions-union.type';
 import { Level } from '@features/questions/interfaces/level.interface';
-import { compareCodes, compareMultiple, compareSingle } from '@features/questions/utils/comparison.utils';
+import {
+  compareCodes,
+  compareMultiple,
+  compareSingle,
+} from '@features/questions/utils/comparison.utils';
 import { ResultAnswer } from '@features/questions/interfaces/result-answer.interface';
 import { SpeechType } from '@features/questions/enums/speech-type.enum';
 import { SpeechBase } from '@features/questions/interfaces/speech-base.interface';
@@ -22,10 +26,13 @@ import { SpeechSelect } from '@features/questions/interfaces/speech-select.inter
 import { Result } from '@features/questions/interfaces/result.interface';
 import { StatisticsService } from '@features/questions/services/statistics.service';
 import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
+import { QuestionMultipleChoice } from '@features/questions/interfaces/question-multiplechoice.interface';
 
 @Injectable()
 export class QuestionsService {
-  private readonly currentQuestion$ = new BehaviorSubject<QuestionsUnionType>(null);
+  private readonly currentQuestion$ = new BehaviorSubject<QuestionsUnionType>(
+    null,
+  );
   private readonly currentLength$ = new BehaviorSubject<number>(0);
 
   private readonly questionsDictionary = new Map<number, QuestionsUnionType>();
@@ -40,9 +47,11 @@ export class QuestionsService {
 
   private contentChangesSubscription: Subscription;
 
-  constructor(private router: Router,
-              private content: ContentService,
-              private statisticsService: StatisticsService) {
+  constructor(
+    private router: Router,
+    private content: ContentService,
+    private statisticsService: StatisticsService,
+  ) {
     this.index = 0;
     this.initContent();
   }
@@ -90,13 +99,23 @@ export class QuestionsService {
     const correctAnswers = this.selectCorrectAnswers(this.questions);
     const maxScore = this.getMaxScore(this.questions);
     const score = this.getScore(answers);
-    const data = Object.keys(correctAnswers).reduce((acc, questionId) => [...acc, this.getResultAnswer(this.getQuestion(+questionId))], []);
-    const level = this.levels.sort((a: Level, b: Level) => b.minScore - a.minScore).find((l: Level) => score >= l.minScore);
+    const data = Object.keys(correctAnswers).reduce(
+      (acc, questionId) => [
+        ...acc,
+        this.getResultAnswer(this.getQuestion(+questionId)),
+      ],
+      [],
+    );
+    const level = this.levels
+      .sort((a: Level, b: Level) => b.minScore - a.minScore)
+      .find((l: Level) => score >= l.minScore);
     return { level, score, maxScore, data };
   }
 
   attach(): void {
-    this.contentChangesSubscription = this.content.changes.subscribe(() => this.initContent());
+    this.contentChangesSubscription = this.content.changes.subscribe(() =>
+      this.initContent(),
+    );
   }
 
   detach(): void {
@@ -118,19 +137,30 @@ export class QuestionsService {
   private initQuestionsDictionary(): void {
     this.modules = [...this.content.get('modules')];
     this.modules.forEach((module: Module) =>
-      module.questions.forEach((question: QuestionsUnionType) => this.questionsDictionary.set(question.id, question)));
+      module.questions.forEach((question: QuestionsUnionType) =>
+        this.questionsDictionary.set(question.id, question),
+      ),
+    );
   }
 
   private initLevelsDictionary(): void {
     const levels = this.content.get('result.levels') || {};
-    this.levels = [...Object.values(levels) as Level[]];
-    Object.keys(levels).forEach((key: string) => this.levelsDictionary.set(key, levels[key]));
+    this.levels = [...(Object.values(levels) as Level[])];
+    Object.keys(levels).forEach((key: string) =>
+      this.levelsDictionary.set(key, levels[key]),
+    );
   }
 
   private initQuestions(answers?: { [key: string]: any }) {
     const baseQuestions = this.modules
       .filter((module: Module) => module.funnel.type === ModuleType.BASE)
-      .reduce((acc: QuestionsUnionType[], module: Module) => [...acc, ...module.questions], []);
+      .reduce(
+        (acc: QuestionsUnionType[], module: Module) => [
+          ...acc,
+          ...module.questions,
+        ],
+        [],
+      );
 
     let baseQuestionsScore = 0;
 
@@ -144,7 +174,7 @@ export class QuestionsService {
       .sort((a: Module, b: Module) => b.funnel.baseScore - a.funnel.baseScore)
       .find((module: Module) => baseQuestionsScore >= module.funnel.baseScore);
 
-    const advancedQuestion = advancedModule && advancedModule.questions || [];
+    const advancedQuestion = (advancedModule && advancedModule.questions) || [];
 
     this.questions = [...baseQuestions, ...advancedQuestion];
 
@@ -158,7 +188,10 @@ export class QuestionsService {
   private handleQuestionState(prevIndex: number, currIndex: number): void {
     const prevQuestion = this.questions[prevIndex];
 
-    if (currIndex !== 0 && !this.answers.hasOwnProperty(prevQuestion && prevQuestion.id)) {
+    if (
+      currIndex !== 0 &&
+      !this.answers.hasOwnProperty(prevQuestion && prevQuestion.id)
+    ) {
       this.prevent = true;
       this.router.navigateByUrl('/');
       return;
@@ -167,7 +200,10 @@ export class QuestionsService {
     this.prevent = false;
   }
 
-  private selectAnswers(answers: { [key: string]: any }, questions: QuestionsUnionType[]): { [key: string]: any } {
+  private selectAnswers(
+    answers: { [key: string]: any },
+    questions: QuestionsUnionType[],
+  ): { [key: string]: any } {
     if (!answers || !questions) {
       return {};
     }
@@ -238,6 +274,10 @@ export class QuestionsService {
           score += this.singleChoicePoints<number>(answer, selection);
           break;
         }
+        case QuestionType.MULTIPLECHOICE: {
+          const { answer } = question as QuestionMultipleChoice;
+          score += 1; // this.multipleChoicePoints<string>(answer, selection, false);
+        }
       }
     });
 
@@ -245,15 +285,21 @@ export class QuestionsService {
   }
 
   private getResultAnswer(question: QuestionsUnionType): ResultAnswer {
-    const selectOption = (value: any, options: { id: any }[]) => options.find(option => option.id === value);
-    const dialogueAnswer = (speech: (SpeechBase & SpeechFunnel & SpeechSelect)[], selection: string[]) => {
+    const selectOption = (value: any, options: { id: any }[]) =>
+      options.find((option) => option.id === value);
+    const dialogueAnswer = (
+      speech: (SpeechBase & SpeechFunnel & SpeechSelect)[],
+      selection: string[],
+    ) => {
       const data = [];
 
       speech.forEach(() => {
         const lastItem = data[data.length - 1];
 
         if (!lastItem) {
-          const firstQuestion = speech.find(q => q.options && q.options.includes(selection[0]));
+          const firstQuestion = speech.find(
+            (q) => q.options && q.options.includes(selection[0]),
+          );
           data.push(firstQuestion);
           return;
         }
@@ -261,7 +307,9 @@ export class QuestionsService {
         const { type: lastItemType } = lastItem;
 
         if (lastItemType === SpeechType.OPTION) {
-          const nextItem = speech.find(s => s.id === lastItem.next && lastItem.next);
+          const nextItem = speech.find(
+            (s) => s.id === lastItem.next && lastItem.next,
+          );
           if (nextItem) {
             data.push(nextItem);
           }
@@ -269,12 +317,14 @@ export class QuestionsService {
         }
 
         if (lastItemType === SpeechType.QUESTION) {
-          const selectedId = lastItem.options.find(o => selection.includes(o));
+          const selectedId = lastItem.options.find((o) =>
+            selection.includes(o),
+          );
           if (!selectedId) {
             return;
           }
 
-          const option = speech.find(s => s.id === selectedId);
+          const option = speech.find((s) => s.id === selectedId);
 
           if (option) {
             data.push(option);
@@ -316,8 +366,17 @@ export class QuestionsService {
       case QuestionType.MULTIPLE: {
         const { text, options } = question as QuestionMultiple;
         const values = answer.value as number[];
-        const correct = values.map(v => selectOption(v, options));
-        const selected = selectedValue.map(v => selectOption(v, options));
+        const correct = values.map((v) => selectOption(v, options));
+        const selected = selectedValue.map((v) => selectOption(v, options));
+        const isCorrect = compareMultiple(selectedValue, values);
+        return { id, type, text, correct, selected, isCorrect };
+      }
+
+      case QuestionType.MULTIPLECHOICE: {
+        const { text, options } = question as QuestionMultipleChoice;
+        const values = answer.value as number[];
+        const correct = values.map((v) => selectOption(v, options));
+        const selected = selectedValue.map((v) => selectOption(v, options));
         const isCorrect = compareMultiple(selectedValue, values);
         return { id, type, text, correct, selected, isCorrect };
       }
@@ -326,16 +385,22 @@ export class QuestionsService {
         const { speech } = question as QuestionDialogue;
         const values = answer.value as string[];
         const isCorrect = compareMultiple(selectedValue, values, false);
-        const correct = dialogueAnswer(speech as (SpeechBase & SpeechFunnel & SpeechSelect)[], values);
-        const selected = dialogueAnswer(speech as (SpeechBase & SpeechFunnel & SpeechSelect)[], selectedValue);
+        const correct = dialogueAnswer(
+          speech as (SpeechBase & SpeechFunnel & SpeechSelect)[],
+          values,
+        );
+        const selected = dialogueAnswer(
+          speech as (SpeechBase & SpeechFunnel & SpeechSelect)[],
+          selectedValue,
+        );
         return { id, type, speech, correct, selected, isCorrect };
       }
 
       case QuestionType.RANKING: {
         const { text, options } = question as QuestionRanking;
         const values = answer.value as number[];
-        const correct = values.map(v => selectOption(v, options));
-        const selected = selectedValue.map(v => selectOption(v, options));
+        const correct = values.map((v) => selectOption(v, options));
+        const selected = selectedValue.map((v) => selectOption(v, options));
         const isCorrect = compareMultiple(selectedValue, values, false);
         return { id, type, text, correct, selected, isCorrect };
       }
@@ -378,13 +443,19 @@ export class QuestionsService {
     }
   }
 
-  private getCorrectAnswerValue(questionId: number): number | number[] | string | string[] {
-    const question: QuestionsUnionType = this.questionsDictionary.get(questionId);
+  private getCorrectAnswerValue(
+    questionId: number,
+  ): number | number[] | string | string[] {
+    const question: QuestionsUnionType = this.questionsDictionary.get(
+      questionId,
+    );
     return question && question.answer && question.answer.value;
   }
 
   private isCorrectAnswer(questionId: number, selectedValue: any): boolean {
-    const question: QuestionsUnionType = this.questionsDictionary.get(questionId);
+    const question: QuestionsUnionType = this.questionsDictionary.get(
+      questionId,
+    );
 
     if (!question) {
       return false;
@@ -412,6 +483,10 @@ export class QuestionsService {
         return compareMultiple(selectedValue, correctValue as number[]);
       }
 
+      case QuestionType.MULTIPLECHOICE: {
+        return compareMultiple(selectedValue, correctValue as number[]);
+      }
+
       case QuestionType.DIALOGUE: {
         return compareMultiple(selectedValue, correctValue as string[], false);
       }
@@ -422,39 +497,57 @@ export class QuestionsService {
     }
   }
 
-  private selectCorrectAnswers(questions: QuestionsUnionType[]): { [key: string]: any } {
-    return questions.reduce((acc, item) => ({ ...acc, ...{ [item.id]: item.answer.value } }), {});
+  private selectCorrectAnswers(
+    questions: QuestionsUnionType[],
+  ): { [key: string]: any } {
+    return questions.reduce(
+      (acc, item) => ({ ...acc, ...{ [item.id]: item.answer.value } }),
+      {},
+    );
   }
 
   private getMaxScore(questions: QuestionsUnionType[]): number {
-    return questions.reduce((acc, item) => acc += item && item.answer && item.answer.points || 0, 0);
+    return questions.reduce(
+      (acc, item) => (acc += (item && item.answer && item.answer.points) || 0),
+      0,
+    );
   }
 
-  private codePoints(answer: { points: number, value: number }, code: string): number {
+  private codePoints(
+    answer: { points: number; value: number },
+    code: string,
+  ): number {
     if (!answer) {
       return 0;
     }
 
     const isCorrect = compareCodes(code, answer.value);
-    return isCorrect && answer.points || 0;
+    return (isCorrect && answer.points) || 0;
   }
 
-  private singleChoicePoints<T>(answer: { points: number, value: T }, selection: T): number {
+  private singleChoicePoints<T>(
+    answer: { points: number; value: T },
+    selection: T,
+  ): number {
     if (!answer) {
       return 0;
     }
 
     const isCorrect = compareSingle(selection, answer.value);
-    return isCorrect && answer.points || 0;
+    return (isCorrect && answer.points) || 0;
   }
 
-  private multipleChoicePoints<T>(answer: { points: number, value: T[] }, selection: T[], sorting = true): number {
+  private multipleChoicePoints<T>(
+    answer: { points: number; value: T[] },
+    selection: T[],
+    sorting = true,
+  ): number {
     if (!answer) {
       return 0;
     }
 
     const isCorrect = compareMultiple(answer.value, selection, sorting);
 
-    return isCorrect && answer.points || 0;
+    return (isCorrect && answer.points) || 0;
   }
 }
