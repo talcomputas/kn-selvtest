@@ -50,6 +50,9 @@ export class ResultPageComponent implements OnInit, OnDestroy {
     } else if (window.location.href.indexOf('regnetesten') > -1) {
       this.qbIdNb = 'ejelvlehqp';
       this.qbIdNn = 'hqivwkebty';
+    } else if (window.location.href.indexOf('lesetesten') > -1) {
+      this.qbIdNb = 'ejelvlehqp';
+      this.qbIdNn = 'hqivwkebty';
     } else {
       console.warn('unknown questback ID');
     }
