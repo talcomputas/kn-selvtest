@@ -18,7 +18,7 @@
       <span *ngFor="let snippet of getSplitText(question.text); let ix = index">
         <span *ngIf="snippet === '%s'">
           <app-multiplechoice
-            [options]="question?.options"
+            [options]="question?.options[ix - 1]"
           ></app-multiplechoice>
         </span>
         <span *ngIf="snippet !== '%s'">{{ snippet }}</span>

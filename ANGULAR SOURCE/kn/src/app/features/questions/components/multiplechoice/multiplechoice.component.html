@@ -5,4 +5,11 @@
   <span correct="false">høytaleren</span>
 </span> -->
 
-<span>Foo </span>
+<span *ngIf="options" class="options">
+  <span
+    *ngFor="let option of options"
+    (click)="onClick(option)"
+    [ngClass]="{ active: isActive(option) }"
+    >{{ option.text }}</span
+  >
+</span>
