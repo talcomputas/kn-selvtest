@@ -12,5 +12,3 @@ export interface SliderOption {
   floor: number;
   ceil: number;
 }
-
-export interface Options extends Array<Option> { }
