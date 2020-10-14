@@ -28,6 +28,7 @@ import nnContent from '@i18n/nynorsk.content.json';
 import nbContent from '@i18n/bokmal.content.json';
 import { QuestionSliderComponent } from './components/question-slider/question-slider.component';
 import { Ng5SliderModule } from 'ng5-slider';
+import { QuestionMultipleDiffPointsComponent } from './components/question-multiple-diff-points/question-multiple-diff-points.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { Ng5SliderModule } from 'ng5-slider';
     AnswersComponent,
     TransitionComponent,
     QuestionSliderComponent,
+    QuestionMultipleDiffPointsComponent,
   ],
   imports: [
     CommonModule,
