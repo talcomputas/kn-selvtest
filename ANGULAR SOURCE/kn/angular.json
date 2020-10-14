@@ -99,6 +99,45 @@
                 }
               ]
             },
+
+            "leseskrivesjekken": {
+              "baseHref": "/leseskrivesjekken/",
+              "outputPath": "dist/leseskrivesjekken/",
+              "assets": [
+                "src/favicon.png",
+                "src/web.config",
+                "src/assets/icons",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/images/leseskrivesjekken/",
+                  "output": "assets/images/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/audios/leseskrivesjekken/",
+                  "output": "assets/audios/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/videos/leseskrivesjekken/",
+                  "output": "assets/videos/"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/i18n/bokmal.content.json",
+                  "with": "src/i18n/bokmal.content.leseskrivesjekken.json"
+                },
+                {
+                  "replace": "src/i18n/nynorsk.content.json",
+                  "with": "src/i18n/nynorsk.content.leseskrivesjekken.json"
+                },
+                {
+                  "replace": "src/web.config",
+                  "with": "src/web.config.leseskrivesjekken"
+                }
+              ]
+            },
             "regnesjekken": {
               "baseHref": "/regnesjekken/",
               "outputPath": "dist/regnesjekken/",
@@ -351,6 +390,9 @@
             },
             "regnesjekken": {
               "browserTarget": "self-check:build:regnesjekken"
+            },
+            "leseskrivesjekken": {
+              "browserTarget": "self-check:build:leseskrivesjekken"
             }
           }
         },

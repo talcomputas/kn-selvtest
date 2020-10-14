@@ -1,0 +1,1198 @@
+{
+  "intro": {
+    "image": "data-check.svg",
+    "title": "Lese- og skrivesjekken",
+    "label": "Vurder dugleiken din",
+    "text": "Med Lese- og skrivesjekken vurderer du din eigen lese- og skrivedugleik og får ein peikepinn om kva du er god til og kva du kan bli betre på."
+  },
+  "result": {
+    "image": "data-check.svg",
+    "levels": {
+      "1": {
+        "id": "1",
+        "title": "Du har vurdert deg sjølv til nivå 1 av 3 i denne sjekken.",
+        "text": "Å kunne lese og skrive på nivå 1 inneber å kunne lese og skrive korte og kjende tekstar.",
+        "minScore": 0
+      },
+      "2": {
+        "id": "2",
+        "title": "Du har vurdert deg sjølv til nivå 2 av 3 i denne sjekken.",
+        "text": "Å kunne lese og skrive på nivå 2 inneber å kunne lese og skrive oversiktlege tekstar. Du kan lese og skrive i dei fleste situasjonar.",
+        "minScore": 12
+      },
+      "3": {
+        "id": "3",
+        "title": "Du har vurdert deg sjølv til nivå 3 av 3 i denne sjekken.",
+        "text": "Å kunne lese og skrive på nivå 3 inneber å meistre eit mangfald av tekstar. Du les og skriv på ein sjølvstendig, kritisk og strategisk måte som er tilpassa til situasjonen og målet.",
+        "minScore": 24
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "questions": [
+        {
+          "id": "1",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Forstår du enkle matoppskrifter?"
+        },
+        {
+          "id": "2",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Forstår du oppslag på ei tavle?"
+        },
+        {
+          "id": "3",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Forstår du annonsar i aviser eller på nettet?"
+        },
+        {
+          "id": "4",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese og forstå instruksjonane på ein billettautomat?"
+        },
+        {
+          "id": "5",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese og forstå informasjon på skilt, t.d. i trafikken?"
+        },
+        {
+          "id": "6",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du skrive eit svar på ei innbyding?"
+        },
+        {
+          "id": "7",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du notere ein enkel beskjed?"
+        },
+        {
+          "id": "8",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du skrive enkle handlelister?"
+        },
+        {
+          "id": "9",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du skrive ein kort tekst der du fortel om deg sjølv?"
+        },
+        {
+          "id": "10",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Klarar du å finne fram til di eiga arbeidstid i ei turnusliste/vaktliste?"
+        },
+        {
+          "id": "11",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese og forstå eit møtereferat?"
+        },
+        {
+          "id": "12",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese omtalar av t.d. filmar og konsertar?"
+        },
+        {
+          "id": "13",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Forstår du informasjonsskriv, til dømes frå skulen eller kommunen?"
+        },
+        {
+          "id": "14",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese ei møteinnkalling og finne ut kvar og når du skal møte opp?"
+        },
+        {
+          "id": "15",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese og forstå faguttrykk som har med jobb eller hobbyar å gjere?"
+        },
+        {
+          "id": "16",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du bruke innhaldslista for å finne fram i bøker?"
+        },
+        {
+          "id": "17",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Varierer du måten du les på, t.d. kor raskt og grundig du les?"
+        },
+        {
+          "id": "18",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du skrive ned og forklare ein framgangsmåte, t.d. ei oppskrift?"
+        },
+        {
+          "id": "19",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du fylle ut eit skjema med personopplysningar?"
+        },
+        {
+          "id": "20",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du skrive korte innlegg på sosiale medium?"
+        },
+        {
+          "id": "21",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Inga erfaring"
+            },
+            {
+              "id": 2,
+              "text": "Litt erfaring"
+            },
+            {
+              "id": 3,
+              "text": "Mykje erfaring"
+            }
+          ],
+          "text": "Kor mykje erfaring har du med å lese aviser eller magasin?"
+        },
+        {
+          "id": "22",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du skrive ei melding, t.d. om uhell eller avvik på arbeidsplassen?"
+        },
+        {
+          "id": "23",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du skrive ein enkel CV?"
+        },
+        {
+          "id": "24",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du skrive ein e-post i jobbsamanheng?"
+        },
+        {
+          "id": "25",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese og forstå reglar, t.d. burettslagsreglar eller arbeidsrutinar?"
+        },
+        {
+          "id": "26",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du hjelpe elevar på ungdomstrinnet med leselekser?"
+        },
+        {
+          "id": "27",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese og orientere deg i nettaviser?"
+        },
+        {
+          "id": "28",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese informasjon om ulike produkt for å vurdere kva du vil kjøpe?"
+        },
+        {
+          "id": "29",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese og forstå vilkåra for ei vare eller teneste du har kjøpt?"
+        },
+        {
+          "id": "30",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese pakningsvedlegg til medisinar?"
+        },
+        {
+          "id": "31",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese og forstå brev frå styresmaktene, t.d. frå Nav eller kommunen?"
+        },
+        {
+          "id": "32",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese og vurdere kontraktar, t.d. arbeids- eller bustadskontraktar?"
+        },
+        {
+          "id": "33",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese og forstå tekstar som inneheld bilete, grafar og tabellar?"
+        },
+        {
+          "id": "34",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Inga erfaring"
+            },
+            {
+              "id": 2,
+              "text": "Litt erfaring"
+            },
+            {
+              "id": 3,
+              "text": "Mykje erfaring"
+            }
+          ],
+          "text": "Kor mykje erfaring har du med å lese bøker?"
+        },
+        {
+          "id": "35",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du skrive ein enkel rapport om eit stykke arbeid du har gjort?"
+        },
+        {
+          "id": "36",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du skrive eit møtereferat?"
+        },
+        {
+          "id": "37",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du skrive ein jobbsøknad som passar til ein stillingsannonse?"
+        },
+        {
+          "id": "38",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du skrive ei grunngjeven klage på eit produkt eller ei teneste?"
+        },
+        {
+          "id": "39",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du skrive eit samandrag av ein fagtekst?"
+        },
+        {
+          "id": "40",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du grunngje synspunktet ditt skriftleg, t.d. i eit lesarinnlegg eller ein blogg?"
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "base"
+      }
+    }
+  ]
+}
