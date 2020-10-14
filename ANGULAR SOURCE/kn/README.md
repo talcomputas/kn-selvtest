@@ -1,10 +1,6 @@
-# SelfCheck
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
-
 ## Development server
 
-Run `npm run start:digital-test` for a dev server in digital-test environment. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run start:digitaltesten` or `npm run start:muntligtesten` for a dev server in digital-test environment. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 Run `npm run start:oral-test` for a dev server in oral-test environment. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
@@ -14,9 +10,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `npm run build:prod:digital-test` to build the project in digital-test environment. The build artifacts will be stored in the `dist/` directory.
-
-Run `npm run build:prod:oral-test` to build the project in oral-test environment. The build artifacts will be stored in the `dist/` directory.
+Run `npm run build:prod` to build the project in digital-test environment. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 
