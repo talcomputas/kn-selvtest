@@ -90,6 +90,40 @@
   margin-bottom: 20px;
 }
 
+%text-multiple-options {
+  display: flex;
+  .button-toggle,
+  .radio-button {
+    margin-left: 1rem;
+    &-disabled {
+      .option {
+        @extend %disabled-button;
+      }
+    }
+  }
+  .cdk-focused {
+    .option {
+      @extend %stroked-button--primary-focused;
+    }
+  }
+  .option {
+    @extend %stroked-button--primary;
+    width: 100%;
+  }
+  .button-toggle-checked,
+  .radio-checked {
+    &.cdk-focused {
+      .option {
+        @extend %button--primary-focused;
+      }
+    }
+
+    .option {
+      @extend %raised-button--primary;
+    }
+  }
+}
+
 %text-options {
   display: flex;
   flex-direction: column;
@@ -178,7 +212,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba($white, .1);
+      background-color: rgba($white, 0.1);
       transition: all 200ms;
     }
 

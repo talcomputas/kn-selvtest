@@ -1,48 +1,62 @@
-<div *ngIf="!question?.video && question?.image as imageUrl" class="image">
+<!-- <div *ngIf="!question?.video && question?.image as imageUrl" class="image">
   <img [src]="'assets/images/' + imageUrl" alt="{{ question?.text }}" />
-</div>
+</div> -->
 
-<div *ngIf="!question?.image && question?.video as video" class="video">
+<!-- <div *ngIf="!question?.image && question?.video as video" class="video">
   <video
     [src]="'assets/videos/' + video.url"
     [autoplay]="video.autoplay"
     [controls]="video.controls"
     [loop]="video.loop"
   ></video>
-</div>
+</div> -->
 
 <div class="content" [class.no-media]="!question?.image && !question?.video">
   <div class="content-inner">
     <h2 *ngIf="question?.title as title" class="title">{{ title }}</h2>
-    <p *ngIf="question?.text as text" class="text">
-      <span *ngFor="let snippet of getSplitText(question.text); let ix = index">
-        <span *ngIf="snippet === '%s'">
-          <app-multiplechoice
-            [options]="question?.options[ix - 1]"
-          ></app-multiplechoice>
-        </span>
-        <span *ngIf="snippet !== '%s'">{{ snippet }}</span>
-      </span>
-    </p>
-    <p *ngIf="question?.info as info" [innerHTML]="info?.text"></p>
+    <audio
+      *ngIf="question?.audio as audioUrl"
+      controls
+      src="assets/audios/{{ audioUrl }}"
+    ></audio>
+    <!-- <p *ngIf="question?.info as info" [innerHTML]="info?.text"></p>
+    <p *ngIf="question?.text as text" [innerHTML]="text" class="text"></p> -->
   </div>
 
-  <span class="flex-spacer"></span>
+  <div *ngIf="question?.text as text" class="text">
+    <span *ngFor="let snippet of getSplitText(question.text); let ix = index">
+      <span *ngIf="snippet === '%s'">
+        <div class="question-answers" [formGroup]="form">
+          <div app-radio-group [formControl]="control" class="options-text">
+            <div
+              app-radio-button
+              *ngFor="let option of question?.options[ix - 1]; let i = index"
+              [value]="option?.id"
+            >
+              <span *ngIf="option?.text" class="option">{{
+                option?.text
+              }}</span>
 
-  <div *ngIf="question?.options as options" [formGroup]="form">
-    <div
-      app-button-toggle-group
-      class="options"
-      [limit]="limit"
-      [formControl]="control"
-    >
-      <div
-        app-button-toggle
-        *ngFor="let option of options"
-        [value]="option?.id"
-      >
-        <div class="option" [innerHTML]="option?.text"></div>
-      </div>
-    </div>
+              <span *ngIf="option?.image" class="option">
+                <img
+                  [src]="'assets/images/' + option?.image"
+                  alt="{{ question?.text }}"
+                />
+              </span>
+
+              <app-audio
+                *ngIf="option?.audio"
+                [trigger]="test.elRef"
+                class="option"
+                url="assets/audios/{{ option?.audio }}"
+              >
+                {{ i + 1 }}.
+              </app-audio>
+            </div>
+          </div>
+        </div>
+      </span>
+      <span *ngIf="snippet !== '%s'">{{ snippet }}</span>
+    </span>
   </div>
 </div>

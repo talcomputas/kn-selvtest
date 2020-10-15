@@ -1,9 +1,5 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Input,
-  OnChanges,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnChanges } from '@angular/core';
+import { QuestionSingle } from '@features/questions/interfaces/question-single.interface';
 import { QuestionComponentBase } from '@features/questions/components/question-component-base';
 import { QuestionMultipleChoice } from '@features/questions/interfaces/question-multiplechoice.interface';
 
@@ -16,15 +12,12 @@ import { QuestionMultipleChoice } from '@features/questions/interfaces/question-
 export class QuestionMultipleChoiceComponent
   extends QuestionComponentBase<QuestionMultipleChoice>
   implements OnChanges {
-  @Input()
-  public readonly limit: number;
+  public optionsClassName: 'text' | 'image' | 'audio';
+  public optionSizeClassName: string;
 
   ngOnChanges(): void {
     super.ngOnChanges();
-  }
-
-  getOptions(text: string) {
-    return text;
+    this.optionsClassName = 'text';
   }
 
   getSplitText(value: string) {
@@ -46,7 +39,6 @@ export class QuestionMultipleChoiceComponent
     result = result.filter((e) => {
       return e === 0 || e;
     });
-
     return result;
   }
 }

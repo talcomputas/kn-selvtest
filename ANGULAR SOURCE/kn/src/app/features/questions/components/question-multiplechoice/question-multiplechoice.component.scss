@@ -1,0 +1,17 @@
+@import '../../styles/question.export';
+
+:host {
+  /*.content {
+    justify-content: space-around;
+    @extend %content;
+  }*/
+
+  .text {
+    @extend %text;
+  }
+
+  .options-text {
+    width: 100%;
+    @extend %text-multiple-options;
+  }
+}
