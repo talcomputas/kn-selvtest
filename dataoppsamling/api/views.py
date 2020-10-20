@@ -15,7 +15,7 @@ def pong():
     return jsonify({"result": "pong"}), 200
 
 
-@app.route("/api/submituser", methods=["POST"])
+@app.route("/api/submituser", methods=["GET", "POST"])
 def submitUser():
     token = secrets.token_hex(18)
     now = datetime.utcnow()
@@ -29,7 +29,7 @@ def submitUser():
     return jsonify(id=token), 201
 
 
-@app.route("/api/submititem", methods=["POST"])
+@app.route("/api/submititem", methods=["GET", "POST"])
 def submitItem():
 
     id = secrets.token_hex(18)
