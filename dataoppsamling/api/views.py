@@ -3,7 +3,6 @@ import secrets
 from flask import request
 from flask.json import jsonify
 from . import app
-from .identity import az_get_secret
 from .connect import connection
 
 
@@ -15,9 +14,8 @@ def home():
 @app.route("/api/ping")
 def pong():
 
-    AppSecret = az_get_secret("AppSecret").value
     return (
-        jsonify({"AppSecret": AppSecret}),
+        jsonify({"AppSecret": "pong"}),
         200,
     )
 

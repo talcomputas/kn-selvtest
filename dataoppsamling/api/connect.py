@@ -19,12 +19,5 @@ def connection():
     except Error as e:
         print(e)
 
-    # finally:
-    #    if conn is not None and conn.is_connected():
-    #        conn.close()
     cursor = conn.cursor()
     return cursor, conn
-
-
-# if __name__ == "__main__":
-#    connect()
