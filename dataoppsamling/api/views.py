@@ -2,8 +2,9 @@ from datetime import datetime
 import secrets
 from flask import request
 from flask.json import jsonify
-from . import app, conn
+from . import app
 from .identity import az_get_secret
+from .connect import connection
 
 
 @app.route("/")
@@ -27,7 +28,7 @@ def submitUser():
     now = datetime.utcnow()
     formatted = now.strftime("%Y-%m-%d %H:%M:%S")
 
-    cursor = conn.cursor()
+    cursor, conn = connection()
     cursor.execute("INSERT INTO user(id, created) VALUES (%s, %s)", (token, formatted))
     conn.commit()
     cursor.close()
@@ -52,7 +53,7 @@ def submitItem():
     ver = request.args.get("ver")
     timeout = request.args.get("timeout")
 
-    cursor = conn.cursor()
+    cursor, conn = connection()
     cursor.execute(
         "INSERT INTO itemdata (id, uid, itemid, answer, correct, time, datecreated, correctanswer, totaltime, ver, timeout) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
         (
