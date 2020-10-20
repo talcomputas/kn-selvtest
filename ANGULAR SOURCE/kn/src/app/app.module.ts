@@ -6,11 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from '@core/core.module';
 import { Ng5SliderModule } from 'ng5-slider';
 import { AngularDraggableModule } from 'angular2-draggable';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NoCacheHeadersInterceptor } from '@shared/interceptors/nocache.interceptor';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -18,8 +18,13 @@ import { AngularDraggableModule } from 'angular2-draggable';
     Ng5SliderModule,
     AngularDraggableModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: NoCacheHeadersInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

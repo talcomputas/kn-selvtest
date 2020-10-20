@@ -1,39 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { environment } from '@env/environment';
-import * as parser from 'fast-xml-parser';
+import { stringify } from 'querystring';
 
 @Injectable()
 export class StatisticsApiService {
-  private readonly attributeNamePrefix = '#';
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) {
-  }
-
-  public getUserId(): Observable<string> {
-    const params = new HttpParams().set('nocache', Date.now().toString());
-    return this.http
-      .get(`${environment.STATISTICS_API}/submituser.php`, {
-        responseType: 'text',
-        params,
-      })
-      .pipe(
-        map((text: string) =>
-          parser.parse(text, {
-            ignoreAttributes: false,
-            attributeNamePrefix: this.attributeNamePrefix,
-          }),
-        ),
-        map(
-          (data: { [key: string]: any }) =>
-            data &&
-            data.startest &&
-            data.startest.user &&
-            data.startest.user[`${this.attributeNamePrefix}id`],
-        ),
-      );
+  public getUserId(): Observable<{ id: string }> {
+    return this.http.get<{ id: string }>(
+      `${environment.STATISTICS_API}submituser`,
+    );
   }
 
   public sendStatistics(
@@ -55,9 +33,9 @@ export class StatisticsApiService {
       .set('totaltime', String(totalTime))
       .set('nocache', Date.now().toString());
 
-    return this.http.get(
-      `${environment.STATISTICS_API}/submititem.php`,
-      { responseType: 'text', params },
-    );
+    return this.http.get(`${environment.STATISTICS_API}submititem`, {
+      responseType: 'text',
+      params,
+    });
   }
 }
