@@ -8,11 +8,12 @@ export class StatisticsService {
   private questionId: number;
   private userId: string;
 
-  constructor(private statisticsApiService: StatisticsApiService) {
-  }
+  constructor(private statisticsApiService: StatisticsApiService) {}
 
   initUser(): void {
-    this.statisticsApiService.getUserId().subscribe((userId: string) => this.userId = userId);
+    this.statisticsApiService
+      .getUserId()
+      .subscribe((value: { id: string }) => (this.userId = value.id));
   }
 
   initQuestion(questionId: number): void {
@@ -20,9 +21,11 @@ export class StatisticsService {
     this.questionStartedAt = Date.now();
   }
 
-  setQuestion(userAnswer: number | number[] | string | string[],
-              correctAnswer: number | number[] | string | string[],
-              isCorrect: boolean): void {
+  setQuestion(
+    userAnswer: number | number[] | string | string[],
+    correctAnswer: number | number[] | string | string[],
+    isCorrect: boolean,
+  ): void {
     const totalTime = Date.now() - this.testStartedAt;
     const time = Date.now() - this.questionStartedAt;
     this.sendStatistics(time, totalTime, userAnswer, correctAnswer, isCorrect);
@@ -32,19 +35,23 @@ export class StatisticsService {
     this.testStartedAt = Date.now();
   }
 
-  private sendStatistics(time: number,
-                         totalTime: number,
-                         userAnswer: number | number[] | string | string[],
-                         correctAnswer: number | number[] | string | string[],
-                         isCorrect: boolean): void {
-    this.statisticsApiService.sendStatistics(
-      this.userId,
-      this.questionId,
-      userAnswer,
-      correctAnswer,
-      isCorrect,
-      time,
-      totalTime,
-    ).subscribe();
+  private sendStatistics(
+    time: number,
+    totalTime: number,
+    userAnswer: number | number[] | string | string[],
+    correctAnswer: number | number[] | string | string[],
+    isCorrect: boolean,
+  ): void {
+    this.statisticsApiService
+      .sendStatistics(
+        this.userId,
+        this.questionId,
+        userAnswer,
+        correctAnswer,
+        isCorrect,
+        time,
+        totalTime,
+      )
+      .subscribe();
   }
 }

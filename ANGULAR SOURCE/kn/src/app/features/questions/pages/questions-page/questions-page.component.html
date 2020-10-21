@@ -25,12 +25,17 @@
       >
       </app-question-slider>
 
-      <app-question-multiple
-        *ngSwitchCase="QuestionType.MULTIPLE"
-        [question]="question"
-        [limit]="question?.answer?.value?.length"
-        [form]="questions"
-      >
+
+      <app-question-multiple *ngSwitchCase="QuestionType.MULTIPLE_DIFF_POINTS"
+                             [question]="question"
+                             [limit]="question?.answer?.value?.length"
+                             [form]="questions">
+      </app-question-multiple>
+
+      <app-question-multiple *ngSwitchCase="QuestionType.MULTIPLE"
+                             [question]="question"
+                             [limit]="question?.answer?.value?.length"
+                             [form]="questions">
       </app-question-multiple>
 
       <app-question-multiplechoice

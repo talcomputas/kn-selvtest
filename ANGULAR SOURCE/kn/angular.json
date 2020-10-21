@@ -64,13 +64,9 @@
                 "output": "assets/videos/"
               }
             ],
-            "styles": [
-              "src/styles/index.scss"
-            ],
+            "styles": ["src/styles/index.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/styles"
-              ]
+              "includePaths": ["src/styles"]
             },
             "scripts": []
           },
@@ -106,6 +102,83 @@
                 {
                   "replace": "src/web.config",
                   "with": "src/web.config.regnetesten"
+                }
+              ]
+            },
+
+            "leseskrivesjekken": {
+              "baseHref": "/leseskrivesjekken/",
+              "outputPath": "dist/leseskrivesjekken/",
+              "assets": [
+                "src/favicon.png",
+                "src/web.config",
+                "src/assets/icons",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/images/leseskrivesjekken/",
+                  "output": "assets/images/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/audios/leseskrivesjekken/",
+                  "output": "assets/audios/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/videos/leseskrivesjekken/",
+                  "output": "assets/videos/"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/i18n/bokmal.content.json",
+                  "with": "src/i18n/bokmal.content.leseskrivesjekken.json"
+                },
+                {
+                  "replace": "src/i18n/nynorsk.content.json",
+                  "with": "src/i18n/nynorsk.content.leseskrivesjekken.json"
+                },
+                {
+                  "replace": "src/web.config",
+                  "with": "src/web.config.leseskrivesjekken"
+                }
+              ]
+            },
+            "regnesjekken": {
+              "baseHref": "/regnesjekken/",
+              "outputPath": "dist/regnesjekken/",
+              "assets": [
+                "src/favicon.png",
+                "src/web.config",
+                "src/assets/icons",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/images/regnesjekken/",
+                  "output": "assets/images/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/audios/regnesjekken/",
+                  "output": "assets/audios/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/videos/regnesjekken/",
+                  "output": "assets/videos/"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/i18n/bokmal.content.json",
+                  "with": "src/i18n/bokmal.content.regnesjekken.json"
+                },
+                {
+                  "replace": "src/i18n/nynorsk.content.json",
+                  "with": "src/i18n/nynorsk.content.regnesjekken.json"
+                },
+                {
+                  "replace": "src/web.config",
+                  "with": "src/web.config.regnesjekken"
                 }
               ]
             },
@@ -224,7 +297,7 @@
               ]
             },
             "production-digitaltesten": {
-              "baseHref": "/digitaltesten/",
+              "baseHref": "/",
               "outputPath": "dist/digitaltesten/",
               "assets": [
                 "src/favicon.png",
@@ -282,7 +355,7 @@
               ]
             },
             "production-muntligtesten": {
-              "baseHref": "/muntligtesten/",
+              "baseHref": "/",
               "outputPath": "dist/muntligtesten/",
               "assets": [
                 "src/favicon.png",
@@ -339,45 +412,37 @@
                 }
               ]
             },
-            "production-lesetesten": {
-              "baseHref": "/lesetesten/",
-              "outputPath": "dist/lesetesten/",
+            "production-regnetesten": {
+              "baseHref": "/",
+              "outputPath": "dist/regnetesten/",
               "assets": [
                 "src/favicon.png",
                 "src/web.config",
                 "src/assets/icons",
                 {
                   "glob": "**/*",
-                  "input": "src/assets/images/lesetesten/",
+                  "input": "src/assets/images/regnetesten/",
                   "output": "assets/images/"
                 },
                 {
                   "glob": "**/*",
-                  "input": "src/assets/audios/lesetesten/",
+                  "input": "src/assets/audios/regnetesten/",
                   "output": "assets/audios/"
                 },
                 {
                   "glob": "**/*",
-                  "input": "src/assets/videos/lesetesten/",
+                  "input": "src/assets/videos/regnetesten/",
                   "output": "assets/videos/"
                 }
               ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.lesetesten.prod.ts"
+                  "with": "src/environments/environment.regnetesten.prod.ts"
                 },
                 {
                   "replace": "src/i18n/bokmal.content.json",
-                  "with": "src/i18n/bokmal.content.lesetesten.json"
-                },
-                {
-                  "replace": "src/i18n/nynorsk.content.json",
-                  "with": "src/i18n/nynorsk.content.lesetesten.json"
-                },
-                {
-                  "replace": "src/web.config",
-                  "with": "src/web.config.lesetesten"
+                  "with": "src/i18n/bokmal.content.regnetesten.json"
                 }
               ],
               "optimization": true,
@@ -419,6 +484,12 @@
             },
             "production-digitaltesten": {
               "browserTarget": "self-check:build:production-digitaltesten"
+            },
+            "regnesjekken": {
+              "browserTarget": "self-check:build:regnesjekken"
+            },
+            "leseskrivesjekken": {
+              "browserTarget": "self-check:build:leseskrivesjekken"
             }
           }
         },
@@ -435,26 +506,16 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "styles": [
-              "src/styles/index.scss"
-            ],
+            "styles": ["src/styles/index.scss"],
             "scripts": [],
-            "assets": [
-              "src/favicon.png",
-              "src/assets"
-            ]
+            "assets": ["src/favicon.png", "src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -480,9 +541,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }

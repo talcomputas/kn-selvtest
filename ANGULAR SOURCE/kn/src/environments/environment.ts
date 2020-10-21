@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   qbId_nb: '',
   qbId_nn: '',
-  STATISTICS_API: 'http://vox-wp2.vox.no/dataoppsamling/lesetest/',
+  STATISTICS_API: 'https://dataoppsamling.azurewebsites.net/api/',
 };
 
 /*

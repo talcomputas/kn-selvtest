@@ -1,0 +1,1084 @@
+{
+  "intro": {
+    "image": "data-check.svg",
+    "title": "Regnesjekken",
+    "label": "Vurder dine ferdigheter",
+    "text": "Med regnesjekken vurderer du dine egne regneferdigheter, og får en pekepinn på hva du er god til og hva du kan bli bedre på."
+  },
+  "result": {
+    "image": "data-check.svg",
+    "levels": {
+      "1": {
+        "id": "1",
+        "title": "Du har vurdert deg selv til nivå 1 av 3 i denne sjekken.",
+        "text": "Å regne på nivå 1 innebærer å bruke enkel regning i kjente sammenhenger og forstå enkel informasjon som inneholder tall.",
+        "minScore": 0
+      },
+      "2": {
+        "id": "2",
+        "title": "Du har vurdert deg selv til nivå 2 av 3 i denne sjekken.",
+        "text": "Å regne på nivå 2 innebærer å bruke regning i forskjellige situasjoner, bearbeide informasjon som inneholder tall og å ha et bevisst forhold til ulike regneoperasjoner.",
+        "minScore": 12
+      },
+      "3": {
+        "id": "3",
+        "title": "Du har vurdert deg selv til nivå 3 av 3 i denne sjekken.",
+        "text": "Å regne på nivå 3 innebærer å anvende sammensatt matematisk informasjon og kunnskap  i nødvendige situasjoner i hverdagen.",
+        "minScore": 24
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "questions": [
+        {
+          "id": "1",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Forstår du prislapper på varer i matbutikken?"
+        },
+        {
+          "id": "2",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du finne og sammenligne kiloprisen på ulike varer?"
+        },
+        {
+          "id": "3",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du kontrollere en lønnslipp og finne ut hvor mye som blir utbetalt?"
+        },
+        {
+          "id": "4",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du finne ut hvor mye av hver ingrediens du skal bruke i en oppskrift?"
+        },
+        {
+          "id": "5",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du bruke vekt og litermål ved matlaging?"
+        },
+        {
+          "id": "6",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du måle lengder med målebånd, tommestokk eller linjal?"
+        },
+        {
+          "id": "7",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Usikker"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Vet du hva det betyr å fordoble og å halvere?"
+        },
+        {
+          "id": "8",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du kontrollere kvitteringen fra matbutikken?"
+        },
+        {
+          "id": "9",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du skrive inn en legetime med riktig dato og klokkeslett i en kalender?"
+        },
+        {
+          "id": "10",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese en enkel tabell, f.eks. en busstabell?"
+        },
+        {
+          "id": "11",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Usikker"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du hente ut enkel informasjon fra et diagram, f. eks. langtidsvarselet i en værmelding?"
+        },
+        {
+          "id": "12",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du anslå hvor mye du skal betale for en liten handlekurv med varer?"
+        },
+        {
+          "id": "13",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du sammenligne priser for å finne den billigste varen? "
+        },
+        {
+          "id": "14",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Usikker"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Vet du hvordan moms (mva.) påvirker prisen på et produkt?"
+        },
+        {
+          "id": "15",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du gjøre om fra desiliter til liter?"
+        },
+        {
+          "id": "16",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du beregne reisetid ut fra avstand og hastighet?"
+        },
+        {
+          "id": "17",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du kontrollere en telefonregning og vurdere forbruket ditt? "
+        },
+        {
+          "id": "18",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du tilpasse en matoppskrift til flere porsjoner enn angitt?"
+        },
+        {
+          "id": "19",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du regne ut hvor mange kalorier (kcal) det er i en matvare ut fra opplysningene på pakningen?"
+        },
+        {
+          "id": "20",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du regne ut prisen på en genser som er satt ned 20 %?"
+        },
+        {
+          "id": "21",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese og forstå ulike typer grafer og diagrammer?"
+        },
+        {
+          "id": "22",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du lese og forstå en nedbetalingsplan?"
+        },
+        {
+          "id": "23",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du regne ut gjennomsnittsalder i en gruppe?"
+        },
+        {
+          "id": "24",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du sette opp et månedsbudsjett med oversikt over inntekter og utgifter?"
+        },
+        {
+          "id": "25",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Et gulv har målene 3 meter ganger 4 meter. Kan du finne ut hvor mange kvadratmeter gulvet er?"
+        },
+        {
+          "id": "26",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Vet du hva kvantumsrabatt betyr?"
+        },
+        {
+          "id": "27",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Usikker"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Forstår du nedbetalingsordninger i forbindelse med varekjøp?"
+        },
+        {
+          "id": "28",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Klarer du å sammenligne næringsinnhold i ulike matvarer?"
+        },
+        {
+          "id": "29",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Usikker"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du regne ut hvor mye det vil koste deg om du ikke betaler en regning i tide?"
+        },
+        {
+          "id": "30",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Usikker"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kjenner du til fordeler og ulemper ved å bruke kredittkort?"
+        },
+        {
+          "id": "31",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Usikker"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Vet du forskjellen på flytende og fast rente?"
+        },
+        {
+          "id": "32",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du sette opp en oversikt for årsforbruket i en husholdning, f.eks. for mat og klær, og fordele utgiftene jevnt over månedene i et budsjett?"
+        },
+        {
+          "id": "33",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du regne ut hvor mye du må spare hver måned når du planlegger å reise på en lengre tur?"
+        },
+        {
+          "id": "34",
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Klarer du å kontrollere skattemeldingen (selvangivelsen) din?"
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "base"
+      }
+    }
+  ]
+}

@@ -9,7 +9,10 @@ import { QuestionSingle } from '../interfaces/question-single.interface';
 import { QuestionHotspot } from '@features/questions/interfaces/question-hotspot.interface';
 import { QuestionRanking } from '@features/questions/interfaces/question-ranking.interface';
 import { QuestionCode } from '@features/questions/interfaces/question-code.interface';
-import { QuestionMultiple } from '@features/questions/interfaces/question-multiple.interface';
+import {
+  QuestionMultiple,
+  QuestionMultipleDiffPoints,
+} from '@features/questions/interfaces/question-multiple.interface';
 import { QuestionDialogue } from '@features/questions/interfaces/question-dialogue.interface';
 import { QuestionsUnionType } from '@features/questions/types/questions-union.type';
 import { Level } from '@features/questions/interfaces/level.interface';
@@ -263,6 +266,12 @@ export class QuestionsService {
           break;
         }
 
+        case QuestionType.MULTIPLE_DIFF_POINTS: {
+          const { answer } = question as QuestionMultipleDiffPoints;
+          score += this.multipleChoiceDiffPoints(answer, selection);
+          break;
+        }
+
         case QuestionType.DIALOGUE: {
           const { answer } = question as QuestionDialogue;
           score += this.multipleChoicePoints<string>(answer, selection, false);
@@ -372,8 +381,8 @@ export class QuestionsService {
         return { id, type, text, correct, selected, isCorrect };
       }
 
-      case QuestionType.MULTIPLECHOICE: {
-        const { text, options } = question as QuestionMultipleChoice;
+      case QuestionType.MULTIPLE_DIFF_POINTS: {
+        const { text, options } = question as QuestionMultipleDiffPoints;
         const values = answer.value as number[];
         const correct = values.map((v) => selectOption(v, options));
         const selected = selectedValue.map((v) => selectOption(v, options));
@@ -494,6 +503,14 @@ export class QuestionsService {
       case QuestionType.RANKING: {
         return compareMultiple(selectedValue, correctValue as number[], false);
       }
+
+      case QuestionType.SLIDER: {
+        return compareSingle(selectedValue, correctValue as number);
+      }
+
+      case QuestionType.MULTIPLE_DIFF_POINTS: {
+        return compareMultiple(selectedValue, correctValue as number[]);
+      }
     }
   }
 
@@ -541,6 +558,20 @@ export class QuestionsService {
     answer: { points: number; value: T[] },
     selection: T[],
     sorting = true,
+  ): number {
+    if (!answer) {
+      return 0;
+    }
+
+    const isCorrect = compareMultiple(answer.value, selection, sorting);
+
+    return (isCorrect && answer.points) || 0;
+  }
+
+  private multipleChoiceDiffPoints<T>(
+    answer: { points: number; value: T[] },
+    selection: T[],
+    sorting = false,
   ): number {
     if (!answer) {
       return 0;

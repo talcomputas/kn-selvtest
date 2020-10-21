@@ -1,5 +1,3 @@
-# import os
-
 from os import environ as env
 from azure.identity import ClientSecretCredential
 from azure.keyvault.secrets import SecretClient

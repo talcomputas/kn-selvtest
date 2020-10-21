@@ -5,26 +5,25 @@
 
 trigger:
   - master
-  - python
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionId: "8fc31c22-8bfe-4dc6-bbfe-81c10568bd15"
+  azureServiceConnectionId: '8fc31c22-8bfe-4dc6-bbfe-81c10568bd15'
 
   # Web app name
-  webAppName: "dataoppsamling"
+  webAppName: 'dataoppsamling'
 
   # Agent VM image name
-  vmImageName: "ubuntu-latest"
+  vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: "dataoppsamling"
+  environmentName: 'dataoppsamling'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)/dataoppsamling
 
   # Python version: 3.8
-  pythonVersion: "3.8"
+  pythonVersion: '3.8'
 
 pool:
   vmImage: $(vmImageName)
@@ -32,8 +31,8 @@ pool:
 steps:
   - task: UsePythonVersion@0
     inputs:
-      versionSpec: "$(pythonVersion)"
-    displayName: "Use Python $(pythonVersion)"
+      versionSpec: '$(pythonVersion)'
+    displayName: 'Use Python $(pythonVersion)'
 
   - script: |
       python -m venv antenv
@@ -42,12 +41,12 @@ steps:
       pip install setup
       pip install -r requirements.txt
     workingDirectory: $(projectRoot)
-    displayName: "Install requirements"
+    displayName: 'Install requirements'
 
   - task: ArchiveFiles@2
-    displayName: "Archive files"
+    displayName: 'Archive files'
     inputs:
-      rootFolderOrFile: "$(projectRoot)"
+      rootFolderOrFile: '$(projectRoot)'
       includeRootFolder: false
       archiveType: zip
       archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
@@ -56,6 +55,6 @@ steps:
   - task: PublishBuildArtifacts@1
     displayName: Publish artifact
     inputs:
-      PathtoPublish: "$(Build.ArtifactStagingDirectory)"
-      ArtifactName: "drop"
-      publishLocation: "Container"
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'drop'
+      publishLocation: 'Container'
