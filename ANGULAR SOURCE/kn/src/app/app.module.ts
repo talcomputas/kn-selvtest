@@ -8,6 +8,7 @@ import { Ng5SliderModule } from 'ng5-slider';
 import { AngularDraggableModule } from 'angular2-draggable';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NoCacheHeadersInterceptor } from '@shared/interceptors/nocache.interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,7 @@ import { NoCacheHeadersInterceptor } from '@shared/interceptors/nocache.intercep
     CoreModule.forRoot(),
     Ng5SliderModule,
     AngularDraggableModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     {
