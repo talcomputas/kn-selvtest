@@ -42,22 +42,23 @@ def submitItem():
     datecreated = now.strftime("%Y-%m-%d %H:%M:%S")
 
     uid = request.args.get("uid")
-    itemId = request.args.get("itemId")
+    itemid = request.args.get("itemid")
     answer = request.args.get("answer")
-    correct = request.args.get("correct")
     correctanswer = request.args.get("correctanswer")
+    correct = request.args.get("correct")
     time = int(request.args.get("time"))
     totaltime = int(request.args.get("totaltime"))
-    ver = request.args.get("ver")
+    ver = request.args.get("ver", "")
     timeout = request.args.get("timeout")
+    name = request.args.get("name")
 
     cursor, conn = connection()
     cursor.execute(
-        "INSERT INTO itemdata (id, uid, itemid, answer, correct, time, datecreated, correctanswer, totaltime, ver, timeout) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+        "INSERT INTO itemdata (id, uid, itemid, answer, correct, time, datecreated, correctanswer, totaltime, ver, timeout, name) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
         (
             id,
             uid,
-            itemId,
+            itemid,
             answer,
             correct,
             time,
@@ -66,6 +67,7 @@ def submitItem():
             totaltime,
             ver,
             timeout,
+            name,
         ),
     )
     conn.commit()
