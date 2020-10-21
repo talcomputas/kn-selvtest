@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   qbId_nb: '',
   qbId_nn: '',
+  name: 'lesetesten',
   STATISTICS_API: 'https://dataoppsamling.azurewebsites.net/api/',
 };
 
