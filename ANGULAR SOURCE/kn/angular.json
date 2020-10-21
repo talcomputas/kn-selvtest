@@ -47,7 +47,7 @@
               "rxjs/operators",
               "rxjs/Subject",
               "rxjs/Subscription",
-              "fast-xml-parser"
+              "ng5-slider"
             ],
             "assets": [
               "src/favicon.png",
@@ -443,6 +443,56 @@
                 {
                   "replace": "src/i18n/bokmal.content.json",
                   "with": "src/i18n/bokmal.content.regnetesten.json"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            },
+            "production-lesetesten": {
+              "baseHref": "/",
+              "outputPath": "dist/lesetesten/",
+              "assets": [
+                "src/favicon.png",
+                "src/web.config",
+                "src/assets/icons",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/images/lesetesten/",
+                  "output": "assets/images/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/audios/lesetesten/",
+                  "output": "assets/audios/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/videos/lesetesten/",
+                  "output": "assets/videos/"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.lesetesten.prod.ts"
+                },
+                {
+                  "replace": "src/i18n/bokmal.content.json",
+                  "with": "src/i18n/bokmal.content.lesetesten.json"
                 }
               ],
               "optimization": true,
