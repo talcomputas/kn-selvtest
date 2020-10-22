@@ -14,7 +14,9 @@
     "build:prod": "npm run build:prod:digitaltesten && npm run build:prod:muntligtesten && npm run build:prod:regnetesten && npm run build:prod:lesetesten",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "format:check": "prettier --config ./.prettierrc --list-different 'src/{app,environments,assets,i18n,styles}/**/*{.ts,.js,.json,.css,.scss}'",
+    "format": "prettier --config ./.prettierrc --write 'src/{app,environments,assets,i18n,styles}/**/*{.ts,.js,.json,.css,.scss}'"
   },
   "private": true,
   "dependencies": {
