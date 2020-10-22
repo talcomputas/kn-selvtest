@@ -11,7 +11,7 @@
       "questions": [
         {
           "id": 1,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Ein solskinsdag",
           "text": "Dei sat i shorts og bar overkropp på terrassen, og dei hadde henta drikke med isbitar. Dei trengde skugge i den varme sola, så dei bestemde seg for å finne fram %s.",
           "options": [
@@ -41,7 +41,7 @@
         },
         {
           "id": 2,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "På kjøkenet",
           "text": "Bordet var allereie dekt. Det lukta litt brent sjølv om klokka ikkje hadde ringt. Senay skrudde ned varmen og fjerna %s.",
           "options": [
@@ -71,7 +71,7 @@
         },
         {
           "id": 3,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Helgevasken",
           "text": "Oskar gjekk i bua og henta langkosten. Han gjekk grundig til verks før han rydda bort bytta og hengde tvoga til tørk. Endeleg blei leilegheita %s",
           "options": [
@@ -101,7 +101,7 @@
         },
         {
           "id": 4,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Kaos",
           "text": "Det flaut med mjøl og sukker. Det ville ta heile pausen å rydde opp, tenkte læraren. Det var bra at alle brukte %s, elles ville kanskje nokre av foreldra klaga.",
           "options": [
@@ -131,7 +131,7 @@
         },
         {
           "id": 5,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Ungane til havørna",
           "text": "Havørnparet har bygd reiret sitt høgt oppe i det gamle treet. No ligg det to egg der. Når egga blir klekte, blir ungane verande i reiret %s dei er klare til å flyge. Så vil foreldra mate dei eit par månader, men så snart ungane er klare, flyg dei ut på eiga hand for å finne %s sin",
           "options": [
@@ -179,7 +179,7 @@
         },
         {
           "id": 6,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Fotballkamp",
           "text": "Det var mange stygge taklingar og amper stemning. Fløyta måtte takast i bruk med jamne mellomrom, og fleire fekk gult kort. Då kampen var slutt, hadde ingen fått %s.",
           "options": [
@@ -209,7 +209,7 @@
         },
         {
           "id": 7,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Hetebølgje",
           "text": "Det hadde vore skyfritt og varmt i fleire dagar. Aida strevde med å ta på sonen %s, men det var vanskeleg, for han ville ikkje stå i ro. Dei kom til å bli forseinka igjen.",
           "options": [
@@ -239,7 +239,7 @@
         },
         {
           "id": 8,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Draumen om ein bondegard",
           "text": "Henrik bladde fram til sidene med bustadannonsar. Leilegheita deira var %s for lita for dei, så no var dei på leiting etter %s større. Dei ville gjerne flytte ut på landet. Dei leitte etter ein liten %s med plass til å ha eit par %s.",
           "options": [
@@ -323,7 +323,7 @@
         },
         {
           "id": 9,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Musikk",
           "text": "Fingerrørslene til eleven var raske og presise. Han sat og trampa medan han spelte. Læraren lytta intenst for å forsikre seg om at han følgde %s.",
           "options": [
@@ -353,7 +353,7 @@
         },
         {
           "id": 10,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Reisa",
           "text": "Ho skulle vere klar om to timar, så ho hadde det litt travelt. Veska låg allereie klar i bilen, og billetten, nyklane og korthaldaren var i lomma. Sambuaren sprang etter henne med %s. Heldigvis for henne, elles hadde ho ikkje kome seg nokon stad.",
           "options": [
@@ -383,7 +383,7 @@
         },
         {
           "id": 11,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Innbyggjarar fryktar pyroman",
           "text": "Innbyggjarane i bygda Berglund kjenner seg %s, for i førre veke blei det rapportert om tre utbrende bilar i området og to brannar i bustadfeltet. Dei er redde for at det er ein pyroman på ferde. Ifølgje politiet tyder undersøkingane så langt på at brannane var påsette, %s dei treng fleire spor i saka før dei kan konkludere.",
           "options": [
@@ -431,7 +431,7 @@
         },
         {
           "id": 12,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Hos tannlegen",
           "text": "Karl låg i stolen, og lyset frå lampa skar han i auga. Han var litt nervøs. Tannlegen la frå seg den vesle spegelen. Han snudde på hovudet og såg at ho tok tak i %s.",
           "options": [
@@ -461,7 +461,7 @@
         },
         {
           "id": 13,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Flaum",
           "text": "Då ekteparet kom heim frå helgeturen, flaut alle tinga rundt i kjellaren. Dei skunda seg med å setje sakene ut i sola. De ville ta kontakt med %s dagen etter. Dei høyrde på nyheitssendinga at mange delar av landet var ramma.",
           "options": [
@@ -491,7 +491,7 @@
         },
         {
           "id": 14,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Blomar og vatning",
           "text": "Det er store skilnader på kor ofte plantar skal vatnast. Nokre bør ein vatne kvar dag, %s andre kan stå i fleire veker utan vatn. Det er ein vanleg %s å gje alle blomar masse vatn. Det kan føre til at røtene får problem med å ta opp nok næring.",
           "options": [
@@ -539,7 +539,7 @@
         },
         {
           "id": 15,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Innbrot",
           "text": "Dei hadde brukt fleire veker på planlegginga, og dei hadde valt ut staden nøye. Kameraten deira venta i bilen rundt hjørnet. Pulsen steig då dei sneik seg fram. Dei håpa at det ikkje var nokre %s der.",
           "options": [
@@ -569,7 +569,7 @@
         },
         {
           "id": 16,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Bjørnar på rømmen?",
           "text": "Ein kraftig storm har velta fleire tre i dyreparken. over gjerdet som var sett opp rundt området der bjørnane var. I %s etterpå blei dei tilsette redde for at bjørnane skulle %s. Dyrepassarane måtte straks leite gjennom heile dyrehagen og telje %s for å forsikre seg om at ingen hadde rømt.",
           "options": [
@@ -635,7 +635,7 @@
         },
         {
           "id": 17,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Bilulukke",
           "text": "Ein kunne høyre lyden av %s kome nærare. Mange menneske hadde samla seg rundt dei to bilane. Nokre av dei stod og gret. ",
           "options": [
@@ -665,7 +665,7 @@
         },
         {
           "id": 18,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Spleiselag",
           "text": "Dei hadde kosa seg med fredagstaco heile kvelden. Linda hadde lagt ut for %s og venta på at alle skulle overføre %s.",
           "options": [
@@ -713,7 +713,7 @@
         },
         {
           "id": 19,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Seint ute",
           "text": "&quot;Vi får sjå til å kome oss av garde&quot;, sa Karim. Likevel tok det eit kvarter før borna var klare til å setje seg i %s. Familien køyrde ein %s gjennom byen, så heldigvis kom dei fram til selskapet berre 10 minutt seinare enn dei andre. ",
           "options": [
@@ -761,7 +761,7 @@
         },
         {
           "id": 20,
-          "type": "multiplechoice",
+          "type": "groups-choice",
           "title": "Ein mistenkjeleg e-post",
           "text": "Maria hadde fått ein e-post frå ein avsendar ho ikkje kjende. Ho undersøkte difor om det var ein person ho kunne ringje eller skrive til %s ho opna vedlegget, men ho fann ingen kontaktopplysningar. Det fekk henne til å %s at e-posten var frå nokon som prøvde å lokke betalingsopplysningar ut av henne, %s ho sletta den",
           "options": [

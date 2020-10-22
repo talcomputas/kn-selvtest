@@ -263,7 +263,6 @@
               "outputPath": "dist/lesetesten/",
               "assets": [
                 "src/favicon.png",
-                "src/web.config",
                 "src/assets/icons",
                 {
                   "glob": "**/*",
@@ -289,10 +288,6 @@
                 {
                   "replace": "src/i18n/nynorsk.content.json",
                   "with": "src/i18n/nynorsk.content.lesetesten.json"
-                },
-                {
-                  "replace": "src/web.config",
-                  "with": "src/web.config.muntligtesten"
                 }
               ]
             },

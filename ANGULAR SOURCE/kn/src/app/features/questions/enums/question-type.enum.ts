@@ -7,5 +7,5 @@ export enum QuestionType {
   RANKING = 'ranking',
   DIALOGUE = 'dialogue',
   SLIDER = 'slider',
-  MULTIPLECHOICE ='multiplechoice'
+  GROUPS_CHOICE = 'groups-choice',
 }

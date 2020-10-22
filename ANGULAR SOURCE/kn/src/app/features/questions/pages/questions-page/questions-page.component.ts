@@ -1,11 +1,18 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
 import { QuestionType } from '@features/questions/enums/question-type.enum';
 import { QuestionsService } from '@features/questions/services/questions.service';
 import { QuestionsUnionType } from '@features/questions/types/questions-union.type';
+import { QuestionGroupsChoice } from '@features/questions/interfaces/question-groups-choice.interface';
 
 @Component({
   selector: 'app-questions-page',
@@ -26,10 +33,14 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
 
   private readonly destroyed$ = new Subject<void>();
 
-  constructor(private route: ActivatedRoute,
-              private cdRef: ChangeDetectorRef,
-              private questionsService: QuestionsService) {
-    this.page$ = this.route.paramMap.pipe(map((params: ParamMap) => +params.get('page')));
+  constructor(
+    private route: ActivatedRoute,
+    private cdRef: ChangeDetectorRef,
+    private questionsService: QuestionsService,
+  ) {
+    this.page$ = this.route.paramMap.pipe(
+      map((params: ParamMap) => +params.get('page')),
+    );
     this.index$ = this.page$.pipe(map((page: number) => page - 1));
     this.question$ = this.questionsService.question$;
     this.length$ = this.questionsService.length$;
@@ -37,14 +48,22 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.questionsService.attach();
-    this.questionsService.changes$.pipe(takeUntil(this.destroyed$)).subscribe(() => this.cdRef.markForCheck());
+    this.questionsService.changes$
+      .pipe(takeUntil(this.destroyed$))
+      .subscribe(() => this.cdRef.markForCheck());
 
-    this.index$.pipe(takeUntil(this.destroyed$)).subscribe((index: number) => this.questionsService.update(index, this.questions.value));
+    this.index$
+      .pipe(takeUntil(this.destroyed$))
+      .subscribe((index: number) =>
+        this.questionsService.update(index, this.questions.value),
+      );
 
-    this.question$.pipe(takeUntil(this.destroyed$)).subscribe((question: QuestionsUnionType) => {
-      this.handleTransition(question);
-      this.addFormControl(question);
-    });
+    this.question$
+      .pipe(takeUntil(this.destroyed$))
+      .subscribe((question: QuestionsUnionType) => {
+        this.handleTransition(question);
+        this.addFormControl(question);
+      });
   }
 
   ngOnDestroy(): void {
@@ -70,7 +89,19 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
       return;
     }
 
+    if (question.type == QuestionType.GROUPS_CHOICE) {
+      let q = question as QuestionGroupsChoice;
+      const skills = new FormArray([]);
+      q.options.forEach(() => {
+        skills.push(new FormControl('', Validators.required));
+      });
+      this.questions.addControl(key, skills);
+      return;
+    }
 
-    this.questions.addControl(key, new FormControl(null, [Validators.required]));
+    this.questions.addControl(
+      key,
+      new FormControl(null, [Validators.required]),
+    );
   }
 }

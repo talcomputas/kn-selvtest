@@ -56,3 +56,36 @@ body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }*/
+
+// Temporary styling of Material. Remove all below when going full Material, ond not just maintaining old css
+.groups-choice {
+  display: inline-flex;
+  justify-content: space-evenly;
+
+  .mat-radio-button {
+    margin-left: 0.2rem;
+    display: inline-flex;
+    border: 2px solid rgb(214, 227, 240);
+    border-radius: 23px;
+    .mat-radio-label {
+      .mat-radio-container {
+        display: none;
+      }
+      .mat-radio-label-content {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+    &.mat-radio-checked {
+      background-color: #2274b9;
+      border: 2px solid #2274b9;
+      color: white;
+    }
+    &:hover {
+      border: 2px solid #149dc4;
+    }
+  }
+}
+
+.groups-choice-radio {
+}

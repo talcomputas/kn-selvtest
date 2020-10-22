@@ -18,6 +18,7 @@ import { QuestionsUnionType } from '@features/questions/types/questions-union.ty
 import { Level } from '@features/questions/interfaces/level.interface';
 import {
   compareCodes,
+  compareGroupsChoice,
   compareMultiple,
   compareSingle,
 } from '@features/questions/utils/comparison.utils';
@@ -29,7 +30,7 @@ import { SpeechSelect } from '@features/questions/interfaces/speech-select.inter
 import { Result } from '@features/questions/interfaces/result.interface';
 import { StatisticsService } from '@features/questions/services/statistics.service';
 import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
-import { QuestionMultipleChoice } from '@features/questions/interfaces/question-multiplechoice.interface';
+import { QuestionGroupsChoice } from '@features/questions/interfaces/question-groups-choice.interface';
 
 @Injectable()
 export class QuestionsService {
@@ -72,6 +73,7 @@ export class QuestionsService {
   }
 
   update(index: number, answers: { [key: string]: any }): void {
+    console.log('Questions Service update');
     this.answers = answers;
     this.initQuestions(answers);
 
@@ -116,12 +118,14 @@ export class QuestionsService {
   }
 
   attach(): void {
+    console.log('Questions Service attach');
     this.contentChangesSubscription = this.content.changes.subscribe(() =>
       this.initContent(),
     );
   }
 
   detach(): void {
+    console.log('Questions Service detach');
     if (this.contentChangesSubscription) {
       this.contentChangesSubscription.unsubscribe();
     }
@@ -283,8 +287,8 @@ export class QuestionsService {
           score += this.singleChoicePoints<number>(answer, selection);
           break;
         }
-        case QuestionType.MULTIPLECHOICE: {
-          const { answer } = question as QuestionMultipleChoice;
+        case QuestionType.GROUPS_CHOICE: {
+          const { answer } = question as QuestionGroupsChoice;
           score += 1; // this.multipleChoicePoints<string>(answer, selection, false);
         }
       }
@@ -481,34 +485,42 @@ export class QuestionsService {
     switch (type) {
       case QuestionType.HOTSPOT:
       case QuestionType.SINGLE: {
+        console.log('compareSingle');
         return compareSingle(selectedValue, correctValue as number);
       }
 
       case QuestionType.CODE: {
+        console.log('compare Codes');
         return compareCodes(selectedValue, correctValue as number);
       }
 
       case QuestionType.MULTIPLE: {
+        console.log('compare Multiple');
         return compareMultiple(selectedValue, correctValue as number[]);
       }
 
-      case QuestionType.MULTIPLECHOICE: {
-        return compareMultiple(selectedValue, correctValue as number[]);
+      case QuestionType.GROUPS_CHOICE: {
+        console.log('compare GroupsChoice');
+        return compareGroupsChoice(selectedValue, correctValue as number[]);
       }
 
       case QuestionType.DIALOGUE: {
+        console.log('compare Dialogue');
         return compareMultiple(selectedValue, correctValue as string[], false);
       }
 
       case QuestionType.RANKING: {
+        console.log('compare Ranking');
         return compareMultiple(selectedValue, correctValue as number[], false);
       }
 
       case QuestionType.SLIDER: {
+        console.log('compare Slider');
         return compareSingle(selectedValue, correctValue as number);
       }
 
       case QuestionType.MULTIPLE_DIFF_POINTS: {
+        console.log('compare Mulitple diff points');
         return compareMultiple(selectedValue, correctValue as number[]);
       }
     }

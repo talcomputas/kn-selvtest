@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Title } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ContentModule } from '@content/content.module';
 import { ContentService } from '@content/services/content.service';
@@ -30,6 +30,9 @@ import nbContent from '@i18n/bokmal.content.json';
 import { QuestionSliderComponent } from './components/question-slider/question-slider.component';
 import { Ng5SliderModule } from 'ng5-slider';
 import { QuestionMultipleDiffPointsComponent } from './components/question-multiple-diff-points/question-multiple-diff-points.component';
+import { QuestionGroupsChoiceComponent } from '@features/questions/components/question-groups-choice/question-groups-choice.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -47,10 +50,12 @@ import { QuestionMultipleDiffPointsComponent } from './components/question-multi
     TransitionComponent,
     QuestionSliderComponent,
     QuestionMultipleDiffPointsComponent,
+    QuestionGroupsChoiceComponent,
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    FormsModule,
     QuestionsRoutingModule,
     DragDropModule,
     SharedModule,
@@ -59,23 +64,25 @@ import { QuestionMultipleDiffPointsComponent } from './components/question-multi
     ButtonModule,
     ButtonToggleModule,
     Ng5SliderModule,
+    MatRadioModule,
+    MatButtonModule,
   ],
-  providers: [
-    QuestionsService,
-    StatisticsService,
-    StatisticsApiService,
-  ],
+  providers: [QuestionsService, StatisticsService, StatisticsApiService],
 })
 export class QuestionsModule {
-  constructor(contentService: ContentService,
+  constructor(
+    contentService: ContentService,
     statisticsService: StatisticsService,
-    titleService: Title) {
+    titleService: Title,
+  ) {
     contentService.set('nb', nbContent);
     contentService.set('nn', nnContent);
     statisticsService.initUser();
 
-    contentService
-      .changes
-      .subscribe(() => titleService.setTitle(`Kompetanse Norge - ${contentService.get('intro.title')}`));
+    contentService.changes.subscribe(() =>
+      titleService.setTitle(
+        `Kompetanse Norge - ${contentService.get('intro.title')}`,
+      ),
+    );
   }
 }

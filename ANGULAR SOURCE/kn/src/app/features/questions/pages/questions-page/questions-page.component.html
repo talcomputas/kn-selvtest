@@ -25,26 +25,29 @@
       >
       </app-question-slider>
 
-
-      <app-question-multiple *ngSwitchCase="QuestionType.MULTIPLE_DIFF_POINTS"
-                             [question]="question"
-                             [limit]="question?.answer?.value?.length"
-                             [form]="questions">
-      </app-question-multiple>
-
-      <app-question-multiple *ngSwitchCase="QuestionType.MULTIPLE"
-                             [question]="question"
-                             [limit]="question?.answer?.value?.length"
-                             [form]="questions">
-      </app-question-multiple>
-
-      <app-question-multiplechoice
-        *ngSwitchCase="QuestionType.MULTIPLECHOICE"
+      <app-question-multiple
+        *ngSwitchCase="QuestionType.MULTIPLE_DIFF_POINTS"
         [question]="question"
         [limit]="question?.answer?.value?.length"
         [form]="questions"
       >
-      </app-question-multiplechoice>
+      </app-question-multiple>
+
+      <app-question-multiple
+        *ngSwitchCase="QuestionType.MULTIPLE"
+        [question]="question"
+        [limit]="question?.answer?.value?.length"
+        [form]="questions"
+      >
+      </app-question-multiple>
+
+      <app-question-groupschoice
+        *ngSwitchCase="QuestionType.GROUPS_CHOICE"
+        [question]="question"
+        [limit]="question?.answer?.value?.length"
+        [form]="questions"
+      >
+      </app-question-groupschoice>
 
       <app-question-hotspot
         *ngSwitchCase="QuestionType.HOTSPOT"
@@ -127,6 +130,7 @@
       >
         {{ 'actions.next' | content }} <i app-svg-icon="arrow-forward"></i>
       </button>
+      <!-- <code>{{ questions.value | json }}</code> -->
     </div>
   </footer>
 </app-card>
