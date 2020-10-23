@@ -23,7 +23,6 @@ export class QuestionGroupsChoiceComponent
   ngOnChanges(): void {
     super.ngOnChanges();
     const splitAry = this.getSplitText(this.question.text);
-    console.log(splitAry);
   }
 
   getSplitText(value: string) {
@@ -45,7 +44,6 @@ export class QuestionGroupsChoiceComponent
     result = result.filter((e) => {
       return e === 0 || e;
     });
-    console.log(result);
     return result;
   }
 

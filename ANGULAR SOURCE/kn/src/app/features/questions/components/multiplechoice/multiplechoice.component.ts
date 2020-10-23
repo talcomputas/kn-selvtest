@@ -19,9 +19,7 @@ export class MultipleChoiceComponent implements OnChanges, OnInit {
   @Input() options: Options;
   selectedItem: Option = null;
 
-  ngOnInit(): void {
-    //console.log(this.options);
-  }
+  ngOnInit(): void {}
 
   onClick = (option: Option) => {
     this.selectedItem = option;
