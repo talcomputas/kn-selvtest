@@ -13,6 +13,23 @@ import { QuestionType } from '@features/questions/enums/question-type.enum';
 import { QuestionsService } from '@features/questions/services/questions.service';
 import { QuestionsUnionType } from '@features/questions/types/questions-union.type';
 import { QuestionGroupsChoice } from '@features/questions/interfaces/question-groups-choice.interface';
+import { ContentService } from '@content/services/content.service';
+
+import nbdigitaltesten from '@i18n/bokmal.content.digitaltesten.json';
+import nbcontent from '@i18n/bokmal.content.json';
+import nblesetesten from '@i18n/bokmal.content.lesetesten.json';
+import nbmuntligtesten from '@i18n/bokmal.content.muntligtesten.json';
+import nbregnesjekken from '@i18n/bokmal.content.regnesjekken.json';
+import nbregnetesten from '@i18n/bokmal.content.regnetesten.json';
+import nbsystem from '@i18n/bokmal.system.json';
+
+import nndigitaltesten from '@i18n/nynorsk.content.digitaltesten.json';
+import nncontent from '@i18n/nynorsk.content.json';
+import nnleseskrivesjekken from '@i18n/nynorsk.content.leseskrivesjekken.json';
+import nnlesetesten from '@i18n/nynorsk.content.lesetesten.json';
+import nnmuntligtesten from '@i18n/nynorsk.content.muntligtesten.json';
+import nnregnesjekken from '@i18n/nynorsk.content.regnesjekken.json';
+import nnsystem from '@i18n/nynorsk.system.json';
 
 @Component({
   selector: 'app-questions-page',
@@ -32,21 +49,48 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
   public showTransition: boolean;
 
   private readonly destroyed$ = new Subject<void>();
-
+  name: string = '';
   constructor(
     private route: ActivatedRoute,
     private cdRef: ChangeDetectorRef,
     private questionsService: QuestionsService,
+    private activatedRoute: ActivatedRoute,
+    private contentService: ContentService,
   ) {
-    this.page$ = this.route.paramMap.pipe(
-      map((params: ParamMap) => +params.get('page')),
-    );
+    this.page$ = this.route.paramMap.pipe(map((params: ParamMap) => +params.get('page')));
     this.index$ = this.page$.pipe(map((page: number) => page - 1));
     this.question$ = this.questionsService.question$;
     this.length$ = this.questionsService.length$;
   }
 
   ngOnInit(): void {
+    this.activatedRoute.data.subscribe((data) => {
+      this.name = data.name;
+      switch (this.name) {
+        case 'lesetesten':
+          this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nblesetesten });
+          this.contentService.set('nn', { ...nncontent, ...nnsystem, ...nnlesetesten });
+          break;
+        case 'digitaltesten':
+          this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbdigitaltesten });
+          this.contentService.set('nn', { ...nncontent, ...nnsystem, ...nndigitaltesten });
+          break;
+        case 'muntligtesten':
+          this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbmuntligtesten });
+          this.contentService.set('nn', { ...nncontent, ...nnsystem, ...nnmuntligtesten });
+          break;
+        case 'regnetesten':
+          this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbregnetesten });
+          //TODO: missing locale
+          break;
+        case 'regnesjekken':
+          this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbregnesjekken });
+          this.contentService.set('nn', { ...nncontent, ...nnsystem, ...nnregnesjekken });
+          break;
+        default:
+          break;
+      }
+    });
     this.questionsService.attach();
     this.questionsService.changes$
       .pipe(takeUntil(this.destroyed$))
@@ -54,16 +98,12 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
 
     this.index$
       .pipe(takeUntil(this.destroyed$))
-      .subscribe((index: number) =>
-        this.questionsService.update(index, this.questions.value),
-      );
+      .subscribe((index: number) => this.questionsService.update(index, this.questions.value));
 
-    this.question$
-      .pipe(takeUntil(this.destroyed$))
-      .subscribe((question: QuestionsUnionType) => {
-        this.handleTransition(question);
-        this.addFormControl(question);
-      });
+    this.question$.pipe(takeUntil(this.destroyed$)).subscribe((question: QuestionsUnionType) => {
+      this.handleTransition(question);
+      this.addFormControl(question);
+    });
   }
 
   ngOnDestroy(): void {
@@ -99,9 +139,6 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
       return;
     }
 
-    this.questions.addControl(
-      key,
-      new FormControl(null, [Validators.required]),
-    );
+    this.questions.addControl(key, new FormControl(null, [Validators.required]));
   }
 }

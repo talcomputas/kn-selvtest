@@ -571,7 +571,7 @@
           "id": 16,
           "type": "groups-choice",
           "title": "Bjørner på rømmen?",
-          "text": "En kraftig storm har veltet flere trær i dyreparken. To av trærne veltet % over gjerdet som var satt opp rundt bjørnenes område. I %s etterpå ble de ansatte redde for at bjørnene skulle %s. Dyrepasserne måtte straks lete gjennom hele dyrehagen og telle antall %s for å forsikre seg om at ingen hadde rømt.",
+          "text": "En kraftig storm har veltet flere trær i dyreparken. To av trærne veltet over gjerdet som var satt opp rundt bjørnenes område. I %s etterpå ble de ansatte redde for at bjørnene skulle %s. Dyrepasserne måtte straks lete gjennom hele dyrehagen og telle antall %s for å forsikre seg om at ingen hadde rømt.",
           "options": [
             [
               {

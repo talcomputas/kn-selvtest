@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -25,8 +25,13 @@ import { QuestionHotspotComponent } from './components/question-hotspot/question
 import { RadioModule } from '../../uikit/radio/radio.module';
 import { ButtonModule } from '../../uikit/button/button.module';
 import { ButtonToggleModule } from '../../uikit/button-toggle/button-toggle.module';
-import nnContent from '@i18n/nynorsk.content.json';
+
 import nbContent from '@i18n/bokmal.content.json';
+import nnContent from '@i18n/nynorsk.content.json';
+
+import nbSystemContent from '@i18n/bokmal.system.json';
+import nnSystemContent from '@i18n/nynorsk.system.json';
+
 import { QuestionSliderComponent } from './components/question-slider/question-slider.component';
 import { Ng5SliderModule } from 'ng5-slider';
 import { QuestionMultipleDiffPointsComponent } from './components/question-multiple-diff-points/question-multiple-diff-points.component';
@@ -75,14 +80,13 @@ export class QuestionsModule {
     statisticsService: StatisticsService,
     titleService: Title,
   ) {
-    contentService.set('nb', nbContent);
-    contentService.set('nn', nnContent);
+    contentService.set('nb', { ...nbContent, ...nbSystemContent });
+    contentService.set('nn', { ...nnContent, ...nnSystemContent });
+
     statisticsService.initUser();
 
     contentService.changes.subscribe(() =>
-      titleService.setTitle(
-        `Kompetanse Norge - ${contentService.get('intro.title')}`,
-      ),
+      titleService.setTitle(`Kompetanse Norge - ${contentService.get('intro.title')}`),
     );
   }
 }

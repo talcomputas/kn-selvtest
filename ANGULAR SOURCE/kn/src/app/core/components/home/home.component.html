@@ -1,0 +1,15 @@
+<mat-card class="home-card">
+  <mat-card-header>
+    <mat-card-title>Kompetanse norge tester og sjekker</mat-card-title>
+    <mat-card-subtitle>Test deg selv</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-nav-list role="list">
+      <a mat-list-item routerLink="/lesetesten">Lesetesten</a>
+      <a mat-list-item routerLink="/digitaltesten">Digitaltesten</a>
+      <a mat-list-item routerLink="/muntligtesten">Muntligtesten</a>
+      <a mat-list-item routerLink="/regnetesten">Regnetesten</a>
+      <button app-stroked-button>{{ 'actions.reviewAnswers' | content }}</button>
+    </mat-nav-list>
+  </mat-card-content>
+</mat-card>

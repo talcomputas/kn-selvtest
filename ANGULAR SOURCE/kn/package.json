@@ -3,15 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start:digitaltesten": "ng serve --configuration=digitaltesten",
-    "start:muntligtesten": "ng serve --configuration=muntligtesten",
-    "start:regnetesten": "ng serve --configuration=regnetesten",
-    "start:lesetesten": "ng serve --configuration=lesetesten",
-    "build:prod:digitaltesten": "ng build --configuration=production-digitaltesten",
-    "build:prod:muntligtesten": "ng build --configuration=production-muntligtesten",
-    "build:prod:regnetesten": "ng build --configuration=production-regnetesten",
-    "build:prod:lesetesten": "ng build --configuration=production-lesetesten",
-    "build:prod": "npm run build:prod:digitaltesten && npm run build:prod:muntligtesten && npm run build:prod:regnetesten && npm run build:prod:lesetesten",
+    "start": "ng serve",
+
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

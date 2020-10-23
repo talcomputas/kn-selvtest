@@ -18,18 +18,17 @@ import nnmuntligtesten from '@i18n/nynorsk.content.muntligtesten.json';
 import nnregnesjekken from '@i18n/nynorsk.content.regnesjekken.json';
 import nnsystem from '@i18n/nynorsk.system.json';
 
+// let questback: any;
+
 @Component({
-  selector: 'app-example-page',
-  templateUrl: './example-page.component.html',
-  styleUrls: ['./example-page.component.scss'],
+  selector: 'app-intro-page',
+  template: '',
 })
-export class ExamplePageComponent {
-  name: string = '';
+export class PageBaseComponent implements OnInit {
   constructor(private contentService: ContentService, private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {
     this.activatedRoute.data.subscribe((data) => {
-      this.name = data.name;
-      switch (this.name) {
+      switch (data.name) {
         case 'lesetesten':
           this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nblesetesten });
           this.contentService.set('nn', { ...nncontent, ...nnsystem, ...nnlesetesten });
