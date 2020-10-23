@@ -49,7 +49,7 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
   public showTransition: boolean;
 
   private readonly destroyed$ = new Subject<void>();
-  name: string = '';
+  name = '';
   constructor(
     private route: ActivatedRoute,
     private cdRef: ChangeDetectorRef,
@@ -81,7 +81,7 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
           break;
         case 'regnetesten':
           this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbregnetesten });
-          //TODO: missing locale
+          // TODO: missing locale
           break;
         case 'regnesjekken':
           this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbregnesjekken });
@@ -129,8 +129,8 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
       return;
     }
 
-    if (question.type == QuestionType.GROUPS_CHOICE) {
-      let q = question as QuestionGroupsChoice;
+    if (question.type === QuestionType.GROUPS_CHOICE) {
+      const q = question as QuestionGroupsChoice;
       const skills = new FormArray([]);
       q.options.forEach(() => {
         skills.push(new FormControl('', Validators.required));

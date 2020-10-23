@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, OnChanges, EventEmitter } from '@angular/core';
-import { QuestionComponentBase } from '@features/questions/components/question-component-base';
+import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
 import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
 import { ChangeContext, Options, PointerType } from 'ng5-slider';
 
@@ -10,9 +10,8 @@ import { ChangeContext, Options, PointerType } from 'ng5-slider';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class QuestionSliderComponent
-  extends QuestionComponentBase<QuestionSlider>
+  extends QuestionComponentBaseDirective<QuestionSlider>
   implements OnInit, OnChanges {
-
   calculatorVisible: boolean;
 
   value = 0;
@@ -25,8 +24,7 @@ export class QuestionSliderComponent
     super();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   ngOnChanges() {
     super.ngOnChanges();

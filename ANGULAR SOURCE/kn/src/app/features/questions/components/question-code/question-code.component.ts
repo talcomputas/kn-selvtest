@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { QuestionComponentBase } from '@features/questions/components/question-component-base';
+import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
 import { QuestionCode } from '@features/questions/interfaces/question-code.interface';
 
 @Component({
@@ -8,5 +8,4 @@ import { QuestionCode } from '@features/questions/interfaces/question-code.inter
   styleUrls: ['./question-code.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class QuestionCodeComponent extends QuestionComponentBase<QuestionCode> {
-}
+export class QuestionCodeComponent extends QuestionComponentBaseDirective<QuestionCode> {}

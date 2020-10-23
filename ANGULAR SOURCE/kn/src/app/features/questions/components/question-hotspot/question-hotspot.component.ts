@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { QuestionHotspot } from '@features/questions/interfaces/question-hotspot.interface';
-import { QuestionComponentBase } from '@features/questions/components/question-component-base';
+import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
 
 @Component({
   selector: 'app-question-hotspot',
@@ -8,5 +8,4 @@ import { QuestionComponentBase } from '@features/questions/components/question-c
   styleUrls: ['./question-hotspot.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class QuestionHotspotComponent extends QuestionComponentBase<QuestionHotspot> {
-}
+export class QuestionHotspotComponent extends QuestionComponentBaseDirective<QuestionHotspot> {}

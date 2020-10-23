@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { QuestionComponentBase } from '@features/questions/components/question-component-base';
+import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
 import { QuestionMultipleDiffPoints } from '@features/questions/interfaces/question-multiple.interface';
 
 @Component({
@@ -8,8 +8,8 @@ import { QuestionMultipleDiffPoints } from '@features/questions/interfaces/quest
   styleUrls: ['./question-multiple-diff-points.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class QuestionMultipleDiffPointsComponent extends QuestionComponentBase<QuestionMultipleDiffPoints> {
-
+export class QuestionMultipleDiffPointsComponent extends QuestionComponentBaseDirective<
+  QuestionMultipleDiffPoints
+> {
   readonly limit = 1;
-
 }

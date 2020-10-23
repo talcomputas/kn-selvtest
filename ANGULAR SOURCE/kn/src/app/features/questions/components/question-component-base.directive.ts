@@ -2,8 +2,8 @@ import { Input, OnChanges, Directive } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { QuestionBase } from '@features/questions/interfaces/question-base.interface';
 
-@Directive()
-export class QuestionComponentBase<T = QuestionBase> implements OnChanges {
+@Directive({})
+export class QuestionComponentBaseDirective<T = QuestionBase> implements OnChanges {
   @Input()
   public readonly question: T & QuestionBase;
 

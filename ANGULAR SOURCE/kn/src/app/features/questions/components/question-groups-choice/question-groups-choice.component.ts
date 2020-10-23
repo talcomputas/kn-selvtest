@@ -1,11 +1,6 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnChanges,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnChanges, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { QuestionComponentBase } from '@features/questions/components/question-component-base';
+import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
 import { Options } from '@features/questions/interfaces/options.interface';
 import { QuestionGroupsChoice } from '@features/questions/interfaces/question-groups-choice.interface';
 import { isNumeric } from 'rxjs/util/isNumeric';
@@ -17,7 +12,7 @@ import { isNumeric } from 'rxjs/util/isNumeric';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class QuestionGroupsChoiceComponent
-  extends QuestionComponentBase<QuestionGroupsChoice>
+  extends QuestionComponentBaseDirective<QuestionGroupsChoice>
   implements OnChanges, OnInit {
   questionId: number;
   splitAry: any[];

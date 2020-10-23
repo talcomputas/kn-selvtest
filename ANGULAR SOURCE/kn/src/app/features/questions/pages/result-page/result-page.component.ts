@@ -37,7 +37,7 @@ export class ResultPageComponent implements OnInit, OnDestroy {
   private qbIdNb;
   private qbIdNn;
 
-  name: string = '';
+  name = '';
 
   constructor(
     private questionsService: QuestionsService,
@@ -63,7 +63,7 @@ export class ResultPageComponent implements OnInit, OnDestroy {
           break;
         case 'regnetesten':
           this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbregnetesten });
-          //TODO: missing locale
+          // TODO: missing locale
           break;
         case 'regnesjekken':
           this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbregnesjekken });

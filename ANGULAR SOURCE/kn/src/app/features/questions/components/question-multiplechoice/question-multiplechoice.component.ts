@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnChanges } from '@angular/core';
 import { QuestionSingle } from '@features/questions/interfaces/question-single.interface';
-import { QuestionComponentBase } from '@features/questions/components/question-component-base';
+import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
 import { QuestionMultipleChoice } from '@features/questions/interfaces/question-multiplechoice.interface';
 
 @Component({
@@ -10,7 +10,7 @@ import { QuestionMultipleChoice } from '@features/questions/interfaces/question-
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class QuestionMultipleChoiceComponent
-  extends QuestionComponentBase<QuestionMultipleChoice>
+  extends QuestionComponentBaseDirective<QuestionMultipleChoice>
   implements OnChanges {
   public optionsClassName: 'text' | 'image' | 'audio';
   public optionSizeClassName: string;

@@ -26,7 +26,7 @@ import nnsystem from '@i18n/nynorsk.system.json';
   styleUrls: ['./intro-page.component.scss'],
 })
 export class IntroPageComponent implements OnInit {
-  name: string = '';
+  name = '';
   constructor(private contentService: ContentService, private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {
     this.activatedRoute.data.subscribe((data) => {
@@ -46,7 +46,7 @@ export class IntroPageComponent implements OnInit {
           break;
         case 'regnetesten':
           this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbregnetesten });
-          //TODO: missing locale
+          // TODO: missing locale
           break;
         case 'regnesjekken':
           this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbregnesjekken });
