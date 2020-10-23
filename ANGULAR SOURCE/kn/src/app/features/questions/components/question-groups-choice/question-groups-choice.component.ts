@@ -1,10 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnChanges, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
 import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
-import { Options } from '@features/questions/interfaces/options.interface';
 import { QuestionGroupsChoice } from '@features/questions/interfaces/question-groups-choice.interface';
-import { isNumeric } from 'rxjs/util/isNumeric';
-
 @Component({
   selector: 'app-question-groupschoice',
   templateUrl: './question-groups-choice.component.html',
@@ -53,7 +49,7 @@ export class QuestionGroupsChoiceComponent
     return result;
   }
 
-  isNumber(value: string | number): boolean {
-    return isNumeric(value);
+  isNumeric(value: any): boolean {
+    return /^\d+$/.test(value);
   }
 }

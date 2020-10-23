@@ -5,10 +5,8 @@
 
     <div [formGroup]="control">
       <span *ngIf="question?.text as text" class="text">
-        <span
-          *ngFor="let snippet of getSplitText(question.text); let ix = index"
-        >
-          <span *ngIf="isNumber(snippet)">
+        <span *ngFor="let snippet of getSplitText(question.text); let ix = index">
+          <span *ngIf="isNumeric(snippet)">
             <mat-radio-group
               [formControlName]="snippet"
               aria-label="Select an option"
@@ -21,7 +19,7 @@
               </mat-radio-button>
             </mat-radio-group>
           </span>
-          <span *ngIf="!isNumber(snippet)">{{ snippet }}</span>
+          <span *ngIf="!isNumeric(snippet)">{{ snippet }}</span>
         </span>
       </span>
     </div>
