@@ -2,24 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Result } from '@features/questions/interfaces/result.interface';
 import { QuestionsService } from '@features/questions/services/questions.service';
-import { ContentService } from '@content/services/content.service';
 import { ActivatedRoute } from '@angular/router';
-
-import nbdigitaltesten from '@i18n/bokmal.content.digitaltesten.json';
-import nbcontent from '@i18n/bokmal.content.json';
-import nblesetesten from '@i18n/bokmal.content.lesetesten.json';
-import nbmuntligtesten from '@i18n/bokmal.content.muntligtesten.json';
-import nbregnesjekken from '@i18n/bokmal.content.regnesjekken.json';
-import nbregnetesten from '@i18n/bokmal.content.regnetesten.json';
-import nbsystem from '@i18n/bokmal.system.json';
-
-import nndigitaltesten from '@i18n/nynorsk.content.digitaltesten.json';
-import nncontent from '@i18n/nynorsk.content.json';
-import nnleseskrivesjekken from '@i18n/nynorsk.content.leseskrivesjekken.json';
-import nnlesetesten from '@i18n/nynorsk.content.lesetesten.json';
-import nnmuntligtesten from '@i18n/nynorsk.content.muntligtesten.json';
-import nnregnesjekken from '@i18n/nynorsk.content.regnesjekken.json';
-import nnsystem from '@i18n/nynorsk.system.json';
 
 declare var questback: any;
 
@@ -37,42 +20,13 @@ export class ResultPageComponent implements OnInit, OnDestroy {
   private qbIdNb;
   private qbIdNn;
 
-  name = '';
+  path: string;
 
-  constructor(
-    private questionsService: QuestionsService,
-    public contentService: ContentService,
-    private activatedRoute: ActivatedRoute,
-  ) {}
+  constructor(private questionsService: QuestionsService, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
-    this.activatedRoute.data.subscribe((data) => {
-      this.name = data.name;
-      switch (this.name) {
-        case 'lesetesten':
-          this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nblesetesten });
-          this.contentService.set('nn', { ...nncontent, ...nnsystem, ...nnlesetesten });
-          break;
-        case 'digitaltesten':
-          this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbdigitaltesten });
-          this.contentService.set('nn', { ...nncontent, ...nnsystem, ...nndigitaltesten });
-          break;
-        case 'muntligtesten':
-          this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbmuntligtesten });
-          this.contentService.set('nn', { ...nncontent, ...nnsystem, ...nnmuntligtesten });
-          break;
-        case 'regnetesten':
-          this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbregnetesten });
-          // TODO: missing locale
-          break;
-        case 'regnesjekken':
-          this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbregnesjekken });
-          this.contentService.set('nn', { ...nncontent, ...nnsystem, ...nnregnesjekken });
-          break;
-        default:
-          break;
-      }
-    });
+    this.path = this.activatedRoute.snapshot.data.path;
+
     // environment not working
     if (window.location.href.indexOf('muntligtesten') > -1) {
       this.qbIdNb = 'wf7hoxw7vh';
@@ -90,11 +44,11 @@ export class ResultPageComponent implements OnInit, OnDestroy {
       console.warn('unknown questback ID');
     }
 
-    if (this.contentService.getCtx() === 'nb') {
+    /*if (this.contentService.getCtx() === 'nb') {
       this.openNbPopup();
     } else {
       this.openNnPopup();
-    }
+    }*/
   }
 
   openNbPopup() {

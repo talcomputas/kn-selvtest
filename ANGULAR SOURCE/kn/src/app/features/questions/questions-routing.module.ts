@@ -9,24 +9,23 @@ const routes: Routes = [
   {
     path: '',
     component: IntroPageComponent,
-    resolve: { name: RouteResolverService },
-    data: { name: RouteResolverService },
+    resolve: { path: RouteResolverService },
   },
   {
     path: 'sporsmal/:page',
     component: QuestionsPageComponent,
-    resolve: { name: RouteResolverService },
-    data: { name: RouteResolverService },
+    resolve: { path: RouteResolverService },
   },
   {
     path: 'resultat',
     component: ResultPageComponent,
-    resolve: { name: RouteResolverService },
+    resolve: { path: RouteResolverService },
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
+  providers: [RouteResolverService],
 })
 export class QuestionsRoutingModule {}
