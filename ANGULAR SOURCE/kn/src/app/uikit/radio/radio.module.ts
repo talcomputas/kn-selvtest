@@ -3,17 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RadioButtonComponent, RadioGroupDirective } from './radio';
 
 @NgModule({
-  declarations: [
-    RadioGroupDirective,
-    RadioButtonComponent,
-  ],
-  exports: [
-    RadioGroupDirective,
-    RadioButtonComponent,
-  ],
-  imports: [
-    CommonModule,
-  ],
+  declarations: [RadioGroupDirective, RadioButtonComponent],
+  exports: [RadioGroupDirective, RadioButtonComponent],
+  imports: [CommonModule],
 })
-export class RadioModule {
-}
+export class RadioModule {}

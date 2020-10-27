@@ -9,5 +9,5 @@ export interface QuestionBase {
   transition?: Transition;
   audio?: string;
   image?: string;
-  video?: { url: string, autoplay: boolean, controls: boolean, loop: boolean };
+  video?: { url: string; autoplay: boolean; controls: boolean; loop: boolean };
 }

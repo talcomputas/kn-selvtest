@@ -38,7 +38,7 @@ export function ICON_LOCATION_FACTORY(): IconLocation {
   return {
     // Note that this needs to be a function, rather than a property, because Angular
     // will only resolve it once, but we want the current path on each call.
-    getPathname: () => location ? (location.pathname + location.search) : '',
+    getPathname: () => (location ? location.pathname + location.search : ''),
   };
 }
 
@@ -59,7 +59,7 @@ const funcIriAttributes = [
 ];
 
 /** Selector that can be used to find all elements that are using a `FuncIRI`. */
-const funcIriAttributeSelector = funcIriAttributes.map(attr => `[${attr}]`).join(', ');
+const funcIriAttributeSelector = funcIriAttributes.map((attr) => `[${attr}]`).join(', ');
 
 /** Regex that can be used to extract the id out of a FuncIRI. */
 const funcIriPattern = /^url\(['"]?#(.*?)['"]?\)$/;
@@ -73,16 +73,18 @@ export class SvgIconDirective implements OnChanges, OnDestroy, AfterViewChecked 
   appSvgIcon: string;
 
   /** Keeps track of the elements and attributes that we've prefixed with the current path. */
-  private elementsWithExternalReferences?: Map<Element, { name: string, value: string }[]>;
+  private elementsWithExternalReferences?: Map<Element, { name: string; value: string }[]>;
 
   /** Keeps track of the current page path. */
   private previousPath?: string;
 
-  constructor(private elementRef: ElementRef<HTMLElement>,
-              private iconRegistryService: IconRegistryService,
-              @Optional() @Inject(ICON_LOCATION)
-              private location?: IconLocation) {
-  }
+  constructor(
+    private elementRef: ElementRef<HTMLElement>,
+    private iconRegistryService: IconRegistryService,
+    @Optional()
+    @Inject(ICON_LOCATION)
+    private location?: IconLocation,
+  ) {}
 
   ngOnChanges(changes: SimpleChanges): void {
     // Only update the inline SVG icon if the inputs changed, to avoid unnecessary DOM operations.
@@ -92,10 +94,13 @@ export class SvgIconDirective implements OnChanges, OnDestroy, AfterViewChecked 
       if (this.appSvgIcon) {
         const [namespace, iconName] = this._splitIconName(this.appSvgIcon);
 
-        this.iconRegistryService.getNamedSvgIcon(iconName, namespace).pipe(take(1)).subscribe(
-          svg => this._setSvgElement(svg),
-          (err: Error) => console.log(`Error retrieving icon: ${err.message}`),
-        );
+        this.iconRegistryService
+          .getNamedSvgIcon(iconName, namespace)
+          .pipe(take(1))
+          .subscribe(
+            (svg) => this._setSvgElement(svg),
+            (err: Error) => console.log(`Error retrieving icon: ${err.message}`),
+          );
       } else if (appSvgIcon.previousValue) {
         this._clearSvgElement();
       }
@@ -212,7 +217,7 @@ export class SvgIconDirective implements OnChanges, OnDestroy, AfterViewChecked 
 
     if (elements) {
       elements.forEach((attrs, element) => {
-        attrs.forEach(attr => {
+        attrs.forEach((attr) => {
           element.setAttribute(attr.name, `url('${path}#${attr.value}')`);
         });
       });
@@ -225,11 +230,11 @@ export class SvgIconDirective implements OnChanges, OnDestroy, AfterViewChecked 
    */
   private _cacheChildrenWithExternalReferences(element: SVGElement) {
     const elementsWithFuncIri = element.querySelectorAll(funcIriAttributeSelector);
-    const elements = this.elementsWithExternalReferences =
-      this.elementsWithExternalReferences || new Map();
+    const elements = (this.elementsWithExternalReferences =
+      this.elementsWithExternalReferences || new Map());
 
     for (let i = 0; i < elementsWithFuncIri.length; i++) {
-      funcIriAttributes.forEach(attr => {
+      funcIriAttributes.forEach((attr) => {
         const elementWithReference = elementsWithFuncIri[i];
         const value = elementWithReference.getAttribute(attr);
         const match = value ? value.match(funcIriPattern) : null;

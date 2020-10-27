@@ -7,7 +7,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ScreenReaderComponent {
-
   constructor() {
     this.load();
   }
@@ -46,7 +45,10 @@ export class ScreenReaderComponent {
     lw.type = 'text/javascript';
     lw.id = id;
     lw.async = true;
-    lw.src = ('https:' === document.location.protocol ? 'https://' : 'http://') + 'speech.leseweb.dk/script/' + lwfile;
+    lw.src =
+      ('https:' === document.location.protocol ? 'https://' : 'http://') +
+      'speech.leseweb.dk/script/' +
+      lwfile;
     document.getElementsByTagName('head')[0].appendChild(lw);
   }
 }

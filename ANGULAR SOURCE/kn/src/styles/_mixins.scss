@@ -63,10 +63,15 @@
   @include dialogItem($max-width, $backgroundColor, $borderColor, $borderWidth);
 
   &:before {
-    @include triangle($triangle-width, $triangle-height, $triangle-left, $borderColor)
+    @include triangle($triangle-width, $triangle-height, $triangle-left, $borderColor);
   }
 
   &:after {
-    @include triangle(($triangle-width - $borderWidth * 2), ($triangle-height - $borderWidth * 2), $triangle-left + $borderWidth, $backgroundColor)
+    @include triangle(
+      ($triangle-width - $borderWidth * 2),
+      ($triangle-height - $borderWidth * 2),
+      $triangle-left + $borderWidth,
+      $backgroundColor
+    );
   }
 }

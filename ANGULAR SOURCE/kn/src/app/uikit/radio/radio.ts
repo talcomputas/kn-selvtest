@@ -28,14 +28,15 @@ let nextUniqueId = 0;
 
 /** Change event object emitted by Radio and RadioGroup. */
 export class RadioChange {
-  constructor(public source: RadioButtonComponent, public value: any) {
-  }
+  constructor(public source: RadioButtonComponent, public value: any) {}
 }
 
 @Directive({
   selector: '[app-radio-group]',
   exportAs: 'appRadioGroup',
-  providers: [{ provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => RadioGroupDirective), multi: true }],
+  providers: [
+    { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => RadioGroupDirective), multi: true },
+  ],
   host: { role: 'radiogroup', class: 'radio-group' },
 })
 export class RadioGroupDirective implements AfterContentInit, ControlValueAccessor {
@@ -57,11 +58,9 @@ export class RadioGroupDirective implements AfterContentInit, ControlValueAccess
   private isDisabled: boolean;
   private isRequired: boolean;
 
-  onChange: (value: any) => void = () => {
-  };
+  onChange: (value: any) => void = () => {};
 
-  onTouched: () => any = () => {
-  };
+  onTouched: () => any = () => {};
 
   /** Name of the radio button group. All radio buttons inside this group will use this name. */
   @Input()
@@ -179,7 +178,7 @@ export class RadioGroupDirective implements AfterContentInit, ControlValueAccess
 
   private updateRadioButtonNames(): void {
     if (this.radios) {
-      this.radios.forEach(radio => {
+      this.radios.forEach((radio) => {
         radio.name = this.name;
         radio.markForCheck();
       });
@@ -193,7 +192,7 @@ export class RadioGroupDirective implements AfterContentInit, ControlValueAccess
 
     if (this.radios && !isSelected) {
       this.innerSelected = null;
-      this.radios.forEach(radio => {
+      this.radios.forEach((radio) => {
         radio.checked = this.value === radio.value;
         if (radio.checked) {
           this.innerSelected = radio;
@@ -213,10 +212,9 @@ export class RadioGroupDirective implements AfterContentInit, ControlValueAccess
       return;
     }
 
-    this.radios.forEach(radio => radio.markForCheck());
+    this.radios.forEach((radio) => radio.markForCheck());
   }
 }
-
 
 @Component({
   /* tslint:disable:component-selector */
@@ -285,7 +283,6 @@ export class RadioButtonComponent implements OnInit, AfterViewInit, OnDestroy {
       if (newCheckedState && this.radioGroup && this.radioGroup.value !== this.value) {
         this.radioGroup.selected = this;
       } else if (!newCheckedState && this.radioGroup && this.radioGroup.value === this.value) {
-
         // When unchecking the selected radio button, update the selected radio
         // property on the group.
         this.radioGroup.selected = null;
@@ -358,15 +355,16 @@ export class RadioButtonComponent implements OnInit, AfterViewInit, OnDestroy {
   private innerValue: any;
 
   /** Unregister function for radioDispatcher */
-  private removeUniqueSelectionListener: () => void = () => {
-  };
+  private removeUniqueSelectionListener: () => void = () => {};
 
-  constructor(@Optional()
-              public radioGroup: RadioGroupDirective,
-              public elRef: ElementRef,
-              private cdRef: ChangeDetectorRef,
-              private focusMonitor: FocusMonitor,
-              private radioDispatcher: UniqueSelectionDispatcher) {
+  constructor(
+    @Optional()
+    public radioGroup: RadioGroupDirective,
+    public elRef: ElementRef,
+    private cdRef: ChangeDetectorRef,
+    private focusMonitor: FocusMonitor,
+    private radioDispatcher: UniqueSelectionDispatcher,
+  ) {
     this.id = this.uniqueId;
     this.isChecked = false;
     this.innerValue = null;
@@ -388,13 +386,11 @@ export class RadioButtonComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    this.focusMonitor
-      .monitor(this.elRef, true)
-      .subscribe(focusOrigin => {
-        if (!focusOrigin && this.radioGroup) {
-          this.radioGroup.touch();
-        }
-      });
+    this.focusMonitor.monitor(this.elRef, true).subscribe((focusOrigin) => {
+      if (!focusOrigin && this.radioGroup) {
+        this.radioGroup.touch();
+      }
+    });
   }
 
   ngOnDestroy(): void {
