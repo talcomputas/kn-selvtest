@@ -7,7 +7,6 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CalculatorComponent implements OnInit {
-
   @Input()
   visible: boolean;
 
@@ -20,16 +19,13 @@ export class CalculatorComponent implements OnInit {
   answered = false; // A flag to check whether the solution has been processed
   operatorSet = false; // You'll see how this is used soon
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   allClear(): void {
     this.subText = '';
     this.mainText = '';
-
   }
 
   pressKey(key: string) {
@@ -38,7 +34,7 @@ export class CalculatorComponent implements OnInit {
       if (lastKey === '/' || lastKey === 'x' || lastKey === '-' || lastKey === '+') {
         this.operatorSet = true;
       }
-      if ((this.operatorSet) || (this.mainText === '')) {
+      if (this.operatorSet || this.mainText === '') {
         return;
       }
       this.operand1 = parseFloat(this.mainText);
@@ -86,5 +82,4 @@ export class CalculatorComponent implements OnInit {
     }
     this.answered = true;
   }
-
 }

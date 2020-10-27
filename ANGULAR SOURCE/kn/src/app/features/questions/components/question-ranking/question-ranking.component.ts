@@ -10,7 +10,9 @@ import { Option } from '@features/questions/interfaces/option.interface';
   styleUrls: ['./question-ranking.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class QuestionRankingComponent extends QuestionComponentBase<QuestionRanking> implements OnChanges {
+export class QuestionRankingComponent
+  extends QuestionComponentBase<QuestionRanking>
+  implements OnChanges {
   public options: Option[] = [];
 
   ngOnChanges(): void {

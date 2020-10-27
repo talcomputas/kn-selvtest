@@ -31,10 +31,11 @@ export class AudioComponent implements OnChanges, OnDestroy {
   private timeupdateListener: () => void;
   private triggerListeners: (() => void)[] = [];
 
-  constructor(private eRef: ElementRef,
-              private cdRef: ChangeDetectorRef,
-              private renderer: Renderer2) {
-  }
+  constructor(
+    private eRef: ElementRef,
+    private cdRef: ChangeDetectorRef,
+    private renderer: Renderer2,
+  ) {}
 
   ngOnChanges(changes: SimpleChanges): void {
     const { url, trigger } = changes;

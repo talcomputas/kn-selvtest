@@ -56,12 +56,7 @@
             }
           ],
           "answer": {
-            "value": [
-              1,
-              2,
-              3,
-              4
-            ],
+            "value": [1, 2, 3, 4],
             "points": 1
           }
         },
@@ -88,12 +83,7 @@
             }
           ],
           "answer": {
-            "value": [
-              1,
-              2,
-              3,
-              4
-            ],
+            "value": [1, 2, 3, 4],
             "points": 1
           }
         },
@@ -401,10 +391,7 @@
           "type": "dialogue",
           "image": "modern-businessman-in-india.jpg",
           "answer": {
-            "value": [
-              "D2F26",
-              "D2F8"
-            ],
+            "value": ["D2F26", "D2F8"],
             "points": 1
           },
           "speech": [
@@ -420,9 +407,7 @@
               "person": "Leader",
               "text": "Korleis går det om dagen?",
               "type": "question",
-              "options": [
-                "D2F26"
-              ]
+              "options": ["D2F26"]
             },
             {
               "id": "D2F26",
@@ -436,11 +421,7 @@
               "person": "Esha",
               "text": "Ja, eg tykkjer du har gjort ein bra innsats i det siste. Men eg har fått tilbakemeldingar om at du ofte kjem for seint på jobben.",
               "type": "question",
-              "options": [
-                "D2F8",
-                "D2F9",
-                "D2F10"
-              ]
+              "options": ["D2F8", "D2F9", "D2F10"]
             },
             {
               "id": "D2F8",
@@ -588,11 +569,7 @@
             }
           ],
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
+            "value": [1, 2, 3],
             "points": 1
           }
         },

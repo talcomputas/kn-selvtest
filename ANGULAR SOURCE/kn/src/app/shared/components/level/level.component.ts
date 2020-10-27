@@ -37,8 +37,7 @@ export class LevelComponent implements OnChanges, OnDestroy {
   private readonly defaultValue = 350;
   private readonly animationDurationMs = 850;
 
-  constructor(private elRef: ElementRef,
-              private cdRef: ChangeDetectorRef) {
+  constructor(private elRef: ElementRef, private cdRef: ChangeDetectorRef) {
     this.value = this.defaultValue;
   }
 
@@ -56,7 +55,8 @@ export class LevelComponent implements OnChanges, OnDestroy {
     const roundOffset = this.strokeWidth / 2;
 
     setTimeout(() => {
-      this.value = this.percentage < 100 && this.percentage > 0 ? pureValue + roundOffset : pureValue;
+      this.value =
+        this.percentage < 100 && this.percentage > 0 ? pureValue + roundOffset : pureValue;
       this.scaleStrokeWidth = this.percentage > 0 ? this.strokeWidth : 0;
       this.cdRef.markForCheck();
     }, this.delay);

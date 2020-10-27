@@ -7,5 +7,4 @@ import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
   templateUrl: './example-page.component.html',
   styleUrls: ['./example-page.component.scss'],
 })
-export class ExamplePageComponent {
-}
+export class ExamplePageComponent {}

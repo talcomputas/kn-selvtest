@@ -34,9 +34,7 @@ import { SharedModule } from '@shared/shared.module';
     SharedModule.forRoot(),
     ButtonModule,
   ],
-  exports: [
-    LayoutComponent,
-  ],
+  exports: [LayoutComponent],
 })
 export class CoreModule {
   /* make sure CoreModule is imported only by one NgModule the AppModule */

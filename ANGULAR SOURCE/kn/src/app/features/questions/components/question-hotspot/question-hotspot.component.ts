@@ -8,5 +8,4 @@ import { QuestionComponentBase } from '@features/questions/components/question-c
   styleUrls: ['./question-hotspot.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class QuestionHotspotComponent extends QuestionComponentBase<QuestionHotspot> {
-}
+export class QuestionHotspotComponent extends QuestionComponentBase<QuestionHotspot> {}

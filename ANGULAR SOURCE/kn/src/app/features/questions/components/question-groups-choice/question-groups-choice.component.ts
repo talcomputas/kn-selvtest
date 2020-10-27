@@ -1,9 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnChanges,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnChanges, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { QuestionComponentBase } from '@features/questions/components/question-component-base';
 import { Options } from '@features/questions/interfaces/options.interface';

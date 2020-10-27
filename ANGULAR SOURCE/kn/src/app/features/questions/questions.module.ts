@@ -80,9 +80,7 @@ export class QuestionsModule {
     statisticsService.initUser();
 
     contentService.changes.subscribe(() =>
-      titleService.setTitle(
-        `Kompetanse Norge - ${contentService.get('intro.title')}`,
-      ),
+      titleService.setTitle(`Kompetanse Norge - ${contentService.get('intro.title')}`),
     );
   }
 }

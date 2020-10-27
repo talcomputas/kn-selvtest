@@ -12,7 +12,6 @@ import { ChangeContext, Options, PointerType } from 'ng5-slider';
 export class QuestionSliderComponent
   extends QuestionComponentBase<QuestionSlider>
   implements OnInit, OnChanges {
-
   calculatorVisible: boolean;
 
   value = 0;
@@ -25,8 +24,7 @@ export class QuestionSliderComponent
     super();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   ngOnChanges() {
     super.ngOnChanges();

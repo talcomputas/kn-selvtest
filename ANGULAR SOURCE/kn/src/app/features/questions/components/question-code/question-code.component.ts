@@ -8,5 +8,4 @@ import { QuestionCode } from '@features/questions/interfaces/question-code.inter
   styleUrls: ['./question-code.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class QuestionCodeComponent extends QuestionComponentBase<QuestionCode> {
-}
+export class QuestionCodeComponent extends QuestionComponentBase<QuestionCode> {}

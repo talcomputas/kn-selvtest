@@ -38,9 +38,7 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
     private cdRef: ChangeDetectorRef,
     private questionsService: QuestionsService,
   ) {
-    this.page$ = this.route.paramMap.pipe(
-      map((params: ParamMap) => +params.get('page')),
-    );
+    this.page$ = this.route.paramMap.pipe(map((params: ParamMap) => +params.get('page')));
     this.index$ = this.page$.pipe(map((page: number) => page - 1));
     this.question$ = this.questionsService.question$;
     this.length$ = this.questionsService.length$;
@@ -54,16 +52,12 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
 
     this.index$
       .pipe(takeUntil(this.destroyed$))
-      .subscribe((index: number) =>
-        this.questionsService.update(index, this.questions.value),
-      );
+      .subscribe((index: number) => this.questionsService.update(index, this.questions.value));
 
-    this.question$
-      .pipe(takeUntil(this.destroyed$))
-      .subscribe((question: QuestionsUnionType) => {
-        this.handleTransition(question);
-        this.addFormControl(question);
-      });
+    this.question$.pipe(takeUntil(this.destroyed$)).subscribe((question: QuestionsUnionType) => {
+      this.handleTransition(question);
+      this.addFormControl(question);
+    });
   }
 
   ngOnDestroy(): void {
@@ -99,9 +93,6 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
       return;
     }
 
-    this.questions.addControl(
-      key,
-      new FormControl(null, [Validators.required]),
-    );
+    this.questions.addControl(key, new FormControl(null, [Validators.required]));
   }
 }

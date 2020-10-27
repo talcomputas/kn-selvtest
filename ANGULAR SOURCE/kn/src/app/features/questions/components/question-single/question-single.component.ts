@@ -8,7 +8,9 @@ import { QuestionComponentBase } from '@features/questions/components/question-c
   styleUrls: ['./question-single.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class QuestionSingleComponent extends QuestionComponentBase<QuestionSingle> implements OnChanges {
+export class QuestionSingleComponent
+  extends QuestionComponentBase<QuestionSingle>
+  implements OnChanges {
   public optionsClassName: 'text' | 'image' | 'audio';
   public optionSizeClassName: string;
 
@@ -19,7 +21,8 @@ export class QuestionSingleComponent extends QuestionComponentBase<QuestionSingl
   }
 
   private resolveOptionsType(): 'text' | 'image' | 'audio' {
-    const check = (propName: string) => this.question.options.every((option) => option.hasOwnProperty(propName));
+    const check = (propName: string) =>
+      this.question.options.every((option) => option.hasOwnProperty(propName));
 
     if (check('text')) {
       return 'text';

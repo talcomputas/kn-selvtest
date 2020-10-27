@@ -41,11 +41,7 @@ import { AngularDraggableModule } from 'angular2-draggable';
     AudioComponent,
     CalculatorComponent,
   ],
-  imports: [
-    CommonModule,
-    ButtonModule,
-    AngularDraggableModule,
-  ],
+  imports: [CommonModule, ButtonModule, AngularDraggableModule],
   exports: [
     CardComponent,
     CardLabelDirective,
@@ -66,18 +62,47 @@ import { AngularDraggableModule } from 'angular2-draggable';
   ],
 })
 export class SharedModule {
-  constructor(iconRegistry: IconRegistryService,
-              domSanitizer: DomSanitizer) {
-    iconRegistry.addSvgIcon(`arrow-forward`, domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/arrow-forward.svg`));
-    iconRegistry.addSvgIcon(`arrow-back`, domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/arrow-back.svg`));
-    iconRegistry.addSvgIcon(`close`, domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/close.svg`));
-    iconRegistry.addSvgIcon(`voice-message`, domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/voice-message.svg`));
-    iconRegistry.addSvgIcon(`voice-message-active`, domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/voice-message-active.svg`));
-    iconRegistry.addSvgIcon(`question-sign`, domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/question-sign.svg`));
-    iconRegistry.addSvgIcon(`settings`, domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/settings.svg`));
-    iconRegistry.addSvgIcon(`speaker`, domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/speaker.svg`));
-    iconRegistry.addSvgIcon(`stop`, domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/stop.svg`));
-    iconRegistry.addSvgIcon(`print`, domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/print.svg`));
+  constructor(iconRegistry: IconRegistryService, domSanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+      `arrow-forward`,
+      domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/arrow-forward.svg`),
+    );
+    iconRegistry.addSvgIcon(
+      `arrow-back`,
+      domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/arrow-back.svg`),
+    );
+    iconRegistry.addSvgIcon(
+      `close`,
+      domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/close.svg`),
+    );
+    iconRegistry.addSvgIcon(
+      `voice-message`,
+      domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/voice-message.svg`),
+    );
+    iconRegistry.addSvgIcon(
+      `voice-message-active`,
+      domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/voice-message-active.svg`),
+    );
+    iconRegistry.addSvgIcon(
+      `question-sign`,
+      domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/question-sign.svg`),
+    );
+    iconRegistry.addSvgIcon(
+      `settings`,
+      domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/settings.svg`),
+    );
+    iconRegistry.addSvgIcon(
+      `speaker`,
+      domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/speaker.svg`),
+    );
+    iconRegistry.addSvgIcon(
+      `stop`,
+      domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/stop.svg`),
+    );
+    iconRegistry.addSvgIcon(
+      `print`,
+      domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/print.svg`),
+    );
   }
 
   static forRoot(): ModuleWithProviders<SharedModule> {

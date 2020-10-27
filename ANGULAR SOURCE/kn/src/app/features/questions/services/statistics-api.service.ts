@@ -8,9 +8,7 @@ export class StatisticsApiService {
   constructor(private http: HttpClient) {}
 
   public getUserId(): Observable<{ id: string }> {
-    return this.http.get<{ id: string }>(
-      `${environment.STATISTICS_API}submituser`,
-    );
+    return this.http.get<{ id: string }>(`${environment.STATISTICS_API}submituser`);
   }
 
   public sendStatistics(

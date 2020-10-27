@@ -8,8 +8,8 @@ import { QuestionMultipleDiffPoints } from '@features/questions/interfaces/quest
   styleUrls: ['./question-multiple-diff-points.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class QuestionMultipleDiffPointsComponent extends QuestionComponentBase<QuestionMultipleDiffPoints> {
-
+export class QuestionMultipleDiffPointsComponent extends QuestionComponentBase<
+  QuestionMultipleDiffPoints
+> {
   readonly limit = 1;
-
 }

@@ -8,8 +8,7 @@ import { ContentService } from '@content/services/content.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LanguageComponent {
-  constructor(public content: ContentService) {
-  }
+  constructor(public content: ContentService) {}
 
   select(ctx: string) {
     this.content.setCtx(ctx);

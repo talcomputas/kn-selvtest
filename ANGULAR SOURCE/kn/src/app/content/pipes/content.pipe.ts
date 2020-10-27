@@ -14,9 +14,7 @@ export class ContentPipe implements PipeTransform, OnDestroy {
   private lastArgs: any[];
   private ctxSubscription: Subscription;
 
-  constructor(private contentService: ContentService,
-              private cdRef: ChangeDetectorRef) {
-  }
+  constructor(private contentService: ContentService, private cdRef: ChangeDetectorRef) {}
 
   transform(key: string, ...args: any[]): any {
     if (!key || key.length === 0) {
@@ -40,11 +38,13 @@ export class ContentPipe implements PipeTransform, OnDestroy {
 
     // subscribe to changes event, in case the ctx changes
     if (!this.ctxSubscription) {
-      this.ctxSubscription = this.contentService.changes.pipe(filter(() => !!this.lastKey)).subscribe(() => {
-        this.lastKey = null; // to make sure it doesn't return the same value until it's been updated
-        this.updateValue(key);
-        this.lastKey = key;
-      });
+      this.ctxSubscription = this.contentService.changes
+        .pipe(filter(() => !!this.lastKey))
+        .subscribe(() => {
+          this.lastKey = null; // to make sure it doesn't return the same value until it's been updated
+          this.updateValue(key);
+          this.lastKey = key;
+        });
     }
 
     return this.value;
@@ -66,5 +66,4 @@ export class ContentPipe implements PipeTransform, OnDestroy {
       this.ctxSubscription = null;
     }
   }
-
 }

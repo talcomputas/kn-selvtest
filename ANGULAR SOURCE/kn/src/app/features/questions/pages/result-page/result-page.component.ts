@@ -1,9 +1,4 @@
-import {
-  Component,
-  ChangeDetectionStrategy,
-  OnDestroy,
-  OnInit,
-} from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { Result } from '@features/questions/interfaces/result.interface';
@@ -28,10 +23,7 @@ export class ResultPageComponent implements OnInit, OnDestroy {
   private qbIdNb;
   private qbIdNn;
 
-  constructor(
-    private questionsService: QuestionsService,
-    public content: ContentService,
-  ) {
+  constructor(private questionsService: QuestionsService, public content: ContentService) {
     // this.result = this.questionsService.result();
     // this.questionsService.attach();
     // this.questionsService.changes$
@@ -66,49 +58,43 @@ export class ResultPageComponent implements OnInit, OnDestroy {
 
   openNbPopup() {
     console.log('popup', this.qbIdNb);
-    questback.popup.create(
-      'https://response.questback.com/vox/' + this.qbIdNb,
-      {
-        title: 'Vinn et gavekort',
-        text:
-          // tslint:disable-next-line:max-line-length
-          'Din tilbakemelding er viktig for at produktene våre skal bli så gode som mulig. Vil du hjelpe oss med å forbedre denne testen? Du kan være med i trekningen av tre gavekort på 500 kroner. Det er mulig å gå fram og tilbake i undersøkelsen, og det tar cirka to minutter å svare på den.',
-        delay: 2,
-        buttons: [
-          {
-            type: 'participate',
-            text: 'Ja, jeg vil vinne',
-          },
-          {
-            type: 'decline',
-            text: 'Nei takk',
-          },
-        ],
-      },
-    );
+    questback.popup.create('https://response.questback.com/vox/' + this.qbIdNb, {
+      title: 'Vinn et gavekort',
+      text:
+        // tslint:disable-next-line:max-line-length
+        'Din tilbakemelding er viktig for at produktene våre skal bli så gode som mulig. Vil du hjelpe oss med å forbedre denne testen? Du kan være med i trekningen av tre gavekort på 500 kroner. Det er mulig å gå fram og tilbake i undersøkelsen, og det tar cirka to minutter å svare på den.',
+      delay: 2,
+      buttons: [
+        {
+          type: 'participate',
+          text: 'Ja, jeg vil vinne',
+        },
+        {
+          type: 'decline',
+          text: 'Nei takk',
+        },
+      ],
+    });
   }
 
   openNnPopup() {
-    questback.popup.create(
-      'https://response.questback.com/vox/' + this.qbIdNn,
-      {
-        title: 'Vinn et gavekort',
-        text:
-          // tslint:disable-next-line:max-line-length
-          'Tilbakemeldinga di er viktig for at produkta våre skal bli så gode som mogleg. Vil du hjelpe oss med å gjere Datasjekken betre? Du kan vere med i trekkinga av tre gåvekort på 500 kroner i juni 2020. Det er mogleg å gå fram og tilbake i undersøkinga, og det tek cirka to minutt å svare på ho.',
-        delay: 2,
-        buttons: [
-          {
-            type: 'participate',
-            text: 'Ja, jeg vil vinne',
-          },
-          {
-            type: 'decline',
-            text: 'Nei takk',
-          },
-        ],
-      },
-    );
+    questback.popup.create('https://response.questback.com/vox/' + this.qbIdNn, {
+      title: 'Vinn et gavekort',
+      text:
+        // tslint:disable-next-line:max-line-length
+        'Tilbakemeldinga di er viktig for at produkta våre skal bli så gode som mogleg. Vil du hjelpe oss med å gjere Datasjekken betre? Du kan vere med i trekkinga av tre gåvekort på 500 kroner i juni 2020. Det er mogleg å gå fram og tilbake i undersøkinga, og det tek cirka to minutt å svare på ho.',
+      delay: 2,
+      buttons: [
+        {
+          type: 'participate',
+          text: 'Ja, jeg vil vinne',
+        },
+        {
+          type: 'decline',
+          text: 'Nei takk',
+        },
+      ],
+    });
   }
 
   ngOnDestroy(): void {

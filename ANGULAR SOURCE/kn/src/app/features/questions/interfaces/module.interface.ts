@@ -4,5 +4,5 @@ import { QuestionsUnionType } from '@features/questions/types/questions-union.ty
 export interface Module {
   id: number;
   questions: QuestionsUnionType[];
-  funnel: { type: ModuleType, baseScore: number };
+  funnel: { type: ModuleType; baseScore: number };
 }

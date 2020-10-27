@@ -27,13 +27,18 @@ let uniqueIdCounter = 0;
 
 /** Change event object emitted by ButtonToggleComponent. */
 export class ButtonToggleChange {
-  constructor(public source: ButtonToggleComponent, public value: any) {
-  }
+  constructor(public source: ButtonToggleComponent, public value: any) {}
 }
 
 @Directive({
   selector: '[app-button-toggle-group]',
-  providers: [{ provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => ButtonToggleGroupDirective), multi: true }],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => ButtonToggleGroupDirective),
+      multi: true,
+    },
+  ],
   host: { role: 'group', class: 'button-toggle-group', '[attr.aria-disabled]': 'disabled' },
   exportAs: 'appButtonToggleGroup',
 })
@@ -64,23 +69,21 @@ export class ButtonToggleGroupDirective implements ControlValueAccessor, AfterCo
     this.innerName = value;
 
     if (this.buttonToggles) {
-      this.buttonToggles.forEach(toggle => {
+      this.buttonToggles.forEach((toggle) => {
         toggle.name = this.innerName;
         toggle.markForCheck();
       });
     }
   }
 
-  onChange: (value: any) => void = () => {
-  };
+  onChange: (value: any) => void = () => {};
 
-  onTouched: () => any = () => {
-  };
+  onTouched: () => any = () => {};
 
   @Input()
   get value(): any {
     const selected = this.selectionModel ? this.selectionModel.selected : [];
-    return selected.map(toggle => toggle.value);
+    return selected.map((toggle) => toggle.value);
   }
 
   set value(newValue: any) {
@@ -101,7 +104,7 @@ export class ButtonToggleGroupDirective implements ControlValueAccessor, AfterCo
     this.isDisabled = coerceBooleanProperty(value);
 
     if (this.buttonToggles) {
-      this.buttonToggles.forEach(toggle => toggle.markForCheck());
+      this.buttonToggles.forEach((toggle) => toggle.markForCheck());
     }
   }
 
@@ -112,7 +115,7 @@ export class ButtonToggleGroupDirective implements ControlValueAccessor, AfterCo
   }
 
   ngAfterContentInit(): void {
-    this.selectionModel.select(...this.buttonToggles.filter(toggle => toggle.checked));
+    this.selectionModel.select(...this.buttonToggles.filter((toggle) => toggle.checked));
     this.handleLimit();
   }
 
@@ -133,7 +136,12 @@ export class ButtonToggleGroupDirective implements ControlValueAccessor, AfterCo
     this.disabled = isDisabled;
   }
 
-  syncButtonToggle(toggle: ButtonToggleComponent, select: boolean, isUserInput = false, deferEvents = false) {
+  syncButtonToggle(
+    toggle: ButtonToggleComponent,
+    select: boolean,
+    isUserInput = false,
+    deferEvents = false,
+  ) {
     if (select) {
       this.selectionModel.select(toggle);
     } else {
@@ -162,7 +170,7 @@ export class ButtonToggleGroupDirective implements ControlValueAccessor, AfterCo
     }
 
     if (Array.isArray(this.rawValue)) {
-      return this.rawValue.some(value => toggle.value != null && value === toggle.value);
+      return this.rawValue.some((value) => toggle.value != null && value === toggle.value);
     }
   }
 
@@ -193,13 +201,14 @@ export class ButtonToggleGroupDirective implements ControlValueAccessor, AfterCo
   /** Clears the selected toggles. */
   private clearSelection() {
     this.selectionModel.clear();
-    this.buttonToggles.forEach(toggle => toggle.checked = false);
+    this.buttonToggles.forEach((toggle) => (toggle.checked = false));
   }
 
   /** Selects a value if there's a toggle that corresponds to it. */
   private selectValue(value: any) {
-    const correspondingOption = this.buttonToggles
-      .find(toggle => toggle.value != null && toggle.value === value);
+    const correspondingOption = this.buttonToggles.find(
+      (toggle) => toggle.value != null && toggle.value === value,
+    );
 
     if (correspondingOption) {
       correspondingOption.checked = true;
@@ -226,20 +235,18 @@ export class ButtonToggleGroupDirective implements ControlValueAccessor, AfterCo
       return;
     }
 
-    const selectedItemsCount = this.buttonToggles.filter(toggle => toggle.checked === true).length;
+    const selectedItemsCount = this.buttonToggles.filter((toggle) => toggle.checked === true)
+      .length;
 
     if (selectedItemsCount < this.limit) {
-      this.buttonToggles.forEach(toggle => toggle.disabled = false);
+      this.buttonToggles.forEach((toggle) => (toggle.disabled = false));
       return;
-
     }
 
-    this.buttonToggles.forEach(toggle => toggle.disabled = !toggle.checked);
+    this.buttonToggles.forEach((toggle) => (toggle.disabled = !toggle.checked));
     this.cdRef.detectChanges();
-
   }
 }
-
 
 @Component({
   /* tslint:disable:component-selector */
@@ -337,11 +344,13 @@ export class ButtonToggleComponent implements OnInit, OnDestroy {
   private isDisabled: boolean;
   private isChecked: boolean;
 
-  constructor(@Optional()
-              public buttonToggleGroup: ButtonToggleGroupDirective,
-              private cdRef: ChangeDetectorRef,
-              private elRef: ElementRef<HTMLElement>,
-              private focusMonitor: FocusMonitor) {
+  constructor(
+    @Optional()
+    public buttonToggleGroup: ButtonToggleGroupDirective,
+    private cdRef: ChangeDetectorRef,
+    private elRef: ElementRef<HTMLElement>,
+    private focusMonitor: FocusMonitor,
+  ) {
     this.isDisabled = false;
     this.isChecked = false;
   }

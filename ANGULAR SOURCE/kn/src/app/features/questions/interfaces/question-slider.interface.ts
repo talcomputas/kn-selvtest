@@ -11,5 +11,5 @@ export interface QuestionSlider extends QuestionBase {
   optionSize?: OptionSize;
   title?: string;
   info?: QuestionInfo;
-  calculator ?: boolean;
+  calculator?: boolean;
 }

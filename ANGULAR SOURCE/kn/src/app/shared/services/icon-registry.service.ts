@@ -1,10 +1,17 @@
 import { DOCUMENT } from '@angular/common';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Inject, Injectable, InjectionToken, OnDestroy, Optional, SecurityContext, SkipSelf } from '@angular/core';
+import {
+  Inject,
+  Injectable,
+  InjectionToken,
+  OnDestroy,
+  Optional,
+  SecurityContext,
+  SkipSelf,
+} from '@angular/core';
 import { DomSanitizer, SafeHtml, SafeResourceUrl } from '@angular/platform-browser';
 import { forkJoin, Observable, of, throwError } from 'rxjs';
 import { catchError, finalize, map, share, tap } from 'rxjs/operators';
-
 
 /**
  * Returns an exception to be thrown in the case when attempting to
@@ -14,25 +21,27 @@ export function getIconNameNotFoundError(iconName: string): Error {
   return Error(`Unable to find icon with the name "${iconName}"`);
 }
 
-
 /**
  * Returns an exception to be thrown when the consumer attempts to use
  * icon without including @angular/common/http.
  */
 export function getIconNoHttpProviderError(): Error {
-  return Error('Could not find HttpClient provider for use with icons. ' +
-    'Please include the HttpClientModule from @angular/common/http in your ' +
-    'app imports.');
+  return Error(
+    'Could not find HttpClient provider for use with icons. ' +
+      'Please include the HttpClientModule from @angular/common/http in your ' +
+      'app imports.',
+  );
 }
-
 
 /**
  * Returns an exception to be thrown when a URL couldn't be sanitized.
  * @param url URL that was attempted to be sanitized.
  */
 export function getIconFailedToSanitizeUrlError(url: SafeResourceUrl): Error {
-  return Error(`The URL provided to IconRegistryService was not trusted as a resource URL ` +
-    `via Angular's DomSanitizer. Attempted URL was "${url}".`);
+  return Error(
+    `The URL provided to IconRegistryService was not trusted as a resource URL ` +
+      `via Angular's DomSanitizer. Attempted URL was "${url}".`,
+  );
 }
 
 /**
@@ -40,10 +49,11 @@ export function getIconFailedToSanitizeUrlError(url: SafeResourceUrl): Error {
  * @param literal HTML that was attempted to be sanitized.
  */
 export function getIconFailedToSanitizeLiteralError(literal: SafeHtml): Error {
-  return Error(`The literal provided to IconRegistryService was not trusted as safe HTML by ` +
-    `Angular's DomSanitizer. Attempted literal was "${literal}".`);
+  return Error(
+    `The literal provided to IconRegistryService was not trusted as safe HTML by ` +
+      `Angular's DomSanitizer. Attempted literal was "${literal}".`,
+  );
 }
-
 
 /**
  * Configuration for an icon, including the URL and possibly the cached SVG element.
@@ -101,12 +111,14 @@ export class IconRegistryService implements OnDestroy {
    */
   private defaultFontSetClass = 'material-icons';
 
-  constructor(@Optional()
-              private http: HttpClient,
-              private sanitizer: DomSanitizer,
-              @Optional()
-              @Inject(DOCUMENT)
-                document: any) {
+  constructor(
+    @Optional()
+    private http: HttpClient,
+    private sanitizer: DomSanitizer,
+    @Optional()
+    @Inject(DOCUMENT)
+    document: any,
+  ) {
     this.document = document;
   }
 
@@ -258,8 +270,8 @@ export class IconRegistryService implements OnDestroy {
     }
 
     return this._loadSvgIconFromConfig(new SvgIconConfig(safeUrl)).pipe(
-      tap(svg => this.cachedIconsByUrl.set(url!, svg)),
-      map(svg => cloneSvg(svg)),
+      tap((svg) => this.cachedIconsByUrl.set(url!, svg)),
+      map((svg) => cloneSvg(svg)),
     );
   }
 
@@ -306,8 +318,8 @@ export class IconRegistryService implements OnDestroy {
     } else {
       // Fetch the icon from the config's URL, cache it, and return a copy.
       return this._loadSvgIconFromConfig(config).pipe(
-        tap(svg => config.svgElement = svg),
-        map(svg => cloneSvg(svg)),
+        tap((svg) => (config.svgElement = svg)),
+        map((svg) => cloneSvg(svg)),
       );
     }
   }
@@ -320,8 +332,10 @@ export class IconRegistryService implements OnDestroy {
    * The returned Observable produces the SVG element if possible, and throws
    * an error if no icon with the specified name can be found.
    */
-  private _getSvgFromIconSetConfigs(name: string, iconSetConfigs: SvgIconConfig[]):
-    Observable<SVGElement> {
+  private _getSvgFromIconSetConfigs(
+    name: string,
+    iconSetConfigs: SvgIconConfig[],
+  ): Observable<SVGElement> {
     // For all the icon set SVG elements we've fetched, see if any contain an icon with the
     // requested name.
     const namedIcon = this._extractIconWithNameFromAnySet(name, iconSetConfigs);
@@ -336,31 +350,35 @@ export class IconRegistryService implements OnDestroy {
     // Not found in any cached icon sets. If there are icon sets with URLs that we haven't
     // fetched, fetch them now and look for iconName in the results.
     const iconSetFetchRequests: Observable<SVGElement | null>[] = iconSetConfigs
-      .filter(iconSetConfig => !iconSetConfig.svgElement)
-      .map(iconSetConfig => {
+      .filter((iconSetConfig) => !iconSetConfig.svgElement)
+      .map((iconSetConfig) => {
         return this._loadSvgIconSetFromConfig(iconSetConfig).pipe(
-          catchError((err: HttpErrorResponse): Observable<SVGElement | null> => {
-            const url = this.sanitizer.sanitize(SecurityContext.RESOURCE_URL, iconSetConfig.url);
+          catchError(
+            (err: HttpErrorResponse): Observable<SVGElement | null> => {
+              const url = this.sanitizer.sanitize(SecurityContext.RESOURCE_URL, iconSetConfig.url);
 
-            // Swallow errors fetching individual URLs so the
-            // combined Observable won't necessarily fail.
-            console.error(`Loading icon set URL: ${url} failed: ${err.message}`);
-            return of(null);
-          }),
+              // Swallow errors fetching individual URLs so the
+              // combined Observable won't necessarily fail.
+              console.error(`Loading icon set URL: ${url} failed: ${err.message}`);
+              return of(null);
+            },
+          ),
         );
       });
 
     // Fetch all the icon set URLs. When the requests complete, every IconSet should have a
     // cached SVG element (unless the request failed), and we can check again for the icon.
-    return forkJoin(iconSetFetchRequests).pipe(map(() => {
-      const foundIcon = this._extractIconWithNameFromAnySet(name, iconSetConfigs);
+    return forkJoin(iconSetFetchRequests).pipe(
+      map(() => {
+        const foundIcon = this._extractIconWithNameFromAnySet(name, iconSetConfigs);
 
-      if (!foundIcon) {
-        throw getIconNameNotFoundError(name);
-      }
+        if (!foundIcon) {
+          throw getIconNameNotFoundError(name);
+        }
 
-      return foundIcon;
-    }));
+        return foundIcon;
+      }),
+    );
   }
 
   /**
@@ -368,8 +386,10 @@ export class IconRegistryService implements OnDestroy {
    * tag matches the specified name. If found, copies the nested element to a new SVG element and
    * returns it. Returns null if no matching element is found.
    */
-  private _extractIconWithNameFromAnySet(iconName: string, iconSetConfigs: SvgIconConfig[]):
-    SVGElement | null {
+  private _extractIconWithNameFromAnySet(
+    iconName: string,
+    iconSetConfigs: SvgIconConfig[],
+  ): SVGElement | null {
     // Iterate backwards, so icon sets added later have precedence.
     for (let i = iconSetConfigs.length - 1; i >= 0; i--) {
       const config = iconSetConfigs[i];
@@ -388,8 +408,9 @@ export class IconRegistryService implements OnDestroy {
    * from it.
    */
   private _loadSvgIconFromConfig(config: SvgIconConfig): Observable<SVGElement> {
-    return this._fetchUrl(config.url)
-      .pipe(map(svgText => this._createSvgElementForSingleIcon(svgText)));
+    return this._fetchUrl(config.url).pipe(
+      map((svgText) => this._createSvgElementForSingleIcon(svgText)),
+    );
   }
 
   /**
@@ -402,15 +423,17 @@ export class IconRegistryService implements OnDestroy {
       return of(config.svgElement);
     }
 
-    return this._fetchUrl(config.url).pipe(map(svgText => {
-      // It is possible that the icon set was parsed and cached by an earlier request, so parsing
-      // only needs to occur if the cache is yet unset.
-      if (!config.svgElement) {
-        config.svgElement = this._svgElementFromString(svgText);
-      }
+    return this._fetchUrl(config.url).pipe(
+      map((svgText) => {
+        // It is possible that the icon set was parsed and cached by an earlier request, so parsing
+        // only needs to occur if the cache is yet unset.
+        if (!config.svgElement) {
+          config.svgElement = this._svgElementFromString(svgText);
+        }
 
-      return config.svgElement;
-    }));
+        return config.svgElement;
+      }),
+    );
   }
 
   /**
@@ -576,7 +599,8 @@ export function ICON_REGISTRY_PROVIDER_FACTORY(
   parentRegistry: IconRegistryService,
   httpClient: HttpClient,
   sanitizer: DomSanitizer,
-  document?: any) {
+  document?: any,
+) {
   return parentRegistry || new IconRegistryService(httpClient, sanitizer, document);
 }
 
