@@ -22,6 +22,9 @@ import { SpeechSelect } from '@features/questions/interfaces/speech-select.inter
 import { Result } from '@features/questions/interfaces/result.interface';
 import { StatisticsService } from '@features/questions/services/statistics.service';
 import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
+import { log } from 'util';
+import { Answer } from '@features/questions/interfaces/answer.interface';
+import { QuestionMultipleDiffPointsComponent } from '@features/questions/components/question-multiple-diff-points/question-multiple-diff-points.component';
 
 @Injectable()
 export class QuestionsService {
@@ -333,7 +336,7 @@ export class QuestionsService {
         const values = answer.value as number[];
         const correct = values.map(v => selectOption(v, options));
         const selected = selectedValue.map(v => selectOption(v, options));
-        const isCorrect = compareMultiple(selectedValue, values);
+        const isCorrect = answer.points[selectedValue - 1];
         return { id, type, text, correct, selected, isCorrect };
       }
 
@@ -481,13 +484,11 @@ export class QuestionsService {
     return isCorrect && answer.points || 0;
   }
 
-  private multipleChoiceDiffPoints<T>(answer: { points: number, value: T[] }, selection: T[], sorting = false): number {
+  private multipleChoiceDiffPoints<T>(answer: Answer<number[]>, selection: number, sorting = false): number {
     if (!answer) {
       return 0;
     }
 
-    const isCorrect = compareMultiple(answer.value, selection, sorting);
-
-    return isCorrect && answer.points || 0;
+    return answer.points[selection - 1];
   }
 }

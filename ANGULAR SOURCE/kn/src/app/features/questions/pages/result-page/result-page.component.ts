@@ -32,11 +32,11 @@ export class ResultPageComponent implements OnInit, OnDestroy {
     private questionsService: QuestionsService,
     public content: ContentService,
   ) {
-    // this.result = this.questionsService.result();
-    // this.questionsService.attach();
-    // this.questionsService.changes$
-    //   .pipe(takeUntil(this.destroyed$))
-    //   .subscribe(() => (this.result = this.questionsService.result()));
+    this.result = this.questionsService.result();
+    this.questionsService.attach();
+    this.questionsService.changes$
+      .pipe(takeUntil(this.destroyed$))
+      .subscribe(() => (this.result = this.questionsService.result()));
   }
 
   ngOnInit() {

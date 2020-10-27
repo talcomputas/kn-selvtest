@@ -18,13 +18,13 @@
         "id": "2",
         "title": "Du har vurdert deg selv til nivå 2 av 3 i denne sjekken.",
         "text": "Å kunne lese og skrive på nivå 2 innebærer å kunne lese og skrive oversiktlige tekster. Du kan lese og skrive i de fleste situasjoner.",
-        "minScore": 12
+        "minScore": 28
       },
       "3": {
         "id": "3",
         "title": "Du har vurdert deg selv til nivå 3 av 3 i denne sjekken.",
         "text": "Å kunne lese og skrive på nivå 3 innebærer å beherske et mangfold av tekster. Du leser og skriver på en selvstendig, kritisk og strategisk måte tilpasset situasjon og mål.",
-        "minScore": 24
+        "minScore": 56
       }
     }
   },
@@ -33,7 +33,7 @@
       "id": 1,
       "questions": [
         {
-          "id": "1",
+          "id": 1,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -58,7 +58,7 @@
           "text": "Forstår du enkle matoppskrifter?"
         },
         {
-          "id": "2",
+          "id": 2,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -83,7 +83,7 @@
           "text": "Forstår du oppslag på en tavle?"
         },
         {
-          "id": "3",
+          "id": 3,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -108,7 +108,7 @@
           "text": "Forstår du annonser i aviser eller på nett?"
         },
         {
-          "id": "4",
+          "id": 4,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -139,7 +139,7 @@
           "text": "Kan du lese og forstå instruksjoner på en billettautomat?"
         },
         {
-          "id": "5",
+          "id": 5,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -164,7 +164,7 @@
           "text": "Kan du lese og forstå informasjon på skilt, f.eks. i trafikken?"
         },
         {
-          "id": "6",
+          "id": 6,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -195,7 +195,7 @@
           "text": "Kan du skrive et svar på en invitasjon?"
         },
         {
-          "id": "7",
+          "id": 7,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -220,7 +220,7 @@
           "text": "Kan du notere en enkel beskjed?"
         },
         {
-          "id": "8",
+          "id": 8,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -245,7 +245,7 @@
           "text": "Kan du skrive enkle handlelister? "
         },
         {
-          "id": "9",
+          "id": 9,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -276,7 +276,7 @@
           "text": "Kan du skrive en kort tekst der du forteller om deg selv?"
         },
         {
-          "id": "10",
+          "id": 10,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -301,7 +301,7 @@
           "text": "Klarer du å finne fram til egen arbeidstid i en turnusliste/vaktliste?"
         },
         {
-          "id": "11",
+          "id": 11,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -332,7 +332,7 @@
           "text": "Kan du lese og forstå et møtereferat?"
         },
         {
-          "id": "12",
+          "id": 12,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -357,7 +357,7 @@
           "text": "Kan du lese anmeldelser av f.eks. filmer eller konserter?  "
         },
         {
-          "id": "13",
+          "id": 13,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -388,7 +388,7 @@
           "text": "Forstår du informasjonsskriv f.eks. fra skole eller kommune?"
         },
         {
-          "id": "14",
+          "id": 14,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -419,7 +419,7 @@
           "text": "Kan du lese en møteinnkalling og finne ut hvor og når du skal møte?"
         },
         {
-          "id": "15",
+          "id": 15,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -450,7 +450,7 @@
           "text": "Kan du lese og forstå faguttrykk knyttet til jobb eller hobby?"
         },
         {
-          "id": "16",
+          "id": 16,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -475,7 +475,7 @@
           "text": "Kan du bruke innholdsfortegnelse for å finne fram i bøker? "
         },
         {
-          "id": "17",
+          "id": 17,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -500,7 +500,7 @@
           "text": "Varierer du måten du leser på, f.eks. hastighet og grundighet?"
         },
         {
-          "id": "18",
+          "id": 18,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -531,7 +531,7 @@
           "text": "Kan du skrive og forklare en framgangsmåte, f.eks. en oppskrift?"
         },
         {
-          "id": "19",
+          "id": 19,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -562,7 +562,7 @@
           "text": "Kan du fylle ut et skjema med personopplysninger?"
         },
         {
-          "id": "20",
+          "id": 20,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -587,7 +587,7 @@
           "text": "Kan du skrive korte innlegg på sosiale medier?"
         },
         {
-          "id": "21",
+          "id": 21,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -618,7 +618,7 @@
           "text": "Hvor mye erfaring har du med å lese aviser eller magasiner?"
         },
         {
-          "id": "22",
+          "id": 22,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -649,7 +649,7 @@
           "text": "Kan du skrive en melding om f.eks. uhell eller avvik på arbeidsplassen?"
         },
         {
-          "id": "23",
+          "id": 23,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -680,7 +680,7 @@
           "text": "Kan du skrive en enkel CV?"
         },
         {
-          "id": "24",
+          "id": 24,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -705,7 +705,7 @@
           "text": "Kan du skrive en e-post i jobbsammenheng?"
         },
         {
-          "id": "25",
+          "id": 25,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -736,7 +736,7 @@
           "text": "Kan du lese og forstå regler som f.eks. gjelder borettslag eller arbeidsrutiner?"
         },
         {
-          "id": "26",
+          "id": 26,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -761,7 +761,7 @@
           "text": "Kan du hjelpe elever på ungdomstrinnet med leselekser?"
         },
         {
-          "id": "27",
+          "id": 27,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -786,7 +786,7 @@
           "text": "Kan du lese og orientere deg i nettaviser?"
         },
         {
-          "id": "28",
+          "id": 28,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -817,7 +817,7 @@
           "text": "Kan du lese informasjon om ulike produkter for å vurdere hva du vil kjøpe?"
         },
         {
-          "id": "29",
+          "id": 29,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -848,7 +848,7 @@
           "text": "Kan du lese og forstå vilkår for en vare eller tjeneste du har kjøpt?"
         },
         {
-          "id": "30",
+          "id": 30,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -879,7 +879,7 @@
           "text": "Kan du lese pakningsvedlegg til medisiner?"
         },
         {
-          "id": "31",
+          "id": 31,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -910,7 +910,7 @@
           "text": "Kan du lese og forstå et brev fra myndighetene, f.eks. Nav eller kommunen?"
         },
         {
-          "id": "32",
+          "id": 32,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -941,7 +941,7 @@
           "text": "Kan du lese og vurdere kontrakter, f.eks. for arbeid eller bolig?"
         },
         {
-          "id": "33",
+          "id": 33,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -972,7 +972,7 @@
           "text": "Kan du lese og forstå tekster som inneholder bilder, grafer og tabeller?"
         },
         {
-          "id": "34",
+          "id": 34,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -1003,7 +1003,7 @@
           "text": "Hvor mye erfaring har du med å lese bøker?"
         },
         {
-          "id": "35",
+          "id": 35,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -1034,7 +1034,7 @@
           "text": "Kan du skrive en enkel rapport om et arbeid du har utført?"
         },
         {
-          "id": "36",
+          "id": 36,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -1065,7 +1065,7 @@
           "text": "Kan du skrive et møtereferat?"
         },
         {
-          "id": "37",
+          "id": 37,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -1096,7 +1096,7 @@
           "text": "Kan du skrive en jobbsøknad som passer til stillingsannonsen?"
         },
         {
-          "id": "38",
+          "id": 38,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -1127,7 +1127,7 @@
           "text": "Kan du skrive en begrunnet klage på et produkt eller en tjeneste?"
         },
         {
-          "id": "39",
+          "id": 39,
           "type": "multiple-diff-points",
           "answer": {
             "value": [
@@ -1158,7 +1158,7 @@
           "text": "Kan du skrive et sammendrag av en fagtekst?"
         },
         {
-          "id": "40",
+          "id": 40,
           "type": "multiple-diff-points",
           "answer": {
             "value": [

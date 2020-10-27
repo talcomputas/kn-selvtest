@@ -1,4 +1,4 @@
-<!-- <app-card>
+<app-card>
   <div app-card-header>
     <ng-container *ngIf="!showAnswers">{{'testIsOver' | content}}</ng-container>
     <ng-container *ngIf="showAnswers">
@@ -60,4 +60,4 @@
 
 <ng-template #answers>
   <app-answers [data]="result?.data" (close)="showAnswers = false"></app-answers>
-</ng-template> -->
+</ng-template>
