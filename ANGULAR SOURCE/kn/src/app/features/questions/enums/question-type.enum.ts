@@ -6,5 +6,6 @@ export enum QuestionType {
   HOTSPOT = 'hotspot',
   RANKING = 'ranking',
   DIALOGUE = 'dialogue',
-  SLIDER = 'slider'
+  SLIDER = 'slider',
+  GROUPS_CHOICE = 'groups-choice',
 }

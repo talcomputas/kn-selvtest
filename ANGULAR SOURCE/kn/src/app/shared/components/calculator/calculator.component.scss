@@ -14,28 +14,28 @@
 }
 
 .subdisplay {
-   border-bottom: 1px solid black;
-   height: 25%;
-   font-size: 1rem;
-   overflow: auto;
- }
+  border-bottom: 1px solid black;
+  height: 25%;
+  font-size: 1rem;
+  overflow: auto;
+}
 
 .keypad {
-    height: calc(200% / 3);
-  }
+  height: calc(200% / 3);
+}
 
 .keys {
-     margin: 0;
-     width: 25%;
-     height: 20%;
-     background: whitesmoke;
-     color: black;
-     padding: 5%;
-     font-size: 1rem;
-     text-align: center;
-     cursor: pointer;
-   }
+  margin: 0;
+  width: 25%;
+  height: 20%;
+  background: whitesmoke;
+  color: black;
+  padding: 5%;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
 
 .one-line {
-      display: inline-block;
-    }
+  display: inline-block;
+}

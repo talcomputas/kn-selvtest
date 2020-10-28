@@ -15,6 +15,8 @@ import nbSystem from '@i18n/bokmal.system.json';
 import nnSystem from '@i18n/nynorsk.system.json';
 import { ButtonModule } from '../uikit/button/button.module';
 import { SharedModule } from '@shared/shared.module';
+import { HomeComponent } from './components/home/home.component';
+import { MaterialModule } from 'material.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { SharedModule } from '@shared/shared.module';
     LayoutComponent,
     LogoComponent,
     LanguageComponent,
+    HomeComponent,
   ],
   imports: [
     CommonModule,
@@ -33,10 +36,9 @@ import { SharedModule } from '@shared/shared.module';
     ContentModule.forRoot(),
     SharedModule.forRoot(),
     ButtonModule,
+    MaterialModule,
   ],
-  exports: [
-    LayoutComponent,
-  ],
+  exports: [LayoutComponent],
 })
 export class CoreModule {
   /* make sure CoreModule is imported only by one NgModule the AppModule */

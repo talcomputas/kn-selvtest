@@ -4,8 +4,8 @@ export interface Option {
   audio?: string;
   image?: string;
   video?: string;
-  floor ?: number;
-  ceil ?: number;
+  floor?: number;
+  ceil?: number;
 }
 
 export interface SliderOption {

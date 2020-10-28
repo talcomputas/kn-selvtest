@@ -1,6 +1,9 @@
 <app-card>
   <div app-card-label>
-    <app-label imgUrl="assets/images/ribbon-puzzle.svg" text="{{ 'intro.label' | content }}"></app-label>
+    <app-label
+      imgUrl="assets/images/ribbon-puzzle.svg"
+      text="{{ 'intro.label' | content }}"
+    ></app-label>
   </div>
 
   <div app-card-content>
@@ -9,7 +12,7 @@
 
       <div class="info">
         <p [innerHTML]="'intro.text' | content"></p>
-        <img src="assets/images/{{ 'intro.image' | content}}" alt="Intro image"/>
+        <img src="assets/images/{{ 'intro.image' | content }}" alt="Intro image" />
       </div>
     </div>
   </div>
@@ -17,7 +20,7 @@
   <footer app-card-footer>
     <app-screen-reader></app-screen-reader>
     <div class="actions">
-      <button routerLink="../sporsmal/1" app-button app-color="accent" class="start">
+      <button routerLink="/{{ path }}/sporsmal/1" app-button app-color="accent" class="start">
         {{ 'actions.start' | content }}
       </button>
     </div>

@@ -1,0 +1,15 @@
+<!-- <span correctindex="1" id="s-1-1" class="options">
+  <span correct="true">parasollen</span>
+  <span correct="false">bassenget</span>
+  <span correct="false">scenen</span>
+  <span correct="false">høytaleren</span>
+</span> -->
+
+<span *ngIf="options" class="options">
+  <span
+    *ngFor="let option of options"
+    (click)="onClick(option)"
+    [ngClass]="{ active: isActive(option) }"
+    >{{ option.text }}</span
+  >
+</span>

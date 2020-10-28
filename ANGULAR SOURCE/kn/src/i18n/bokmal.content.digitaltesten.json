@@ -2,11 +2,11 @@
   "intro": {
     "label": "Test dine ferdigheter",
     "title": "Digitaltesten",
-    "image": "data-check.svg",
+    "image": "digitaltesten-data-check.svg",
     "text": "<p>Digitaltesten består av 30-32 oppgaver med oppgavetyper som flervalgsoppgaver, dra og slipp, sorter og dialoger. Det tar ca. 10-15 minutter å gjennomføre testen.</p><p>Testen har av to deler, en innledende del og en hoveddel. Resultatet på din innledende del bestemmer om du får en lettere eller vanskeligere hoveddel. Sluttresultatet viser ditt samlede nivå basert på læringsmål for grunnleggende ferdigheter.</p> <p>Digitaltesten er på et overordnet nivå, temaer for testen er:</p><ul><li>Inn- og utlogging av offentlige tjenester</li><li>Bruke søkemotor for å finne informasjon, produkter og tjenester</li><li>Datasikkerhet og nettvett</li><li>Digital kommunikasjon</li><li>Medier og underholdning</li><li>Sosiale medier</li></ul>"
   },
   "result": {
-    "image": "data-check.svg",
+    "image": "digitaltesten-data-check.svg",
     "levels": {
       "1": {
         "id": "1",

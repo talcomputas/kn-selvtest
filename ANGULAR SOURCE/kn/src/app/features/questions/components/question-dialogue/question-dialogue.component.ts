@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, HostBinding, OnChanges } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
-import { QuestionComponentBase } from '@features/questions/components/question-component-base';
+import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
 import { QuestionDialogue } from '@features/questions/interfaces/question-dialogue.interface';
 import { SpeechBase } from '@features/questions/interfaces/speech-base.interface';
 import { SpeechFunnel } from '@features/questions/interfaces/speech-funnel.interface';
@@ -13,7 +13,9 @@ import { SpeechType } from '@features/questions/enums/speech-type.enum';
   styleUrls: ['./question-dialogue.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class QuestionDialogueComponent extends QuestionComponentBase<QuestionDialogue> implements OnChanges {
+export class QuestionDialogueComponent
+  extends QuestionComponentBaseDirective<QuestionDialogue>
+  implements OnChanges {
   public readonly SpeechType = SpeechType;
   public speech: SpeechBase | SpeechFunnel | SpeechSelect;
 
@@ -44,7 +46,7 @@ export class QuestionDialogueComponent extends QuestionComponentBase<QuestionDia
   }
 
   getById(id: string): SpeechBase | SpeechFunnel | SpeechSelect {
-    return this.question.speech.find(item => item.id === id);
+    return this.question.speech.find((item) => item.id === id);
   }
 
   private finish(): void {
@@ -52,9 +54,12 @@ export class QuestionDialogueComponent extends QuestionComponentBase<QuestionDia
   }
 
   private initSpeech(): void {
-    this.speech = this.question.speech.find(item => item.type === SpeechType.INTRO || item.type === SpeechType.QUESTION);
-    this.backgroundImage = this.question.image
-      && this.sanitizer.bypassSecurityTrustStyle(`url(assets/images/${this.question.image})`);
+    this.speech = this.question.speech.find(
+      (item) => item.type === SpeechType.INTRO || item.type === SpeechType.QUESTION,
+    );
+    this.backgroundImage =
+      this.question.image &&
+      this.sanitizer.bypassSecurityTrustStyle(`url(assets/images/${this.question.image})`);
     this.value = [];
   }
 }

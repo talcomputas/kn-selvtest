@@ -19,7 +19,6 @@ export class AnswersComponent {
   @Input()
   public readonly data: ResultAnswer[];
 
-
   public onPrint(): void {
     window.print();
   }

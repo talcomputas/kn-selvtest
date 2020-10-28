@@ -1,20 +1,22 @@
-import { ChangeDetectionStrategy, Component, Directive, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Directive,
+  OnInit,
+  ViewEncapsulation,
+} from '@angular/core';
 
 @Directive({ selector: '[app-card-label]', host: { class: 'card-label' } })
-export class CardLabelDirective {
-}
+export class CardLabelDirective {}
 
 @Directive({ selector: '[app-card-header]', host: { class: 'card-header' } })
-export class CardHeaderDirective {
-}
+export class CardHeaderDirective {}
 
 @Directive({ selector: '[app-card-content]', host: { class: 'card-content' } })
-export class CardContentDirective {
-}
+export class CardContentDirective {}
 
 @Directive({ selector: '[app-card-footer]', host: { class: 'card-footer' } })
-export class CardFooterDirective {
-}
+export class CardFooterDirective {}
 
 @Component({
   selector: 'app-card',
@@ -25,11 +27,7 @@ export class CardFooterDirective {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardComponent implements OnInit {
+  constructor() {}
 
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

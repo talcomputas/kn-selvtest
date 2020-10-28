@@ -1,12 +1,12 @@
 {
   "intro": {
     "label": "Test dine ferdigheter",
-    "title": "Regnetest",
-    "image": "data-check.svg",
+    "title": "Regnetesten",
+    "image": "regnetesten-data-check.svg",
     "text": "Dette er en kortere regnetest som består av 30 oppgaver. Ta deg tid og ro til å gjennomføre testen for at resultatet skal vise dine ferdigheter! Det kan ta 10-15 minutter å ta regnetesten.\nVi anbefaler at du kun bruke kalkulator der den er tilgjengelig i oppgavene. Bruk penn og papir for å notere eller gjøre enkle utregninger."
   },
   "result": {
-    "image": "data-check.svg",
+    "image": "regnetesten-data-check.svg",
     "levels": {
       "1": {
         "id": "1",
@@ -727,4 +727,3 @@
     }
   ]
 }
-

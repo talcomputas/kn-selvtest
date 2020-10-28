@@ -1,4 +1,6 @@
-import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ContentService } from '@content/services/content.service';
 
 // let questback: any;
 
@@ -7,5 +9,11 @@ import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
   templateUrl: './intro-page.component.html',
   styleUrls: ['./intro-page.component.scss'],
 })
-export class IntroPageComponent {
+export class IntroPageComponent implements OnInit {
+  path: string;
+  constructor(private activatedRoute: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.path = this.activatedRoute.snapshot.data.path;
+  }
 }

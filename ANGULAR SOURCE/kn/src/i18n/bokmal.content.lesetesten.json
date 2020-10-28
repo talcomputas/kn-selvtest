@@ -1,0 +1,835 @@
+{
+  "intro": {
+    "label": "Lesetesten",
+    "title": "Lesetesten",
+    "text": "Dette er en kort lesetest som måler lesehastigheten din. Testen stopper automatisk etter 10 minutter. Det er mange oppgaver, så det er viktig å svare raskt og riktig.",
+    "image": "reading-exam.svg"
+  },
+  "modules": [
+    {
+      "id": 1,
+      "questions": [
+        {
+          "id": 1,
+          "type": "groups-choice",
+          "title": "En solskinnsdag",
+          "text": "De satt i shorts og bar overkropp på terrassen, og de hadde hentet drikke med isbiter. De trengte skygge i den varme sommersola, så de bestemte seg for å finne frem %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "parasollen"
+              },
+              {
+                "id": 2,
+                "text": "bassenget"
+              },
+              {
+                "id": 3,
+                "text": "scenen"
+              },
+              {
+                "id": 4,
+                "text": "høytaleren"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [1],
+            "points": 1
+          }
+        },
+        {
+          "id": 2,
+          "type": "groups-choice",
+          "title": "På kjøkkenet",
+          "text": "Bordet var allerede dekket. Det luktet litt brent, selv om klokka ikke hadde ringt. Senay skrudde ned varmen og fjernet %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "dyna"
+              },
+              {
+                "id": 2,
+                "text": "papirene"
+              },
+              {
+                "id": 3,
+                "text": "radioen"
+              },
+              {
+                "id": 4,
+                "text": "kjelen"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4],
+            "points": 1
+          }
+        },
+        {
+          "id": 3,
+          "type": "groups-choice",
+          "title": "Helgevasken",
+          "text": "Oskar gikk i boden og hentet langkosten. Han gikk grundig til verks før han ryddet bort bøtta og hengte kluten til tørk. Endelig ble leiligheten %s",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "skitten"
+              },
+              {
+                "id": 2,
+                "text": "malt"
+              },
+              {
+                "id": 3,
+                "text": "solgt"
+              },
+              {
+                "id": 4,
+                "text": "ren"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4],
+            "points": 1
+          }
+        },
+        {
+          "id": 4,
+          "type": "groups-choice",
+          "title": "Kaos",
+          "text": "Det fløt med mel og sukker. Det ville ta hele pausen å rydde opp, tenkte læreren. Det var bra at alle brukte %s, ellers ville noen av foreldrene kanskje klage.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "papp"
+              },
+              {
+                "id": 2,
+                "text": "PCer"
+              },
+              {
+                "id": 3,
+                "text": "forklær"
+              },
+              {
+                "id": 4,
+                "text": "tannbørste"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4],
+            "points": 1
+          }
+        },
+        {
+          "id": 5,
+          "type": "groups-choice",
+          "title": "Havørnens unger",
+          "text": "Høyt oppe i det gamle treet har havørnparet bygget reiret sitt. Nå ligger det to egg der. Når de klekkes, blir ungene værende i reiret %s de er klare til å fly. Deretter vil foreldrene mate dem et par måneder, men så snart ungene er klare, vil de fly ut på egen hånd for å finne %s sin.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "og"
+              },
+              {
+                "id": 2,
+                "text": "til"
+              },
+              {
+                "id": 3,
+                "text": "så"
+              },
+              {
+                "id": 4,
+                "text": "hvis"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "faren"
+              },
+              {
+                "id": 2,
+                "text": "ungen"
+              },
+              {
+                "id": 3,
+                "text": "maten"
+              },
+              {
+                "id": 4,
+                "text": "fuglen"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [2, 3],
+            "points": 1
+          }
+        },
+        {
+          "id": 6,
+          "type": "groups-choice",
+          "title": "Fotballkamp",
+          "text": "Det var mange stygge taklinger og amper stemning. Med jevne mellomrom måtte fløyta tas i bruk, og flere fikk gult kort. Da det var slutt, hadde ingen fått %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "kort"
+              },
+              {
+                "id": 2,
+                "text": "penger"
+              },
+              {
+                "id": 3,
+                "text": "straff"
+              },
+              {
+                "id": 4,
+                "text": "mål"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4],
+            "points": 1
+          }
+        },
+        {
+          "id": 7,
+          "type": "groups-choice",
+          "title": "Hetebølge",
+          "text": "Det hadde vært skyfritt og varmt i flere dager. Aida strevde med å ta på sønnen %s, men det var vanskelig, for han ville ikke stå stille. De kom til å bli forsinket igjen.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "regntøy"
+              },
+              {
+                "id": 2,
+                "text": "solkrem"
+              },
+              {
+                "id": 3,
+                "text": "støvler"
+              },
+              {
+                "id": 4,
+                "text": "ullsokker"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [2],
+            "points": 1
+          }
+        },
+        {
+          "id": 8,
+          "type": "groups-choice",
+          "title": "Drømmen om en bondegård",
+          "text": "Henrik bladde fram til sidene med boligannonser. Leiligheten deres var %s for liten for dem, så nå lette de etter %s større. De ville gjerne flytte ut på landet. De lette etter en liten %s hvor det var plass til å ha et par %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "innredet"
+              },
+              {
+                "id": 2,
+                "text": "solgt"
+              },
+              {
+                "id": 3,
+                "text": "annonsert"
+              },
+              {
+                "id": 4,
+                "text": "blitt"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "det"
+              },
+              {
+                "id": 2,
+                "text": "noe"
+              },
+              {
+                "id": 3,
+                "text": "annet"
+              },
+              {
+                "id": 4,
+                "text": "flere"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "altan"
+              },
+              {
+                "id": 2,
+                "text": "restaurant"
+              },
+              {
+                "id": 3,
+                "text": "gård"
+              },
+              {
+                "id": 4,
+                "text": "bil"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "ferier"
+              },
+              {
+                "id": 2,
+                "text": "hester"
+              },
+              {
+                "id": 3,
+                "text": "år"
+              },
+              {
+                "id": 4,
+                "text": "foredrag"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4, 2, 3, 2],
+            "points": 1
+          }
+        },
+        {
+          "id": 9,
+          "type": "groups-choice",
+          "title": "Musikk",
+          "text": "Elevens fingre beveget seg raskt og presist. Han satt og trampet mens han spilte. Læreren lyttet intenst for å forsikre seg om at han fulgte %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "oppskriften"
+              },
+              {
+                "id": 2,
+                "text": "strekene"
+              },
+              {
+                "id": 3,
+                "text": "reglene"
+              },
+              {
+                "id": 4,
+                "text": "notene"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4],
+            "points": 1
+          }
+        },
+        {
+          "id": 10,
+          "type": "groups-choice",
+          "title": "Reisen",
+          "text": "Hun skulle være klar om to timer, så hun hadde det litt travelt. Vesken lå allerede i bilen, og billetten, nøklene og kortholderen var i lomma. Samboeren løp etter henne med %s. Heldigvis for henne, ellers så hadde hun ikke kommet seg av gårde.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "passet"
+              },
+              {
+                "id": 2,
+                "text": "matpakken"
+              },
+              {
+                "id": 3,
+                "text": "innkjøpslisten"
+              },
+              {
+                "id": 4,
+                "text": "klokka"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [1],
+            "points": 1
+          }
+        },
+        {
+          "id": 11,
+          "type": "groups-choice",
+          "title": "Beboere frykter pyroman",
+          "text": "Innbyggerne i bygda Berglund føler seg %s, for i forrige uke ble det rapportert om tre utbrente biler i området og to branner på boligfeltet. De frykter at en pyroman er på ferde. Ifølge politiet tyder de foreløpige undersøkelsene på at brannene var påsatt, %s de trenger flere spor i saken før de kan konkludere.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "late"
+              },
+              {
+                "id": 2,
+                "text": "heldige"
+              },
+              {
+                "id": 3,
+                "text": "utrygge"
+              },
+              {
+                "id": 4,
+                "text": "klønete"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "men"
+              },
+              {
+                "id": 2,
+                "text": "ettersom"
+              },
+              {
+                "id": 3,
+                "text": "for"
+              },
+              {
+                "id": 4,
+                "text": "hvis"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [3, 1],
+            "points": 1
+          }
+        },
+        {
+          "id": 12,
+          "type": "groups-choice",
+          "title": "Hos tannlegen",
+          "text": "Karl lå i stolen og lyset fra lampa skar ham i øynene. Han var litt nervøs. Tannlegen la fra seg det lille speilet. Han snudde på hodet og så at hun tok tak i %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "sykkelen"
+              },
+              {
+                "id": 2,
+                "text": "boret"
+              },
+              {
+                "id": 3,
+                "text": "brevet"
+              },
+              {
+                "id": 4,
+                "text": "hammeren"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [2],
+            "points": 1
+          }
+        },
+        {
+          "id": 13,
+          "type": "groups-choice",
+          "title": "Flom",
+          "text": "Da ekteparet kom hjem fra helgeturen, fløt alle tingene rundt i kjelleren. De skyndte seg å sette sakene ut i sola. De ville kontakte %s dagen etter. I nyhetene hørte de at mange områder i landet var rammet.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "flyttebyrået"
+              },
+              {
+                "id": 2,
+                "text": "vitnene"
+              },
+              {
+                "id": 3,
+                "text": "legen"
+              },
+              {
+                "id": 4,
+                "text": "forsikringsselskapet"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4],
+            "points": 1
+          }
+        },
+        {
+          "id": 14,
+          "type": "groups-choice",
+          "title": "Blomster og vanning",
+          "text": "Det er store forskjeller på hvor ofte planter skal vannes. Noen bør vannes hver dag, %s andre kan stå i flere uker uten vann. Det er en vanlig %s å gi alle blomster masse vann. Det kan føre til at røttene får problemer med å ta opp nok næring.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "fordi"
+              },
+              {
+                "id": 2,
+                "text": "mens"
+              },
+              {
+                "id": 3,
+                "text": "hvis"
+              },
+              {
+                "id": 4,
+                "text": "for"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "plikt"
+              },
+              {
+                "id": 2,
+                "text": "bedrift"
+              },
+              {
+                "id": 3,
+                "text": "feil"
+              },
+              {
+                "id": 4,
+                "text": "forkjølelse"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [3, 1],
+            "points": 1
+          }
+        },
+        {
+          "id": 15,
+          "type": "groups-choice",
+          "title": "Innbrudd",
+          "text": "De hadde brukt flere uker på planleggingen, og de hadde valgt ut stedet nøye. Kameraten deres ventet i bilen rundt hjørnet. Pulsen steg da de snek seg fram. De håpet det ikke var noen %s der.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "klager"
+              },
+              {
+                "id": 2,
+                "text": "boder"
+              },
+              {
+                "id": 3,
+                "text": "stoler"
+              },
+              {
+                "id": 4,
+                "text": "hunder"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4],
+            "points": 1
+          }
+        },
+        {
+          "id": 16,
+          "type": "groups-choice",
+          "title": "Bjørner på rømmen?",
+          "text": "En kraftig storm har veltet flere trær i dyreparken. To av trærne veltet over gjerdet som var satt opp rundt bjørnenes område. I %s etterpå ble de ansatte redde for at bjørnene skulle %s. Dyrepasserne måtte straks lete gjennom hele dyrehagen og telle antall %s for å forsikre seg om at ingen hadde rømt.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "timene"
+              },
+              {
+                "id": 2,
+                "text": "dyrene"
+              },
+              {
+                "id": 3,
+                "text": "årene"
+              },
+              {
+                "id": 4,
+                "text": "burene"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "falle"
+              },
+              {
+                "id": 2,
+                "text": "slippe"
+              },
+              {
+                "id": 3,
+                "text": "hoppe"
+              },
+              {
+                "id": 4,
+                "text": "rømme"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "bjørner"
+              },
+              {
+                "id": 2,
+                "text": "trær"
+              },
+              {
+                "id": 3,
+                "text": "unger"
+              },
+              {
+                "id": 4,
+                "text": "gjerder"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [1, 4, 1],
+            "points": 1
+          }
+        },
+        {
+          "id": 17,
+          "type": "groups-choice",
+          "title": "Bilulykke",
+          "text": "Man kunne høre lyden av %s komme nærmere. Mange mennesker hadde samlet seg rundt de to bilene. Noen av dem sto og gråt.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "hundene"
+              },
+              {
+                "id": 2,
+                "text": "ambulansen"
+              },
+              {
+                "id": 3,
+                "text": "demonstrantene"
+              },
+              {
+                "id": 4,
+                "text": "torden"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [2],
+            "points": 1
+          }
+        },
+        {
+          "id": 18,
+          "type": "groups-choice",
+          "title": "Spleiselag",
+          "text": "De hadde kost seg med fredagstaco hele kvelden. Linda hadde lagt ut for %s og ventet på at alle skulle overføre %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "ingrediensene"
+              },
+              {
+                "id": 2,
+                "text": "bøkene"
+              },
+              {
+                "id": 3,
+                "text": "arbeidet"
+              },
+              {
+                "id": 4,
+                "text": "telefonene"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "posten"
+              },
+              {
+                "id": 2,
+                "text": "nøkler"
+              },
+              {
+                "id": 3,
+                "text": "navn"
+              },
+              {
+                "id": 4,
+                "text": "penger"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [1, 4],
+            "points": 1
+          }
+        },
+        {
+          "id": 19,
+          "type": "groups-choice",
+          "title": "Sent ute",
+          "text": "”Vi får se å komme oss av sted”, sa Karim. Likevel tok det et kvarter før barna var klare til å sette seg i %s. Familien kjørte en %s gjennom byen, så de kom heldigvis bare 10 minutter senere enn de andre til selskapet.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "sofaen"
+              },
+              {
+                "id": 2,
+                "text": "bilen"
+              },
+              {
+                "id": 3,
+                "text": "trappa"
+              },
+              {
+                "id": 4,
+                "text": "bagasjen"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "snarvei"
+              },
+              {
+                "id": 2,
+                "text": "omvei"
+              },
+              {
+                "id": 3,
+                "text": "blindvei"
+              },
+              {
+                "id": 4,
+                "text": "karusell"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [2, 1],
+            "points": 1
+          }
+        },
+        {
+          "id": 20,
+          "type": "groups-choice",
+          "title": "En mistenkelig e-post",
+          "text": "Maria hadde fått en e-post fra en avsender hun ikke kjente. Hun undersøkte derfor om det var en person hun kunne ringe eller skrive til %s hun åpnet vedlegget, men hun fant ingen kontaktopplysninger. Det fikk henne til å %s at e-posten var fra en som forsøkte å lokke betalingsopplysninger fra henne, %s hun slettet den.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "at"
+              },
+              {
+                "id": 2,
+                "text": "fordi"
+              },
+              {
+                "id": 3,
+                "text": "for"
+              },
+              {
+                "id": 4,
+                "text": "før"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "mistenke"
+              },
+              {
+                "id": 2,
+                "text": "benekte"
+              },
+              {
+                "id": 3,
+                "text": "planlegge"
+              },
+              {
+                "id": 4,
+                "text": "huske"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "fordi"
+              },
+              {
+                "id": 2,
+                "text": "da"
+              },
+              {
+                "id": 3,
+                "text": "så"
+              },
+              {
+                "id": 4,
+                "text": "når"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4, 1, 3],
+            "points": 1
+          }
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "base"
+      }
+    }
+  ]
+}

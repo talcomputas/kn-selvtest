@@ -38,7 +38,8 @@ $icon-height: $button-height - 13px;
   font-size: $font-size-medium;
   transform: translate3d(0, 0, 0);
   background: transparent;
-  transition: background .4s cubic-bezier(.25, .8, .25, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+  transition: background 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   font-family: Verdana, Helvetica, Arial, sans-serif;
 
   // IE 11 flex align center fix
@@ -162,10 +163,12 @@ $icon-height: $button-height - 13px;
 
 %raised-button {
   @extend %button;
-  box-shadow: 0 3px 1px -2px rgba($black, .2), 0 2px 2px 0 rgba($black, .14), 0 1px 5px 0 rgba($black, .12);
+  box-shadow: 0 3px 1px -2px rgba($black, 0.2), 0 2px 2px 0 rgba($black, 0.14),
+    0 1px 5px 0 rgba($black, 0.12);
 
   &:active {
-    box-shadow: 0 5px 5px -3px rgba($black, .2), 0 8px 10px 1px rgba($black, .14), 0 3px 14px 2px rgba($black, .12);
+    box-shadow: 0 5px 5px -3px rgba($black, 0.2), 0 8px 10px 1px rgba($black, 0.14),
+      0 3px 14px 2px rgba($black, 0.12);
   }
 }
 
@@ -190,7 +193,7 @@ $icon-height: $button-height - 13px;
 }
 
 %disabled-button {
-  color: rgba($black, .4) !important;
+  color: rgba($black, 0.4) !important;
   cursor: default;
   pointer-events: none;
 }

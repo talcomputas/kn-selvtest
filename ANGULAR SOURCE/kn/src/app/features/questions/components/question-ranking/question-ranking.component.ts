@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnChanges } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { QuestionRanking } from '@features/questions/interfaces/question-ranking.interface';
-import { QuestionComponentBase } from '@features/questions/components/question-component-base';
+import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
 import { Option } from '@features/questions/interfaces/option.interface';
 
 @Component({
@@ -10,7 +10,9 @@ import { Option } from '@features/questions/interfaces/option.interface';
   styleUrls: ['./question-ranking.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class QuestionRankingComponent extends QuestionComponentBase<QuestionRanking> implements OnChanges {
+export class QuestionRankingComponent
+  extends QuestionComponentBaseDirective<QuestionRanking>
+  implements OnChanges {
   public options: Option[] = [];
 
   ngOnChanges(): void {

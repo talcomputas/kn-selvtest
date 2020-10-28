@@ -6,6 +6,7 @@ export const environment = {
   production: true,
   qbId_nb: 'wf7hoxw7vh',
   qbId_nn: 'wmsg3i4nxj',
+  name: 'muntligtesten',
   STATISTICS_API: 'http://vox-wp2.vox.no/dataoppsamling/muntligtest',
 };
 

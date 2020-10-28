@@ -4,22 +4,14 @@ import { ContentParser } from './services/content.parser';
 import { ContentPipe } from './pipes/content.pipe';
 
 @NgModule({
-  declarations: [
-    ContentPipe,
-  ],
-  exports: [
-    ContentPipe,
-  ],
+  declarations: [ContentPipe],
+  exports: [ContentPipe],
 })
 export class ContentModule {
   static forRoot(): ModuleWithProviders<ContentModule> {
     return {
       ngModule: ContentModule,
-      providers: [
-        ContentService,
-        ContentParser,
-        ContentPipe,
-      ],
+      providers: [ContentService, ContentParser, ContentPipe],
     };
   }
 }
