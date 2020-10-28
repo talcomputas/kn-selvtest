@@ -19,6 +19,7 @@ export class StatisticsApiService {
     isCorrect: boolean,
     answerTime: number,
     totalTime: number,
+    name: string,
   ): Observable<any> {
     const params = new HttpParams()
       .set('uid', userId)
@@ -28,7 +29,7 @@ export class StatisticsApiService {
       .set('correct', String(isCorrect))
       .set('time', String(answerTime))
       .set('totaltime', String(totalTime))
-      .set('name', `${environment.name}`)
+      .set('name', name)
       .set('nocache', Date.now().toString());
 
     return this.http.get(`${environment.STATISTICS_API}submititem`, {

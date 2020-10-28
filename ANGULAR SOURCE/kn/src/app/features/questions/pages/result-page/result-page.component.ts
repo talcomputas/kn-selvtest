@@ -17,8 +17,8 @@ export class ResultPageComponent implements OnInit, OnDestroy {
 
   private readonly destroyed$ = new Subject<void>();
 
-  private qbIdNb;
-  private qbIdNn;
+  private qbIdNb: string;
+  private qbIdNn: string;
 
   path: string;
 

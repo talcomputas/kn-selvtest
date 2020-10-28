@@ -53,7 +53,9 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
 
     this.index$
       .pipe(takeUntil(this.destroyed$))
-      .subscribe((index: number) => this.questionsService.update(index, this.questions.value));
+      .subscribe((index: number) =>
+        this.questionsService.update(index, this.questions.value, this.path),
+      );
 
     this.question$.pipe(takeUntil(this.destroyed$)).subscribe((question: QuestionsUnionType) => {
       this.handleTransition(question);
@@ -68,7 +70,7 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
   }
 
   finish(): void {
-    this.questionsService.update(null, this.questions.value);
+    this.questionsService.update(null, this.questions.value, this.path);
   }
 
   private handleTransition(question: QuestionsUnionType): void {

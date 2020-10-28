@@ -25,10 +25,11 @@ export class StatisticsService {
     userAnswer: number | number[] | string | string[],
     correctAnswer: number | number[] | string | string[],
     isCorrect: boolean,
+    name: string,
   ): void {
     const totalTime = Date.now() - this.testStartedAt;
     const time = Date.now() - this.questionStartedAt;
-    this.sendStatistics(time, totalTime, userAnswer, correctAnswer, isCorrect);
+    this.sendStatistics(time, totalTime, userAnswer, correctAnswer, isCorrect, name);
   }
 
   setTestStart(): void {
@@ -41,6 +42,7 @@ export class StatisticsService {
     userAnswer: number | number[] | string | string[],
     correctAnswer: number | number[] | string | string[],
     isCorrect: boolean,
+    name: string,
   ): void {
     this.statisticsApiService
       .sendStatistics(
@@ -51,6 +53,7 @@ export class StatisticsService {
         isCorrect,
         time,
         totalTime,
+        name,
       )
       .subscribe();
   }

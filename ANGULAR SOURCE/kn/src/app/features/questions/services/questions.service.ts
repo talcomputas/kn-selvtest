@@ -70,12 +70,12 @@ export class QuestionsService {
     return this.currentLength$.asObservable();
   }
 
-  update(index: number, answers: { [key: string]: any }): void {
+  update(index: number, answers: { [key: string]: any }, name: string): void {
     this.answers = answers;
     this.initQuestions(answers);
 
     if (isNaN(index) || index === null) {
-      this.handleStatistics(this.index, index);
+      this.handleStatistics(this.index, index, name);
       this.index = 0;
       return;
     }
@@ -87,7 +87,7 @@ export class QuestionsService {
       return;
     }
 
-    this.handleStatistics(this.index, index);
+    this.handleStatistics(this.index, index, name);
     this.index = index;
   }
 
@@ -268,7 +268,7 @@ export class QuestionsService {
         }
         case QuestionType.GROUPS_CHOICE: {
           const { answer } = question as QuestionGroupsChoice;
-          score += 1; // this.multipleChoicePoints<string>(answer, selection, false);
+          score += this.groupChoicePoints(answer, selection);
         }
       }
     });
@@ -367,6 +367,18 @@ export class QuestionsService {
         return { id, type, text, correct, selected, isCorrect };
       }
 
+      case QuestionType.GROUPS_CHOICE: {
+        const { text, options } = question as QuestionGroupsChoice;
+        const values = answer.value as number[];
+        const correct = values.map((v) => selectOption(v, options));
+        const selected = selectedValue.map((v) => selectOption(v, options));
+        console.log(correct);
+        console.log(selected);
+        throw new Error('comparison');
+        // const isCorrect = compareGroupsChoice(selectedValue, values);
+        // return { id, type, text, correct, selected, isCorrect };
+      }
+
       case QuestionType.DIALOGUE: {
         const { speech } = question as QuestionDialogue;
         const values = answer.value as string[];
@@ -401,7 +413,7 @@ export class QuestionsService {
     }
   }
 
-  private handleStatistics(prevIndex: number, currIndex: number): void {
+  private handleStatistics(prevIndex: number, currIndex: number, name: string): void {
     if (prevIndex !== null && currIndex !== null && prevIndex > currIndex) {
       return;
     }
@@ -421,7 +433,7 @@ export class QuestionsService {
       const userAnswer = this.answers[prevQuestion.id];
       const correctAnswer = this.getCorrectAnswerValue(prevQuestion.id);
       const isCorrect = this.isCorrectAnswer(prevQuestion.id, userAnswer);
-      this.statisticsService.setQuestion(userAnswer, correctAnswer, isCorrect);
+      this.statisticsService.setQuestion(userAnswer, correctAnswer, isCorrect, name);
     }
 
     if (currQuestion) {
@@ -540,5 +552,16 @@ export class QuestionsService {
     const isCorrect = compareMultiple(answer.value, selection, sorting);
 
     return (isCorrect && answer.points) || 0;
+  }
+
+  private groupChoicePoints<T>(answer: { points: number; value: number[] }, selection: number[]) {
+    // gets one point for each correct answer pr page
+    let result = 0;
+    selection.forEach((value, index) => {
+      if (answer.value[index] === value) {
+        result = result + answer.points;
+      }
+    });
+    return result;
   }
 }
