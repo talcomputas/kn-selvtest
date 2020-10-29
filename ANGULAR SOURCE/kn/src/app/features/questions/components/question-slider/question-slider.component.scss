@@ -1,3 +1,6 @@
+@use "~@material/slider";
+@include slider.core-styles();
+
 .slider {
   background: #dedede;
   height: 10px;

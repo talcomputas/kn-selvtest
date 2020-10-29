@@ -24,8 +24,8 @@
 
     <mat-slider
       role="slider"
-      aria-valuemin="{{ optionsSlider.floor }}"
-      aria-valuemax="{{ optionsSlider.ceil }}"
+      min="100"
+      max="150"
       [(ngModel)]="value"
       (valueChange)="onUserChange($event)"></mat-slider>
 

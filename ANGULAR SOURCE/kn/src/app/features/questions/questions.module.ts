@@ -33,7 +33,6 @@ import nbSystemContent from '@i18n/bokmal.system.json';
 import nnSystemContent from '@i18n/nynorsk.system.json';
 
 import { QuestionSliderComponent } from './components/question-slider/question-slider.component';
-import { Ng5SliderModule } from 'ng5-slider';
 import { QuestionMultipleDiffPointsComponent } from './components/question-multiple-diff-points/question-multiple-diff-points.component';
 import { QuestionGroupsChoiceComponent } from '@features/questions/components/question-groups-choice/question-groups-choice.component';
 import { MatRadioModule } from '@angular/material/radio';
@@ -69,7 +68,6 @@ import { MatSliderModule } from '@angular/material/slider';
     RadioModule,
     ButtonModule,
     ButtonToggleModule,
-    Ng5SliderModule,
     MatRadioModule,
     MatButtonModule,
     MatSliderModule,
