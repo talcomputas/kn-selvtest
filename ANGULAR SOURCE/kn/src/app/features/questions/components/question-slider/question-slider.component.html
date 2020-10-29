@@ -24,11 +24,12 @@
 
     <mat-slider
       role="slider"
-      min="100"
-      max="150"
+      min="{{ optionsSlider.floor }}"
+      max="{{ optionsSlider.ceil }}"
       [(ngModel)]="value"
       (valueChange)="onUserChange($event)"></mat-slider>
 
+    <p>{{value}}</p>
 
     <button class="secondary" *ngIf="question.calculator" (click)="toggleCalculator()"></button>
     <div>
