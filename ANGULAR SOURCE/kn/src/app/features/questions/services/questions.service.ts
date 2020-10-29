@@ -30,9 +30,6 @@ import { SpeechSelect } from '@features/questions/interfaces/speech-select.inter
 import { Result } from '@features/questions/interfaces/result.interface';
 import { StatisticsService } from '@features/questions/services/statistics.service';
 import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
-import { log } from 'util';
-import { Answer } from '@features/questions/interfaces/answer.interface';
-import { QuestionMultipleDiffPointsComponent } from '@features/questions/components/question-multiple-diff-points/question-multiple-diff-points.component';
 import { QuestionGroupsChoice } from '@features/questions/interfaces/question-groups-choice.interface';
 
 @Injectable()

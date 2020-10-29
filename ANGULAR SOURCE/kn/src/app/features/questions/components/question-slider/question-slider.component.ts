@@ -32,8 +32,8 @@ export class QuestionSliderComponent
     this.updateSliderOptions();
   }
 
-  onUserChange(changeContext: ChangeContext): void {
-    this.control.patchValue(changeContext.value);
+  onUserChange(changeContext: number): void {
+    this.control.patchValue(changeContext);
   }
 
   private updateSliderOptions(): void {

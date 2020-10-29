@@ -38,6 +38,7 @@ import { QuestionMultipleDiffPointsComponent } from './components/question-multi
 import { QuestionGroupsChoiceComponent } from '@features/questions/components/question-groups-choice/question-groups-choice.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { MatButtonModule } from '@angular/material/button';
     Ng5SliderModule,
     MatRadioModule,
     MatButtonModule,
+    MatSliderModule,
   ],
   providers: [QuestionsService, StatisticsService, StatisticsApiService],
 })
