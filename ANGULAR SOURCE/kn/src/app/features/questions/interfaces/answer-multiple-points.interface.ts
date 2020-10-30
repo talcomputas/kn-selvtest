@@ -1,4 +1,4 @@
-export interface AnswerWithMultiplePoints<V> {
-  value: V;
-  pointsList: number[];
+export interface AnswerWithMultiplePoints {
+  value: number[];
+  points: number[];
 }

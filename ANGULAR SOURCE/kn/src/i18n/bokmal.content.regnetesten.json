@@ -722,7 +722,7 @@
       ],
       "funnel": {
         "baseScore": 0,
-        "type": "base"
+        "type": "BASE"
       }
     }
   ]

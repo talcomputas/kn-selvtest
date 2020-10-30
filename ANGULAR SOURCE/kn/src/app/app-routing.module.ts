@@ -8,6 +8,11 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
+    path: 'samletesten',
+    loadChildren: () =>
+      import('./features/questions/questions.module').then((m) => m.QuestionsModule),
+  },
+  {
     path: 'lesetesten',
     loadChildren: () =>
       import('./features/questions/questions.module').then((m) => m.QuestionsModule),

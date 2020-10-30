@@ -33,7 +33,7 @@
       "id": 1,
       "questions": [
         {
-          "id": "1",
+          "id": 1,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2],
@@ -52,7 +52,7 @@
           "text": "Forstår du prislappar på varer i matbutikken?"
         },
         {
-          "id": "2",
+          "id": 2,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -75,7 +75,7 @@
           "text": "Kan du finne og samanlikne kiloprisen på ulike varer?"
         },
         {
-          "id": "3",
+          "id": 3,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -98,7 +98,7 @@
           "text": "Kan du kontrollere ein lønsslipp og finne ut kor mykje som blir utbetalt?"
         },
         {
-          "id": "4",
+          "id": 4,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -121,7 +121,7 @@
           "text": "Kan du finne ut kor mykje av kvar ingrediens du skal bruke i ei oppskrift?"
         },
         {
-          "id": "5",
+          "id": 5,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -144,7 +144,7 @@
           "text": "Kan du bruke vekt og litermål når du lagar mat?"
         },
         {
-          "id": "6",
+          "id": 6,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -167,7 +167,7 @@
           "text": "Kan du måle lengder med måleband, tommestokk eller linjal?"
         },
         {
-          "id": "7",
+          "id": 7,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -190,7 +190,7 @@
           "text": "Veit du kva det tyder å doble og å halvere?"
         },
         {
-          "id": "8",
+          "id": 8,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -213,7 +213,7 @@
           "text": "Kan du kontrollere kvitteringa frå matbutikken?"
         },
         {
-          "id": "9",
+          "id": 9,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -236,7 +236,7 @@
           "text": "Kan du skrive inn ein legetime med rett dato og klokkeslett i ein kalender?"
         },
         {
-          "id": "10",
+          "id": 10,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -259,7 +259,7 @@
           "text": "Kan du lese ein enkel tabell, t.d. ein busstabell?"
         },
         {
-          "id": "11",
+          "id": 11,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -282,7 +282,7 @@
           "text": "Kan du hente ut enkel informasjon frå eit diagram, t.d. langtidsvarselet i ei værmelding?"
         },
         {
-          "id": "12",
+          "id": 12,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -305,7 +305,7 @@
           "text": "Kan du seie om lag kor mykje du skal betale for ei lita handlekorg med varer?"
         },
         {
-          "id": "13",
+          "id": 13,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -328,7 +328,7 @@
           "text": "Kan du samanlikne prisar for å finne den billigaste vara?"
         },
         {
-          "id": "14",
+          "id": 14,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -351,7 +351,7 @@
           "text": "Veit du korleis moms (mva.) påverkar prisen på eit produkt?"
         },
         {
-          "id": "15",
+          "id": 15,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -374,7 +374,7 @@
           "text": "Kan du rekne om frå desiliter til liter?"
         },
         {
-          "id": "16",
+          "id": 16,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -397,7 +397,7 @@
           "text": "Kan du rekne ut reisetider ut frå avstand og fart?"
         },
         {
-          "id": "17",
+          "id": 17,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -420,7 +420,7 @@
           "text": "Kan du kontrollere ei telefonrekning og vurdere forbruket ditt?"
         },
         {
-          "id": "18",
+          "id": 18,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -443,7 +443,7 @@
           "text": "Kan du tilpasse ei matoppskrift for å lage fleire porsjonar enn det som er oppgjeve?"
         },
         {
-          "id": "19",
+          "id": 19,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -466,7 +466,7 @@
           "text": "Kan du rekne ut kor mange kaloriar (kcal) det er i ei matvare ut frå opplysningane på pakken?"
         },
         {
-          "id": "20",
+          "id": 20,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -489,7 +489,7 @@
           "text": "Kan du rekne ut prisen på ein genser som er sett ned med 20Â %?"
         },
         {
-          "id": "21",
+          "id": 21,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -512,7 +512,7 @@
           "text": "Kan du lese og forstå ulike typar grafar og diagram?"
         },
         {
-          "id": "22",
+          "id": 22,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -535,7 +535,7 @@
           "text": "Kan du lese og forstå ein nedbetalingsplan?"
         },
         {
-          "id": "23",
+          "id": 23,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -558,7 +558,7 @@
           "text": "Kan du rekne ut gjennomsnittsalderen i ei gruppe?"
         },
         {
-          "id": "24",
+          "id": 24,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -581,7 +581,7 @@
           "text": "Kan du setje opp eit månadsbudsjett med oversikt over inntekter og utgifter?"
         },
         {
-          "id": "25",
+          "id": 25,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -604,7 +604,7 @@
           "text": "Eit golv måler 3 meter gongar 4 meter. Kan du finne ut kor mange kvadratmeter golvet er?"
         },
         {
-          "id": "26",
+          "id": 26,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2],
@@ -623,7 +623,7 @@
           "text": "Veit du kva kvantumsrabatt tyder?"
         },
         {
-          "id": "27",
+          "id": 27,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -646,7 +646,7 @@
           "text": "Forstår du nedbetalingsordningar i samband med varekjøp?"
         },
         {
-          "id": "28",
+          "id": 28,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -669,7 +669,7 @@
           "text": "Klarar du å samanlikne nÃ¦ringsinnhaldet i ulike matvarer?"
         },
         {
-          "id": "29",
+          "id": 29,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -692,7 +692,7 @@
           "text": "Kan du rekne ut kor mykje det vil koste deg dersom du ikkje betalar ei rekning i tide?"
         },
         {
-          "id": "30",
+          "id": 30,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -715,7 +715,7 @@
           "text": "Kjenner du til føremonene og ulempene ved å bruke kredittkort?"
         },
         {
-          "id": "31",
+          "id": 31,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -738,7 +738,7 @@
           "text": "Veit du skilnaden på flytande og fast rente?"
         },
         {
-          "id": "32",
+          "id": 32,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -761,7 +761,7 @@
           "text": "Kan du setje opp ei oversikt over årsforbruket i eit hushald, til dømes for mat og klede, og fordele utgiftene jamt over månadene i eit budsjett?"
         },
         {
-          "id": "33",
+          "id": 33,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -784,7 +784,7 @@
           "text": "Kan du rekne ut kor mykje du må spare kvar månad når du planlegg å reise på ein lang tur?"
         },
         {
-          "id": "34",
+          "id": 34,
           "type": "multiple-diff-points",
           "answer": {
             "value": [1, 2, 3],
@@ -809,7 +809,7 @@
       ],
       "funnel": {
         "baseScore": 0,
-        "type": "base"
+        "type": "BASE"
       }
     }
   ]

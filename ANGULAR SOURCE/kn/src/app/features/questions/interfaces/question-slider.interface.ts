@@ -7,7 +7,7 @@ import { QuestionBase } from '@features/questions/interfaces/question-base.inter
 export interface QuestionSlider extends QuestionBase {
   text: string;
   answer: Answer<number>;
-  options: Option;
+  options: SliderOption;
   optionSize?: OptionSize;
   title?: string;
   info?: QuestionInfo;

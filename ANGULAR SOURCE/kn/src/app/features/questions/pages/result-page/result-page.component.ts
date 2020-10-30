@@ -3,6 +3,8 @@ import { Subject } from 'rxjs';
 import { Result } from '@features/questions/interfaces/result.interface';
 import { QuestionsService } from '@features/questions/services/questions.service';
 import { ActivatedRoute } from '@angular/router';
+import { takeUntil } from 'rxjs/operators';
+import { ContentService } from '@content/services/content.service';
 
 declare var questback: any;
 
@@ -22,7 +24,17 @@ export class ResultPageComponent implements OnInit, OnDestroy {
 
   path: string;
 
-  constructor(private questionsService: QuestionsService, private activatedRoute: ActivatedRoute) {}
+  constructor(
+    private questionsService: QuestionsService,
+    private activatedRoute: ActivatedRoute,
+    public content: ContentService,
+  ) {
+    this.result = this.questionsService.result();
+    this.questionsService.attach();
+    this.questionsService.changes$
+      .pipe(takeUntil(this.destroyed$))
+      .subscribe(() => (this.result = this.questionsService.result()));
+  }
 
   ngOnInit() {
     this.path = this.activatedRoute.snapshot.data.path;
@@ -44,11 +56,11 @@ export class ResultPageComponent implements OnInit, OnDestroy {
       console.warn('unknown questback ID');
     }
 
-    /*if (this.contentService.getCtx() === 'nb') {
+    if (this.content.getCtx() === 'nb') {
       this.openNbPopup();
     } else {
       this.openNnPopup();
-    }*/
+    }
   }
 
   openNbPopup() {
