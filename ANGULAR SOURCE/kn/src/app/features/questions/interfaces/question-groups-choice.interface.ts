@@ -6,7 +6,7 @@ import { Options } from '@features/questions/interfaces/options.interface';
 export interface QuestionGroupsChoice extends QuestionBase {
   text: string;
   answer: Answer<number[]>;
-  options: Options;
+  options: Options[];
   title?: string;
   info?: QuestionInfo;
 }
