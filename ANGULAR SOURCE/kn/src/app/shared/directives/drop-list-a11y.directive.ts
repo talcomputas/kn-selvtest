@@ -74,7 +74,7 @@ export class DropListA11yDirective implements AfterContentInit, FocusableOption 
 
   /** Passes relevant key presses to our key manager. */
   keydown(event: KeyboardEvent): void {
-    const keyCode = event.keyCode;
+    const keyCode = event.key;
     const manager = this.keyManager;
     const data = this.cdkDropList.data;
     const lastDataIndex = (data && data.length - 1) || 0;
@@ -84,14 +84,14 @@ export class DropListA11yDirective implements AfterContentInit, FocusableOption 
     const nextIndex = currIndex < lastDataIndex ? currIndex + 1 : lastDataIndex;
 
     switch (keyCode) {
-      case UP_ARROW:
+      case "ArrowUp" || "Up":
         moveItemInArray(data, currIndex, prevIndex);
         this.cdkDropList.dropped.emit();
         setTimeout(() => manager.setActiveItem(prevIndex));
         event.preventDefault();
         break;
 
-      case DOWN_ARROW:
+      case "ArrowDown" || "Down":
         moveItemInArray(data, currIndex, nextIndex);
         event.preventDefault();
         break;
