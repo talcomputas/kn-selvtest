@@ -6,7 +6,7 @@ import { OptionSize } from '@features/questions/enums/option-size.enum';
 
 export interface QuestionSingle extends QuestionBase {
   text: string;
-  answer: Answer<number>;
+  answer: Answer<number, number>;
   options: Option[];
   optionSize?: OptionSize;
   title?: string;

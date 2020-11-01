@@ -1,9 +1,9 @@
 import { Intro } from '@features/questions/interfaces/intro.interface';
 import { Module } from '@features/questions/interfaces/module.interface';
-import { PossibleLevels } from '@features/questions/interfaces/possible-levels';
+import { ResultLevels } from '@features/questions/interfaces/result-levels.interface';
 
-export interface Consultation {
+export interface Lesson {
   intro: Intro;
-  result: PossibleLevels;
+  result: ResultLevels;
   modules: Module[];
 }

@@ -1,8 +1,6 @@
 <div class="content" [class.no-media]="!question?.image && !question?.video">
   <div class="content-inner">
     <h2 *ngIf="question?.title as title" class="title">{{ title }}</h2>
-    <p *ngIf="question?.info as info" [innerHTML]="info?.text"></p>
-
     <div [formGroup]="control">
       <span *ngIf="question?.text as text" class="text">
         <span *ngFor="let snippet of getSplitText(question.text); let ix = index">

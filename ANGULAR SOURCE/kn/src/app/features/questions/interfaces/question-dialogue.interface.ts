@@ -6,5 +6,5 @@ import { SpeechSelect } from '@features/questions/interfaces/speech-select.inter
 
 export interface QuestionDialogue extends QuestionBase {
   speech: Array<SpeechSelect | SpeechFunnel | SpeechBase>;
-  answer: Answer<string[]>;
+  answer: Answer<string[], number>;
 }

@@ -6,7 +6,7 @@ import { Option } from '@features/questions/interfaces/option.interface';
 export interface QuestionRanking extends QuestionBase {
   text: string;
   options: Option[];
-  answer: Answer<number[]>;
+  answer: Answer<number[], number>;
   title?: string;
   info?: QuestionInfo;
 }

@@ -4,7 +4,7 @@ import { Answer } from '@features/questions/interfaces/answer.interface';
 
 export interface QuestionCode extends QuestionBase {
   text: string;
-  answer: Answer<number>;
+  answer: Answer<number, number>;
   title?: string;
   info?: QuestionInfo;
 }

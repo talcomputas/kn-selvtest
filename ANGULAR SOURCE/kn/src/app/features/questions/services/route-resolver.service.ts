@@ -23,9 +23,9 @@ import nnregnesjekkenRaw from '@i18n/nynorsk.content.regnesjekken.json';
 import nbregnetestenRaw from '@i18n/bokmal.content.regnetesten.json';
 import nnleseskrivesjekkenRaw from '@i18n/nynorsk.content.leseskrivesjekken.json';
 
-import nbsamltetestenRaw from '@i18n/bokmal.content.samlettesten.json';
+import nbsamltetestenRaw from '@i18n/bokmal.content.samletesten.json';
 
-import { Consultation } from '@features/questions/interfaces/consultation.interface';
+import { Lesson } from '@features/questions/interfaces/lesson.interface';
 
 @Injectable()
 export class RouteResolverService implements Resolve<any> {
@@ -33,14 +33,13 @@ export class RouteResolverService implements Resolve<any> {
 
   constructor(public contentService: ContentService) {}
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any {
-    const nblesetesten: Consultation = nblesetestenRaw as Consultation; // JSON.parse(nblesetestenRaw.toString());
-
-    const nnlesetesten: Consultation = nnlesetestenRaw as Consultation;
-    const nbdigitaltesten: Consultation = nbdigitaltestenRaw as Consultation;
-    const nndigitaltesten: Consultation = nndigitaltestenRaw as Consultation;
-    const nbmuntligtesten: Consultation = nbmuntligtestenRaw as Consultation;
-    const nnmuntligtesten: Consultation = nnmuntligtestenRaw as Consultation;
-    const nbregnetesten: Consultation = nbregnetestenRaw as Consultation;
+    const nblesetesten: Lesson = nblesetestenRaw as Lesson;
+    const nnlesetesten: Lesson = nnlesetestenRaw as Lesson;
+    const nbdigitaltesten: Lesson = nbdigitaltestenRaw as Lesson;
+    const nndigitaltesten: Lesson = nndigitaltestenRaw as Lesson;
+    const nbmuntligtesten: Lesson = nbmuntligtestenRaw as Lesson;
+    const nnmuntligtesten: Lesson = nnmuntligtestenRaw as Lesson;
+    const nbregnetesten: Lesson = nbregnetestenRaw as Lesson;
     // const nbregnesjekken: Consultation = nbregnesjekkenRaw as Consultation;
     // const nnregnesjekken: Consultation = nnregnesjekkenRaw as Consultation;
     // const nbsamltetesten: Consultation = nbsamltetestenRaw as Consultation;

@@ -4,7 +4,7 @@ import { QuestionInfo } from '@features/questions/interfaces/question-info.inter
 import { Option } from '@features/questions/interfaces/option.interface';
 import { Answer } from '@features/questions/interfaces/answer.interface';
 
-export interface QuestionMultipleDiffPoints extends QuestionBase<AnswerWithMultiplePoints> {
+export interface QuestionMultipleDiffPoints extends QuestionBase {
   text: string;
   answer: Answer<number[], number[]>;
   options: Option[];

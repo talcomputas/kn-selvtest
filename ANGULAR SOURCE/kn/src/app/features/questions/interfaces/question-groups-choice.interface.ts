@@ -7,5 +7,5 @@ export interface QuestionGroupsChoice extends QuestionBase {
   title?: string;
   text: string;
   options: Options;
-  answer: Answer<number[]>;
+  answer: Answer<number[], number>;
 }

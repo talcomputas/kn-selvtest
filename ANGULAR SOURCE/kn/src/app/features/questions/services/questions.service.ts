@@ -266,7 +266,7 @@ export class QuestionsService {
         }
         case QuestionType.GROUPS_CHOICE: {
           const { answer } = question as QuestionGroupsChoice;
-          score += this.groupChoicePoints(answer, selection);
+          score += 0; // this.groupChoicePoints(answer, selection);
         }
       }
     });
@@ -502,11 +502,25 @@ export class QuestionsService {
     return questions.reduce((acc, item) => ({ ...acc, ...{ [item.id]: item.answer.value } }), {});
   }
 
-  private getMaxScore(questions: QuestionsUnionType[]): number {
-    return questions.reduce(
-      (acc, item) => (acc += (item && item.answer && item.answer.points) || 0),
-      0,
-    );
+  public getMaxScore(questions: QuestionsUnionType[]): number {
+    const initialValue = 0;
+
+    const result = questions.reduce((acc: number, item) => {
+      if (item && item.answer && item.answer.points) {
+        if (Array.isArray(item.answer.points)) {
+          const maxValue = item.answer.points.reduce((prev: number, current: number) => {
+            return prev > current ? prev : current;
+          });
+          acc = acc + maxValue;
+        } else {
+          acc = acc + item.answer.points;
+        }
+      } else {
+        acc = acc + 0;
+      }
+      return acc;
+    }, initialValue);
+    return result;
   }
 
   private codePoints(answer: { points: number; value: number }, code: string): number {

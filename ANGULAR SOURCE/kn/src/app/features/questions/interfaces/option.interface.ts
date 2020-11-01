@@ -5,8 +5,3 @@ export interface Option {
   image?: string;
   video?: string;
 }
-
-export interface SliderOption extends Option {
-  floor: number;
-  ceil: number;
-}
