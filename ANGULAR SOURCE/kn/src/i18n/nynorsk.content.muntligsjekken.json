@@ -1,0 +1,966 @@
+{
+  "intro": {
+    "image": "data-check.svg",
+    "title": "Munnlegsjekken",
+    "label": "Vurder dugleiken din",
+    "text": "Med Munnlegsjekken vurderer du den munnlege dugleiken din og får ein peikepinn om kva du er god til og kva du kan bli betre på."
+  },
+  "result": {
+    "image": "data-check.svg",
+    "levels": {
+      "1": {
+        "id": "1",
+        "title": "Ut frå di eiga vurdering er du på nivå 1 av 3 i denne sjekken.",
+        "text": "Munnleg dugleik på nivå 1 inneber at ein kommuniserer enkelt i kjende samanhengar. Ein forstår hovudinnhaldet i beskjedar og instruksar og brukar enkle strategiar for å kommunisere.",
+        "minScore": 0
+      },
+      "2": {
+        "id": "2",
+        "title": "Ut frå di eiga vurdering er du på nivå 2 av 3 i denne sjekken.",
+        "text": "Munnleg dugleik på nivå 2 inneber at ein kommuniserer aktivt om tema som er av interesse, i kjende samanhengar. Ein kan ta seg av sine eigne interesser og behov i kvardagen og vidareutvikle den munnlege kommunikasjonen sin som det trengst.",
+        "minScore": 24
+      },
+      "3": {
+        "id": "3",
+        "title": "Ut frå di eiga vurdering er du på nivå 3 av 3 i denne sjekken.",
+        "text": "Munnleg dugleik på nivå 3 inneber at ein kommuniserer fleksibelt og effektivt både i kjende og ukjende samanhengar. Ein kan ta aktivt del i meiningsutvekslingar i offentlege og private samanhengar og ta ansvar i kommunikasjonen.",
+        "minScore": 48
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "questions": [
+        {
+          "id": 1,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ikkje alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du følgje ein enkel arbeidsinstruks som blir gjeven munnleg?"
+        },
+        {
+          "id": 2,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Litt"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Har du erfaring med å forklare når ein kollega ber om hjelp til å løyse ei arbeidsoppgåve?"
+        },
+        {
+          "id": 3,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Sjeldan"
+            },
+            {
+              "id": 2,
+              "text": "Det kjem an på temaet"
+            },
+            {
+              "id": 3,
+              "text": "Ja, som regel"
+            }
+          ],
+          "text": "Deltek du aktivt i pauseprat?"
+        },
+        {
+          "id": 4,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Sjeldan"
+            },
+            {
+              "id": 2,
+              "text": "Ikkje alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, som regel"
+            }
+          ],
+          "text": "Får du med deg hovudinnhaldet i eit møte?"
+        },
+        {
+          "id": 5,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, dersom eg kjenner personen godt"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Brukar du å be andre personar om å gjenta dersom du ikkje forstår?"
+        },
+        {
+          "id": 6,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Eg tykkjer ofte det er vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Ja, dersom eg kjenner temaet"
+            },
+            {
+              "id": 3,
+              "text": "Ja, alltid"
+            }
+          ],
+          "text": "Forstår du alltid hovudinnhaldet i ein reportasje på TV?"
+        },
+        {
+          "id": 7,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Sjeldan"
+            },
+            {
+              "id": 2,
+              "text": "Ikkje alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, som regel"
+            }
+          ],
+          "text": "Kan du vidareformidle relevant informasjon frå møte?"
+        },
+        {
+          "id": 8,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Sjeldan"
+            },
+            {
+              "id": 2,
+              "text": "Ikkje alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, som regel"
+            }
+          ],
+          "text": "Forstår du instruksjonar over telefon frå kundeservice?"
+        },
+        {
+          "id": 9,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ikkje alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Stiller du oppfølgingsspørsmål til seljarar dersom det trengst?"
+        },
+        {
+          "id": 10,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med folk eg kjenner"
+            },
+            {
+              "id": 3,
+              "text": "Ja, alltid"
+            }
+          ],
+          "text": "Kan du oppfatte meiningar, forventingar og haldningar som ikkje blir uttrykte direkte?"
+        },
+        {
+          "id": 11,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Det tykkjer eg er vanskeleg"
+            },
+            {
+              "id": 3,
+              "text": "Ja, som regel"
+            }
+          ],
+          "text": "Tek du imot kritiske kommentarar om din eigen arbeidsinnsats på ein profesjonell måte?"
+        },
+        {
+          "id": 12,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Ikkje alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "Kan du klage på ei vare i ein butikk på ein konstruktiv måte?"
+        },
+        {
+          "id": 13,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Ikkje alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "Kan du fremje dine eigne interesser på møte på jobben eller på fritida?"
+        },
+        {
+          "id": 14,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg på telefonen"
+            },
+            {
+              "id": 2,
+              "text": "Ikkje alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "Kan du gje ei kort skildring av hendingar knytte til arbeidet over telefon?"
+        },
+        {
+          "id": 15,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Ikkje alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "Kan du gjere ei avtale med ein handverkar om ein naudsynt reparasjon i bustaden din?"
+        },
+        {
+          "id": 16,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Ikkje alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "Brukar du å be om hjelp til å løyse oppgåver som du tykkjer er vanskelege på jobben?"
+        },
+        {
+          "id": 17,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Nokre gonger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "Kan du tilpasse din eigen språkbruk i samtalar med forskjellige folk i ulike situasjonar?"
+        },
+        {
+          "id": 18,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Inga erfaring"
+            },
+            {
+              "id": 2,
+              "text": "Berre positive"
+            },
+            {
+              "id": 3,
+              "text": "Ja, begge delar"
+            }
+          ],
+          "text": "Har du erfaring med å gje både positive og negative tilbakemeldingar til den næraste leiaren din?"
+        },
+        {
+          "id": 19,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Ikkje alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "Kan du halde ein kort tale framfor ei gruppe menneske?"
+        },
+        {
+          "id": 20,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Nokre gonger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "I ein samtale med leiaren din, kan du forklare kva du treng opplæring i?"
+        },
+        {
+          "id": 21,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Nokre gonger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "Kan du på ein konstruktiv måte grunngje kvifor du er usamd i ei avgjerd?"
+        },
+        {
+          "id": 22,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Nokre gonger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "Kan du snakke med folk på ein høfleg måte sjølv om du er usamd i synspunkta deira?"
+        },
+        {
+          "id": 23,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Nokre gonger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "Er du van med å diskutere for å finne kompromiss?"
+        },
+        {
+          "id": 24,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Nokre gonger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "Kan du beklage ein feil du har gjort?"
+        },
+        {
+          "id": 25,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Har du erfaring med å gje munnleg varsel om avvik eller brot på ein rutine?"
+        },
+        {
+          "id": 26,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Nokre gonger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "Kan du halde eit førebudd munnleg innlegg på eit møte?"
+        },
+        {
+          "id": 27,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Nokre gonger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "Kan du starte ein samtale om vÃªret/naboskap/forseinking?"
+        },
+        {
+          "id": 28,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Det kjem an på kven eg snakkar med"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "Kan du halde i gang ein samtale i ein daglegdags situasjon?"
+        },
+        {
+          "id": 29,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskeleg"
+            },
+            {
+              "id": 2,
+              "text": "Nokre gonger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanlegvis"
+            }
+          ],
+          "text": "Er du medviten om bruk av kroppsspråk i ein samtale?"
+        },
+        {
+          "id": 30,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, i kjende situasjonar"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Har du erfaring med å forklare dersom nokon ikkje skjønar det du seier?"
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "base"
+      }
+    }
+  ]
+}
