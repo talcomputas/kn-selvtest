@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '@core/components/home/home.component';
+import { QuestionsModule } from '@features/questions/questions.module';
+import { ChangeLessonGuard } from 'change-lesson.guard';
+import { LessonResolverService } from 'lesson-resolver.service';
 
 const routes: Routes = [
   {
@@ -9,29 +12,59 @@ const routes: Routes = [
   },
   {
     path: 'lesetesten',
-    loadChildren: () =>
-      import('./features/questions/questions.module').then((m) => m.QuestionsModule),
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
   },
   {
     path: 'digitaltesten',
-    loadChildren: () =>
-      import('./features/questions/questions.module').then((m) => m.QuestionsModule),
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
   },
   {
     path: 'muntligtesten',
-    loadChildren: () =>
-      import('./features/questions/questions.module').then((m) => m.QuestionsModule),
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
   },
   {
     path: 'regnetesten',
-    loadChildren: () =>
-      import('./features/questions/questions.module').then((m) => m.QuestionsModule),
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
   },
+  {
+    path: 'regnesjekken',
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
+  },
+  {
+    path: 'leseskrivesjekken',
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
+  },
+  {
+    path: 'muntligsjekken',
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
+  },
+  {
+    path: 'datassjekken',
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
+  },
+
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  providers: [LessonResolverService, ChangeLessonGuard],
 })
 export class AppRoutingModule {}
