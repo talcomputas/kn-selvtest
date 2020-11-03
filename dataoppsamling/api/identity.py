@@ -3,7 +3,7 @@ from azure.identity import ClientSecretCredential
 from azure.keyvault.secrets import SecretClient
 from cachetools import cached, TTLCache
 
-cache = TTLCache(maxSize=1, ttl=300)
+cache = TTLCache(maxsize = 60, ttl = 300)
 
 @cached(cache)
 def az_get_secret(secretName):

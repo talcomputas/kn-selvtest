@@ -33,14 +33,6 @@ def submitUser():
 
     return jsonify(id=token), 201
 
-@app.route("/api/performance", methods=["GET"])
-def performanceTest():
-    cursor, conn = connection()
-    res = cursor.execute("SELECT * from *")
-    cursor.close()
-
-    return jsonify(res)
-
 @app.route("/api/submititem", methods=["GET", "POST"])
 def submitItem():
 
