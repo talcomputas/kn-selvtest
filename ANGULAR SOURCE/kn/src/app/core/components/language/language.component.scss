@@ -1,16 +1,10 @@
-:host {
-  display: flex;
-
-  .link {
-    margin-left: 10px;
-    cursor: pointer;
-
-    &:first-child {
-      margin-left: 0;
+.mat-radio-group {
+  .mat-radio-button {
+    &:last-child {
+      margin-left: 0.4rem;
     }
-
-    &.radio-checked {
-      text-decoration: underline;
+    &:first-child {
+      margin-left: 0.4rem;
     }
   }
 }

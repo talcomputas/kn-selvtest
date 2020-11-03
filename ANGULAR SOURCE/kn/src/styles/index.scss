@@ -4,9 +4,9 @@
 // Plus imports for other components in your app.
 
 $custom-typography: mat-typography-config(
-  $font-family: 'Roboto, monospace',
-  $headline: mat-typography-level(32px, 48px, 700),
-  $body-1: mat-typography-level(16px, 24px, 500),
+  $font-family: 'Sansita Swashed, monospace',
+  /*$headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500),*/
 );
 @include angular-material-typography($custom-typography);
 // Include the common styles for Angular Material. We include this here so that you only
@@ -40,8 +40,10 @@ $self-check-theme: mat-light-theme(
 // that you are using.
 @include angular-material-theme($self-check-theme);
 
+@import 'kn-style';
+
 /* You can add global styles to this file, and also import other style files */
-/*@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext');
 @import '~@angular/cdk/a11y';
 @import '~normalize-scss/sass/_normalize.scss';
 
@@ -50,7 +52,7 @@ $self-check-theme: mat-light-theme(
 @import 'variables';
 @import 'mixins';
 @import 'layout';
-@import 'reset';*/
+@import 'reset';
 
 html,
 body {
@@ -58,7 +60,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
 }
 
 // Temporary styling of Material. Remove all below when going full Material, ond not just maintaining old css

@@ -1,6 +1,9 @@
-<div app-radio-group [value]="content.getCtx()">
-  <span app-radio-button *ngFor="let ctx of content.getCtxList()"
-        class="link"
-        [value]="ctx"
-        (change)="select(ctx)">{{'language.' + ctx | content}}</span>
-</div>
+<mat-radio-group aria-label="Select an option" class="groups-choice language-radio-group">
+  <mat-radio-button
+    [checked]="ctx == content.getCtx()"
+    *ngFor="let ctx of content.getCtxList()"
+    [value]="ctx"
+    (change)="select(ctx)"
+    >{{ 'language.' + ctx | content }}</mat-radio-button
+  >
+</mat-radio-group>

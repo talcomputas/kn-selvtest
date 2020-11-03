@@ -16,8 +16,12 @@ import nnSystem from '@i18n/nynorsk.system.json';
 import { ButtonModule } from '../uikit/button/button.module';
 import { SharedModule } from '@shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
-import { MaterialModule } from 'material.module';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatRadioModule } from '@angular/material/radio';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -36,7 +40,12 @@ import { MaterialModule } from 'material.module';
     ContentModule.forRoot(),
     SharedModule.forRoot(),
     ButtonModule,
-    MaterialModule,
+    MatToolbarModule,
+    MatListModule,
+    MatCardModule,
+    MatButtonModule,
+    MatRadioModule,
+    LayoutModule,
   ],
   exports: [LayoutComponent],
 })
