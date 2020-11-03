@@ -1,0 +1,1084 @@
+{
+  "intro": {
+    "image": "data-check.svg",
+    "title": "Numeracy check",
+    "label": "Assess your skills",
+    "text": "This numeracy check helps you to assess your numeracy skills. You will get an indication on what you are capable of and what you can improve. "
+  },
+  "result": {
+    "image": "data-check.svg",
+    "levels": {
+      "1": {
+        "id": "1",
+        "title": "You have assessed yourself on level 1 out of 3 levels in this check.",
+        "text": "Numeracy skills on level 1 mean that you are able to use simple calculation in known situations and understand straightforward information with numbers.",
+        "minScore": 0
+      },
+      "2": {
+        "id": "2",
+        "title": "You have assessed yourself on level 2 out of 3 in this check.",
+        "text": "Numeracy on level 2 mean that you are able to calculate in different situations, modify mathematical information and relate consciously to different mathematical operations.",
+        "minScore": 12
+      },
+      "3": {
+        "id": "3",
+        "title": "You have assessed yourself on level 3 out of 3 in this check.",
+        "text": "Numeracy skills on level 3 mean that you are able to understand and act on mathematical information embedded in various contexts and use your skills when required in daily life.",
+        "minScore": 24
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "questions": [
+        {
+          "id": 1,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Do you understand price stickers on products in the grocery store?"
+        },
+        {
+          "id": 2,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you find and compare the price per kilo of different products?"
+        },
+        {
+          "id": 3,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you check a payslip and find out how much you have been paid?"
+        },
+        {
+          "id": 4,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you find out how much of each ingredient you should use in a recipe?"
+        },
+        {
+          "id": 5,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you use weight and fluid measures when preparing food?"
+        },
+        {
+          "id": 6,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you measure lengths with a tape measure, yardstick or ruler?"
+        },
+        {
+          "id": 7,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Not sure"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Do you know what it means to double something or halve something?"
+        },
+        {
+          "id": 8,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you check a grocery receipt?"
+        },
+        {
+          "id": 9,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you write a doctorâ€™s appointment on a calendar, with the right date and time?"
+        },
+        {
+          "id": 10,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read a simple table, e.g. a bus timetable?"
+        },
+        {
+          "id": 11,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Not sure"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you extract simple information from a chart, e.g. the long-term forecast from a weather forecast?"
+        },
+        {
+          "id": 12,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you estimate how much you should pay for a small shopping basket of produce?"
+        },
+        {
+          "id": 13,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you compare prices in order to find the cheapest product?"
+        },
+        {
+          "id": 14,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Not sure"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Do you know how VAT affects the price of a product?"
+        },
+        {
+          "id": 15,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you convert from decilitres to litres?"
+        },
+        {
+          "id": 16,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you calculate travelling time on the basis of distance and speed?"
+        },
+        {
+          "id": 17,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you check a phone bill and evaluate your consumption?"
+        },
+        {
+          "id": 18,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you adapt a recipe to make more portions than the recipe specifies?"
+        },
+        {
+          "id": 19,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you calculate how many calories (kcal) there are in a product, based on the information on the packet?"
+        },
+        {
+          "id": 20,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you calculate the price of a sweater which has been reduced by 20%?"
+        },
+        {
+          "id": 21,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read and understand different types of graphs and charts?"
+        },
+        {
+          "id": 22,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read and understand a payment plan?"
+        },
+        {
+          "id": 23,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you calculate the average age of a group?"
+        },
+        {
+          "id": 24,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you prepare a monthly budget with an overview of income and expenditure?"
+        },
+        {
+          "id": 25,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "A floor measures 3 metres by 4 metres. Can you work out how many square metres the floor is?"
+        },
+        {
+          "id": 26,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Do you know what bulk discount means?"
+        },
+        {
+          "id": 27,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Not sure"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Do you understand payment schemes for products?"
+        },
+        {
+          "id": 28,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you compare the nutritional content of different foods?"
+        },
+        {
+          "id": 29,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Not sure"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you work out how much it would cost you if you did not pay a bill on time?"
+        },
+        {
+          "id": 30,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Not sure"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Are you aware of the benefits and disadvantages of using a credit card?"
+        },
+        {
+          "id": 31,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Not sure"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Do you know the difference between fixed and variable interest?"
+        },
+        {
+          "id": 32,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you compile an overview of the annual consumption of a household, e.g. for food and clothing, and distribute the expenses evenly over the months in a budget?"
+        },
+        {
+          "id": 33,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you work out how much you need to save each month if you are planning to go on a long holiday?"
+        },
+        {
+          "id": 34,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you check your tax return?"
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "base"
+      }
+    }
+  ]
+}

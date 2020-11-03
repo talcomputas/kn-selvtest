@@ -1,0 +1,1079 @@
+{
+  "intro": {
+    "image": "data-check.svg",
+    "title": "Datasjekken",
+    "label": "Vurder dine ferdigheter",
+    "text": "Med datasjekken vurderer du dine egne dataerfaringer, og får en pekepinn på hva du er god til og hva du kan bli bedre på."
+  },
+  "result": {
+    "image": "data-check.svg",
+    "levels": {
+      "1": {
+        "id": "1",
+        "title": "Du har vurdert deg selv til nivå 1 av 3 i denne sjekken.",
+        "text": "Digitale ferdigheter på nivå 1 innebærer å bruke enkle digitale verktøy og å kunne forholde seg til digital informasjon når det er nødvendig.",
+        "minScore": 0
+      },
+      "2": {
+        "id": "2",
+        "title": "Du har vurdert deg selv til nivå 2 av 3 i denne sjekken.",
+        "text": "Digitale ferdigheter på nivå 2 innebærer å forholde seg aktivt til digital informasjon og å  bruke informasjonen i nye sammenhenger og situasjoner. Digitale verktøy og tjenester er kjent og blir benyttet.",
+        "minScore": 28
+      },
+      "3": {
+        "id": "3",
+        "title": "Du har vurdert deg selv til nivå 3 av 3 i denne sjekken.",
+        "text": "Digitale ferdigheter på nivå 3 innebærer å være en reflektert bruker av sammensatte digitale verktøy og tjenester. Fordi utviklingen innen digitale ferdigheter går fort, er det allikevel slik at vi må regne med å lære nye verktøy og tjenester.",
+        "minScore": 56
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "questions": [
+        {
+          "id": 1,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ingen erfaring"
+            },
+            {
+              "id": 2,
+              "text": "Litt erfaring"
+            },
+            {
+              "id": 3,
+              "text": "Mye erfaring"
+            }
+          ],
+          "text": "Hvor mye erfaring har du med å bruke e-post?"
+        },
+        {
+          "id": 2,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Har ikke brukt det"
+            },
+            {
+              "id": 2,
+              "text": "Har brukt det litt"
+            },
+            {
+              "id": 3,
+              "text": "Har brukt det mye"
+            }
+          ],
+          "text": "Hvor mye erfaring har du med tekstbehandling (f.eks. Word)?"
+        },
+        {
+          "id": 3,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Usikker"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Vil du klare å bytte fastlege på nett?"
+        },
+        {
+          "id": 4,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Har ingen erfaring med dette"
+            },
+            {
+              "id": 2,
+              "text": "Trenger hjelp til å installere apper"
+            },
+            {
+              "id": 3,
+              "text": "Installerer apper etter behov"
+            }
+          ],
+          "text": "Installerer du apper på smarttelefon eller nettbrett?"
+        },
+        {
+          "id": 5,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Har aldri brukt digitale kart"
+            },
+            {
+              "id": 2,
+              "text": "Bruker enkel navigasjon"
+            },
+            {
+              "id": 3,
+              "text": "Bruker ved behov, og kan mange funksjoner"
+            }
+          ],
+          "text": "Bruker du digitale karttjenester (f.eks. Google Maps og GPS)?"
+        },
+        {
+          "id": 6,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Bruker du nettbank/mobilbank?"
+        },
+        {
+          "id": 7,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Bruker ikke skylagring"
+            },
+            {
+              "id": 2,
+              "text": "Ja, bruker lagring"
+            },
+            {
+              "id": 3,
+              "text": "Ja, bruker lagring og deling"
+            }
+          ],
+          "text": "Bruker du skylagring (f.eks. iCloud, Dropbox eller OneDrive)?"
+        },
+        {
+          "id": 8,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Bruker ikke e-post"
+            },
+            {
+              "id": 2,
+              "text": "Nei, har ikke noe system"
+            },
+            {
+              "id": 3,
+              "text": "Ja, bruker mapper/regler/søkefunksjon"
+            }
+          ],
+          "text": "Organiserer du e-post?"
+        },
+        {
+          "id": 9,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, aldri"
+            },
+            {
+              "id": 2,
+              "text": "Noen ganger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, alltid"
+            }
+          ],
+          "text": "Ville du ha spurt om lov før du legger ut bilder av andre på sosiale medier?"
+        },
+        {
+          "id": 10,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Bruker ikke sosiale medier"
+            },
+            {
+              "id": 2,
+              "text": "Kjenner til enkel bruk"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Har du et bevisst forhold til profil- og sikkerhetsinnstillinger på sosiale medier (f.eks. Facebook, Snapchat eller LinkedIn)?"
+        },
+        {
+          "id": 11,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Sikrer du smarttelefonen din med f.eks. pinkode eller fingeravtrykk?"
+        },
+        {
+          "id": 12,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, ingen erfaring"
+            },
+            {
+              "id": 2,
+              "text": "Ja, litt erfaring"
+            },
+            {
+              "id": 3,
+              "text": "Ja, mye erfaring"
+            }
+          ],
+          "text": "Har du erfaring med å kjøpe varer eller billetter på nett?"
+        },
+        {
+          "id": 13,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Bruker du sikker innlogging på nettbaserte tjenester der det finnes (f.eks. to-trinnsbekreftelse eller Bank-ID)?"
+        },
+        {
+          "id": 14,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Aldri"
+            },
+            {
+              "id": 2,
+              "text": "Av og til"
+            },
+            {
+              "id": 3,
+              "text": "Regelmessig"
+            }
+          ],
+          "text": "Hvor ofte bruker du nettet for å finne informasjon?"
+        },
+        {
+          "id": 15,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, aldri"
+            },
+            {
+              "id": 2,
+              "text": "Noen ganger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, alltid"
+            }
+          ],
+          "text": "Vurderer du om informasjon du finner på nett er troverdig, ensidig eller utdatert?"
+        },
+        {
+          "id": 16,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ja"
+            },
+            {
+              "id": 2,
+              "text": "Har ikke tenkt over"
+            },
+            {
+              "id": 3,
+              "text": "Nei"
+            }
+          ],
+          "text": "Har du skrevet noe nedsettende om en person på nett (f.eks. i sosiale medier eller kommentarfelt?)"
+        },
+        {
+          "id": 17,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Har ikke brukt det"
+            },
+            {
+              "id": 2,
+              "text": "Har brukt det litt"
+            },
+            {
+              "id": 3,
+              "text": "Har brukt det mye"
+            }
+          ],
+          "text": "Hvor mye erfaring har du med å bruke presentasjonsverktøy (f.eks. PowerPoint)?"
+        },
+        {
+          "id": 18,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Har ikke brukt det"
+            },
+            {
+              "id": 2,
+              "text": "Har brukt det litt"
+            },
+            {
+              "id": 3,
+              "text": "Har brukt det mye"
+            }
+          ],
+          "text": "Hvor mye erfaring har du med å bruke regneark (f.eks. Excel)?"
+        },
+        {
+          "id": 19,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Har ingen erfaring med dette"
+            },
+            {
+              "id": 2,
+              "text": "Kan sende via MMS"
+            },
+            {
+              "id": 3,
+              "text": "Bruker flere ulike apper"
+            }
+          ],
+          "text": "Hvilken erfaring har du med å dele bilder med andre ved hjelp av mobiltelefon?"
+        },
+        {
+          "id": 20,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du koble til trådløse enheter eller nettverk gjennom f.eks. WiFi, Bluetooth eller Smart TV? "
+        },
+        {
+          "id": 21,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ingen erfaring"
+            },
+            {
+              "id": 2,
+              "text": "Litt erfaring"
+            },
+            {
+              "id": 3,
+              "text": "Mye erfaring"
+            }
+          ],
+          "text": "Hvilken erfaring har du med bruk av digital kalender for å organisere avtaler og møter?"
+        },
+        {
+          "id": 22,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Aldri"
+            },
+            {
+              "id": 2,
+              "text": "Av og til"
+            },
+            {
+              "id": 3,
+              "text": "Alltid"
+            }
+          ],
+          "text": "Navngir eller organiserer du filer og dokumenter slik at de er enkle å finne igjen?"
+        },
+        {
+          "id": 23,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, men må ha hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Bruker du offentlige tjenester på nett (f.eks. Altinn eller Nav)?"
+        },
+        {
+          "id": 24,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ingen erfaring"
+            },
+            {
+              "id": 2,
+              "text": "Litt erfaring"
+            },
+            {
+              "id": 3,
+              "text": "Mye erfaring"
+            }
+          ],
+          "text": "Hvilken erfaring har du med strømmetjenester for å se på tv eller høre på musikk (f.eks. Netflix eller Spotify)?"
+        },
+        {
+          "id": 25,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, jeg synes det er vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Ja, men det kan ta lang tid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, jeg finner lett informasjon"
+            }
+          ],
+          "text": "Klarer du å orientere deg og finne informasjonen du trenger på nett?"
+        },
+        {
+          "id": 26,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ingen erfaring"
+            },
+            {
+              "id": 2,
+              "text": "Litt erfaring"
+            },
+            {
+              "id": 3,
+              "text": "Mye erfaring"
+            }
+          ],
+          "text": "Hvilken erfaring har du med å installere og avinstallere programmer på datamaskin?"
+        },
+        {
+          "id": 27,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du sjekke hvor mye mobildata du bruker?"
+        },
+        {
+          "id": 28,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Usikker"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du gjenopprette data fra en sikkerhetskopi på datamaskin eller smarttelefon?"
+        },
+        {
+          "id": 29,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Er du kritisk til å åpne en lenke som du få tilsendt i en epost fra ukjent avsender?"
+        },
+        {
+          "id": 30,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Endrer ikke innstillinger"
+            },
+            {
+              "id": 2,
+              "text": "Gjør enkle endringer"
+            },
+            {
+              "id": 3,
+              "text": "Tilpasser aktivt"
+            }
+          ],
+          "text": "Endrer du innstillinger på mobil og/eller datamaskin (f.eks. språk, lyd og skjerm)?"
+        },
+        {
+          "id": 31,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Ville du kunne lagt ut en annonse på nett ved hjelp av app eller nettjeneste?"
+        },
+        {
+          "id": 32,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Bruker du digitale betalingsløsninger på smarttelefon (f. eks. Vipps eller PayPal)?"
+        },
+        {
+          "id": 33,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Aldri"
+            },
+            {
+              "id": 2,
+              "text": "Av og til"
+            },
+            {
+              "id": 3,
+              "text": "Alltid"
+            }
+          ],
+          "text": "Forholder du deg til regler for opphavsrett når du tar i bruk innhold (f.eks. tekst, video eller bilder) som du finner på nett?"
+        },
+        {
+          "id": 34,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Har ingen erfaring"
+            },
+            {
+              "id": 2,
+              "text": "Kun innlegg med tekst"
+            },
+            {
+              "id": 3,
+              "text": "Innlegg med tekst og bilder"
+            }
+          ],
+          "text": "Hvilken erfaring har du med å skrive innlegg på nett (f.eks. Facebook eller kommentarfelt)? "
+        },
+        {
+          "id": 35,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, tenker ikke over det"
+            },
+            {
+              "id": 2,
+              "text": "Ja, vurderer noe"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vurderer nøye"
+            }
+          ],
+          "text": "Er du bevisst på risikoen for nettsvindel?"
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "base"
+      }
+    }
+  ]
+}

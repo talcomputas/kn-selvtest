@@ -1,0 +1,1079 @@
+{
+  "intro": {
+    "image": "data-check.svg",
+    "title": "Computer skills check",
+    "label": "Assess your skills",
+    "text": "This computer skills check helps you to assess your computer skills. You will get an indication on what you are capable of and what you can improve. "
+  },
+  "result": {
+    "image": "data-check.svg",
+    "levels": {
+      "1": {
+        "id": "1",
+        "title": "You have assessed yourself on level 1 out of 3 levels in this check.",
+        "text": "Digital skills on level 1 mean that you can relate to digital information whenever this is necessary and use simple digital tools.",
+        "minScore": 0
+      },
+      "2": {
+        "id": "2",
+        "title": "You have assessed yourself on level 2 out of 3 in this check.",
+        "text": "Digital skills on level 2 mean that you can relate actively to digital information and can use information in new contexts and situations. You know several digital tools and services and use them.",
+        "minScore": 28
+      },
+      "3": {
+        "id": "3",
+        "title": "You have assessed yourself on level 3 out of 3 in this check.",
+        "text": "Digital skills on level 3 mean that you are a reflected user of more complex digital tools and services. The development within digital skills is fast and it is wise to keep yourself updated.",
+        "minScore": 56
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "questions": [
+        {
+          "id": 1,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No experience"
+            },
+            {
+              "id": 2,
+              "text": "A little experience"
+            },
+            {
+              "id": 3,
+              "text": "A lot of experience"
+            }
+          ],
+          "text": "How much experience do you have of using e-mail?"
+        },
+        {
+          "id": 2,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "I have never used them"
+            },
+            {
+              "id": 2,
+              "text": "I have used them a little"
+            },
+            {
+              "id": 3,
+              "text": "I have used them a lot"
+            }
+          ],
+          "text": "How much experience do you have of word-processing programs (e.g. Word)?"
+        },
+        {
+          "id": 3,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Not sure"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Could you manage to change your GP online?"
+        },
+        {
+          "id": 4,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "I have no experience with this"
+            },
+            {
+              "id": 2,
+              "text": "I need help to install apps"
+            },
+            {
+              "id": 3,
+              "text": "I install apps whenever I need them"
+            }
+          ],
+          "text": "Do you install apps on your smartphone or tablet?"
+        },
+        {
+          "id": 5,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "I have never used digital maps"
+            },
+            {
+              "id": 2,
+              "text": "I use simple navigation features"
+            },
+            {
+              "id": 3,
+              "text": "I use whatever I need to and am comfortable with numerous functions"
+            }
+          ],
+          "text": "Do you use digital map services (e.g. Google Maps and GPS)?"
+        },
+        {
+          "id": 6,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Do you use online banking/mobile banking?"
+        },
+        {
+          "id": 7,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "I do not use cloud storage"
+            },
+            {
+              "id": 2,
+              "text": "Yes, I use it for storage"
+            },
+            {
+              "id": 3,
+              "text": "Yes, I use it for storage and sharing"
+            }
+          ],
+          "text": "Do you use cloud storage (e.g. iCloud, Dropbox or OneDrive)?"
+        },
+        {
+          "id": 8,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "I do not use e-mail"
+            },
+            {
+              "id": 2,
+              "text": "No, I have no system"
+            },
+            {
+              "id": 3,
+              "text": "Yes, I use folders/rules/search functions"
+            }
+          ],
+          "text": "Do you organise your e-mail?"
+        },
+        {
+          "id": 9,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No, never"
+            },
+            {
+              "id": 2,
+              "text": "Sometimes"
+            },
+            {
+              "id": 3,
+              "text": "Yes, always"
+            }
+          ],
+          "text": "Would you ask permission before you post photos of other people on social media?"
+        },
+        {
+          "id": 10,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "I do not use social media"
+            },
+            {
+              "id": 2,
+              "text": "I know some basic settings"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Do you have a proactive approach to your profile and security settings on social media (e.g. Facebook, Snapchat or LinkedIn)?"
+        },
+        {
+          "id": 11,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Do you protect your smartphone with a setting like a PIN code or fingerprint?"
+        },
+        {
+          "id": 12,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No, no experience"
+            },
+            {
+              "id": 2,
+              "text": "Yes, a little experience"
+            },
+            {
+              "id": 3,
+              "text": "Yes, a lot of experience"
+            }
+          ],
+          "text": "Do you have any experience of buying products or tickets online?"
+        },
+        {
+          "id": 13,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Do you use secure login features on online services where these are available (e.g. two-step confirmation or BankID)?"
+        },
+        {
+          "id": 14,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Never"
+            },
+            {
+              "id": 2,
+              "text": "Occasionally"
+            },
+            {
+              "id": 3,
+              "text": "Regularly"
+            }
+          ],
+          "text": "How often do you use the Internet to find information?"
+        },
+        {
+          "id": 15,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No, never"
+            },
+            {
+              "id": 2,
+              "text": "Sometimes"
+            },
+            {
+              "id": 3,
+              "text": "Yes, always"
+            }
+          ],
+          "text": "Do you think about whether the information you find online is trustworthy, biased or outdated?"
+        },
+        {
+          "id": 16,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Yes"
+            },
+            {
+              "id": 2,
+              "text": "I havenâ€™t thought about it"
+            },
+            {
+              "id": 3,
+              "text": "No"
+            }
+          ],
+          "text": "Have you written anything derogatory about a person online (e.g. on social media or in a comment)?"
+        },
+        {
+          "id": 17,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "I have never used them"
+            },
+            {
+              "id": 2,
+              "text": "I have used them a little"
+            },
+            {
+              "id": 3,
+              "text": "I have used them a lot"
+            }
+          ],
+          "text": "How much experience do you have of using presentation tools (e.g. PowerPoint)?"
+        },
+        {
+          "id": 18,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "I have never used them"
+            },
+            {
+              "id": 2,
+              "text": "I have used them a little"
+            },
+            {
+              "id": 3,
+              "text": "I have used them a lot"
+            }
+          ],
+          "text": "How much experience do you have of using spreadsheets (e.g. Excel)?"
+        },
+        {
+          "id": 19,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "I have no experience with this"
+            },
+            {
+              "id": 2,
+              "text": "Can send them via MMS"
+            },
+            {
+              "id": 3,
+              "text": "I use a variety of apps"
+            }
+          ],
+          "text": "What experience do you have of sharing photos with other people using a mobile phone?"
+        },
+        {
+          "id": 20,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you connect to wireless devices or networks using e.g. WiFi, Bluetooth or Smart TV?"
+        },
+        {
+          "id": 21,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No experience"
+            },
+            {
+              "id": 2,
+              "text": "A little experience"
+            },
+            {
+              "id": 3,
+              "text": "A lot of experience"
+            }
+          ],
+          "text": "What experience do you have of using digital calendars to organise appointments and meetings?"
+        },
+        {
+          "id": 22,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Never"
+            },
+            {
+              "id": 2,
+              "text": "Occasionally"
+            },
+            {
+              "id": 3,
+              "text": "Always"
+            }
+          ],
+          "text": "Do you name or organise files and documents so that they are easy to find again?"
+        },
+        {
+          "id": 23,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, but I need help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Do you use government services online (e.g. Altinn or NAV)?"
+        },
+        {
+          "id": 24,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No experience"
+            },
+            {
+              "id": 2,
+              "text": "A little experience"
+            },
+            {
+              "id": 3,
+              "text": "A lot of experience"
+            }
+          ],
+          "text": "What experience do you have of streaming services for watching TV or listening to music (e.g. Netflix or Spotify)?"
+        },
+        {
+          "id": 25,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No, I think it is difficult"
+            },
+            {
+              "id": 2,
+              "text": "Yes, but it can take a long time"
+            },
+            {
+              "id": 3,
+              "text": "Yes, I can find information easily"
+            }
+          ],
+          "text": "Can you navigate online and find the information you need?"
+        },
+        {
+          "id": 26,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No experience"
+            },
+            {
+              "id": 2,
+              "text": "A little experience"
+            },
+            {
+              "id": 3,
+              "text": "A lot of experience"
+            }
+          ],
+          "text": "What experience do you have of installing and uninstalling programs on a computer?"
+        },
+        {
+          "id": 27,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you check how much mobile data you are using?"
+        },
+        {
+          "id": 28,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Not sure"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you restore data from a backup copy on a computer or smart phone?"
+        },
+        {
+          "id": 29,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Are you cautious about opening links which you are sent in emails from unknown senders?"
+        },
+        {
+          "id": 30,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "I do not change settings"
+            },
+            {
+              "id": 2,
+              "text": "I make some simple changes"
+            },
+            {
+              "id": 3,
+              "text": "I customise settings actively"
+            }
+          ],
+          "text": "Do you change the settings on your mobile phone and/or computer (e.g. language, sound and display)?"
+        },
+        {
+          "id": 31,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Would you be able to post an advert online using an app or online service?"
+        },
+        {
+          "id": 32,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Do you use digital payment systems on a smart phone (e.g. Vipps or PayPal)?"
+        },
+        {
+          "id": 33,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Never"
+            },
+            {
+              "id": 2,
+              "text": "Occasionally"
+            },
+            {
+              "id": 3,
+              "text": "Always"
+            }
+          ],
+          "text": "Do you generally abide by copyright rules when you use content (e.g. text, video or images) that you find online?"
+        },
+        {
+          "id": 34,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "I have no experience"
+            },
+            {
+              "id": 2,
+              "text": "I only post text"
+            },
+            {
+              "id": 3,
+              "text": "I post text and images"
+            }
+          ],
+          "text": "What experience do you have of writing posts online (e.g. Facebook or comments?"
+        },
+        {
+          "id": 35,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No, I never think about it"
+            },
+            {
+              "id": 2,
+              "text": "Yes, I think about it a little"
+            },
+            {
+              "id": 3,
+              "text": "Yes, I am very conscious about it"
+            }
+          ],
+          "text": "Are you aware of the risk of Internet fraud?"
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "base"
+      }
+    }
+  ]
+}
