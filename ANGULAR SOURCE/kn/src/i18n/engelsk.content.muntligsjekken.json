@@ -1,0 +1,966 @@
+{
+  "intro": {
+    "image": "data-check.svg",
+    "title": "Computer skills check",
+    "label": "Assess your skills",
+    "text": "This computer skills check helps you to assess your computer skills. You will get an indication on what you are capable of and what you can improve. "
+  },
+  "result": {
+    "image": "data-check.svg",
+    "levels": {
+      "1": {
+        "id": "1",
+        "title": "You have assessed yourself on level 1 out of 3 levels in this check.",
+        "text": "Digital skills on level 1 mean that you can relate to digital information whenever this is necessary and use simple digital tools.",
+        "minScore": 0
+      },
+      "2": {
+        "id": "2",
+        "title": "You have assessed yourself on level 2 out of 3 in this check.",
+        "text": "Digital skills on level 2 mean that you can relate actively to digital information and can use information in new contexts and situations. You know several digital tools and services and use them.",
+        "minScore": 24
+      },
+      "3": {
+        "id": "3",
+        "title": "You have assessed yourself on level 3 out of 3 in this check.",
+        "text": "Digital skills on level 3 mean that you are a reflected user of more complex digital tools and services. The development within digital skills is fast and it is wise to keep yourself updated.",
+        "minScore": 48
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "questions": [
+        {
+          "id": 1,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ikke alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du fÃ¸lge en enkel arbeidsinstruksjon gitt muntlig?"
+        },
+        {
+          "id": 2,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Litt"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Har du erfaring med Ã¥ forklare nÃ¥r en kollega ber om hjelp til Ã¥ lÃ¸se en arbeidsoppgave?"
+        },
+        {
+          "id": 3,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Sjelden"
+            },
+            {
+              "id": 2,
+              "text": "Kommer an pÃ¥ tema"
+            },
+            {
+              "id": 3,
+              "text": "Ja, som regel"
+            }
+          ],
+          "text": "Deltar du aktivt i pauseprat?"
+        },
+        {
+          "id": 4,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Sjelden"
+            },
+            {
+              "id": 2,
+              "text": "Ikke alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, som regel"
+            }
+          ],
+          "text": "FÃ¥r du med deg hovedinnholdet i et mÃ¸te?"
+        },
+        {
+          "id": 5,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, hvis jeg kjenner personen godt"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Pleier du Ã¥ be andre personer gjenta hvis du ikke forstÃ¥r?"
+        },
+        {
+          "id": 6,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ofte synes jeg at det er vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Ja, hvis jeg kjenner temaet"
+            },
+            {
+              "id": 3,
+              "text": "Ja, alltid"
+            }
+          ],
+          "text": "ForstÃ¥r du alltid hovedinnholdet i en reportasje pÃ¥ tv?"
+        },
+        {
+          "id": 7,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Sjelden"
+            },
+            {
+              "id": 2,
+              "text": "Ikke alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, som regel"
+            }
+          ],
+          "text": "Kan du videreformidle relevant informasjon fra mÃ¸ter?"
+        },
+        {
+          "id": 8,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Sjelden"
+            },
+            {
+              "id": 2,
+              "text": "Ikke alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, som regel"
+            }
+          ],
+          "text": "ForstÃ¥ du instruksjoner over telefon fra kundeservice?"
+        },
+        {
+          "id": 9,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ikke alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Stiller du oppfÃ¸lgingsspÃ¸rsmÃ¥l til en selger ved behov?"
+        },
+        {
+          "id": 10,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med folk jeg kjenner"
+            },
+            {
+              "id": 3,
+              "text": "Ja, bestandig"
+            }
+          ],
+          "text": "Kan du oppfatte meninger, forventninger og holdninger som er ikke uttrykt direkte?"
+        },
+        {
+          "id": 11,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Det synes jeg er vanskelig"
+            },
+            {
+              "id": 3,
+              "text": "Ja, som regel"
+            }
+          ],
+          "text": " Tar du imot kritiske kommentarer til egen arbeidsinnsats pÃ¥ en profesjonell mÃ¥te?"
+        },
+        {
+          "id": 12,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Ikke alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Kan du klage pÃ¥ en vare i en butikk pÃ¥ en konstruktiv mÃ¥te?"
+        },
+        {
+          "id": 13,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Ikke alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Kan du fremme egne interesser pÃ¥ mÃ¸ter pÃ¥ jobb eller pÃ¥ fritid."
+        },
+        {
+          "id": 14,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, der er for vansklig pÃ¥ telefon"
+            },
+            {
+              "id": 2,
+              "text": "Ikke alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Kan du gi en kort beskrivelse av hendelser knyttet til arbeidet over telefon?"
+        },
+        {
+          "id": 15,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, der er for vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Ikke alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Kan du gjÃ¸re en avtale med en hÃ¥ndverker om en nÃ¸dvendig reparasjon i boligen?"
+        },
+        {
+          "id": 16,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Ikke alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Pleier du Ã¥ be om hjelp til Ã¥ lÃ¸se en oppgave som du synes er vanskelig pÃ¥ jobben?"
+        },
+        {
+          "id": 17,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Noen ganger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Kan du tilpasse egen sprÃ¥kbruk i samtaler med forskjellige folk i ulike situasjoner?"
+        },
+        {
+          "id": 18,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Ingen erfaring"
+            },
+            {
+              "id": 2,
+              "text": "Kun positive"
+            },
+            {
+              "id": 3,
+              "text": "Ja, begge deler"
+            }
+          ],
+          "text": "Har du erfaring med Ã¥ gi bÃ¥de positive og negative tilbakemeldinger til nÃ¦rmeste leder?"
+        },
+        {
+          "id": 19,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Ikke alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Kan du holde en kort tale foran en gruppe mennesker?"
+        },
+        {
+          "id": 20,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Noen ganger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Kan du forklare hva du trenger opplÃ¦ring i, i samtale med lederen din?"
+        },
+        {
+          "id": 21,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Noen ganger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Kan du pÃ¥ en konstruktiv mÃ¥te begrunne hvorfor du er uenig i en avgjÃ¸relse?"
+        },
+        {
+          "id": 22,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Noen ganger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Kan du snakke med folk pÃ¥ en hÃ¸flig mÃ¥te selv om du er uenig i deres synspunkter?"
+        },
+        {
+          "id": 23,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Noen ganger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Er du vant til Ã¥ diskutere for Ã¥ finne kompromisser?"
+        },
+        {
+          "id": 24,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Noen ganger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Kan du beklage en feil du har gjort?"
+        },
+        {
+          "id": 25,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Har du erfaring med Ã¥ varsle muntlig om brudd pÃ¥ en rutine eller avvik?"
+        },
+        {
+          "id": 26,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Noen ganger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Kan du holde et forberedt muntlig innlegg pÃ¥ et mÃ¸te?"
+        },
+        {
+          "id": 27,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Noen ganger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Kan du starte en samtale om vÃ¦ret/naboskap/forsinkelse?"
+        },
+        {
+          "id": 28,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Det avhenger av hvem jeg snakker med"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Kan du opprettholde en samtale i en dagligdags situasjon?"
+        },
+        {
+          "id": 29,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei, det er for vanskelig"
+            },
+            {
+              "id": 2,
+              "text": "Noen ganger"
+            },
+            {
+              "id": 3,
+              "text": "Ja, vanligvis"
+            }
+          ],
+          "text": "Er du bevisst pÃ¥ bruk av kroppssprÃ¥k i en samtale?"
+        },
+        {
+          "id": 30,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, i kjente situasjoner"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Har du erfaring med Ã¥ forklare hvis noen ikke skjÃ¸nner det du sier?"
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "base"
+      }
+    }
+  ]
+}

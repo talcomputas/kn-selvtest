@@ -38,6 +38,7 @@ import { QuestionGroupsChoiceComponent } from '@features/questions/components/qu
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
+import { StatisticsPageComponent } from './pages/statistics-page/statistics-page.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { MatSliderModule } from '@angular/material/slider';
     QuestionSliderComponent,
     QuestionMultipleDiffPointsComponent,
     QuestionGroupsChoiceComponent,
+    StatisticsPageComponent,
   ],
   imports: [
     CommonModule,

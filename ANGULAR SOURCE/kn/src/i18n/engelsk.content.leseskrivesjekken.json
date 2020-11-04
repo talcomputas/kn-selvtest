@@ -1,0 +1,1198 @@
+{
+  "intro": {
+    "image": "data-check.svg",
+    "title": "Literacy check",
+    "label": "Assess your skills",
+    "text": "This literacy check helps you to assess your literacy skills. You will get an indication on what you are capable of and what you can improve."
+  },
+  "result": {
+    "image": "data-check.svg",
+    "levels": {
+      "1": {
+        "id": "1",
+        "title": "You have assessed yourself on level 1 out of 3 levels in this check.",
+        "text": "Literacy skills on level 1 mean that you can read and write short and familiar texts.",
+        "minScore": 0
+      },
+      "2": {
+        "id": "2",
+        "title": "You have assessed yourself on level 2 out of 3 in this check.",
+        "text": "Literacy skills on level 2 mean that you can read and write texts with a clear structure. You can use reading and writing in most situations.",
+        "minScore": 28
+      },
+      "3": {
+        "id": "3",
+        "title": "You have assessed yourself on level 3 out of 3 in this check.",
+        "text": "Literacy skills on level 3 mean that you manage a variety of texts. You read and write in an independent, critical and flexible manner.",
+        "minScore": 56
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "questions": [
+        {
+          "id": 1,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you understand simple food recipes?"
+        },
+        {
+          "id": 2,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you understand posters on a noticeboard?"
+        },
+        {
+          "id": 3,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you understand adverts in the newspapers or on the Internet?"
+        },
+        {
+          "id": 4,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read and understand instructions on a ticket machine?"
+        },
+        {
+          "id": 5,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read and understand information on signs, e.g. road signs?"
+        },
+        {
+          "id": 6,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you write a reply to an invitation?"
+        },
+        {
+          "id": 7,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you jot down a simple message?"
+        },
+        {
+          "id": 8,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you write simple shopping lists?"
+        },
+        {
+          "id": 9,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you write a short text about yourself?"
+        },
+        {
+          "id": 10,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you figure out your working hours on a rota/duty roster?"
+        },
+        {
+          "id": 11,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read and understand the minutes of a meeting?"
+        },
+        {
+          "id": 12,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read reviews of e.g. films or concerts?"
+        },
+        {
+          "id": 13,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you understand newsletters from an authority like a school or municipality?"
+        },
+        {
+          "id": 14,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read an invitation to a meeting and find out where and when you should attend?"
+        },
+        {
+          "id": 15,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read and understand specialist terms relating to your work or hobby?"
+        },
+        {
+          "id": 16,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you use the table of contents to navigate through a book?"
+        },
+        {
+          "id": 17,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Do you vary the way you read, e.g. speed and thoroughness?"
+        },
+        {
+          "id": 18,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you write and explain a procedure, e.g. a recipe?"
+        },
+        {
+          "id": 19,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you enter your personal details onto a form?"
+        },
+        {
+          "id": 20,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you write a short post on social media?"
+        },
+        {
+          "id": 21,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No experience"
+            },
+            {
+              "id": 2,
+              "text": "Some experience"
+            },
+            {
+              "id": 3,
+              "text": "A lot of experience"
+            }
+          ],
+          "text": "How much experience do you have of reading newspapers or magazines?"
+        },
+        {
+          "id": 22,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you write an account of something like an accident or nonconformity at work?"
+        },
+        {
+          "id": 23,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you write a simple CV?"
+        },
+        {
+          "id": 24,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you write an email in a work context?"
+        },
+        {
+          "id": 25,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read and understand rules, such as the rules of a housing association or rules about procedures at work?"
+        },
+        {
+          "id": 26,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you help students at lower secondary level with their reading homework?"
+        },
+        {
+          "id": 27,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2
+            ],
+            "points": [
+              0,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read and find your way around online newspapers?"
+        },
+        {
+          "id": 28,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read information about various products in order to decide which one to buy?"
+        },
+        {
+          "id": 29,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read and understand the terms and conditions that apply to a product or service you have bought?"
+        },
+        {
+          "id": 30,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read the patient information leaflet for a medicine?"
+        },
+        {
+          "id": 31,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read and understand a letter from the authorities, e.g. NAV or the municipality?"
+        },
+        {
+          "id": 32,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read and evaluate contracts, e.g. for work or accommodation?"
+        },
+        {
+          "id": 33,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you read and understand texts which contain pictures, graphs and tables?"
+        },
+        {
+          "id": 34,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No experience"
+            },
+            {
+              "id": 2,
+              "text": "Some experience"
+            },
+            {
+              "id": 3,
+              "text": "A lot of experience"
+            }
+          ],
+          "text": "How much experience do you have of reading books?"
+        },
+        {
+          "id": 35,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you write a simple report about a job you have done?"
+        },
+        {
+          "id": 36,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you write the minutes of a meeting?"
+        },
+        {
+          "id": 37,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you write a job application in response to a job advert?"
+        },
+        {
+          "id": 38,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you write a justified complaint about a product or service?"
+        },
+        {
+          "id": 39,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you write a summary of a specialised text?"
+        },
+        {
+          "id": 40,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [
+              1,
+              2,
+              3
+            ],
+            "points": [
+              0,
+              1,
+              2
+            ]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "No"
+            },
+            {
+              "id": 2,
+              "text": "Yes, with a little help"
+            },
+            {
+              "id": 3,
+              "text": "Yes"
+            }
+          ],
+          "text": "Can you present your point of view in writing, e.g. in a letter to the editor or a blog?"
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "base"
+      }
+    }
+  ]
+}
