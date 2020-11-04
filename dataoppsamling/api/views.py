@@ -33,7 +33,6 @@ def submitUser():
 
     return jsonify(id=token), 201
 
-
 @app.route("/api/submititem", methods=["GET", "POST"])
 def submitItem():
 
@@ -74,3 +73,4 @@ def submitItem():
     cursor.close()
 
     return jsonify(id=id), 201
+

@@ -1,7 +1,7 @@
-import { Component, OnInit, ChangeDetectionStrategy, OnChanges, EventEmitter } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, OnChanges } from '@angular/core';
 import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
 import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
-import { ChangeContext, Options, PointerType } from 'ng5-slider';
+import { SliderOption } from '@features/questions/interfaces/slider-option.interface';
 
 @Component({
   selector: 'app-question-slider',
@@ -15,7 +15,7 @@ export class QuestionSliderComponent
   calculatorVisible: boolean;
 
   value = 0;
-  optionsSlider: Options = {
+  optionsSlider = {
     floor: 0,
     ceil: 100,
   };
@@ -32,8 +32,8 @@ export class QuestionSliderComponent
     this.updateSliderOptions();
   }
 
-  onUserChange(changeContext: ChangeContext): void {
-    this.control.patchValue(changeContext.value);
+  onUserChange(changeContext: number): void {
+    this.control.patchValue(changeContext);
   }
 
   private updateSliderOptions(): void {

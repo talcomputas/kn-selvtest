@@ -1,4 +1,4 @@
-export interface Answer<V = any, Y = any> {
+export interface Answer<V = any, P = any> {
   value: V;
-  points: Y;
+  points: P;
 }
