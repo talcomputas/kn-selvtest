@@ -11,12 +11,13 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'samletesten',
-    loadChildren: () =>
-      import('./features/questions/questions.module').then((m) => m.QuestionsModule),
+    path: 'lesetesten',
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
   },
   {
-    path: 'lesetesten',
+    path: 'regnetesten',
     loadChildren: () => QuestionsModule,
     resolve: { lessonPath: LessonResolverService },
     canActivate: [ChangeLessonGuard],
@@ -34,7 +35,7 @@ const routes: Routes = [
     canActivate: [ChangeLessonGuard],
   },
   {
-    path: 'regnetesten',
+    path: 'leseskrivesjekken',
     loadChildren: () => QuestionsModule,
     resolve: { lessonPath: LessonResolverService },
     canActivate: [ChangeLessonGuard],
@@ -46,7 +47,7 @@ const routes: Routes = [
     canActivate: [ChangeLessonGuard],
   },
   {
-    path: 'leseskrivesjekken',
+    path: 'datasjekken',
     loadChildren: () => QuestionsModule,
     resolve: { lessonPath: LessonResolverService },
     canActivate: [ChangeLessonGuard],
@@ -58,12 +59,11 @@ const routes: Routes = [
     canActivate: [ChangeLessonGuard],
   },
   {
-    path: 'datasjekken',
+    path: 'samletesten',
     loadChildren: () => QuestionsModule,
     resolve: { lessonPath: LessonResolverService },
     canActivate: [ChangeLessonGuard],
   },
-
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
 

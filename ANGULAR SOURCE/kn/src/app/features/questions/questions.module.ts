@@ -28,9 +28,11 @@ import { ButtonToggleModule } from '../../uikit/button-toggle/button-toggle.modu
 
 import nbContent from '@i18n/bokmal.content.json';
 import nnContent from '@i18n/nynorsk.content.json';
+import enContent from '@i18n/engelsk.content.json';
 
 import nbSystemContent from '@i18n/bokmal.system.json';
 import nnSystemContent from '@i18n/nynorsk.system.json';
+import enSystemContent from '@i18n/engelsk.system.json';
 
 import { QuestionSliderComponent } from './components/question-slider/question-slider.component';
 import { QuestionMultipleDiffPointsComponent } from './components/question-multiple-diff-points/question-multiple-diff-points.component';
@@ -39,6 +41,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
 import { StatisticsPageComponent } from './pages/statistics-page/statistics-page.component';
+import { QuestionGradingComponent } from '@features/questions/components/question-grading/question-grading.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +54,7 @@ import { StatisticsPageComponent } from './pages/statistics-page/statistics-page
     QuestionMultipleComponent,
     QuestionDialogueComponent,
     QuestionMultipleChoiceComponent,
+    QuestionGradingComponent,
     ResultPageComponent,
     AnswersComponent,
     TransitionComponent,
@@ -84,6 +88,7 @@ export class QuestionsModule {
   ) {
     contentService.set('nb', { ...nbContent, ...nbSystemContent });
     contentService.set('nn', { ...nnContent, ...nnSystemContent });
+    contentService.set('en', { ...enContent, ...enSystemContent });
 
     statisticsService.initUser();
 

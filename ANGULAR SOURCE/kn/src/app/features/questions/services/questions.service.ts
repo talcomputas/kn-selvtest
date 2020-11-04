@@ -100,7 +100,10 @@ export class QuestionsService {
     const maxScore = this.getMaxScore(this.questions);
     const score = this.getScore(answers);
     const data = Object.keys(correctAnswers).reduce(
-      (acc, questionId) => [...acc, this.getResultAnswer(this.getQuestion(+questionId))],
+      (acc, questionId) => [
+        ...acc,
+        this.getResultAnswer(this.getQuestion(+questionId), this.answers[+questionId]),
+      ],
       [],
     );
     const level = this.levels
@@ -274,9 +277,10 @@ export class QuestionsService {
     return score;
   }
 
-  private getResultAnswer(question: QuestionsUnionType): ResultAnswer {
-    const selectOption = (value: any, options: { id: any }[]) =>
-      options.find((option) => option.id === value);
+  public getResultAnswer(question: QuestionsUnionType, selectedValue: any): ResultAnswer {
+    const selectOption = (value: any, options: { id: any }[]) => {
+      return options.find((option) => option.id === value);
+    };
     const dialogueAnswer = (
       speech: (SpeechBase & SpeechFunnel & SpeechSelect)[],
       selection: string[],
@@ -320,7 +324,6 @@ export class QuestionsService {
     };
 
     const { id, answer, type } = question;
-    const selectedValue = this.answers[String(id)];
 
     switch (type) {
       case QuestionType.SINGLE: {
@@ -365,20 +368,29 @@ export class QuestionsService {
         return { id, type, text, correct, selected, isCorrect };
       }
 
-      /* case QuestionType.GROUPS_CHOICE: {
+      case QuestionType.GROUPS_CHOICE: {
         const { text, options } = question as QuestionGroupsChoice;
         const values = answer.value as number[];
-        const correct = values.map((v) => selectOption(v, options));
-        const selected = selectedValue.map((v) => selectOption(v, options));
-        const isCorrect = compareMultiple(selectedValue, values);
-        return { id, type, text, correct, selected, isCorrect };
-        // const values = answer.value as number[];
-        // const correct = values.map((v) => selectOption(v, options));
-        // const selected = selectedValue.map((v) => selectOption(v, options));
 
-        // const isCorrect = compareGroupsChoice(selectedValue, values);
-        // return { id, type, text, correct, selected, isCorrect };
-      } */
+        const correct = [];
+        values.forEach((val, index) => {
+          correct.push(selectOption(val, options[index]));
+        });
+
+        const selected = [];
+        selectedValue.forEach((val, index) => {
+          selected.push(selectOption(val, options[index]));
+        });
+        const isCorrect = JSON.stringify(correct) === JSON.stringify(selected);
+        return {
+          id: question.id,
+          type: QuestionType.GROUPS_CHOICE,
+          text,
+          correct,
+          selected,
+          isCorrect,
+        };
+      }
 
       case QuestionType.DIALOGUE: {
         const { speech } = question as QuestionDialogue;
@@ -477,7 +489,7 @@ export class QuestionsService {
       }
 
       case QuestionType.GROUPS_CHOICE: {
-        return compareGroupsChoice(selectedValue, correctValue as number[]);
+        return JSON.stringify(selectedValue) === JSON.stringify(correctValue);
       }
 
       case QuestionType.DIALOGUE: {
