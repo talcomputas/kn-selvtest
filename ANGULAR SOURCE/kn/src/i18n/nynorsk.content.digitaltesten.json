@@ -371,7 +371,7 @@
       ],
       "funnel": {
         "baseScore": 0,
-        "type": "base"
+        "type": "BASE"
       }
     },
     {
@@ -985,7 +985,7 @@
       ],
       "funnel": {
         "baseScore": 0,
-        "type": "advanced"
+        "type": "ADVANCED"
       }
     },
     {
@@ -1735,7 +1735,7 @@
       ],
       "funnel": {
         "baseScore": 8,
-        "type": "advanced"
+        "type": "ADVANCED"
       }
     }
   ]

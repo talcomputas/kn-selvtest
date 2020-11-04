@@ -1,5 +1,3 @@
-// import nbsamltetestenRaw from '@i18n/bokmal.content.samletesten.json';
-
 import nbdigitaltestenRaw from '@i18n/bokmal.content.digitaltesten.json';
 import nndigitaltestenRaw from '@i18n/nynorsk.content.digitaltesten.json';
 
@@ -9,21 +7,26 @@ import nnlesetestenRaw from '@i18n/nynorsk.content.lesetesten.json';
 import nbmuntligtestenRaw from '@i18n/bokmal.content.muntligtesten.json';
 import nnmuntligtestenRaw from '@i18n/nynorsk.content.muntligtesten.json';
 
+import nbregnetestenRaw from '@i18n/bokmal.content.regnetesten.json';
+import nnregnetestenRaw from '@i18n/nynorsk.content.regnetesten.json';
+
+import nbleseskrivesjekkenRaw from '@i18n/bokmal.content.leseskrivesjekken.json';
+import nnleseskrivesjekkenRaw from '@i18n/nynorsk.content.leseskrivesjekken.json';
+import enleseskrivesjekkenRaw from '@i18n/engelsk.content.leseskrivesjekken.json';
+
 import nbregnesjekkenRaw from '@i18n/bokmal.content.regnesjekken.json';
 import nnregnesjekkenRaw from '@i18n/nynorsk.content.regnesjekken.json';
+import enregnesjekkenRaw from '@i18n/nynorsk.content.regnesjekken.json';
 
-import nbregnetestenRaw from '@i18n/bokmal.content.regnetesten.json';
-import nnleseskrivesjekkenRaw from '@i18n/nynorsk.content.leseskrivesjekken.json';
-/* import { Lesson } from '@features/questions/interfaces/lesson.interface';
-import { QuestionSingle } from '@features/questions/interfaces/question-single.interface';
-import { QuestionCode } from '@features/questions/interfaces/question-code.interface';
-import { QuestionDialogue } from '@features/questions/interfaces/question-dialogue.interface';
-import { QuestionGroupsChoice } from '@features/questions/interfaces/question-groups-choice.interface';
-import { QuestionHotspot } from '@features/questions/interfaces/question-hotspot.interface';
-import { QuestionMultipleDiffPoints } from '@features/questions/interfaces/question-multiple-diff-points.interface';
-import { QuestionMultiple } from '@features/questions/interfaces/question-multiple.interface';
-import { QuestionRanking } from '@features/questions/interfaces/question-ranking.interface';
-import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface'; */
+import nbdatasjekken from '@i18n/bokmal.content.datasjekk.json';
+import nndatasjekken from '@i18n/nynorsk.content.datasjekk.json';
+import endatasjekken from '@i18n/engelsk.content.datasjekk.json';
+
+import nbmuntligsjekken from '@i18n/bokmal.content.muntligsjekken.json';
+import nnmuntligsjekken from '@i18n/nynorsk.content.muntligsjekken.json';
+import enmuntligsjekken from '@i18n/engelsk.content.muntligsjekken.json';
+
+import samleSjekken from '@i18n/bokmal.content.samletesten.json';
 
 enum ModuleType {
   BASE = 'BASE',
@@ -238,51 +241,54 @@ interface QuestionSlider extends QuestionBase {
   calculator?: boolean;
 }
 
-const nbSamleSjekken: Lesson = nbsamltetestenRaw as Lesson;
 const nbdigitaltesten: Lesson = nbdigitaltestenRaw as Lesson;
 const nndigitaltesten: Lesson = nndigitaltestenRaw as Lesson;
 const nblesetesten: Lesson = nblesetestenRaw as Lesson;
 const nnlesetesten: Lesson = nnlesetestenRaw as Lesson;
 const nbmuntligtesten: Lesson = nbmuntligtestenRaw as Lesson;
 const nnmuntligtesten: Lesson = nnmuntligtestenRaw as Lesson;
+
+const nbregnetesten: Lesson = nbregnetestenRaw as Lesson;
+const nnregnetesten: Lesson = nnregnetestenRaw as Lesson;
+
 const nbregnesjekken: Lesson = nbregnesjekkenRaw as Lesson;
 const nnregnesjekken: Lesson = nnregnesjekkenRaw as Lesson;
-const nbregnetesten: Lesson = nbregnetestenRaw as Lesson;
-const nnleseskrivesjekken: Lesson = nbsamltetestenRaw as Lesson;
 
-const q1 = nbSamleSjekken.modules[0].questions[0] as QuestionSingle;
+const nnleseskrivesjekken: Lesson = samleSjekken as Lesson;
+
+const q1 = samleSjekken.modules[0].questions[0] as QuestionSingle;
 const p11 = q1.answer.value;
 const p111 = q1.answer.points;
 
-const q2 = nbSamleSjekken.modules[0].questions[1] as QuestionMultiple;
+const q2 = samleSjekken.modules[0].questions[1] as QuestionMultiple;
 const p22 = q2.answer.points;
 const p222 = q2.answer.value;
 
-const q3 = nbSamleSjekken.modules[0].questions[2] as QuestionHotspot;
+const q3 = samleSjekken.modules[0].questions[2] as QuestionHotspot;
 const p33 = q3.answer.points;
 const p333 = q3.answer.value;
 
-const q4 = nbSamleSjekken.modules[0].questions[3] as QuestionDialogue;
+const q4 = samleSjekken.modules[0].questions[3] as QuestionDialogue;
 const p44 = q4.answer.points;
 const p444 = q4.answer.value;
 
-const q5 = nbSamleSjekken.modules[0].questions[4] as QuestionCode;
+const q5 = samleSjekken.modules[0].questions[4] as QuestionCode;
 const p55 = q5.answer.points;
 const p555 = q5.answer.value;
 
-const q6 = nbSamleSjekken.modules[0].questions[5] as QuestionRanking;
+const q6 = samleSjekken.modules[0].questions[5] as QuestionRanking;
 const p66 = q6.answer.points;
 const p666 = q6.answer.value;
 
-const q7 = nbSamleSjekken.modules[0].questions[6] as QuestionSlider;
+const q7 = samleSjekken.modules[0].questions[6] as QuestionSlider;
 const p77 = q7.answer.points;
 const p777 = q7.answer.value;
 
-const q8 = nbSamleSjekken.modules[0].questions[7] as QuestionMultipleDiffPoints;
+const q8 = samleSjekken.modules[0].questions[7] as QuestionMultipleDiffPoints;
 const p88 = q8.answer.points;
 const p888 = q8.answer.value;
 
-const q9 = nbSamleSjekken.modules[0].questions[8] as QuestionGroupsChoice;
+const q9 = samleSjekken.modules[0].questions[8] as QuestionGroupsChoice;
 const p99 = q9.answer.points;
 const p999 = q9.answer.value;
 

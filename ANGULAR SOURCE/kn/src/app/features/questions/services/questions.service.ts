@@ -9,10 +9,7 @@ import { QuestionSingle } from '../interfaces/question-single.interface';
 import { QuestionHotspot } from '@features/questions/interfaces/question-hotspot.interface';
 import { QuestionRanking } from '@features/questions/interfaces/question-ranking.interface';
 import { QuestionCode } from '@features/questions/interfaces/question-code.interface';
-import {
-  QuestionMultiple,
-  QuestionMultipleDiffPoints,
-} from '@features/questions/interfaces/question-multiple.interface';
+import { QuestionMultiple } from '@features/questions/interfaces/question-multiple.interface';
 import { QuestionDialogue } from '@features/questions/interfaces/question-dialogue.interface';
 import { QuestionsUnionType } from '@features/questions/types/questions-union.type';
 import { Level } from '@features/questions/interfaces/level.interface';
@@ -31,6 +28,7 @@ import { Result } from '@features/questions/interfaces/result.interface';
 import { StatisticsService } from '@features/questions/services/statistics.service';
 import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
 import { QuestionGroupsChoice } from '@features/questions/interfaces/question-groups-choice.interface';
+import { QuestionMultipleDiffPoints } from '@features/questions/interfaces/question-multiple-diff-points.interface';
 
 @Injectable()
 export class QuestionsService {
@@ -250,8 +248,8 @@ export class QuestionsService {
         }
 
         case QuestionType.MULTIPLE_DIFF_POINTS: {
-          const { answer } = question as QuestionMultipleDiffPoints;
-          score += this.multipleChoiceDiffPoints(answer, selection);
+          // const { answer } = question as QuestionMultipleDiffPoints;
+          // score += 1; this.multipleChoiceDiffPoints(answer, selection);
           break;
         }
 
@@ -268,7 +266,7 @@ export class QuestionsService {
         }
         case QuestionType.GROUPS_CHOICE: {
           const { answer } = question as QuestionGroupsChoice;
-          score += this.groupChoicePoints(answer, selection);
+          score += 0; // this.groupChoicePoints(answer, selection);
         }
       }
     });
@@ -367,17 +365,20 @@ export class QuestionsService {
         return { id, type, text, correct, selected, isCorrect };
       }
 
-      case QuestionType.GROUPS_CHOICE: {
+      /* case QuestionType.GROUPS_CHOICE: {
         const { text, options } = question as QuestionGroupsChoice;
         const values = answer.value as number[];
         const correct = values.map((v) => selectOption(v, options));
         const selected = selectedValue.map((v) => selectOption(v, options));
-        console.log(correct);
-        console.log(selected);
-        throw new Error('comparison');
+        const isCorrect = compareMultiple(selectedValue, values);
+        return { id, type, text, correct, selected, isCorrect };
+        // const values = answer.value as number[];
+        // const correct = values.map((v) => selectOption(v, options));
+        // const selected = selectedValue.map((v) => selectOption(v, options));
+
         // const isCorrect = compareGroupsChoice(selectedValue, values);
         // return { id, type, text, correct, selected, isCorrect };
-      }
+      } */
 
       case QuestionType.DIALOGUE: {
         const { speech } = question as QuestionDialogue;
@@ -501,11 +502,25 @@ export class QuestionsService {
     return questions.reduce((acc, item) => ({ ...acc, ...{ [item.id]: item.answer.value } }), {});
   }
 
-  private getMaxScore(questions: QuestionsUnionType[]): number {
-    return questions.reduce(
-      (acc, item) => (acc += (item && item.answer && item.answer.points) || 0),
-      0,
-    );
+  public getMaxScore(questions: QuestionsUnionType[]): number {
+    const initialValue = 0;
+
+    const result = questions.reduce((acc: number, item) => {
+      if (item && item.answer && item.answer.points) {
+        if (Array.isArray(item.answer.points)) {
+          const maxValue = item.answer.points.reduce((prev: number, current: number) => {
+            return prev > current ? prev : current;
+          });
+          acc = acc + maxValue;
+        } else {
+          acc = acc + item.answer.points;
+        }
+      } else {
+        acc = acc + 0;
+      }
+      return acc;
+    }, initialValue);
+    return result;
   }
 
   private codePoints(answer: { points: number; value: number }, code: string): number {

@@ -1,0 +1,406 @@
+{
+  "intro": {
+    "label": "Samletesten",
+    "title": "Samletesten",
+    "text": "For debugging og testing",
+    "image": "reading-exam.svg"
+  },
+  "result": {
+    "image": "digitaltesten-data-check.svg",
+    "levels": {
+      "1": {
+        "id": "1",
+        "title": "Basert på dine svar er du på nivå 1 av 3 i denne testen.",
+        "text": "Digitale ferdigheter på nivå 1 innebærer å bruke enkle digitale verktøy og å kunne forholde seg til digital informasjon når det er nødvendig.",
+        "minScore": 1
+      },
+      "2": {
+        "id": "2",
+        "title": "Basert på dine svar er du på nivå 2 av 3 i denne testen.",
+        "text": "Digitale ferdigheter på nivå 2 innebærer å forholde seg aktivt til digital informasjon og å bruke informasjonen i nye sammenhenger og situasjoner. Digitale verktøy og tjenester er kjent og blir benyttet.",
+        "minScore": 2
+      },
+      "3": {
+        "id": "3",
+        "title": "Basert på dine svar er du på nivå 3 av 3 i denne testen.",
+        "text": "Digitale ferdigheter på nivå 3 innebærer å være en reflektert bruker av sammensatte digitale verktøy og tjenester. Fordi utviklingen innen digitale ferdigheter går fort, er det allikevel slik at vi må regne med å lære nye verktøy og tjenester.",
+        "minScore": 3
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "questions": [
+        {
+          "id": 1,
+          "type": "single",
+          "text": "Kvar er det <b>IKKJE</b> mogleg å kjøpe dataspel?",
+          "image": "8M2yA4GoH0iDztqRhbR37Q.png",
+          "answer": {
+            "value": 4,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "På internett"
+            },
+            {
+              "id": 2,
+              "text": "I elektronikkbutikkar"
+            },
+            {
+              "id": 3,
+              "text": "På App Store/Google Play"
+            },
+            {
+              "id": 4,
+              "text": "På YouTube"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "type": "multiple",
+          "text": "Hvordan kan sosiale medier gi målrettet reklame tilpasset den enkelte? <b>(Velg to alternativ)</b>",
+          "image": "LELQTPLlHU22QRdBWfFlsA.png",
+          "options": [
+            {
+              "id": 1,
+              "text": "De sjekker hvor mobilen din har vært"
+            },
+            {
+              "id": 2,
+              "text": "De sjekker språket på mobilen din"
+            },
+            {
+              "id": 3,
+              "text": "De sjekker hvor mobilen er kjøpt"
+            }
+          ],
+          "answer": {
+            "value": [1, 2],
+            "points": 1
+          }
+        },
+        {
+          "id": 3,
+          "type": "hotspot",
+          "text": "Hvor trykker du for å søke etter en bestemt tv-serie?",
+          "image": "CbJojWjnkuqk6OK9Jgg.png?v=2",
+          "answer": {
+            "value": 2,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "x": 2,
+              "y": 79,
+              "width": 15,
+              "height": 17
+            },
+            {
+              "id": 2,
+              "x": 29,
+              "y": 79,
+              "width": 15,
+              "height": 17
+            },
+            {
+              "id": 3,
+              "x": 56,
+              "y": 79,
+              "width": 15,
+              "height": 17
+            },
+            {
+              "id": 4,
+              "x": 83,
+              "y": 79,
+              "width": 15,
+              "height": 17
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "type": "dialogue",
+          "image": "sebastian.jpg",
+          "answer": {
+            "value": ["D17F5", "D17F10"],
+            "points": 1
+          },
+          "speech": [
+            {
+              "id": "D17F2",
+              "person": "Sebastian",
+              "text": "Du skal hjelpe vennen din med å lage en Instagram-profil, så han kan delta på sosiale medier.",
+              "type": "intro",
+              "next": "D17F1"
+            },
+            {
+              "id": "D17F1",
+              "person": "Sebastian",
+              "text": "Hei, jeg skal opprette en Instagram-profil. Hva slags passord er det best å ha?",
+              "type": "question",
+              "options": ["D17F3", "D17F4", "D17F5"]
+            },
+            {
+              "id": "D17F3",
+              "person": "Player",
+              "text": "Et som består av flere tilfeldige tall og bokstaver.",
+              "type": "option",
+              "next": "D17F8"
+            },
+            {
+              "id": "D17F4",
+              "person": "Player",
+              "text": "Et som består av forskjellige tegn og tall.",
+              "type": "option",
+              "next": "D17F8"
+            },
+            {
+              "id": "D17F5",
+              "person": "Player",
+              "text": "Et som består av forskjellige ord etter hverandre med sammenheng.",
+              "type": "option",
+              "next": "D17F6"
+            },
+            {
+              "id": "D17F8",
+              "person": "Sebastian",
+              "text": "Det er ikke det jeg har hørt, men du vet når det står \"husk meg\". Når burde man IKKE bruke det?",
+              "type": "question",
+              "options": ["D17F10", "D17F11", "D17F12"]
+            },
+            {
+              "id": "D17F6",
+              "person": "Sebastian",
+              "text": "Wow, det visste jeg ikke! Her står det også at jeg kan trykke på \"husk meg\". Når burde man IKKE bruke det?",
+              "type": "question",
+              "options": ["D17F10", "D17F11", "D17F12"]
+            },
+            {
+              "id": "D17F10",
+              "person": "Player",
+              "text": "Hvis flere bruker samme enhet.",
+              "type": "option",
+              "next": "D17F13"
+            },
+            {
+              "id": "D17F11",
+              "person": "Player",
+              "text": "Når man har dårlig tid.",
+              "type": "option",
+              "next": "D17F17"
+            },
+            {
+              "id": "D17F12",
+              "person": "Player",
+              "text": "Om man lett glemmer passord.",
+              "type": "option",
+              "next": "D17F17"
+            },
+            {
+              "id": "D17F13",
+              "person": "Sebastian",
+              "text": "Skjønner. Kan du hjelpe meg med å opprette en profil på Instagram?",
+              "type": "completion"
+            },
+            {
+              "id": "D17F17",
+              "person": "Sebastian",
+              "text": "Det høres ikke logisk ut, men greit. Kan du hjelpe meg med å opprette en profil på Instagram?",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "type": "code",
+          "text": "Hvor mange av feltene er det obligatorisk å fylle ut?",
+          "image": "U5mlJh904U6Zev981wk1jQ.png?v=2",
+          "answer": {
+            "value": 2,
+            "points": 1
+          }
+        },
+        {
+          "id": 7,
+          "type": "ranking",
+          "text": "Dra og slipp passordene i riktig rekkefølge. Sett det sikreste øverst.",
+          "image": "7nwRTybRAEy2bzXj4kT4g.png",
+          "options": [
+            {
+              "id": 1,
+              "text": "hemmelig123"
+            },
+            {
+              "id": 2,
+              "text": "Kebab1Lompe2Med3Grønnsaker4"
+            },
+            {
+              "id": 3,
+              "text": "passord"
+            },
+            {
+              "id": 4,
+              "text": "BatWoman62"
+            }
+          ],
+          "answer": {
+            "value": [2, 4, 1, 3],
+            "points": 1
+          }
+        },
+        {
+          "id": 2,
+          "type": "slider",
+          "text": "Hvilket tall peker pilen på?",
+          "image": "Skala_tall2.png",
+          "answer": {
+            "value": 130,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 100,
+            "ceil": 150
+          }
+        },
+        {
+          "id": 1,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [1, 2],
+            "points": [0, 2]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Forstår du enkle matoppskrifter?"
+        },
+        {
+          "id": 17,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja, med litt hjelp"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du kontrollere en telefonregning og vurdere forbruket ditt? "
+        },
+        {
+          "id": 8,
+          "type": "groups-choice",
+          "title": "Drømmen om en bondegård",
+          "text": "Henrik bladde fram til sidene med boligannonser. Leiligheten deres var %s for liten for dem, så nå lette de etter %s større. De ville gjerne flytte ut på landet. De lette etter en liten %s hvor det var plass til å ha et par %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "innredet"
+              },
+              {
+                "id": 2,
+                "text": "solgt"
+              },
+              {
+                "id": 3,
+                "text": "annonsert"
+              },
+              {
+                "id": 4,
+                "text": "blitt"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "det"
+              },
+              {
+                "id": 2,
+                "text": "noe"
+              },
+              {
+                "id": 3,
+                "text": "annet"
+              },
+              {
+                "id": 4,
+                "text": "flere"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "altan"
+              },
+              {
+                "id": 2,
+                "text": "restaurant"
+              },
+              {
+                "id": 3,
+                "text": "gård"
+              },
+              {
+                "id": 4,
+                "text": "bil"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "ferier"
+              },
+              {
+                "id": 2,
+                "text": "hester"
+              },
+              {
+                "id": 3,
+                "text": "år"
+              },
+              {
+                "id": 4,
+                "text": "foredrag"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4, 2, 3, 2],
+            "points": 1
+          }
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "BASE"
+      }
+    }
+  ]
+}

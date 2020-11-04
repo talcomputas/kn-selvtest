@@ -1,7 +1,7 @@
-import { Component, OnInit, ChangeDetectionStrategy, OnChanges, EventEmitter } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, OnChanges } from '@angular/core';
 import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
-import { SliderOption } from '@features/questions/interfaces/option.interface';
 import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
+import { SliderOption } from '@features/questions/interfaces/slider-option.interface';
 
 @Component({
   selector: 'app-question-slider',
@@ -15,7 +15,7 @@ export class QuestionSliderComponent
   calculatorVisible: boolean;
 
   value = 0;
-  optionsSlider: SliderOption = {
+  optionsSlider = {
     floor: 0,
     ceil: 100,
   };

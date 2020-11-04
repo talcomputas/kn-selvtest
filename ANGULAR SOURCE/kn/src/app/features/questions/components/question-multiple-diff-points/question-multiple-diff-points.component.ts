@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
-import { QuestionMultipleDiffPoints } from '@features/questions/interfaces/question-multiple.interface';
+import { QuestionMultipleDiffPoints } from '@features/questions/interfaces/question-multiple-diff-points.interface';
 
 @Component({
   selector: 'app-question-multiple-diff-points',
