@@ -53,7 +53,7 @@ const routes: Routes = [
     canActivate: [ChangeLessonGuard],
   },
   {
-    path: 'datassjekken',
+    path: 'datasjekken',
     loadChildren: () => QuestionsModule,
     resolve: { lessonPath: LessonResolverService },
     canActivate: [ChangeLessonGuard],

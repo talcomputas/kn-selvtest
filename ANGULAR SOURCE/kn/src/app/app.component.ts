@@ -11,11 +11,7 @@ import { LoadingService } from 'services/loading.service';
 export class AppComponent implements OnInit {
   loading = false;
 
-  constructor(private loadingService: LoadingService, httpService: HttpClient) {
-    httpService.get('https://jsonplaceholder.typicode.com/posts').subscribe((data) => {
-      console.log(data);
-    });
-  }
+  constructor(private loadingService: LoadingService, httpService: HttpClient) {}
   ngOnInit(): void {
     this.listenToLoading();
   }
