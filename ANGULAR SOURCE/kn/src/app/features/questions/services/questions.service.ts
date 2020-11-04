@@ -113,7 +113,10 @@ export class QuestionsService {
   }
 
   attach(): void {
-    this.contentChangesSubscription = this.content.changes.subscribe(() => this.initContent());
+    this.contentChangesSubscription = this.content.changes.subscribe(() => {
+      const res = this.initContent();
+      return res;
+    });
   }
 
   detach(): void {
@@ -236,8 +239,6 @@ export class QuestionsService {
 
         case QuestionType.RANKING: {
           const { answer } = question as QuestionRanking;
-          console.log(answer);
-          console.log(selection);
           const result = this.multipleChoicePoints<number>(answer, selection, false);
 
           score += result;
