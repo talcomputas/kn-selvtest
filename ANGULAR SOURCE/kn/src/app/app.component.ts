@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { delay } from 'rxjs/operators';
 import { LoadingService } from 'services/loading.service';
@@ -11,7 +10,7 @@ import { LoadingService } from 'services/loading.service';
 export class AppComponent implements OnInit {
   loading = false;
 
-  constructor(private loadingService: LoadingService, httpService: HttpClient) {}
+  constructor(private loadingService: LoadingService) {}
   ngOnInit(): void {
     this.listenToLoading();
   }
