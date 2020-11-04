@@ -207,7 +207,7 @@ export class QuestionsService {
     return this.questionsDictionary.get(id);
   }
 
-  private getScore(answers: { [key: string]: any }): number {
+  public getScore(answers: { [key: string]: any }): number {
     let score = 0;
 
     Object.keys(answers).forEach((id: string) => {
@@ -222,54 +222,66 @@ export class QuestionsService {
       switch (question.type) {
         case QuestionType.SINGLE: {
           const { answer } = question as QuestionSingle;
-          score += this.singleChoicePoints<number>(answer, selection);
+          const result = this.singleChoicePoints<number>(answer, selection);
+          score += result;
           break;
         }
 
         case QuestionType.HOTSPOT: {
           const { answer } = question as QuestionHotspot;
-          score += this.singleChoicePoints<number>(answer, selection);
+          const result = this.singleChoicePoints<number>(answer, selection);
+          score += result;
           break;
         }
 
         case QuestionType.RANKING: {
           const { answer } = question as QuestionRanking;
-          score += this.multipleChoicePoints<number>(answer, selection, false);
+          console.log(answer);
+          console.log(selection);
+          const result = this.multipleChoicePoints<number>(answer, selection, false);
+
+          score += result;
           break;
         }
 
         case QuestionType.CODE: {
           const { answer } = question as QuestionCode;
-          score += this.codePoints(answer, selection);
+          const result = this.codePoints(answer, selection);
+          score += result;
           break;
         }
 
         case QuestionType.MULTIPLE: {
           const { answer } = question as QuestionMultiple;
-          score += this.multipleChoicePoints<number>(answer, selection);
+          const result = this.multipleChoicePoints<number>(answer, selection);
+          score += result;
           break;
         }
 
         case QuestionType.MULTIPLE_DIFF_POINTS: {
-          // const { answer } = question as QuestionMultipleDiffPoints;
-          // score += 1; this.multipleChoiceDiffPoints(answer, selection);
+          const { answer } = question as QuestionMultipleDiffPoints;
+          const result = this.multipleChoiceDiffPoints(answer, selection);
+          score += result;
           break;
         }
 
         case QuestionType.DIALOGUE: {
           const { answer } = question as QuestionDialogue;
-          score += this.multipleChoicePoints<string>(answer, selection, false);
+          const result = this.multipleChoicePoints<string>(answer, selection, false);
+          score += result;
           break;
         }
 
         case QuestionType.SLIDER: {
           const { answer } = question as QuestionSlider;
-          score += this.singleChoicePoints<number>(answer, selection);
+          const result = this.singleChoicePoints<number>(answer, selection);
+          score += result;
           break;
         }
         case QuestionType.GROUPS_CHOICE: {
           const { answer } = question as QuestionGroupsChoice;
-          score += 0; // this.groupChoicePoints(answer, selection);
+          const result = this.groupChoicePoints(answer, selection);
+          score += result;
         }
       }
     });
@@ -568,7 +580,7 @@ export class QuestionsService {
   }
 
   private multipleChoiceDiffPoints<T>(
-    answer: { points: number; value: T[] },
+    answer: { points: number[]; value: T[] },
     selection: T[],
     sorting = false,
   ): number {
@@ -577,8 +589,9 @@ export class QuestionsService {
     }
 
     const isCorrect = compareMultiple(answer.value, selection, sorting);
-
-    return (isCorrect && answer.points) || 0;
+    return 1;
+    // TODO fix this logic
+    // return (isCorrect && answer.points) || 0;
   }
 
   private groupChoicePoints<T>(answer: { points: number; value: number[] }, selection: number[]) {

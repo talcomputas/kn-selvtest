@@ -621,4 +621,18 @@ describe('QuestionService', () => {
 
     expect(result).toEqual(expectedResult);
   });
+
+  /*   it('QuestionGroupsChoice getScore should report correct score for answers', () => {
+    const contentService = TestBed.inject(ContentService);
+    const nbsamletesten: Lesson = nbsamletestenRaw as Lesson;
+    contentService.set('nb', nbsamletesten);
+    contentService.setCtx('nb');
+    const questionsService = TestBed.inject(QuestionsService);
+
+    const answers = {};
+    const result = questionsService.getScore(answers);
+    const expectedResult = 69;
+
+    expect(result).toEqual(expectedResult);
+  }); */
 });

@@ -27,6 +27,7 @@ import nnmuntligsjekken from '@i18n/nynorsk.content.muntligsjekken.json';
 import enmuntligsjekken from '@i18n/engelsk.content.muntligsjekken.json';
 
 import samleSjekken from '@i18n/bokmal.content.samletesten.json';
+import { QuestionGrading } from '@features/questions/interfaces/question-grading.interface';
 
 enum ModuleType {
   BASE = 'BASE',
@@ -291,5 +292,9 @@ const p888 = q8.answer.value;
 const q9 = samleSjekken.modules[0].questions[8] as QuestionGroupsChoice;
 const p99 = q9.answer.points;
 const p999 = q9.answer.value;
+
+const q10 = samleSjekken.modules[0].questions[8] as QuestionGrading;
+const p100 = q10.answer.points;
+const p1000 = q10.answer.value;
 
 console.log('check');
