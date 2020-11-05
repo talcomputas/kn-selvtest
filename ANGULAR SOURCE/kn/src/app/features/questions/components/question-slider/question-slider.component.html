@@ -27,7 +27,7 @@
         (valueChange)="onUserChange($event)"
       ></mat-slider>
     </div>
-    <p>{{ value }}</p>
+    <p>{{ question.answer.value }}</p>
 
     <button class="secondary" *ngIf="question.calculator" (click)="toggleCalculator()"></button>
     <div>
