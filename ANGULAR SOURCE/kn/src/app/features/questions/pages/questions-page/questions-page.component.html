@@ -63,11 +63,7 @@
       >
       </app-question-ranking>
 
-      <app-question-code
-        *ngSwitchCase="QuestionType.CODE"
-        [question]="question"
-        [form]="questions"
-      >
+      <app-question-code *ngSwitchCase="QuestionType.CODE" [question]="question" [form]="questions">
       </app-question-code>
 
       <app-question-dialogue
@@ -76,12 +72,16 @@
         [form]="questions"
       >
       </app-question-dialogue>
+
+      <app-question-grading
+        *ngSwitchCase="QuestionType.GRADING"
+        [question]="question"
+        [form]="questions"
+      >
+      </app-question-grading>
     </ng-container>
 
-    <app-transition
-      *ngIf="showTransition"
-      [transition]="question?.transition"
-    ></app-transition>
+    <app-transition *ngIf="showTransition" [transition]="question?.transition"></app-transition>
   </div>
 
   <footer app-card-footer>

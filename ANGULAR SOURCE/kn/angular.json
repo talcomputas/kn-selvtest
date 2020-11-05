@@ -43,7 +43,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "allowedCommonJsDependencies": ["ng5-slider"],
+            "allowedCommonJsDependencies": ["rxjs/operators", "rxjs/Subject", "rxjs/Subscription"],
             "assets": ["src/favicon.png", "src/assets"],
             "styles": ["src/styles/index.scss"],
             "stylePreprocessorOptions": {

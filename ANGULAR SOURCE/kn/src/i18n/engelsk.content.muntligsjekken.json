@@ -1,12 +1,12 @@
 {
   "intro": {
-    "image": "data-check.svg",
+    "image": "calc-check.svg",
     "title": "Computer skills check",
     "label": "Assess your skills",
     "text": "This computer skills check helps you to assess your computer skills. You will get an indication on what you are capable of and what you can improve. "
   },
   "result": {
-    "image": "data-check.svg",
+    "image": "calc-check.svg",
     "levels": {
       "1": {
         "id": "1",
@@ -36,16 +36,8 @@
           "id": 1,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -67,16 +59,8 @@
           "id": 2,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -98,16 +82,8 @@
           "id": 3,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -129,16 +105,8 @@
           "id": 4,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -160,16 +128,8 @@
           "id": 5,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -191,16 +151,8 @@
           "id": 6,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -222,16 +174,8 @@
           "id": 7,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -253,16 +197,8 @@
           "id": 8,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -284,16 +220,8 @@
           "id": 9,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -315,16 +243,8 @@
           "id": 10,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -346,16 +266,8 @@
           "id": 11,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -377,16 +289,8 @@
           "id": 12,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -408,16 +312,8 @@
           "id": 13,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -439,16 +335,8 @@
           "id": 14,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -470,16 +358,8 @@
           "id": 15,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -501,16 +381,8 @@
           "id": 16,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -532,16 +404,8 @@
           "id": 17,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -563,16 +427,8 @@
           "id": 18,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -594,16 +450,8 @@
           "id": 19,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -625,16 +473,8 @@
           "id": 20,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -656,16 +496,8 @@
           "id": 21,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -687,16 +519,8 @@
           "id": 22,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -718,16 +542,8 @@
           "id": 23,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -749,16 +565,8 @@
           "id": 24,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -780,14 +588,8 @@
           "id": 25,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2
-            ],
-            "points": [
-              0,
-              2
-            ]
+            "value": [1, 2],
+            "points": [0, 2]
           },
           "options": [
             {
@@ -805,16 +607,8 @@
           "id": 26,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -836,16 +630,8 @@
           "id": 27,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -867,16 +653,8 @@
           "id": 28,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -898,16 +676,8 @@
           "id": 29,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {
@@ -929,16 +699,8 @@
           "id": 30,
           "type": "multiple-diff-points",
           "answer": {
-            "value": [
-              1,
-              2,
-              3
-            ],
-            "points": [
-              0,
-              1,
-              2
-            ]
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
           },
           "options": [
             {

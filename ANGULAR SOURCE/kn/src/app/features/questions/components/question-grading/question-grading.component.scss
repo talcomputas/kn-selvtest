@@ -1,0 +1,39 @@
+@import '../../styles/question.export';
+
+:host {
+  @extend %question-two-columns;
+
+  .image {
+    @extend %image;
+    @extend %img-secondary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video {
+    @extend %video;
+  }
+
+  .content {
+    justify-content: space-around;
+    @extend %content;
+  }
+
+  .text {
+    @extend %text;
+  }
+
+  .options-text {
+    width: 100%;
+    @extend %text-options;
+  }
+
+  .options-image {
+    @extend %image-options;
+  }
+
+  .options-audio {
+    @extend %audio-options;
+  }
+}

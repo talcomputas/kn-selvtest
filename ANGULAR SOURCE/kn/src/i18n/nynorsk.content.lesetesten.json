@@ -5,6 +5,29 @@
     "text": "Dette er en kort lesetest som måler lesehastigheten din. Testen stopper automatisk etter 10 minutter. Det er mange oppgaver, så det er viktig å svare raskt og riktig.",
     "image": "reading-exam.svg"
   },
+  "result": {
+    "image": "lesetesten-data-check.svg",
+    "levels": {
+      "1": {
+        "id": "1",
+        "title": "Basert på dine svar er du på nivå 1 av 3 i denne testen.",
+        "text": "Dette resultatet tyder på mange tekstar kan vere vanskelege og ta lang tid for deg å lese. Du kan ha nytte av å øve meir på å lese.",
+        "minScore": 8
+      },
+      "2": {
+        "id": "2",
+        "title": "Basert på dine svar er du på nivå 2 av 3 i denne testen.",
+        "text": "Dette resultatet tyder på at lesedugleiken din er nokså bra, men at nokre tekstar kan vere vanskelege og ta tid for deg å lese.",
+        "minScore": 12
+      },
+      "3": {
+        "id": "3",
+        "title": "Basert på dine svar er du på nivå 3 av 3 i denne testen.",
+        "text": "Resultat over 4 viser at du er ein god lesar. Du les vanlege tekstar både raskt og nøyaktig.",
+        "minScore": 16
+      }
+    }
+  },
   "modules": [
     {
       "id": 1,
@@ -828,7 +851,7 @@
       ],
       "funnel": {
         "baseScore": 0,
-        "type": "base"
+        "type": "BASE"
       }
     }
   ]

@@ -5,15 +5,7 @@ import { Option } from '@features/questions/interfaces/option.interface';
 
 export interface QuestionMultiple extends QuestionBase {
   text: string;
-  answer: Answer<number[]>;
-  options: Option[];
-  title?: string;
-  info?: QuestionInfo;
-}
-
-export interface QuestionMultipleDiffPoints extends QuestionBase {
-  text: string;
-  answer: Answer<number[]>;
+  answer: Answer<number[], number>;
   options: Option[];
   title?: string;
   info?: QuestionInfo;

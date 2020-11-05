@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, OnChanges } from '@angular/core';
-import { QuestionSingle } from '@features/questions/interfaces/question-single.interface';
 import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
 import { QuestionMultipleChoice } from '@features/questions/interfaces/question-multiplechoice.interface';
 

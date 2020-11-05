@@ -1,0 +1,25 @@
+{
+  "language": {
+    "nn": "Nynorsk",
+    "nb": "Bokmål",
+    "en": "English"
+  },
+  "actions": {
+    "start": "Start",
+    "back": "Back",
+    "next": "Next",
+    "reviewAnswers": "Review your answers",
+    "getAdvice": "Get advice and tips to improve",
+    "backToResult": "View result",
+    "backToTests": "Back to Test your selves",
+    "print": "Here you can print your answers"
+  },
+  "placeholders": {
+    "code": "Write a number..."
+  },
+  "level": "Level",
+  "questions": "Question",
+  "answers": "Answer",
+  "answersTitle": "Your answers",
+  "testIsOver": "Testen complete"
+}

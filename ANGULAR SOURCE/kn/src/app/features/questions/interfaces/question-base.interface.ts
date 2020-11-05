@@ -2,10 +2,10 @@ import { QuestionType } from '@features/questions/enums/question-type.enum';
 import { Answer } from '@features/questions/interfaces/answer.interface';
 import { Transition } from '@features/questions/interfaces/transition.interface';
 
-export interface QuestionBase {
+export interface QuestionBase<T = Answer<any, any>> {
   id: number;
   type: QuestionType;
-  answer: Answer<any>;
+  answer: T;
   transition?: Transition;
   audio?: string;
   image?: string;
