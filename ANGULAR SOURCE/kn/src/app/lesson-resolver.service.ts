@@ -1,4 +1,3 @@
-import { ThrowStmt } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
 import { ContentService } from '@content/services/content.service';
