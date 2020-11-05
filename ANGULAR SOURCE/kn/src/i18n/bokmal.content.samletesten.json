@@ -34,6 +34,90 @@
       "questions": [
         {
           "id": 1,
+          "type": "groups-choice",
+          "title": "Drømmen om en bondegård",
+          "text": "Henrik bladde fram til sidene med boligannonser. Leiligheten deres var %s for liten for dem, så nå lette de etter %s større. De ville gjerne flytte ut på landet. De lette etter en liten %s hvor det var plass til å ha et par %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "innredet"
+              },
+              {
+                "id": 2,
+                "text": "solgt"
+              },
+              {
+                "id": 3,
+                "text": "annonsert"
+              },
+              {
+                "id": 4,
+                "text": "blitt"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "det"
+              },
+              {
+                "id": 2,
+                "text": "noe"
+              },
+              {
+                "id": 3,
+                "text": "annet"
+              },
+              {
+                "id": 4,
+                "text": "flere"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "altan"
+              },
+              {
+                "id": 2,
+                "text": "restaurant"
+              },
+              {
+                "id": 3,
+                "text": "gård"
+              },
+              {
+                "id": 4,
+                "text": "bil"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "ferier"
+              },
+              {
+                "id": 2,
+                "text": "hester"
+              },
+              {
+                "id": 3,
+                "text": "år"
+              },
+              {
+                "id": 4,
+                "text": "foredrag"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4, 2, 3, 2],
+            "points": 1
+          }
+        },
+        {
+          "id": 2,
           "type": "slider",
           "text": "Hvilket tall peker pilen på?",
           "image": "Skala_tall2.png",
@@ -48,7 +132,7 @@
           }
         },
         {
-          "id": 2,
+          "id": 3,
           "type": "single",
           "text": "Kvar er det <b>IKKJE</b> mogleg å kjøpe dataspel?",
           "image": "8M2yA4GoH0iDztqRhbR37Q.png",
@@ -76,7 +160,7 @@
           ]
         },
         {
-          "id": 3,
+          "id": 4,
           "type": "multiple",
           "text": "Hvordan kan sosiale medier gi målrettet reklame tilpasset den enkelte? <b>(Velg to alternativ)</b>",
           "image": "LELQTPLlHU22QRdBWfFlsA.png",
@@ -100,7 +184,7 @@
           }
         },
         {
-          "id": 4,
+          "id": 5,
           "type": "hotspot",
           "text": "Hvor trykker du for å søke etter en bestemt tv-serie?",
           "image": "CbJojWjnkuqk6OK9Jgg.png?v=2",
@@ -140,7 +224,7 @@
           ]
         },
         {
-          "id": 5,
+          "id": 6,
           "type": "dialogue",
           "image": "sebastian.jpg",
           "answer": {
@@ -233,7 +317,7 @@
           ]
         },
         {
-          "id": 6,
+          "id": 7,
           "type": "code",
           "text": "Hvor mange av feltene er det obligatorisk å fylle ut?",
           "image": "U5mlJh904U6Zev981wk1jQ.png?v=2",
@@ -243,7 +327,7 @@
           }
         },
         {
-          "id": 7,
+          "id": 8,
           "type": "ranking",
           "text": "Dra og slipp passordene i riktig rekkefølge. Sett det sikreste øverst.",
           "image": "7nwRTybRAEy2bzXj4kT4g.png",
@@ -267,91 +351,6 @@
           ],
           "answer": {
             "value": [2, 4, 1, 3],
-            "points": 1
-          }
-        },
-
-        {
-          "id": 8,
-          "type": "groups-choice",
-          "title": "Drømmen om en bondegård",
-          "text": "Henrik bladde fram til sidene med boligannonser. Leiligheten deres var %s for liten for dem, så nå lette de etter %s større. De ville gjerne flytte ut på landet. De lette etter en liten %s hvor det var plass til å ha et par %s.",
-          "options": [
-            [
-              {
-                "id": 1,
-                "text": "innredet"
-              },
-              {
-                "id": 2,
-                "text": "solgt"
-              },
-              {
-                "id": 3,
-                "text": "annonsert"
-              },
-              {
-                "id": 4,
-                "text": "blitt"
-              }
-            ],
-            [
-              {
-                "id": 1,
-                "text": "det"
-              },
-              {
-                "id": 2,
-                "text": "noe"
-              },
-              {
-                "id": 3,
-                "text": "annet"
-              },
-              {
-                "id": 4,
-                "text": "flere"
-              }
-            ],
-            [
-              {
-                "id": 1,
-                "text": "altan"
-              },
-              {
-                "id": 2,
-                "text": "restaurant"
-              },
-              {
-                "id": 3,
-                "text": "gård"
-              },
-              {
-                "id": 4,
-                "text": "bil"
-              }
-            ],
-            [
-              {
-                "id": 1,
-                "text": "ferier"
-              },
-              {
-                "id": 2,
-                "text": "hester"
-              },
-              {
-                "id": 3,
-                "text": "år"
-              },
-              {
-                "id": 4,
-                "text": "foredrag"
-              }
-            ]
-          ],
-          "answer": {
-            "value": [4, 2, 3, 2],
             "points": 1
           }
         }
