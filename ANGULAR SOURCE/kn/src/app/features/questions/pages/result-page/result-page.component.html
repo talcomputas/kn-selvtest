@@ -56,7 +56,27 @@
       </div>
     </div>
   </div>
-
+  <div style="background-color: lightcoral">
+    <!-- TODO: remove this when in production -->
+    <table>
+      <tr>
+        <td>result.score</td>
+        <td>{{ result.score }}</td>
+      </tr>
+      <tr>
+        <td>result.maxScore</td>
+        <td>{{ result.maxScore }}</td>
+      </tr>
+      <tr>
+        <td>result.level.id</td>
+        <td>{{ result.level.id }}</td>
+      </tr>
+      <tr>
+        <td>result.level</td>
+        <td>{{ result.level | json }}</td>
+      </tr>
+    </table>
+  </div>
   <footer app-card-footer *ngIf="showAnswers">
     <div class="actions">
       <button app-stroked-button app-color="primary" (click)="showAnswers = false">

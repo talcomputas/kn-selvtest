@@ -317,3 +317,18 @@
     }
   }
 }
+
+.groups-choice .mat-radio-button.groups-choice-neutral.mat-radio-checked {
+  background-color: white;
+  color: black;
+}
+
+.groups-choice .mat-radio-button.groups-choice-correct.mat-radio-checked {
+  background-color: $green-dark;
+  color: white;
+}
+
+.groups-choice .mat-radio-button.groups-choice-incorrect.mat-radio-checked {
+  background-color: $red;
+  color: white;
+}
