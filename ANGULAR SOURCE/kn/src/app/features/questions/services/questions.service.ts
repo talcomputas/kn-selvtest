@@ -431,9 +431,9 @@ export class QuestionsService {
 
       case QuestionType.SLIDER: {
         const { text } = question as QuestionSlider;
-        const correct = selectOption(answer.value, this.answers[id]);
-        const selected = selectOption(selectedValue, this.answers[id]);
-        const isCorrect = compareSingle(selectedValue, answer.value);
+        const isCorrect = selectedValue === answer.value;
+        const selected = selectedValue;
+        const correct = answer.value;
         return { id, type, text, correct, selected, isCorrect };
       }
     }

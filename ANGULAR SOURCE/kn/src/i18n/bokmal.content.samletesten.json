@@ -34,6 +34,21 @@
       "questions": [
         {
           "id": 1,
+          "type": "slider",
+          "text": "Hvilket tall peker pilen på?",
+          "image": "Skala_tall2.png",
+          "answer": {
+            "value": 130,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 100,
+            "ceil": 150
+          }
+        },
+        {
+          "id": 2,
           "type": "single",
           "text": "Kvar er det <b>IKKJE</b> mogleg å kjøpe dataspel?",
           "image": "8M2yA4GoH0iDztqRhbR37Q.png",
@@ -61,7 +76,7 @@
           ]
         },
         {
-          "id": 2,
+          "id": 3,
           "type": "multiple",
           "text": "Hvordan kan sosiale medier gi målrettet reklame tilpasset den enkelte? <b>(Velg to alternativ)</b>",
           "image": "LELQTPLlHU22QRdBWfFlsA.png",
@@ -85,7 +100,7 @@
           }
         },
         {
-          "id": 3,
+          "id": 4,
           "type": "hotspot",
           "text": "Hvor trykker du for å søke etter en bestemt tv-serie?",
           "image": "CbJojWjnkuqk6OK9Jgg.png?v=2",
@@ -125,7 +140,7 @@
           ]
         },
         {
-          "id": 4,
+          "id": 5,
           "type": "dialogue",
           "image": "sebastian.jpg",
           "answer": {
@@ -218,7 +233,7 @@
           ]
         },
         {
-          "id": 5,
+          "id": 6,
           "type": "code",
           "text": "Hvor mange av feltene er det obligatorisk å fylle ut?",
           "image": "U5mlJh904U6Zev981wk1jQ.png?v=2",
@@ -255,63 +270,7 @@
             "points": 1
           }
         },
-        {
-          "id": 2,
-          "type": "slider",
-          "text": "Hvilket tall peker pilen på?",
-          "image": "Skala_tall2.png",
-          "answer": {
-            "value": 130,
-            "points": 1
-          },
-          "options": {
-            "id": 1,
-            "floor": 100,
-            "ceil": 150
-          }
-        },
-        {
-          "id": 1,
-          "type": "multiple-diff-points",
-          "answer": {
-            "value": [1, 2],
-            "points": [0, 2]
-          },
-          "options": [
-            {
-              "id": 1,
-              "text": "Nei"
-            },
-            {
-              "id": 2,
-              "text": "Ja"
-            }
-          ],
-          "text": "Forstår du enkle matoppskrifter?"
-        },
-        {
-          "id": 17,
-          "type": "multiple-diff-points",
-          "answer": {
-            "value": [1, 2, 3],
-            "points": [0, 1, 2]
-          },
-          "options": [
-            {
-              "id": 1,
-              "text": "Nei"
-            },
-            {
-              "id": 2,
-              "text": "Ja, med litt hjelp"
-            },
-            {
-              "id": 3,
-              "text": "Ja"
-            }
-          ],
-          "text": "Kan du kontrollere en telefonregning og vurdere forbruket ditt? "
-        },
+
         {
           "id": 8,
           "type": "groups-choice",
