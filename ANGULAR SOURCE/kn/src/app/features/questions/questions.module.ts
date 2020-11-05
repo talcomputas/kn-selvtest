@@ -40,6 +40,8 @@ import { QuestionGroupsChoiceComponent } from '@features/questions/components/qu
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatIconModule } from '@angular/material/icon';
 import { StatisticsPageComponent } from './pages/statistics-page/statistics-page.component';
 import { QuestionGradingComponent } from '@features/questions/components/question-grading/question-grading.component';
 
@@ -77,6 +79,8 @@ import { QuestionGradingComponent } from '@features/questions/components/questio
     MatRadioModule,
     MatButtonModule,
     MatSliderModule,
+    MatBadgeModule,
+    MatIconModule,
   ],
   providers: [QuestionsService, StatisticsService, StatisticsApiService],
 })

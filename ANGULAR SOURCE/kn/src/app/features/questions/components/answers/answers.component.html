@@ -239,6 +239,19 @@
           </ng-container>
         </div>
       </div>
+
+      <div
+        class="question-multiple-diff-points"
+        *ngSwitchCase="QuestionType.MULTIPLE_DIFF_POINTS === item.type"
+      >
+        <p class="text" [innerHTML]="item.text"></p>
+
+        <div class="value">
+          <p>
+            {{ item.selected[0].text }}
+          </p>
+        </div>
+      </div>
     </ng-container>
   </div>
 </div>

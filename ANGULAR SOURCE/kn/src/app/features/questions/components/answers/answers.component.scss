@@ -135,6 +135,24 @@
     }
   }
 
+  .question-multiple-diff-points {
+    @extend %text-item;
+
+    .value {
+      @extend %text-value;
+
+      > * {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0;
+
+        > * {
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+
   .question-single {
     @extend %text-item;
 
