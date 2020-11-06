@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subscription } from 'rxjs';
+import { BehaviorSubject, Observable, Subscription, throwError } from 'rxjs';
 import { ContentService } from '@content/services/content.service';
 import { ModuleType } from '../enums/module-type.enum';
 import { QuestionType } from '../enums/question-type.enum';
@@ -15,7 +15,6 @@ import { QuestionsUnionType } from '@features/questions/types/questions-union.ty
 import { Level } from '@features/questions/interfaces/level.interface';
 import {
   compareCodes,
-  compareGroupsChoice,
   compareMultiple,
   compareSingle,
 } from '@features/questions/utils/comparison.utils';
@@ -213,7 +212,7 @@ export class QuestionsService {
   public getScore(answers: { [key: string]: any }): number {
     let score = 0;
 
-    Object.keys(answers).forEach((id: string) => {
+    Object.keys(answers).forEach((id: string): number => {
       const questionId = Number(id);
       const selection = answers[id];
       const question = this.questionsDictionary.get(questionId);
@@ -283,8 +282,10 @@ export class QuestionsService {
           const { answer } = question as QuestionGroupsChoice;
           const result = this.groupChoicePoints(answer, selection);
           score += result;
+          break;
         }
       }
+      return score;
     });
 
     return score;
@@ -344,7 +345,7 @@ export class QuestionsService {
         const correct = selectOption(answer.value, options);
         const selected = selectOption(selectedValue, options);
         const isCorrect = compareSingle(selectedValue, answer.value);
-        return { id, type, text, correct, selected, isCorrect };
+        return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
       }
 
       case QuestionType.CODE: {
@@ -352,7 +353,7 @@ export class QuestionsService {
         const correct = answer.value;
         const selected = Number(selectedValue);
         const isCorrect = compareCodes(selectedValue, answer.value);
-        return { id, type, text, correct, selected, isCorrect };
+        return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
       }
 
       case QuestionType.HOTSPOT: {
@@ -360,7 +361,7 @@ export class QuestionsService {
         const correct = selectOption(answer.value, options);
         const selected = selectOption(selectedValue, options);
         const isCorrect = compareSingle(selectedValue, answer.value);
-        return { id, type, text, correct, selected, isCorrect, image };
+        return { id, type, text, correct, selected, isCorrect, image } as ResultAnswer;
       }
 
       case QuestionType.MULTIPLE: {
@@ -369,7 +370,7 @@ export class QuestionsService {
         const correct = values.map((v) => selectOption(v, options));
         const selected = selectedValue.map((v) => selectOption(v, options));
         const isCorrect = compareMultiple(selectedValue, values);
-        return { id, type, text, correct, selected, isCorrect };
+        return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
       }
 
       case QuestionType.MULTIPLE_DIFF_POINTS: {
@@ -378,7 +379,7 @@ export class QuestionsService {
         const correct = values.map((v) => selectOption(v, options));
         const selected = selectedValue.map((v) => selectOption(v, options));
         const isCorrect = compareMultiple(selectedValue, values);
-        return { id, type, text, correct, selected, isCorrect };
+        return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
       }
 
       case QuestionType.GROUPS_CHOICE: {
@@ -402,7 +403,7 @@ export class QuestionsService {
           correct,
           selected,
           isCorrect,
-        };
+        } as ResultAnswer;
       }
 
       case QuestionType.DIALOGUE: {
@@ -417,7 +418,7 @@ export class QuestionsService {
           speech as (SpeechBase & SpeechFunnel & SpeechSelect)[],
           selectedValue,
         );
-        return { id, type, speech, correct, selected, isCorrect };
+        return { id, type, speech, correct, selected, isCorrect } as ResultAnswer;
       }
 
       case QuestionType.RANKING: {
@@ -426,7 +427,7 @@ export class QuestionsService {
         const correct = values.map((v) => selectOption(v, options));
         const selected = selectedValue.map((v) => selectOption(v, options));
         const isCorrect = compareMultiple(selectedValue, values, false);
-        return { id, type, text, correct, selected, isCorrect };
+        return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
       }
 
       case QuestionType.SLIDER: {
@@ -434,7 +435,11 @@ export class QuestionsService {
         const isCorrect = selectedValue === answer.value;
         const selected = selectedValue;
         const correct = answer.value;
-        return { id, type, text, correct, selected, isCorrect };
+        return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
+      }
+      default: {
+        throwError('QuestionType not Found');
+        return null;
       }
     }
   }
@@ -520,7 +525,10 @@ export class QuestionsService {
       case QuestionType.MULTIPLE_DIFF_POINTS: {
         return compareMultiple(selectedValue, correctValue as number[]);
       }
+      default:
+        throwError('isCorrectAnswer: Could not determine true or false answer');
     }
+    return false;
   }
 
   private selectCorrectAnswers(questions: QuestionsUnionType[]): { [key: string]: any } {

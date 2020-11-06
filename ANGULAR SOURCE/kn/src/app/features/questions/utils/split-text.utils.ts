@@ -1,7 +1,7 @@
-export const getSplitText = (value: string): string[] => {
+export const getSplitText = (value: string): (string | number)[] => {
   const ary = value.split('%s');
 
-  let result = [];
+  let result: (string | number)[] = [];
 
   for (let i = 0; i < ary.length; i++) {
     if (ary[i] === '' && i < ary.length - 1) {

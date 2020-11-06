@@ -164,7 +164,7 @@ export class ButtonToggleGroupDirective implements ControlValueAccessor, AfterCo
   }
 
   /** Determines whether a button toggle should be checked on init. */
-  isPrechecked(toggle: ButtonToggleComponent) {
+  isPrechecked(toggle: ButtonToggleComponent): boolean {
     if (typeof this.rawValue === 'undefined') {
       return false;
     }
@@ -172,6 +172,7 @@ export class ButtonToggleGroupDirective implements ControlValueAccessor, AfterCo
     if (Array.isArray(this.rawValue)) {
       return this.rawValue.some((value) => toggle.value != null && value === toggle.value);
     }
+    return false;
   }
 
   private emitChangeEvent(): void {
