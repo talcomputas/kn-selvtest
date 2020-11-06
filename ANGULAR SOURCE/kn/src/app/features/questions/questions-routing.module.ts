@@ -20,7 +20,7 @@ const routes: Routes = [
     path: 'resultat',
     component: ResultPageComponent,
     resolve: { path: RouteResolverService },
-  },
+  }
 ];
 
 @NgModule({

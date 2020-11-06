@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { StatisticsService } from '@features/questions/services/statistics.service';
 
 @Component({
   selector: 'app-statistics-page',
@@ -8,9 +9,14 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class StatisticsPageComponent implements OnInit {
 
-  constructor() { }
+  itemData: Array<string>
+
+  constructor(private statisticsService: StatisticsService) { }
 
   ngOnInit(): void {
+    this.statisticsService.getBaseData().subscribe(itemData => {
+      this.itemData = itemData
+    });
   }
 
 }

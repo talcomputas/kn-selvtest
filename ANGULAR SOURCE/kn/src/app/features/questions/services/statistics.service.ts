@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { StatisticsApiService } from '@features/questions/services/statistics-api.service';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class StatisticsService {
@@ -56,5 +57,9 @@ export class StatisticsService {
         name,
       )
       .subscribe();
+  }
+
+  getBaseData(): Observable<any> {
+    return this.statisticsApiService.getItemData();
   }
 }

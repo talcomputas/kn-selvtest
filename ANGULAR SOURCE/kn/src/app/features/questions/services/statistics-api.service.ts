@@ -37,4 +37,8 @@ export class StatisticsApiService {
       params,
     });
   }
+
+  getItemData() {
+    return this.http.get(`${environment.STATISTICS_API}itemdata`)
+  }
 }

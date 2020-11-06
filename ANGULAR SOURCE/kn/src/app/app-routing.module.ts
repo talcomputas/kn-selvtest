@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '@core/components/home/home.component';
+import { StatisticsPageComponent } from '@features/questions/pages/statistics-page/statistics-page.component';
+import { RouteResolverService } from '@features/questions/services/route-resolver.service';
 
 const routes: Routes = [
   {
@@ -32,6 +34,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./features/questions/questions.module').then((m) => m.QuestionsModule),
   },
+  {
+    path: 'statistikk',
+    component: StatisticsPageComponent,
+    resolve: { path: RouteResolverService }
+  },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
 
@@ -39,4 +46,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}
