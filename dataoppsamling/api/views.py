@@ -90,8 +90,7 @@ def itemdata():
         if cur.with_rows:
             result = [dict((cur.description[i][0], value)
                 for i, value in enumerate(row)) for row in cur.fetchall()]
-
-    print(result)
+            print(result)
 
     conn.commit()
     conn.close()
