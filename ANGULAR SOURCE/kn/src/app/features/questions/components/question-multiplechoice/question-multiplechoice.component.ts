@@ -19,18 +19,18 @@ export class QuestionMultipleChoiceComponent
     this.optionsClassName = 'text';
   }
 
-  getSplitText(value: string) {
+  getSplitText(value: string): (string | number)[] {
     const ary = value.split('%s');
 
-    let result = [];
+    let result: (string | number)[] = [];
 
     for (let i = 0; i < ary.length; i++) {
       if (ary[i] === '' && i < ary.length - 1) {
-        result.push('%s');
+        result.push(i);
       } else {
         result.push(ary[i]);
         if (i < ary.length - 1) {
-          result.push('%s');
+          result.push(i);
         }
       }
     }
