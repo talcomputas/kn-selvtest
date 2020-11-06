@@ -10,8 +10,13 @@ describe('ContentService', () => {
     contentService.setCtx('nb');
   });
 
-  it('intro should contain a certain keys', () => {
+  it('should contain a certain keys', () => {
     expect(Object.keys(contentService.get('intro'))).toContain('label');
     expect(Object.keys(contentService.get('intro'))).toContain('title');
+
+    expect(contentService.get('result.levels.3.id')).toEqual('3');
+  });
+  it('should be able to get value by nested keys', () => {
+    expect(contentService.get('result.levels.3.id')).toEqual('3');
   });
 });

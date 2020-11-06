@@ -3,7 +3,7 @@ import { isDefined } from '../utils/utils';
 
 @Injectable()
 export class ContentParser {
-  public getValue(target: object, key: string): any {
+  public getValue(target: { [key: string]: any }, key: string): any {
     const keys = key.split('.');
     key = '';
     do {
