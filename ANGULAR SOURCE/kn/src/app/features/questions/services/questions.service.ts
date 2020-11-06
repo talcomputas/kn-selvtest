@@ -28,6 +28,9 @@ import { StatisticsService } from '@features/questions/services/statistics.servi
 import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
 import { QuestionGroupsChoice } from '@features/questions/interfaces/question-groups-choice.interface';
 import { QuestionMultipleDiffPoints } from '@features/questions/interfaces/question-multiple-diff-points.interface';
+import { Answer } from '@features/questions/interfaces/answer.interface';
+import { Options } from '@features/questions/interfaces/options.interface';
+import { Option } from '@features/questions/interfaces/option.interface';
 
 @Injectable()
 export class QuestionsService {
@@ -291,50 +294,51 @@ export class QuestionsService {
     return score;
   }
 
+  private getDialogueAnswer(
+    speech: (SpeechBase & SpeechFunnel & SpeechSelect)[],
+    selection: string[],
+  ) {
+    const data: (SpeechBase & SpeechFunnel & SpeechSelect)[] = [];
+
+    speech.forEach(() => {
+      const lastItem = data[data.length - 1];
+
+      if (!lastItem) {
+        const firstQuestion = speech.find((q) => q.options && q.options.includes(selection[0]));
+        data.push(firstQuestion);
+        return;
+      }
+
+      const { type: lastItemType } = lastItem;
+
+      if (lastItemType === SpeechType.OPTION) {
+        const nextItem = speech.find((s) => s.id === lastItem.next && lastItem.next);
+        if (nextItem) {
+          data.push(nextItem);
+        }
+        return;
+      }
+
+      if (lastItemType === SpeechType.QUESTION) {
+        const selectedId = lastItem.options.find((o) => selection.includes(o));
+        if (!selectedId) {
+          return;
+        }
+
+        const option = speech.find((s) => s.id === selectedId);
+
+        if (option) {
+          data.push(option);
+        }
+      }
+    });
+
+    return data;
+  }
+
   public getResultAnswer(question: QuestionsUnionType, selectedValue: any): ResultAnswer {
     const selectOption = (value: any, options: { id: any }[]) => {
       return options.find((option) => option.id === value);
-    };
-    const dialogueAnswer = (
-      speech: (SpeechBase & SpeechFunnel & SpeechSelect)[],
-      selection: string[],
-    ) => {
-      const data = [];
-
-      speech.forEach(() => {
-        const lastItem = data[data.length - 1];
-
-        if (!lastItem) {
-          const firstQuestion = speech.find((q) => q.options && q.options.includes(selection[0]));
-          data.push(firstQuestion);
-          return;
-        }
-
-        const { type: lastItemType } = lastItem;
-
-        if (lastItemType === SpeechType.OPTION) {
-          const nextItem = speech.find((s) => s.id === lastItem.next && lastItem.next);
-          if (nextItem) {
-            data.push(nextItem);
-          }
-          return;
-        }
-
-        if (lastItemType === SpeechType.QUESTION) {
-          const selectedId = lastItem.options.find((o) => selection.includes(o));
-          if (!selectedId) {
-            return;
-          }
-
-          const option = speech.find((s) => s.id === selectedId);
-
-          if (option) {
-            data.push(option);
-          }
-        }
-      });
-
-      return data;
     };
 
     const { id, answer, type } = question;
@@ -368,7 +372,7 @@ export class QuestionsService {
         const { text, options } = question as QuestionMultiple;
         const values = answer.value as number[];
         const correct = values.map((v) => selectOption(v, options));
-        const selected = selectedValue.map((v) => selectOption(v, options));
+        const selected = selectedValue.map((v: number) => selectOption(v, options));
         const isCorrect = compareMultiple(selectedValue, values);
         return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
       }
@@ -377,7 +381,10 @@ export class QuestionsService {
         const { text, options } = question as QuestionMultipleDiffPoints;
         const values = answer.value as number[];
         const correct = values.map((v) => selectOption(v, options));
-        const selected = selectedValue.map((v) => selectOption(v, options));
+
+        const selected = selectedValue.map((v: number) => {
+          return selectOption(v, options);
+        });
         const isCorrect = compareMultiple(selectedValue, values);
         return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
       }
@@ -386,13 +393,13 @@ export class QuestionsService {
         const { text, options } = question as QuestionGroupsChoice;
         const values = answer.value as number[];
 
-        const correct = [];
+        const correct: Option[] = [];
         values.forEach((val, index) => {
           correct.push(selectOption(val, options[index]));
         });
 
-        const selected = [];
-        selectedValue.forEach((val, index) => {
+        const selected: Option[] = [];
+        selectedValue.forEach((val: number, index: number) => {
           selected.push(selectOption(val, options[index]));
         });
         const isCorrect = JSON.stringify(correct) === JSON.stringify(selected);
@@ -410,11 +417,11 @@ export class QuestionsService {
         const { speech } = question as QuestionDialogue;
         const values = answer.value as string[];
         const isCorrect = compareMultiple(selectedValue, values, false);
-        const correct = dialogueAnswer(
+        const correct = this.getDialogueAnswer(
           speech as (SpeechBase & SpeechFunnel & SpeechSelect)[],
           values,
         );
-        const selected = dialogueAnswer(
+        const selected = this.getDialogueAnswer(
           speech as (SpeechBase & SpeechFunnel & SpeechSelect)[],
           selectedValue,
         );
@@ -425,7 +432,7 @@ export class QuestionsService {
         const { text, options } = question as QuestionRanking;
         const values = answer.value as number[];
         const correct = values.map((v) => selectOption(v, options));
-        const selected = selectedValue.map((v) => selectOption(v, options));
+        const selected = selectedValue.map((v: number) => selectOption(v, options));
         const isCorrect = compareMultiple(selectedValue, values, false);
         return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
       }
