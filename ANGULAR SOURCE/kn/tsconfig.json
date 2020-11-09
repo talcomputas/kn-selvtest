@@ -3,26 +3,22 @@
   "compilerOptions": {
     "baseUrl": "./src/app",
     "outDir": "./dist/out-tsc",
-    //"noImplicitAny": true,
-    //"noImplicitReturns": true,
-    "noImplicitThis": true,
+    "forceConsistentCasingInFileNames": true,
+    //"strict": true,
+    "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    //"strictNullChecks": true,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
-    "module": "es2020",
-    "moduleResolution": "node",
     "experimentalDecorators": true,
+    "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "module": "es2020",
     "lib": [
       "es2018",
       "dom"
     ],
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "paths": {
       "@assets/*": [
         "assets/*"
@@ -45,6 +41,21 @@
       "@env/*": [
         "../environments/*"
       ]
-    }
+    },
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    //"strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true
+    /*
+    "esModuleInterop": true,
+     */
+
+  },
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    //"strictInputAccessModifiers": true,
+    //"strictTemplates": true
   }
 }

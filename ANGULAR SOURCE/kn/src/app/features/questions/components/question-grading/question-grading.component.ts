@@ -34,6 +34,6 @@ export class QuestionGradingComponent
       return 'audio';
     }
 
-    return null;
+    return 'text';
   }
 }

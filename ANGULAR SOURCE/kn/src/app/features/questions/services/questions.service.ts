@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subscription } from 'rxjs';
+import { BehaviorSubject, Observable, Subscription, throwError } from 'rxjs';
 import { ContentService } from '@content/services/content.service';
 import { ModuleType } from '../enums/module-type.enum';
 import { QuestionType } from '../enums/question-type.enum';
@@ -15,7 +15,6 @@ import { QuestionsUnionType } from '@features/questions/types/questions-union.ty
 import { Level } from '@features/questions/interfaces/level.interface';
 import {
   compareCodes,
-  compareGroupsChoice,
   compareMultiple,
   compareSingle,
 } from '@features/questions/utils/comparison.utils';
@@ -29,6 +28,9 @@ import { StatisticsService } from '@features/questions/services/statistics.servi
 import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
 import { QuestionGroupsChoice } from '@features/questions/interfaces/question-groups-choice.interface';
 import { QuestionMultipleDiffPoints } from '@features/questions/interfaces/question-multiple-diff-points.interface';
+import { Answer } from '@features/questions/interfaces/answer.interface';
+import { Options } from '@features/questions/interfaces/options.interface';
+import { Option } from '@features/questions/interfaces/option.interface';
 
 @Injectable()
 export class QuestionsService {
@@ -213,7 +215,7 @@ export class QuestionsService {
   public getScore(answers: { [key: string]: any }): number {
     let score = 0;
 
-    Object.keys(answers).forEach((id: string) => {
+    Object.keys(answers).forEach((id: string): number => {
       const questionId = Number(id);
       const selection = answers[id];
       const question = this.questionsDictionary.get(questionId);
@@ -283,57 +285,60 @@ export class QuestionsService {
           const { answer } = question as QuestionGroupsChoice;
           const result = this.groupChoicePoints(answer, selection);
           score += result;
+          break;
         }
       }
+      return score;
     });
 
     return score;
   }
 
+  private getDialogueAnswer(
+    speech: (SpeechBase & SpeechFunnel & SpeechSelect)[],
+    selection: string[],
+  ) {
+    const data: (SpeechBase & SpeechFunnel & SpeechSelect)[] = [];
+
+    speech.forEach(() => {
+      const lastItem = data[data.length - 1];
+
+      if (!lastItem) {
+        const firstQuestion = speech.find((q) => q.options && q.options.includes(selection[0]));
+        data.push(firstQuestion);
+        return;
+      }
+
+      const { type: lastItemType } = lastItem;
+
+      if (lastItemType === SpeechType.OPTION) {
+        const nextItem = speech.find((s) => s.id === lastItem.next && lastItem.next);
+        if (nextItem) {
+          data.push(nextItem);
+        }
+        return;
+      }
+
+      if (lastItemType === SpeechType.QUESTION) {
+        const selectedId = lastItem.options.find((o) => selection.includes(o));
+        if (!selectedId) {
+          return;
+        }
+
+        const option = speech.find((s) => s.id === selectedId);
+
+        if (option) {
+          data.push(option);
+        }
+      }
+    });
+
+    return data;
+  }
+
   public getResultAnswer(question: QuestionsUnionType, selectedValue: any): ResultAnswer {
     const selectOption = (value: any, options: { id: any }[]) => {
       return options.find((option) => option.id === value);
-    };
-    const dialogueAnswer = (
-      speech: (SpeechBase & SpeechFunnel & SpeechSelect)[],
-      selection: string[],
-    ) => {
-      const data = [];
-
-      speech.forEach(() => {
-        const lastItem = data[data.length - 1];
-
-        if (!lastItem) {
-          const firstQuestion = speech.find((q) => q.options && q.options.includes(selection[0]));
-          data.push(firstQuestion);
-          return;
-        }
-
-        const { type: lastItemType } = lastItem;
-
-        if (lastItemType === SpeechType.OPTION) {
-          const nextItem = speech.find((s) => s.id === lastItem.next && lastItem.next);
-          if (nextItem) {
-            data.push(nextItem);
-          }
-          return;
-        }
-
-        if (lastItemType === SpeechType.QUESTION) {
-          const selectedId = lastItem.options.find((o) => selection.includes(o));
-          if (!selectedId) {
-            return;
-          }
-
-          const option = speech.find((s) => s.id === selectedId);
-
-          if (option) {
-            data.push(option);
-          }
-        }
-      });
-
-      return data;
     };
 
     const { id, answer, type } = question;
@@ -344,7 +349,7 @@ export class QuestionsService {
         const correct = selectOption(answer.value, options);
         const selected = selectOption(selectedValue, options);
         const isCorrect = compareSingle(selectedValue, answer.value);
-        return { id, type, text, correct, selected, isCorrect };
+        return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
       }
 
       case QuestionType.CODE: {
@@ -352,7 +357,7 @@ export class QuestionsService {
         const correct = answer.value;
         const selected = Number(selectedValue);
         const isCorrect = compareCodes(selectedValue, answer.value);
-        return { id, type, text, correct, selected, isCorrect };
+        return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
       }
 
       case QuestionType.HOTSPOT: {
@@ -360,38 +365,41 @@ export class QuestionsService {
         const correct = selectOption(answer.value, options);
         const selected = selectOption(selectedValue, options);
         const isCorrect = compareSingle(selectedValue, answer.value);
-        return { id, type, text, correct, selected, isCorrect, image };
+        return { id, type, text, correct, selected, isCorrect, image } as ResultAnswer;
       }
 
       case QuestionType.MULTIPLE: {
         const { text, options } = question as QuestionMultiple;
         const values = answer.value as number[];
         const correct = values.map((v) => selectOption(v, options));
-        const selected = selectedValue.map((v) => selectOption(v, options));
+        const selected = selectedValue.map((v: number) => selectOption(v, options));
         const isCorrect = compareMultiple(selectedValue, values);
-        return { id, type, text, correct, selected, isCorrect };
+        return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
       }
 
       case QuestionType.MULTIPLE_DIFF_POINTS: {
         const { text, options } = question as QuestionMultipleDiffPoints;
         const values = answer.value as number[];
         const correct = values.map((v) => selectOption(v, options));
-        const selected = selectedValue.map((v) => selectOption(v, options));
+
+        const selected = selectedValue.map((v: number) => {
+          return selectOption(v, options);
+        });
         const isCorrect = compareMultiple(selectedValue, values);
-        return { id, type, text, correct, selected, isCorrect };
+        return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
       }
 
       case QuestionType.GROUPS_CHOICE: {
         const { text, options } = question as QuestionGroupsChoice;
         const values = answer.value as number[];
 
-        const correct = [];
+        const correct: Option[] = [];
         values.forEach((val, index) => {
           correct.push(selectOption(val, options[index]));
         });
 
-        const selected = [];
-        selectedValue.forEach((val, index) => {
+        const selected: Option[] = [];
+        selectedValue.forEach((val: number, index: number) => {
           selected.push(selectOption(val, options[index]));
         });
         const isCorrect = JSON.stringify(correct) === JSON.stringify(selected);
@@ -402,31 +410,31 @@ export class QuestionsService {
           correct,
           selected,
           isCorrect,
-        };
+        } as ResultAnswer;
       }
 
       case QuestionType.DIALOGUE: {
         const { speech } = question as QuestionDialogue;
         const values = answer.value as string[];
         const isCorrect = compareMultiple(selectedValue, values, false);
-        const correct = dialogueAnswer(
+        const correct = this.getDialogueAnswer(
           speech as (SpeechBase & SpeechFunnel & SpeechSelect)[],
           values,
         );
-        const selected = dialogueAnswer(
+        const selected = this.getDialogueAnswer(
           speech as (SpeechBase & SpeechFunnel & SpeechSelect)[],
           selectedValue,
         );
-        return { id, type, speech, correct, selected, isCorrect };
+        return { id, type, speech, correct, selected, isCorrect } as ResultAnswer;
       }
 
       case QuestionType.RANKING: {
         const { text, options } = question as QuestionRanking;
         const values = answer.value as number[];
         const correct = values.map((v) => selectOption(v, options));
-        const selected = selectedValue.map((v) => selectOption(v, options));
+        const selected = selectedValue.map((v: number) => selectOption(v, options));
         const isCorrect = compareMultiple(selectedValue, values, false);
-        return { id, type, text, correct, selected, isCorrect };
+        return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
       }
 
       case QuestionType.SLIDER: {
@@ -434,7 +442,11 @@ export class QuestionsService {
         const isCorrect = selectedValue === answer.value;
         const selected = selectedValue;
         const correct = answer.value;
-        return { id, type, text, correct, selected, isCorrect };
+        return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
+      }
+      default: {
+        throwError('QuestionType not Found');
+        return null;
       }
     }
   }
@@ -520,7 +532,10 @@ export class QuestionsService {
       case QuestionType.MULTIPLE_DIFF_POINTS: {
         return compareMultiple(selectedValue, correctValue as number[]);
       }
+      default:
+        throwError('isCorrectAnswer: Could not determine true or false answer');
     }
+    return false;
   }
 
   private selectCorrectAnswers(questions: QuestionsUnionType[]): { [key: string]: any } {
