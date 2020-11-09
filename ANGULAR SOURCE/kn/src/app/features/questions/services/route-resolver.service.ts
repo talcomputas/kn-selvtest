@@ -49,7 +49,7 @@ export class RouteResolverService implements Resolve<any> {
 
   constructor(public contentService: ContentService) {}
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any {
-    this.path = route.parent.url[0].path ? route.parent.url[0].path : '';
+    this.path = route && route.parent && route.parent.url[0].path ? route.parent.url[0].path : '';
 
     const nblesetesten: Lesson = nblesetestenRaw as Lesson;
     const nnlesetesten: Lesson = nnlesetestenRaw as Lesson;
@@ -133,6 +133,6 @@ export class RouteResolverService implements Resolve<any> {
         break;
     }
 
-    return route.parent.url[0].path ? route.parent.url[0].path : '';
+    return this.path;
   }
 }

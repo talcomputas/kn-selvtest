@@ -36,6 +36,6 @@ export class QuestionSingleComponent
       return 'audio';
     }
 
-    return null;
+    return 'text';
   }
 }

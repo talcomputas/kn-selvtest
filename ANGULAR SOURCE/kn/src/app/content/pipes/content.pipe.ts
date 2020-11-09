@@ -10,7 +10,7 @@ import { ContentService } from '../services/content.service';
 })
 export class ContentPipe implements PipeTransform, OnDestroy {
   private value = '';
-  private lastKey: string;
+  private lastKey: string | null;
   private lastArgs: any[];
   private ctxSubscription: Subscription;
 
@@ -63,7 +63,6 @@ export class ContentPipe implements PipeTransform, OnDestroy {
   private dispose(): void {
     if (this.ctxSubscription) {
       this.ctxSubscription.unsubscribe();
-      this.ctxSubscription = null;
     }
   }
 }
