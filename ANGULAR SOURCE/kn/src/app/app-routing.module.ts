@@ -37,7 +37,6 @@ const routes: Routes = [
   {
     path: 'statistikk',
     component: StatisticsPageComponent,
-    resolve: { path: RouteResolverService }
   },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
@@ -46,5 +45,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

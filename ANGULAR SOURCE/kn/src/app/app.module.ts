@@ -8,6 +8,8 @@ import { AngularDraggableModule } from 'angular2-draggable';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NoCacheHeadersInterceptor } from '@shared/interceptors/nocache.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StatisticsService } from '@features/questions/services/statistics.service';
+import { StatisticsApiService } from '@features/questions/services/statistics-api.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       useClass: NoCacheHeadersInterceptor,
       multi: true,
     },
+    StatisticsService,
+    StatisticsApiService,
   ],
   bootstrap: [AppComponent],
 })
