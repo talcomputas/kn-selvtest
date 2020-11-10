@@ -59,7 +59,7 @@ export class StatisticsService {
       .subscribe();
   }
 
-  getBaseData(): Observable<any> {
-    return this.statisticsApiService.getItemData();
+  getBaseData(fromDate: string, toDate: string, test: string): Observable<any> {
+    return this.statisticsApiService.getItemData(fromDate, toDate, test);
   }
 }

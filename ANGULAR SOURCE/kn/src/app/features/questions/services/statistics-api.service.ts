@@ -38,7 +38,18 @@ export class StatisticsApiService {
     });
   }
 
-  getItemData() {
-    return this.http.get(`${environment.STATISTICS_API}itemdata`)
+  getItemData(
+    fromDate: string,
+    toDate: string,
+    test: string
+  ) {
+    const params = new HttpParams()
+      .set('fromdate', fromDate)
+      .set('todate', toDate)
+      .set('test', test)
+    return this.http.get(`${environment.STATISTICS_API}itemdata`,{
+      responseType: 'text',
+      params
+    } )
   }
 }

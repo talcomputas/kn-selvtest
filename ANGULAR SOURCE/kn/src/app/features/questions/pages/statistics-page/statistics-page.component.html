@@ -1,5 +1,3 @@
-<div *ngFor="let item of itemData">{{ item.id }}</div>
-
 <div>
   <mat-form-field appearance="fill">
     <mat-label>Fra:</mat-label>
@@ -17,13 +15,12 @@
 
   <mat-form-field appearance="fill">
     <mat-label>Sjekk:</mat-label>
-    <select matNativeControl required>
-      <option value="regnesjek">Regnesjekk</option>
-      <option value="datasjek">Datasjekk</option>
-    </select>
+    <mat-select placeholder="Test" [(value)]="selectedTest">
+       <mat-option value="regnesjekk">Regnesjekk</mat-option>
+       <mat-option value="datasjekk">Datasjekk</mat-option>
+    </mat-select>
   </mat-form-field>
 
   <button mat-raised-button (click)="exportCsv()">Last ned</button>
-
 </div>
 

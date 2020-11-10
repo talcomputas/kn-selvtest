@@ -2,7 +2,8 @@ import { Component, OnInit, ChangeDetectionStrategy, ViewChild } from '@angular/
 import { StatisticsService } from '@features/questions/services/statistics.service';
 import { MatDatepicker } from '@angular/material/datepicker';
 import { FormControl } from '@angular/forms';
-import { AngularCsv } from 'angular-csv-ext/dist/Angular-csv'
+import { AngularCsv } from 'angular-csv-ext/dist/Angular-csv';
+import { MatSelect } from '@angular/material/select';
 
 @Component({
   selector: 'app-statistics-page',
@@ -14,35 +15,40 @@ export class StatisticsPageComponent implements OnInit {
 
   @ViewChild(MatDatepicker) fromDate: MatDatepicker<Date>;
   @ViewChild(MatDatepicker) toDate: MatDatepicker<Date>;
-  itemData: Array<any>;
+
+  selectedTest = 'regnesjekk';
 
   fromDateControl = new FormControl(new Date());
   toDateControl = new FormControl(new Date());
 
   csvOptions = {
     fieldSeparator: ',',
-    quoteStrings: "",
+    quoteStrings: '',
     decimalSeparator: '.',
     showLabels: true,
     showTitle: true,
     title: 'Statistikk',
     useBom: true,
     noDownload: false,
-    headers: ["answer", "correct", "correctanswer", "datecreated", "id", "itemid", "time", "timeout", "totaltime", "uid"],
+    headers: ['answer', 'correct', 'correctanswer', 'datecreated', 'id', 'itemid', 'time', 'timeout', 'totaltime', 'uid'],
   };
 
   constructor(private statisticsService: StatisticsService) {
   }
 
   ngOnInit(): void {
-    this.statisticsService.getBaseData().subscribe(itemData => {
-      console.log(itemData);
-      this.itemData = itemData;
-    });
   }
 
+
   exportCsv() {
-    // tslint:disable-next-line:no-unused-expression
-    new AngularCsv(this.itemData, "Statistikk", this.csvOptions)
+    this.statisticsService.getBaseData(
+      this.fromDateControl.value.toString(),
+      this.toDateControl.value.toString(),
+      this.selectedTest)
+      .subscribe(itemData => {
+        console.log(itemData);
+        // tslint:disable-next-line:no-unused-expression
+        new AngularCsv(itemData, 'Statistikk', this.csvOptions);
+      });
   }
 }

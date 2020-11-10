@@ -80,8 +80,18 @@ def submitItem():
 def itemdata():
     token = secrets.token_hex(18)
 
+    test = request.args.get("test")
+    table = ""
+    if test == "regnesjekk":
+        table = "kompetanse_norge_regnesjek"
+    elif test == "datasjekk":
+        table = "kompetanse_norge_datasjek"
+
+    useQuery = "USE " + table + ";"
+    selectQuery = "SELECT * FROM itemdata LIMIT 10"
+
     cursor, conn = connection()
-    query = cursor.execute("USE kompetanse_norge_regnesjek; SELECT * from itemdata LIMIT 3", multi=True)
+    query = cursor.execute(useQuery+selectQuery, multi=True)
 
     result = None
 
@@ -90,7 +100,6 @@ def itemdata():
         if cur.with_rows:
             result = [dict((cur.description[i][0], value)
                 for i, value in enumerate(row)) for row in cur.fetchall()]
-            print(result)
 
     conn.commit()
     conn.close()
