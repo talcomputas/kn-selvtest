@@ -1,1 +1,29 @@
-<p *ngFor="let item in itemData">{{ item }}</p>
+<div *ngFor="let item of itemData">{{ item.id }}</div>
+
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Fra:</mat-label>
+    <input matInput [matDatepicker]="fromDate"  [formControl]="fromDateControl" placeholder="Fra">
+    <mat-datepicker-toggle matSuffix [for]="fromDate"></mat-datepicker-toggle>
+    <mat-datepicker #fromDate></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Til:</mat-label>
+    <input matInput [matDatepicker]="toDate" [formControl]="toDateControl" placeholder="Til">
+    <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+    <mat-datepicker #toDate></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Sjekk:</mat-label>
+    <select matNativeControl required>
+      <option value="regnesjek">Regnesjekk</option>
+      <option value="datasjek">Datasjekk</option>
+    </select>
+  </mat-form-field>
+
+  <button mat-raised-button (click)="exportCsv()">Last ned</button>
+
+</div>
+

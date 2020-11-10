@@ -39,6 +39,11 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
 import { StatisticsPageComponent } from './pages/statistics-page/statistics-page.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -73,8 +78,10 @@ import { StatisticsPageComponent } from './pages/statistics-page/statistics-page
     MatRadioModule,
     MatButtonModule,
     MatSliderModule,
+    MatDatepickerModule,
+    MatInputModule,
   ],
-  providers: [QuestionsService, StatisticsService, StatisticsApiService],
+  providers: [QuestionsService, StatisticsService, StatisticsApiService, { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }, ],
 })
 export class QuestionsModule {
   constructor(
