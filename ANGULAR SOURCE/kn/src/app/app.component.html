@@ -1,6 +1,20 @@
-<app-layout (layoutSize)="switchMode($event)" [layoutClass]="class">
-  <div *ngIf="loading" class="loading-container">
-    <mat-progress-spinner color="primary" mode="indeterminate"> </mat-progress-spinner>
-  </div>
+<div class="container">
+  <mat-toolbar
+    appLayout
+    (layoutSize)="switchMode($event)"
+    [layoutClass]="breakpointClass"
+    role="toolbar"
+    class="toolbar"
+  >
+    <a href="/" class="toolbar__link">
+      <img src="assets/images/kn-logo.png" alt="Kompetanse Norge logo" />
+    </a>
+    <span class="toolbar__spacer">&nbsp;</span>
+    <app-language></app-language>
+  </mat-toolbar>
+
   <router-outlet></router-outlet>
-</app-layout>
+</div>
+<div *ngIf="loading" class="loading-container">
+  <mat-progress-spinner color="primary" mode="indeterminate"> </mat-progress-spinner>
+</div>

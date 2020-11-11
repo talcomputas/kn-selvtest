@@ -14,10 +14,19 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { LayoutDirective } from '@shared/directives/layout.directive';
+import { LanguageComponent } from '@core/components/language/language.component';
 
-const material = [MatMenuModule, MatProgressSpinnerModule, MatIconModule, MatButtonModule];
+const material = [
+  MatMenuModule,
+  MatProgressSpinnerModule,
+  MatIconModule,
+  MatButtonModule,
+  MatToolbarModule,
+];
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LayoutDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,6 +35,7 @@ const material = [MatMenuModule, MatProgressSpinnerModule, MatIconModule, MatBut
     BrowserAnimationsModule,
     material,
   ],
+  exports: [material],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
@@ -38,6 +48,6 @@ const material = [MatMenuModule, MatProgressSpinnerModule, MatIconModule, MatBut
       multi: true,
     },
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent, LanguageComponent],
 })
 export class AppModule {}

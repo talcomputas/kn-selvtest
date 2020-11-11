@@ -1,20 +1,10 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import {
-  Component,
-  ChangeDetectionStrategy,
-  Input,
-  EventEmitter,
-  Output,
-  OnInit,
-} from '@angular/core';
+import { Directive, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
-@Component({
-  selector: 'app-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+@Directive({
+  selector: '[appLayout]',
 })
-export class LayoutComponent implements OnInit {
+export class LayoutDirective implements OnInit {
   @Input()
   layoutClass = '';
 
@@ -22,6 +12,7 @@ export class LayoutComponent implements OnInit {
   readonly layoutSize = new EventEmitter<string>();
 
   constructor(private breakpointObserver: BreakpointObserver) {}
+
   ngOnInit(): void {
     this.breakpointObserver
       .observe([

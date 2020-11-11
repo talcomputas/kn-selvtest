@@ -1,8 +1,3 @@
-:host {
-  display: flex;
-  flex-direction: column;
-}
-
 .loading-container {
   display: flex;
   position: fixed;
@@ -14,4 +9,24 @@
   z-index: 5;
   align-items: center;
   justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  display: flex;
+  height: 91px;
+  &__link {
+    img {
+      width: 168px; // same as kn
+    }
+  }
+  &__spacer {
+    flex: 1 1 auto;
+  }
+  &__menubutton {
+  }
 }

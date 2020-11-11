@@ -9,7 +9,7 @@ import { LoadingService } from 'services/loading.service';
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
-  class = '';
+  breakpointClass = '';
   loading = false;
 
   constructor(
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     private loadingService: LoadingService,
   ) {}
   ngOnInit(): void {
-    this.renderer.setAttribute(this.document.body, 'class', this.class);
+    // this.renderer.setAttribute(this.document.body, 'class', this.class);
     this.listenToLoading();
   }
 
@@ -30,6 +30,6 @@ export class AppComponent implements OnInit {
       });
   }
   switchMode(newClass: string) {
-    this.renderer.setAttribute(this.document.body, 'class', newClass);
+    this.renderer.setAttribute(this.document.body, 'class', 'mat-typography ' + newClass);
   }
 }

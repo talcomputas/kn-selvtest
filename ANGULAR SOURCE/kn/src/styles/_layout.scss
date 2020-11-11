@@ -14,14 +14,14 @@ a,
 }
 
 body {
-  background-color: $grey;
+  // background-color: $grey;
   font-size: $font-size-x-regular;
   color: $grey-dark-deep;
   line-height: 1.5;
-  font-family: Verdana, Helvetica, Arial, sans-serif;
+  // font-family: Verdana, Helvetica, Arial, sans-serif;
 }
 
-.container {
+/* .container {
   margin-right: auto;
   margin-left: auto;
   width: 100%;
@@ -29,7 +29,7 @@ body {
   @include breakpointFrom($screen-large) {
     max-width: 1140px;
   }
-}
+} */
 
 .flex-spacer {
   flex: 1 1 auto;

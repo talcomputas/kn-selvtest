@@ -7,7 +7,6 @@ import { ContentModule } from '@content/content.module';
 import { ContentService } from '@content/services/content.service';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { LayoutComponent } from './components/layout/layout.component';
 import { LanguageComponent } from './components/language/language.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { RadioModule } from '../uikit/radio/radio.module';
@@ -26,14 +25,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    FooterComponent,
-    LayoutComponent,
-    LogoComponent,
-    LanguageComponent,
-    HomeComponent,
-  ],
+  declarations: [HeaderComponent, FooterComponent, LogoComponent, LanguageComponent, HomeComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -52,7 +44,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatMenuModule,
     MatIconModule,
   ],
-  exports: [LayoutComponent],
+  exports: [LanguageComponent],
+  providers: [],
 })
 export class CoreModule {
   /* make sure CoreModule is imported only by one NgModule the AppModule */

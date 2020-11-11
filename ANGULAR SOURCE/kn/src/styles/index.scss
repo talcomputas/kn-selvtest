@@ -3,16 +3,16 @@
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
 
-$custom-typography: mat-typography-config(
-  $font-family: 'Sansita Swashed, monospace',
-  /*$headline: mat-typography-level(32px, 48px, 700),
+//$custom-typography: mat-typography-config(
+//  $font-family: 'Roboto, Helvetica Neue, monospace',
+/*$headline: mat-typography-level(32px, 48px, 700),
   $body-1: mat-typography-level(16px, 24px, 500),*/
-);
-@include angular-material-typography($custom-typography);
+//);
+//@include angular-material-typography($custom-typography);
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat-core($custom-typography);
+@include mat-core();
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
@@ -61,50 +61,5 @@ body {
 body {
   margin: 0;
   box-sizing: border-box;
-}
-
-// Temporary styling of Material. Remove all below when going full Material, ond not just maintaining old css
-.groups-choice {
-  display: inline-flex;
-  justify-content: space-evenly;
-
-  .mat-radio-button {
-    margin-left: 0.2rem;
-    display: inline-flex;
-    border: 2px solid rgb(214, 227, 240);
-    border-radius: 23px;
-    .mat-radio-label {
-      .mat-radio-container {
-        display: none;
-      }
-      .mat-radio-label-content {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-    }
-    &.mat-radio-checked {
-      background-color: #2274b9;
-      border: 2px solid #2274b9;
-      color: white;
-    }
-    &:hover {
-      border: 2px solid #149dc4;
-    }
-  }
-}
-
-// fix to show thumb label on slider when not focused
-.mat-slider-thumb-label {
-  transform: rotate(45deg) !important;
-  border-radius: 50% 50% 0 !important;
-}
-
-// fix to show thumb label on slider when not focused
-.mat-slider-thumb {
-  transform: scale(0) !important;
-}
-
-// fix to show thumb label on slider when not focused
-.mat-slider-thumb-label-text {
-  opacity: 1 !important;
+  font-family: 'Source Sans Pro', sans-serif;
 }
