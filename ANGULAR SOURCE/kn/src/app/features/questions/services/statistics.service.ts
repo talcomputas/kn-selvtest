@@ -60,6 +60,9 @@ export class StatisticsService {
   }
 
   getBaseData(fromDate: string, toDate: string, test: string): Observable<any> {
+    console.log(fromDate);
+    console.log(toDate);
+    console.log(test);
     return this.statisticsApiService.getItemData(fromDate, toDate, test);
   }
 }

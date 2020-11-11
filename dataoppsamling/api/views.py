@@ -4,6 +4,7 @@ from flask import request
 from flask.json import jsonify
 from . import app
 from .connect import connection
+from datetime import datetime
 
 import json
 
@@ -81,14 +82,31 @@ def itemdata():
     token = secrets.token_hex(18)
 
     test = request.args.get("test")
+    fromDate = request.args.get('fromdate')
+    toDate = request.args.get('todate')
+
     table = ""
     if test == "regnesjekk":
         table = "kompetanse_norge_regnesjek"
     elif test == "datasjekk":
         table = "kompetanse_norge_datasjek"
 
+    inFormat = '%b %d %Y'
+    outFormat = '%Y-%m-%d'
+
+    fromDate = " ".join(fromDate.split(" ", 4)[1:4])
+    fromDate = datetime.strptime(fromDate, inFormat)
+    fromDate = datetime.strftime(fromDate, outFormat)
+
+    toDate = " ".join(toDate.split(" ", 4)[1:4])
+    toDate = datetime.strptime(toDate, inFormat)
+    toDate = datetime.strftime(toDate, outFormat)
+
+    print(fromDate)
+    print(toDate)
+
     useQuery = "USE " + table + ";"
-    selectQuery = "SELECT * FROM itemdata LIMIT 10"
+    selectQuery = "SELECT * FROM itemdata WHERE datecreated >= '" + fromDate + "' AND datecreated <= '" + toDate + "';"
 
     cursor, conn = connection()
     query = cursor.execute(useQuery+selectQuery, multi=True)
