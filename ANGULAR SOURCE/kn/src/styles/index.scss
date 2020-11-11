@@ -93,5 +93,18 @@ body {
   }
 }
 
-.groups-choice-radio {
+// fix to show thumb label on slider when not focused
+.mat-slider-thumb-label {
+  transform: rotate(45deg) !important;
+  border-radius: 50% 50% 0 !important;
+}
+
+// fix to show thumb label on slider when not focused
+.mat-slider-thumb {
+  transform: scale(0) !important;
+}
+
+// fix to show thumb label on slider when not focused
+.mat-slider-thumb-label-text {
+  opacity: 1 !important;
 }

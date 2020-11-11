@@ -19,15 +19,19 @@
     <p *ngIf="question?.text as text" [innerHTML]="text" class="text"></p>
     <div [formGroup]="form" *ngIf="question">
       <mat-slider
+        class="question-slider"
+        [max]="question.options.ceil"
+        [min]="question.options.floor"
+        [step]="step"
+        [thumbLabel]="thumbLabel"
+        [tickInterval]="getSliderTickInterval()"
         role="slider"
-        min="{{ question.options.floor }}"
-        max="{{ question.options.ceil }}"
         [formControl]="control"
         [value]="question.answer.value"
         (valueChange)="onUserChange($event)"
       ></mat-slider>
+      <!-- <p *ngIf="control.value">{{ control.value }}</p> -->
     </div>
-    <p>{{ question.answer.value }}</p>
 
     <button class="secondary" *ngIf="question.calculator" (click)="toggleCalculator()"></button>
     <div>
