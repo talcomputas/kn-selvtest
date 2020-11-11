@@ -38,6 +38,7 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
     private cdRef: ChangeDetectorRef,
     private questionsService: QuestionsService,
   ) {
+    // @ts-ignore
     this.page$ = this.route.paramMap.pipe(map((params: ParamMap) => +params.get('page')));
     this.index$ = this.page$.pipe(map((page: number) => page - 1));
     this.question$ = this.questionsService.question$;
@@ -70,6 +71,7 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
   }
 
   finish(): void {
+    // @ts-ignore
     this.questionsService.update(null, this.questions.value, this.path);
   }
 
