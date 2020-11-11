@@ -5,6 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable()
 export class ContentService {
+  // @ts-ignore
   private readonly changes$ = new BehaviorSubject<void>(null);
   private readonly contentMap = new Map<string, object>();
   private ctx: string; // nn or nb
@@ -18,6 +19,7 @@ export class ContentService {
   set(ctx: string, data: object): void {
     let content = this.contentMap.get(ctx);
     content = content ? mergeDeep(content, data) : data;
+    // @ts-ignore
     this.contentMap.set(ctx, content);
     this.changes$.next();
   }
@@ -26,6 +28,7 @@ export class ContentService {
     if (!isDefined(key) || !key.length) {
       throw new Error(`Parameter "key" required`);
     }
+    // @ts-ignore
     return this.getParsedResult(this.contentMap.get(this.ctx), key);
   }
 

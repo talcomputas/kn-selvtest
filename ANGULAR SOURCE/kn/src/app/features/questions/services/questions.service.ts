@@ -34,6 +34,7 @@ import { Option } from '@features/questions/interfaces/option.interface';
 
 @Injectable()
 export class QuestionsService {
+  // @ts-ignore
   private readonly currentQuestion$ = new BehaviorSubject<QuestionsUnionType>(null);
   private readonly currentLength$ = new BehaviorSubject<number>(0);
 
@@ -94,6 +95,7 @@ export class QuestionsService {
   result(): Result {
     if (!this.answers || !this.questions) {
       // this.router.navigateByUrl('/');
+      // @ts-ignore
       return null;
     }
 
@@ -111,6 +113,7 @@ export class QuestionsService {
     const level = this.levels
       .sort((a: Level, b: Level) => b.minScore - a.minScore)
       .find((l: Level) => score >= l.minScore);
+    // @ts-ignore
     return { level, score, maxScore, data };
   }
 
@@ -209,6 +212,7 @@ export class QuestionsService {
   }
 
   private getQuestion(id: number): QuestionsUnionType {
+    // @ts-ignore
     return this.questionsDictionary.get(id);
   }
 
@@ -305,6 +309,7 @@ export class QuestionsService {
 
       if (!lastItem) {
         const firstQuestion = speech.find((q) => q.options && q.options.includes(selection[0]));
+        // @ts-ignore
         data.push(firstQuestion);
         return;
       }
@@ -395,11 +400,13 @@ export class QuestionsService {
 
         const correct: Option[] = [];
         values.forEach((val, index) => {
+          // @ts-ignore
           correct.push(selectOption(val, options[index]));
         });
 
         const selected: Option[] = [];
         selectedValue.forEach((val: number, index: number) => {
+          // @ts-ignore
           selected.push(selectOption(val, options[index]));
         });
         const isCorrect = JSON.stringify(correct) === JSON.stringify(selected);
@@ -446,6 +453,7 @@ export class QuestionsService {
       }
       default: {
         throwError('QuestionType not Found');
+        // @ts-ignore
         return null;
       }
     }
@@ -480,11 +488,13 @@ export class QuestionsService {
   }
 
   private getCorrectAnswerValue(questionId: number): number | number[] | string | string[] {
+    // @ts-ignore
     const question: QuestionsUnionType = this.questionsDictionary.get(questionId);
     return question && question.answer && question.answer.value;
   }
 
   private isCorrectAnswer(questionId: number, selectedValue: any): boolean {
+    // @ts-ignore
     const question: QuestionsUnionType = this.questionsDictionary.get(questionId);
 
     if (!question) {

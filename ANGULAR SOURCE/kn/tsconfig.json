@@ -44,7 +44,7 @@
     },
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    //"strictNullChecks": true,
+    "strictNullChecks": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "alwaysStrict": true

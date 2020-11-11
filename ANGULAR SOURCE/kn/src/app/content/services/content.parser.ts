@@ -16,6 +16,7 @@ export class ContentParser {
         target = target[key];
         key = '';
       } else if (!keys.length) {
+        // @ts-ignore
         target = undefined;
       } else {
         key += '.';
