@@ -1,9 +1,8 @@
-<mat-radio-group aria-label="Select an option" class="groups-choice language-radio-group">
-  <mat-radio-button
-    [checked]="ctx == content.getCtx()"
-    *ngFor="let ctx of content.getCtxList()"
-    [value]="ctx"
-    (change)="select(ctx)"
-    >{{ 'language.' + ctx | content }}</mat-radio-button
-  >
-</mat-radio-group>
+<button mat-raised-button [matMenuTriggerFor]="menu" class="toolbar__menubutton">
+  <span>{{ 'language.' + selectedLanguage | content }}</span>
+</button>
+<mat-menu class="toolbar__menu" #menu="matMenu">
+  <button *ngFor="let ctx of content.getCtxList()" (click)="onLanguageChange(ctx)" mat-menu-item>
+    <span>{{ 'language.' + ctx | content }}</span>
+  </button>
+</mat-menu>

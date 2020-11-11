@@ -13,6 +13,7 @@ import { LogoComponent } from './components/logo/logo.component';
 import { RadioModule } from '../uikit/radio/radio.module';
 import nbSystem from '@i18n/bokmal.system.json';
 import nnSystem from '@i18n/nynorsk.system.json';
+import enSystem from '@i18n/engelsk.system.json';
 import { ButtonModule } from '../uikit/button/button.module';
 import { SharedModule } from '@shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
@@ -22,6 +23,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -46,6 +49,8 @@ import { MatRadioModule } from '@angular/material/radio';
     MatButtonModule,
     MatRadioModule,
     LayoutModule,
+    MatMenuModule,
+    MatIconModule,
   ],
   exports: [LayoutComponent],
 })
@@ -58,6 +63,7 @@ export class CoreModule {
 
     contentService.set('nb', nbSystem);
     contentService.set('nn', nnSystem);
+    contentService.set('en', enSystem);
     contentService.setCtx('nb');
   }
 

@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { ContentService } from '@content/services/content.service';
 
 @Component({
@@ -7,10 +7,15 @@ import { ContentService } from '@content/services/content.service';
   styleUrls: ['./language.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LanguageComponent {
+export class LanguageComponent implements OnInit {
   constructor(public content: ContentService) {}
+  selectedLanguage: string;
 
-  select(ctx: string) {
+  ngOnInit(): void {
+    this.selectedLanguage = this.content.getCtx();
+  }
+
+  onLanguageChange(ctx: string) {
     this.content.setCtx(ctx);
   }
 }

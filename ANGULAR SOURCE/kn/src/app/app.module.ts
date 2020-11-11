@@ -9,7 +9,13 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NoCacheHeadersInterceptor } from '@shared/interceptors/nocache.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpRequestInterceptor } from 'interceptors/http-request.interceptor';
+
+import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+
+const material = [MatMenuModule, MatProgressSpinnerModule, MatIconModule, MatButtonModule];
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -18,7 +24,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     CoreModule.forRoot(),
     AngularDraggableModule,
     BrowserAnimationsModule,
-    MatProgressSpinnerModule,
+    material,
   ],
   providers: [
     {
