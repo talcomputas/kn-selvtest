@@ -90,6 +90,10 @@ def itemdata():
         table = "kompetanse_norge_regnesjek"
     elif test == "datasjekk":
         table = "kompetanse_norge_datasjek"
+    elif test == "leseskrivesjekk":
+        table = "kompetanse_norge_lesing_skrivesjek"
+    elif test == "lesetesten":
+        table = "kompetanse_norge"
 
     inFormat = '%b %d %Y'
     outFormat = '%Y-%m-%d'
