@@ -17,7 +17,7 @@ export class QuestionGroupsChoiceComponent
     super();
   }
 
-  getSplitText(value: string): string[] {
+  getSplitText(value: string): any[] {
     const ary = value.split('%s');
 
     let result = [];
