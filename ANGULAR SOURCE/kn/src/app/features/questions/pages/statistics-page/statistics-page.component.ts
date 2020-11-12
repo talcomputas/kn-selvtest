@@ -4,6 +4,7 @@ import { MatDatepicker } from '@angular/material/datepicker';
 import { FormControl } from '@angular/forms';
 import { AngularCsv } from 'angular-csv-ext/dist/Angular-csv';
 import { MatSelect } from '@angular/material/select';
+import { Statistics } from '@features/questions/interfaces/statistics.interface';
 
 @Component({
   selector: 'app-statistics-page',
@@ -23,14 +24,14 @@ export class StatisticsPageComponent implements OnInit {
 
   csvOptions = {
     fieldSeparator: ',',
-    quoteStrings: '',
+    quoteStrings: "",
     decimalSeparator: '.',
     showLabels: true,
     showTitle: true,
     title: 'Statistikk',
     useBom: true,
     noDownload: false,
-    headers: ['answer', 'correct', 'correctanswer', 'datecreated', 'id', 'itemid', 'time', 'timeout', 'totaltime', 'uid'],
+    headers: ['answer', 'correct', 'correctanswer', 'datecreated', 'id', 'itemid', 'name', 'time', 'timeout', 'totaltime', 'uid', 'ver'],
   };
 
   constructor(private statisticsService: StatisticsService) {
@@ -46,9 +47,18 @@ export class StatisticsPageComponent implements OnInit {
       this.toDateControl.value.toString(),
       this.selectedTest)
       .subscribe(itemData => {
-        console.log(itemData);
+        itemData = JSON.parse(itemData);
+        Object.keys(itemData).forEach(line => {
+          Object.keys(itemData[line]).forEach(value => {
+            if (itemData[line][value]) {
+              itemData[line][value] = itemData[line][value].toString().replaceAll(',', ' ')
+            }
+          })
+        })
         // tslint:disable-next-line:no-unused-expression
         new AngularCsv(itemData, 'Statistikk', this.csvOptions);
       });
   }
+
+
 }

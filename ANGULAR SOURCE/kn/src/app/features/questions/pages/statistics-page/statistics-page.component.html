@@ -16,10 +16,14 @@
   <mat-form-field appearance="fill">
     <mat-label>Sjekk:</mat-label>
     <mat-select placeholder="Test" [(value)]="selectedTest">
-       <mat-option value="regnesjekk">Regnesjekk</mat-option>
-       <mat-option value="datasjekk">Datasjekk</mat-option>
-       <mat-option value="leseskrivesjekk">Lese- og skrivesjekk</mat-option>
+       <mat-option value="alle">Alle</mat-option>
+       <mat-option value="regnesjekken">Regnesjekk</mat-option>
+       <mat-option value="datasjekken">Datasjekk</mat-option>
+       <mat-option value="leseskrivesjekken">Lese- og skrivesjekk</mat-option>
        <mat-option value="lesetesten">Lesetesten</mat-option>
+       <mat-option value="digitaltesten">Digitaltesten</mat-option>
+       <mat-option value="regnetesten">Regnetesten</mat-option>
+       <mat-option value="muntligtesten">Muntligtesten</mat-option>
     </mat-select>
   </mat-form-field>
 

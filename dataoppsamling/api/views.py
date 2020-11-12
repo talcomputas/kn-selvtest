@@ -85,16 +85,6 @@ def itemdata():
     fromDate = request.args.get('fromdate')
     toDate = request.args.get('todate')
 
-    table = ""
-    if test == "regnesjekk":
-        table = "kompetanse_norge_regnesjek"
-    elif test == "datasjekk":
-        table = "kompetanse_norge_datasjek"
-    elif test == "leseskrivesjekk":
-        table = "kompetanse_norge_lesing_skrivesjek"
-    elif test == "lesetesten":
-        table = "kompetanse_norge"
-
     inFormat = '%b %d %Y'
     outFormat = '%Y-%m-%d'
 
@@ -106,11 +96,13 @@ def itemdata():
     toDate = datetime.strptime(toDate, inFormat)
     toDate = datetime.strftime(toDate, outFormat)
 
-    print(fromDate)
-    print(toDate)
+    useQuery = "USE kompetansenorge;"
+    selectQuery = "SELECT * FROM itemdata WHERE "
+    if test != "alle":
+        selectQuery += "name = '" + test + "' AND "
+    selectQuery += "datecreated >= '" + fromDate + "' AND datecreated <= '" + toDate + "';"
 
-    useQuery = "USE " + table + ";"
-    selectQuery = "SELECT * FROM itemdata WHERE datecreated >= '" + fromDate + "' AND datecreated <= '" + toDate + "';"
+    print(selectQuery)
 
     cursor, conn = connection()
     query = cursor.execute(useQuery+selectQuery, multi=True)
