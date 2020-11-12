@@ -1,3 +1,7 @@
+body {
+  background-color: #e8edf0;
+}
+
 body.medium,
 body.large,
 body.xlarge {
@@ -10,8 +14,8 @@ body.xlarge {
     padding-right: 2rem;
   }
   .content {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
   .footer {
     padding-left: 2rem;

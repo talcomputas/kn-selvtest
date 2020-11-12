@@ -13,7 +13,38 @@
     <app-language></app-language>
   </mat-toolbar>
 
-  <router-outlet></router-outlet>
+  <div class="back">
+    <a mat-raised-button href="/"><mat-icon>arrow_back</mat-icon><span>Til Test deg selv</span></a>
+  </div>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <footer class="footer">
+    <div class="footer__item">
+      <img
+        class="footer__item__logo"
+        src="assets/images/kn-logo.png"
+        alt="Logo til Kompetanse Norge"
+      />
+    </div>
+    <div class="footer__item footer__links">
+      <a class="mat-body-strong" href="http://www.kompetansenorge.no">www.kompetansenorge.no</a>
+      <a class="mat-body-strong" href="mailto:webmaster@kompetansenorge.no">
+        webmaster@kompetansenorge.no</a
+      >
+    </div>
+    <div class="footer__item">
+      <img
+        class="footer__item__eu"
+        src="assets/images/european-union.svg"
+        alt="Logo til Kompetanse Norge"
+      />
+      <p class="footer__item__eu__text">
+        Co-founded by the Erasmus+ Programme of the European Union
+      </p>
+    </div>
+  </footer>
 </div>
 <div *ngIf="loading" class="loading-container">
   <mat-progress-spinner color="primary" mode="indeterminate"> </mat-progress-spinner>

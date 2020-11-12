@@ -14,6 +14,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .toolbar {
@@ -28,5 +29,48 @@
     flex: 1 1 auto;
   }
   &__menubutton {
+  }
+}
+
+.content {
+  //border-radius: 2px;
+  //background-color: #ffffff;
+  box-shadow: 0 13px 20px 0 rgba(90, 110, 136, 0.08);
+  flex-grow: 1;
+}
+
+.back {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.footer {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__logo {
+      max-width: 100%;
+      width: 168px;
+    }
+    &__eu {
+      width: 82px;
+      &__text {
+        max-width: 150px;
+        padding-left: 0.5rem;
+        margin: auto;
+      }
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
   }
 }

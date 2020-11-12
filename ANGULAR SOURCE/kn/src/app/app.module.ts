@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { LayoutDirective } from '@shared/directives/layout.directive';
 import { LanguageComponent } from '@core/components/language/language.component';
+import { MatCardModule } from '@angular/material/card';
 
 const material = [
   MatMenuModule,
@@ -24,6 +25,7 @@ const material = [
   MatIconModule,
   MatButtonModule,
   MatToolbarModule,
+  MatCardModule,
 ];
 @NgModule({
   declarations: [AppComponent, LayoutDirective],

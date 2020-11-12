@@ -35,12 +35,14 @@ $self-check-theme: mat-light-theme(
   )
 );
 
+@include mat-toolbar-theme($self-check-theme);
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($self-check-theme);
 
-@import 'kn-style';
+@import 'kn-layout';
 
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext');
