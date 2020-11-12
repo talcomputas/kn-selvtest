@@ -14,38 +14,38 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+@import './custom-components-theme.scss';
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$self-check-primary: mat-palette($mat-indigo);
-$self-check-accent: mat-palette($mat-pink, A200, A100, A400);
+$kn-color-primary: mat-palette($mat-indigo);
+$kn-color-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$self-check-warn: mat-palette($mat-red);
+$kn-color-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$self-check-theme: mat-light-theme(
+$kn-theme: mat-light-theme(
   (
     color: (
-      primary: $self-check-primary,
-      accent: $self-check-accent,
-      warn: $self-check-warn,
+      primary: $kn-color-primary,
+      accent: $kn-color-accent,
+      warn: $kn-color-warn,
     ),
   )
 );
-
-@include mat-toolbar-theme($self-check-theme);
+// @include mat-toolbar-theme($kn-theme);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($self-check-theme);
-
-@import 'kn-layout';
+@include angular-material-theme($kn-theme);
+@include custom-components-theme($kn-theme);
 
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext');
+/* @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext');
 @import '~@angular/cdk/a11y';
 @import '~normalize-scss/sass/_normalize.scss';
 
@@ -54,7 +54,7 @@ $self-check-theme: mat-light-theme(
 @import 'variables';
 @import 'mixins';
 @import 'layout';
-@import 'reset';
+@import 'reset'; */
 
 html,
 body {
@@ -64,4 +64,47 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+body.mat-app-background {
+  background-color: #e8edf0; // from kn
+}
+
+body.medium,
+body.large,
+body.xlarge {
+  .toolbar {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .back {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .content {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+body.xsmall {
+  .toolbar {
+    //padding-left: 0.5rem;
+  }
+  .back {
+    padding-left: 0.5rem;
+  }
+  .content {
+  }
+  .footer {
+    flex-direction: column;
+
+    &__item {
+      margin: 1rem;
+    }
+  }
 }

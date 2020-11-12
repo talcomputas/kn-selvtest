@@ -15,7 +15,6 @@ import { SvgIconDirective } from './directives/svg-icon.directive';
 import { DropListControlValueAccessorDirective } from './directives/drop-list-control-value-accessor.directive';
 import { DragA11yDirective, DropListA11yDirective } from './directives/drop-list-a11y.directive';
 import { LevelComponent } from './components/level/level.component';
-import { ProgressComponent } from './components/progress/progress.component';
 import { ScreenReaderComponent } from './components/screen-reader/screen-reader.component';
 import { ButtonModule } from '../uikit/button/button.module';
 import { AudioComponent } from './components/audio/audio.component';
@@ -36,7 +35,6 @@ import { AngularDraggableModule } from 'angular2-draggable';
     DragA11yDirective,
     DropListA11yDirective,
     LevelComponent,
-    ProgressComponent,
     ScreenReaderComponent,
     AudioComponent,
     CalculatorComponent,
@@ -55,7 +53,6 @@ import { AngularDraggableModule } from 'angular2-draggable';
     DragA11yDirective,
     DropListA11yDirective,
     LevelComponent,
-    ProgressComponent,
     ScreenReaderComponent,
     AudioComponent,
     CalculatorComponent,

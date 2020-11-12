@@ -10,7 +10,18 @@
     justify-content: space-between;
     flex-direction: row-reverse;
 
-    app-progress {
+    .progress-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 48%;
+    }
+
+    .progress-text {
+      margin-left: 1rem;
+    }
+
+    .app-progress {
       width: 48%;
     }
 
@@ -18,7 +29,7 @@
       flex-direction: column;
       margin: -10px 0 0;
 
-      app-progress {
+      .app-progress {
         width: 100%;
       }
     }

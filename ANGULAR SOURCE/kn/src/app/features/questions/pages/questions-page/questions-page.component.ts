@@ -38,9 +38,17 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
     private cdRef: ChangeDetectorRef,
     private questionsService: QuestionsService,
   ) {
-    // @ts-ignore
-    this.page$ = this.route.paramMap.pipe(map((params: ParamMap) => +params.get('page')));
-    this.index$ = this.page$.pipe(map((page: number) => page - 1));
+    this.page$ = this.route.paramMap.pipe(
+      map((params: ParamMap) => {
+        // @ts-ignore
+        return +params.get('page');
+      }),
+    );
+    this.index$ = this.page$.pipe(
+      map((page: number) => {
+        return page - 1;
+      }),
+    );
     this.question$ = this.questionsService.question$;
     this.length$ = this.questionsService.length$;
   }
@@ -52,11 +60,9 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.destroyed$))
       .subscribe(() => this.cdRef.markForCheck());
 
-    this.index$
-      .pipe(takeUntil(this.destroyed$))
-      .subscribe((index: number) =>
-        this.questionsService.update(index, this.questions.value, this.path),
-      );
+    this.index$.pipe(takeUntil(this.destroyed$)).subscribe((index: number) => {
+      return this.questionsService.update(index, this.questions.value, this.path);
+    });
 
     this.question$.pipe(takeUntil(this.destroyed$)).subscribe((question: QuestionsUnionType) => {
       this.handleTransition(question);

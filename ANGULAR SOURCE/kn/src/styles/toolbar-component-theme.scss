@@ -1,0 +1,31 @@
+@import '~@angular/material/theming';
+
+@mixin toolbar-component-theme($config-or-theme) {
+  $config: mat-get-color-config($config-or-theme);
+  /*$primary: map-get($config, primary);
+  $accent: map-get($config, accent);
+  $warn: map-get($config, warn);*/
+  $foreground: map-get($config, foreground);
+  $background: map-get($config, background);
+  .mat-toolbar {
+    background: mat-color($background, dialog); // Dialog is default white
+
+    //border-bottom-color: mat-color($foreground, divider);
+    border-bottom: 2px solid mat-color($foreground, divider);
+    /* color: mat-color($foreground, text);
+
+    &.mat-primary {
+      @include _mat-toolbar-color($primary);
+    }
+
+    &.mat-accent {
+      @include _mat-toolbar-color($accent);
+    }
+
+    &.mat-warn {
+      @include _mat-toolbar-color($warn);
+    }
+
+    @include _mat-toolbar-form-field-overrides; */
+  }
+}

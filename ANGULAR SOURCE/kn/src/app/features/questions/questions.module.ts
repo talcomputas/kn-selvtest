@@ -42,6 +42,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { StatisticsPageComponent } from './pages/statistics-page/statistics-page.component';
 import { QuestionGradingComponent } from '@features/questions/components/question-grading/question-grading.component';
 
@@ -81,6 +82,7 @@ import { QuestionGradingComponent } from '@features/questions/components/questio
     MatSliderModule,
     MatBadgeModule,
     MatIconModule,
+    MatProgressBarModule,
   ],
   providers: [QuestionsService, StatisticsService, StatisticsApiService],
 })

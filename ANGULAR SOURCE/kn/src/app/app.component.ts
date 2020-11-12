@@ -30,6 +30,10 @@ export class AppComponent implements OnInit {
       });
   }
   switchMode(newClass: string) {
-    this.renderer.setAttribute(this.document.body, 'class', 'mat-typography ' + newClass);
+    this.renderer.setAttribute(
+      this.document.body,
+      'class',
+      'mat-typography mat-app-background ' + newClass,
+    );
   }
 }

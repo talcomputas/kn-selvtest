@@ -1,37 +1,20 @@
-body {
-  background-color: #e8edf0;
-}
+$kn-primary: mat-palette($mat-indigo);
+$kn-accent: mat-palette($mat-pink, A200, A100, A400);
 
-body.medium,
-body.large,
-body.xlarge {
-  .toolbar {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .back {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .content {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-  .footer {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .back {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
+// The warn palette is optional (defaults to red).
+$kn-warn: mat-palette($mat-red);
 
-body.xsmall {
-  .footer {
-    flex-direction: column;
-  }
-}
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$kn-theme: mat-light-theme(
+  (
+    color: (
+      primary: $kn-primary,
+      accent: $kn-accent,
+      warn: $kn-warn,
+    ),
+  )
+);
 
 // Temporary styling of Material. Remove all below when going full Material, ond not just maintaining old css
 .groups-choice {

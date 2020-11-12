@@ -4,10 +4,15 @@
   <div app-card-content [formGroup]="questions">
     <div class="top-nav">
       <app-screen-reader></app-screen-reader>
-      <app-progress
-        *ngIf="!showTransition"
-        [value]="((index$ | async) / (length$ | async)) * 100"
-      ></app-progress>
+      <div class="progress-container">
+        <mat-progress-bar
+          mode="determinate"
+          [value]="((index$ | async) + 1 / (length$ | async)) * 100"
+        ></mat-progress-bar>
+        <span class="progress-text mat-h3">{{
+          (index$ | async) + 1 + '/' + (length$ | async)
+        }}</span>
+      </div>
     </div>
 
     <ng-container *ngIf="!showTransition" [ngSwitch]="question.type">
@@ -100,12 +105,14 @@
         <button
           *ngIf="page < (length$ | async)"
           routerLink="../{{ page + 1 }}"
-          app-icon-button
-          app-color="primary"
+          mat-raised-button
           class="next"
           [disabled]="questions?.controls[question.id]?.invalid"
+          color="primary"
         >
-          {{ 'actions.next' | content }} <i app-svg-icon="arrow-forward"></i>
+          <span>{{ 'actions.next' | content }}</span>
+          <mat-icon>arrow_forward</mat-icon>
+          <!-- <i app-svg-icon="arrow-forward"></i> -->
         </button>
 
         <button
