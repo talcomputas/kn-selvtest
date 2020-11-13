@@ -37,10 +37,6 @@ export class StatisticsPageComponent implements OnInit {
   constructor(private statisticsService: StatisticsService) {
   }
 
-  ngOnInit(): void {
-  }
-
-
   exportCsv() {
     this.statisticsService.getBaseData(
       this.fromDateControl.value.toString(),
@@ -58,6 +54,9 @@ export class StatisticsPageComponent implements OnInit {
         // tslint:disable-next-line:no-unused-expression
         new AngularCsv(itemData, 'Statistikk', this.csvOptions);
       });
+  }
+
+  ngOnInit(): void {
   }
 
 

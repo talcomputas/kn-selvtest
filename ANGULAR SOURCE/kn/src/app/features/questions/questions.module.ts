@@ -41,9 +41,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import { StatisticsPageComponent } from './pages/statistics-page/statistics-page.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
-import { MAT_DATE_LOCALE, MatOptionModule } from '@angular/material/core';
-import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatOptionModule } from '@angular/material/core';
+import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
@@ -82,7 +81,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatDatepickerModule,
     MatInputModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
   ],
   providers: [QuestionsService, StatisticsService, StatisticsApiService, { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }, ],
 })
