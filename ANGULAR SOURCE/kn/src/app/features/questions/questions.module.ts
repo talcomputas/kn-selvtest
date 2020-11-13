@@ -45,6 +45,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { StatisticsPageComponent } from './pages/statistics-page/statistics-page.component';
 import { QuestionGradingComponent } from '@features/questions/components/question-grading/question-grading.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MAT_DATE_LOCALE, MatOptionModule } from '@angular/material/core';
+import {
+  MAT_DIALOG_DEFAULT_OPTIONS,
+  MatDialogModule,
+  MatDialogRef,
+} from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -83,8 +93,17 @@ import { QuestionGradingComponent } from '@features/questions/components/questio
     MatBadgeModule,
     MatIconModule,
     MatProgressBarModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatSelectModule,
+    MatOptionModule,
   ],
-  providers: [QuestionsService, StatisticsService, StatisticsApiService],
+  providers: [
+    QuestionsService,
+    StatisticsService,
+    StatisticsApiService,
+    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } },
+  ],
 })
 export class QuestionsModule {
   constructor(

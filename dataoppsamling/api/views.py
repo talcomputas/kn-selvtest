@@ -4,6 +4,9 @@ from flask import request
 from flask.json import jsonify
 from . import app
 from .connect import connection
+from datetime import datetime
+
+import json
 
 
 @app.route("/")
@@ -74,3 +77,45 @@ def submitItem():
 
     return jsonify(id=id), 201
 
+@app.route("/api/itemdata", methods=["GET"])
+def itemdata():
+    token = secrets.token_hex(18)
+
+    test = request.args.get("test")
+    fromDate = request.args.get('fromdate')
+    toDate = request.args.get('todate')
+
+    inFormat = '%b %d %Y'
+    outFormat = '%Y-%m-%d'
+
+    fromDate = " ".join(fromDate.split(" ", 4)[1:4])
+    fromDate = datetime.strptime(fromDate, inFormat)
+    fromDate = datetime.strftime(fromDate, outFormat)
+
+    toDate = " ".join(toDate.split(" ", 4)[1:4])
+    toDate = datetime.strptime(toDate, inFormat)
+    toDate = datetime.strftime(toDate, outFormat)
+
+    useQuery = "USE kompetansenorge;"
+    selectQuery = "SELECT * FROM itemdata WHERE "
+    if test != "alle":
+        selectQuery += "name = '" + test + "' AND "
+    selectQuery += "datecreated >= '" + fromDate + "' AND datecreated <= '" + toDate + "';"
+
+    print(selectQuery)
+
+    cursor, conn = connection()
+    query = cursor.execute(useQuery+selectQuery, multi=True)
+
+    result = None
+
+    for cur in query:
+        print("cursor", cur)
+        if cur.with_rows:
+            result = [dict((cur.description[i][0], value)
+                for i, value in enumerate(row)) for row in cur.fetchall()]
+
+    conn.commit()
+    conn.close()
+
+    return jsonify(result), 201

@@ -9,6 +9,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NoCacheHeadersInterceptor } from '@shared/interceptors/nocache.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpRequestInterceptor } from 'interceptors/http-request.interceptor';
+import { StatisticsService } from '@features/questions/services/statistics.service';
+import { StatisticsApiService } from '@features/questions/services/statistics-api.service';
 
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -49,6 +51,8 @@ const material = [
       useClass: HttpRequestInterceptor,
       multi: true,
     },
+    StatisticsService,
+    StatisticsApiService,
   ],
   bootstrap: [AppComponent, LanguageComponent],
 })

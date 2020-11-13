@@ -1,1 +1,32 @@
-<p>statistics-page works!</p>
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Fra:</mat-label>
+    <input matInput [matDatepicker]="fromDate"  [formControl]="fromDateControl" placeholder="Fra">
+    <mat-datepicker-toggle matSuffix [for]="fromDate"></mat-datepicker-toggle>
+    <mat-datepicker #fromDate></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Til:</mat-label>
+    <input matInput [matDatepicker]="toDate" [formControl]="toDateControl" placeholder="Til">
+    <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+    <mat-datepicker #toDate></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Sjekk:</mat-label>
+    <mat-select placeholder="Test" [(value)]="selectedTest">
+       <mat-option value="alle">Alle</mat-option>
+       <mat-option value="regnesjekken">Regnesjekk</mat-option>
+       <mat-option value="datasjekken">Datasjekk</mat-option>
+       <mat-option value="leseskrivesjekken">Lese- og skrivesjekk</mat-option>
+       <mat-option value="lesetesten">Lesetesten</mat-option>
+       <mat-option value="digitaltesten">Digitaltesten</mat-option>
+       <mat-option value="regnetesten">Regnetesten</mat-option>
+       <mat-option value="muntligtesten">Muntligtesten</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button (click)="exportCsv()">Last ned</button>
+</div>
+

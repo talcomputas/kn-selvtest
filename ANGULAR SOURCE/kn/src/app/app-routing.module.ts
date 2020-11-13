@@ -4,6 +4,8 @@ import { HomeComponent } from '@core/components/home/home.component';
 import { QuestionsModule } from '@features/questions/questions.module';
 import { ChangeLessonGuard } from 'change-lesson.guard';
 import { LessonResolverService } from 'lesson-resolver.service';
+import { StatisticsPageComponent } from '@features/questions/pages/statistics-page/statistics-page.component';
+import { RouteResolverService } from '@features/questions/services/route-resolver.service';
 
 const routes: Routes = [
   {
@@ -63,6 +65,10 @@ const routes: Routes = [
     loadChildren: () => QuestionsModule,
     resolve: { lessonPath: LessonResolverService },
     canActivate: [ChangeLessonGuard],
+  },
+  {
+    path: 'statistikk',
+    component: StatisticsPageComponent,
   },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
