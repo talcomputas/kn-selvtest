@@ -29,6 +29,9 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
   public readonly length$: Observable<number>;
   public readonly question$: Observable<QuestionsUnionType>;
 
+  public numberOfQuestions = 0;
+  public questionIndex = 0;
+
   public showTransition: boolean;
   path: string;
 
@@ -46,11 +49,15 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
     );
     this.index$ = this.page$.pipe(
       map((page: number) => {
+        this.questionIndex = page;
         return page - 1;
       }),
     );
     this.question$ = this.questionsService.question$;
     this.length$ = this.questionsService.length$;
+    this.questionsService.length$.subscribe((nr: number) => {
+      this.numberOfQuestions = nr;
+    });
   }
 
   ngOnInit(): void {
@@ -79,6 +86,10 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
   finish(): void {
     // @ts-ignore
     this.questionsService.update(null, this.questions.value, this.path);
+  }
+
+  getProgressAsPercent(): number {
+    return Math.ceil((this.questionIndex / this.numberOfQuestions) * 100);
   }
 
   private handleTransition(question: QuestionsUnionType): void {

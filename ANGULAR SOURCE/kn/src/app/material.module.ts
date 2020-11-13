@@ -9,8 +9,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
-  imports: [MatButtonModule, MatCardModule, MatIconModule, MatListModule, MatDatepickerModule, MatNativeDateModule, MatInputModule, MatSelectModule, MatOptionModule],
+  imports: [
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatListModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatInputModule,
+    MatSelectModule,
+    MatOptionModule,
+  ],
   exports: [MatButtonModule, MatCardModule, MatIconModule, MatListModule],
 })
-export class MaterialModule {
-}
+export class MaterialModule {}

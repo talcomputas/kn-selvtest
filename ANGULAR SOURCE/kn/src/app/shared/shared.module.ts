@@ -20,6 +20,7 @@ import { ButtonModule } from '../uikit/button/button.module';
 import { AudioComponent } from './components/audio/audio.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { AngularDraggableModule } from 'angular2-draggable';
+import { MaterialModule } from 'material.module';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { AngularDraggableModule } from 'angular2-draggable';
     AudioComponent,
     CalculatorComponent,
   ],
-  imports: [CommonModule, ButtonModule, AngularDraggableModule],
+  imports: [CommonModule, ButtonModule, AngularDraggableModule, MaterialModule],
   exports: [
     CardComponent,
     CardLabelDirective,

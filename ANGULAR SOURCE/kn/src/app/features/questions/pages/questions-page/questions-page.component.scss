@@ -4,21 +4,19 @@
   display: block;
 
   .top-nav {
-    margin: -20px 0 0;
-    padding: 0 0 20px;
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    flex-direction: row;
 
     .progress-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 48%;
+      width: 100%;
     }
 
     .progress-text {
-      margin-left: 1rem;
+      margin: 0 1rem 0 1rem;
     }
 
     .app-progress {

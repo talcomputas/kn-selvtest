@@ -20,6 +20,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { LayoutDirective } from '@shared/directives/layout.directive';
 import { LanguageComponent } from '@core/components/language/language.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 const material = [
   MatMenuModule,
@@ -28,6 +33,15 @@ const material = [
   MatButtonModule,
   MatToolbarModule,
   MatCardModule,
+  MatButtonModule,
+  MatCardModule,
+  MatIconModule,
+  MatListModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatInputModule,
+  MatSelectModule,
+  MatOptionModule,
 ];
 @NgModule({
   declarations: [AppComponent, LayoutDirective],

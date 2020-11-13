@@ -3,15 +3,12 @@
 
   <div app-card-content [formGroup]="questions">
     <div class="top-nav">
-      <app-screen-reader></app-screen-reader>
       <div class="progress-container">
-        <mat-progress-bar
-          mode="determinate"
-          [value]="((index$ | async) + 1 / (length$ | async)) * 100"
-        ></mat-progress-bar>
+        <mat-progress-bar mode="determinate" [value]="getProgressAsPercent()"></mat-progress-bar>
         <span class="progress-text mat-h3">{{
           (index$ | async) + 1 + '/' + (length$ | async)
         }}</span>
+        <app-screen-reader></app-screen-reader>
       </div>
     </div>
 
