@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { throwError } from 'rxjs';
 import { isDefined } from '../utils/utils';
 
 @Injectable()
@@ -18,6 +19,7 @@ export class ContentParser {
       } else if (!keys.length) {
         // @ts-ignore
         target = undefined;
+        throwError('Parsing is not possible');
       } else {
         key += '.';
       }
