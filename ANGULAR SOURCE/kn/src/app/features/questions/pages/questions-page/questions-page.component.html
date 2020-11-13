@@ -72,6 +72,13 @@
         [form]="questions"
       >
       </app-question-dialogue>
+
+      <app-question-grading
+        *ngSwitchCase="QuestionType.GRADING"
+        [question]="question"
+        [form]="questions"
+      >
+      </app-question-grading>
     </ng-container>
 
     <app-transition *ngIf="showTransition" [transition]="question?.transition"></app-transition>
@@ -123,6 +130,7 @@
       >
         {{ 'actions.next' | content }} <i app-svg-icon="arrow-forward"></i>
       </button>
+      <!-- <code>{{ questions.value | json }}</code> -->
     </div>
   </footer>
 </app-card>

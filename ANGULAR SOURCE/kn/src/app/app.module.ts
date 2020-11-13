@@ -8,6 +8,8 @@ import { AngularDraggableModule } from 'angular2-draggable';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NoCacheHeadersInterceptor } from '@shared/interceptors/nocache.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpRequestInterceptor } from 'interceptors/http-request.interceptor';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { StatisticsService } from '@features/questions/services/statistics.service';
 import { StatisticsApiService } from '@features/questions/services/statistics-api.service';
 
@@ -19,11 +21,17 @@ import { StatisticsApiService } from '@features/questions/services/statistics-ap
     CoreModule.forRoot(),
     AngularDraggableModule,
     BrowserAnimationsModule,
+    MatProgressSpinnerModule,
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: NoCacheHeadersInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpRequestInterceptor,
       multi: true,
     },
     StatisticsService,

@@ -1,0 +1,63 @@
+<div *ngIf="!question?.video && question?.image as imageUrl" class="image">
+  <img [src]="'assets/images/' + imageUrl" alt="{{ question?.text }}" />
+</div>
+
+<div *ngIf="!question?.image && question?.video as video" class="video">
+  <video
+    [src]="'assets/videos/' + video.url"
+    [autoplay]="video.autoplay"
+    [controls]="video.controls"
+    [loop]="video.loop"
+  ></video>
+</div>
+
+<div class="content" [class.no-media]="!question?.image && !question?.video">
+  <div class="content-inner">
+    <h2 *ngIf="question?.title as title" class="title">{{ title }}</h2>
+    <audio
+      *ngIf="question?.audio as audioUrl"
+      controls
+      src="assets/audios/{{ audioUrl }}"
+    ></audio>
+    <p *ngIf="question?.info as info" [innerHTML]="info?.text"></p>
+    <p *ngIf="question?.text as text" [innerHTML]="text" class="text"></p>
+  </div>
+
+  <div
+    class="question-answers"
+    *ngIf="question?.options as options"
+    [formGroup]="form"
+  >
+    <div
+      app-radio-group
+      [formControl]="control"
+      class="options-{{ optionsClassName }} {{ optionSizeClassName }}"
+      [class.xl]="options.length <= 2"
+    >
+      <div
+        app-radio-button
+        *ngFor="let option of options; let i = index"
+        [value]="option?.id"
+        #test
+      >
+        <span *ngIf="option?.text" class="option">{{ option?.text }}</span>
+
+        <span *ngIf="option?.image" class="option">
+          <img
+            [src]="'assets/images/' + option?.image"
+            alt="{{ question?.text }}"
+          />
+        </span>
+
+        <app-audio
+          *ngIf="option?.audio"
+          [trigger]="test.elRef"
+          class="option"
+          url="assets/audios/{{ option?.audio }}"
+        >
+          {{ i + 1 }}.
+        </app-audio>
+      </div>
+    </div>
+  </div>
+</div>

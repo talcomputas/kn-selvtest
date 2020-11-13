@@ -2,6 +2,8 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 import { ResultAnswer } from '@features/questions/interfaces/result-answer.interface';
 import { QuestionType } from '@features/questions/enums/question-type.enum';
 import { SpeechType } from '@features/questions/enums/speech-type.enum';
+import { isNumeric } from '@features/questions/utils/is-numeric.utils';
+import { getSplitText } from '@features/questions/utils/split-text.utils';
 
 @Component({
   selector: 'app-answers',
@@ -12,6 +14,8 @@ import { SpeechType } from '@features/questions/enums/speech-type.enum';
 export class AnswersComponent {
   public readonly QuestionType = QuestionType;
   public readonly SpeechType = SpeechType;
+  isNumeric = isNumeric;
+  getSplitText = getSplitText;
 
   @Output()
   public readonly close = new EventEmitter<void>();

@@ -8,4 +8,5 @@ export enum QuestionType {
   DIALOGUE = 'dialogue',
   SLIDER = 'slider',
   GROUPS_CHOICE = 'groups-choice',
+  GRADING = 'grading',
 }

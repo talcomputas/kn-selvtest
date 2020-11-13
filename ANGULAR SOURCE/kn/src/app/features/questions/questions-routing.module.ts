@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ExamplePageComponent } from '@features/questions/pages/example/example-page.component';
 import { IntroPageComponent } from '@features/questions/pages/intro-page/intro-page.component';
 import { QuestionsPageComponent } from '@features/questions/pages/questions-page/questions-page.component';
 import { ResultPageComponent } from '@features/questions/pages/result-page/result-page.component';
@@ -20,7 +21,12 @@ const routes: Routes = [
     path: 'resultat',
     component: ResultPageComponent,
     resolve: { path: RouteResolverService },
-  }
+  },
+  {
+    path: 'eksempel',
+    component: ExamplePageComponent,
+    resolve: { path: RouteResolverService },
+  },
 ];
 
 @NgModule({

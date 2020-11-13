@@ -1,0 +1,858 @@
+{
+  "intro": {
+    "label": "Reading test",
+    "title": "Reading test",
+    "text": "This short reading test assesses your reading speed. The test will stop automatically after 10 minutes. As it contains many tasks, remember to do the tasks fast and correct. This 10-minute reading test will give you an indication of how well you read.",
+    "image": "reading-exam.svg"
+  },
+  "result": {
+    "image": "lesetesten-data-check.svg",
+    "levels": {
+      "1": {
+        "id": "1",
+        "title": "Basert på dine svar er du på nivå 1 av 3 i denne testen.",
+        "text": "Resultatet ditt tyder på at mange tekster kan være vanskelige og ta lang tid å lese for deg. Du kan ha nytte av å øve mer på lesing.",
+        "minScore": 8
+      },
+      "2": {
+        "id": "2",
+        "title": "Basert på dine svar er du på nivå 2 av 3 i denne testen.",
+        "text": "Resultatet tyder på at leseferdighetene dine er ganske gode, men noen tekster kan være vanskelige og ta tid å lese for deg.",
+        "minScore": 12
+      },
+      "3": {
+        "id": "3",
+        "title": "Basert på dine svar er du på nivå 3 av 3 i denne testen.",
+        "text": "Resultatet viser at du er en god leser. Du leser vanlige tekster både raskt og nøyaktig.",
+        "minScore": 16
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "questions": [
+        {
+          "id": 1,
+          "type": "groups-choice",
+          "title": "They had taken their shirts off and were sitting in shorts on the terrace, enjoying ice cold drinks. They needed shade from the hot summer sun, so they decided to go and get the %s.",
+          "text": "",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "parasol"
+              },
+              {
+                "id": 2,
+                "text": "swimming pool"
+              },
+              {
+                "id": 3,
+                "text": "stage"
+              },
+              {
+                "id": 4,
+                "text": "loudspeaker"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [1],
+            "points": 1
+          }
+        },
+        {
+          "id": 2,
+          "type": "groups-choice",
+          "title": "In the kitchen",
+          "text": "The table was already laid. There was a burning smell, even though the timer had not gone off. Senay turned down the temperature and removed the %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "duvet"
+              },
+              {
+                "id": 2,
+                "text": "papers"
+              },
+              {
+                "id": 3,
+                "text": "radio"
+              },
+              {
+                "id": 4,
+                "text": "casserole"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4],
+            "points": 1
+          }
+        },
+        {
+          "id": 3,
+          "type": "groups-choice",
+          "title": "The weekend cleaning",
+          "text": "Oskar opened the storeroom and took out the mop. He worked busily, then tidied the bucket away and stood the mop up to dry. At last, the apartment was %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "dirty"
+              },
+              {
+                "id": 2,
+                "text": "painted"
+              },
+              {
+                "id": 3,
+                "text": "sold"
+              },
+              {
+                "id": 4,
+                "text": "clean"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4],
+            "points": 1
+          }
+        },
+        {
+          "id": 4,
+          "type": "groups-choice",
+          "title": "Chaos",
+          "text": "Flour and sugar were all over the place. It was going to take the entire break time to clean things up, thought the teacher. Thank goodness everyone had worn %s, or else some of the parents might have complained.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "cardboard"
+              },
+              {
+                "id": 2,
+                "text": "PCs"
+              },
+              {
+                "id": 3,
+                "text": "aprons"
+              },
+              {
+                "id": 4,
+                "text": "toothbrushes"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4],
+            "points": 1
+          }
+        },
+        {
+          "id": 5,
+          "type": "groups-choice",
+          "title": "The young sea eagles",
+          "text": "High up in the old tree, the pair of sea eagles have built their nest. There are two eggs in there now. When they hatch, the young birds will stay in the nest %s they are ready to fly. Then the parents will feed them for a few months, but as soon as the young birds are ready, they will fly off to find their %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "and"
+              },
+              {
+                "id": 2,
+                "text": "until"
+              },
+              {
+                "id": 3,
+                "text": "then"
+              },
+              {
+                "id": 4,
+                "text": "if"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "father"
+              },
+              {
+                "id": 2,
+                "text": "young bird"
+              },
+              {
+                "id": 3,
+                "text": "food"
+              },
+              {
+                "id": 4,
+                "text": "bird"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [2, 3],
+            "points": 1
+          }
+        },
+        {
+          "id": 6,
+          "type": "groups-choice",
+          "title": "The football match",
+          "text": "There were lots of ugly tackles and an angry atmosphere. The whistle had been needed at regular intervals, and a lot of players had been given yellow cards. When it was full-time, neither team had got a %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "card"
+              },
+              {
+                "id": 2,
+                "text": "money"
+              },
+              {
+                "id": 3,
+                "text": "penalty"
+              },
+              {
+                "id": 4,
+                "text": "goal"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4],
+            "points": 1
+          }
+        },
+        {
+          "id": 7,
+          "type": "groups-choice",
+          "title": "Heat wave",
+          "text": "It had been cloudless and hot for many days. Aida was struggling to put %s on her son, but it was difficult, because he would not stand still. They were going to be late again.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "rain clothes"
+              },
+              {
+                "id": 2,
+                "text": "suncream"
+              },
+              {
+                "id": 3,
+                "text": "boots"
+              },
+              {
+                "id": 4,
+                "text": "woollen socks"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [2],
+            "points": 1
+          }
+        },
+        {
+          "id": 8,
+          "type": "groups-choice",
+          "title": "The dream of a farm",
+          "text": "Henrik turned to the property ads. Their apartment had %s too small for them, so now they were looking for %s bigger. They wanted to move into the country. They were looking for a small %s where there would be room to have a few %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "furnished"
+              },
+              {
+                "id": 2,
+                "text": "sold"
+              },
+              {
+                "id": 3,
+                "text": "advertised"
+              },
+              {
+                "id": 4,
+                "text": "become"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "it"
+              },
+              {
+                "id": 2,
+                "text": "something"
+              },
+              {
+                "id": 3,
+                "text": "another"
+              },
+              {
+                "id": 4,
+                "text": "more"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "balcony"
+              },
+              {
+                "id": 2,
+                "text": "restaurant"
+              },
+              {
+                "id": 3,
+                "text": "farm"
+              },
+              {
+                "id": 4,
+                "text": "car"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "holidays"
+              },
+              {
+                "id": 2,
+                "text": "horses"
+              },
+              {
+                "id": 3,
+                "text": "years"
+              },
+              {
+                "id": 4,
+                "text": "lectures"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4, 2, 3, 2],
+            "points": 1
+          }
+        },
+        {
+          "id": 9,
+          "type": "groups-choice",
+          "title": "Music",
+          "text": "The pupil’s fingers moved quickly and accurately. His feet tapped out the beat while he played. The teacher listened intently to make sure that he was following the %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "recipe"
+              },
+              {
+                "id": 2,
+                "text": "lines"
+              },
+              {
+                "id": 3,
+                "text": "rules"
+              },
+              {
+                "id": 4,
+                "text": "notes"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4],
+            "points": 1
+          }
+        },
+        {
+          "id": 10,
+          "type": "groups-choice",
+          "title": "The journey",
+          "text": "She needed to be ready in two hours, so she was quite busy. Her bag was already in the car, and the ticket, keys and card holder were in her pocket. Her boyfriend ran after her with her %s. That was lucky for her, or else she would not have got far.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "passport"
+              },
+              {
+                "id": 2,
+                "text": "lunch"
+              },
+              {
+                "id": 3,
+                "text": "shopping list"
+              },
+              {
+                "id": 4,
+                "text": "watch"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [1],
+            "points": 1
+          }
+        },
+        {
+          "id": 11,
+          "type": "groups-choice",
+          "title": "Residents worried about arsonist",
+          "text": "The residents of Berglund village are feeling %s, because last week three burnt-out cars were reported in the area, and two fires on a housing estate. They are worried that an arsonist is in the area. According to the police, their preliminary investigations indicate that the fires were started deliberately, %s they need more evidence before they can come to a conclusion.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "lazy"
+              },
+              {
+                "id": 2,
+                "text": "lucky"
+              },
+              {
+                "id": 3,
+                "text": "unsafe"
+              },
+              {
+                "id": 4,
+                "text": "clumsy"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "but"
+              },
+              {
+                "id": 2,
+                "text": "since"
+              },
+              {
+                "id": 3,
+                "text": "because"
+              },
+              {
+                "id": 4,
+                "text": "if"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [3, 1],
+            "points": 1
+          }
+        },
+        {
+          "id": 12,
+          "type": "groups-choice",
+          "title": "At the dentist",
+          "text": "Karl lay in the chair, and the light from the lamp was shining in his eyes. He was a bit nervous. The dentist put down the little mirror. He turned his head and saw that she was picking up the %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "bicycle"
+              },
+              {
+                "id": 2,
+                "text": "drill"
+              },
+              {
+                "id": 3,
+                "text": "letter"
+              },
+              {
+                "id": 4,
+                "text": "hammer"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [2],
+            "points": 1
+          }
+        },
+        {
+          "id": 13,
+          "type": "groups-choice",
+          "title": "The flood",
+          "text": "When the couple got back home from the weekend trip, everything was floating around in the cellar. They hurried to put the things out in the sun. They would contact the %s the next day. On the news, they heard that many areas of the country had been affected.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "travel agency"
+              },
+              {
+                "id": 2,
+                "text": "witnesses"
+              },
+              {
+                "id": 3,
+                "text": "doctor"
+              },
+              {
+                "id": 4,
+                "text": "insurance company"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4],
+            "points": 1
+          }
+        },
+        {
+          "id": 14,
+          "type": "groups-choice",
+          "title": "Watering flowers",
+          "text": "Plants vary a great deal in how often they need to be watered. Some should be watered every day, %s others can go for several weeks without water. It is a common %s to give all flowers a lot of water. This can make it difficult for the plants to absorb enough nutrients through their roots.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "because"
+              },
+              {
+                "id": 2,
+                "text": "while"
+              },
+              {
+                "id": 3,
+                "text": "if"
+              },
+              {
+                "id": 4,
+                "text": "for"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "duty"
+              },
+              {
+                "id": 2,
+                "text": "company"
+              },
+              {
+                "id": 3,
+                "text": "mistake"
+              },
+              {
+                "id": 4,
+                "text": "cold"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [3, 1],
+            "points": 1
+          }
+        },
+        {
+          "id": 15,
+          "type": "groups-choice",
+          "title": "The burglary",
+          "text": "They had spent many weeks planning this, and had chosen the place carefully. Their accomplice was waiting in the car around the corner. Their pulses rose as they crept forward. They hoped that there would not be any %s there.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "complaints"
+              },
+              {
+                "id": 2,
+                "text": "storerooms"
+              },
+              {
+                "id": 3,
+                "text": "chairs"
+              },
+              {
+                "id": 4,
+                "text": "dogs"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4],
+            "points": 1
+          }
+        },
+        {
+          "id": 16,
+          "type": "groups-choice",
+          "title": "Bears on the loose?",
+          "text": "A violent storm had uprooted several trees in the zoo. Two of the trees had toppled over the fence which had been put up around the bears’ enclosure. For the next few %s, the staff were afraid that the bears would %s. The zookeepers had to search through the whole zoo and count the number of %s to make sure that none of them had escaped.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "hours"
+              },
+              {
+                "id": 2,
+                "text": "animals"
+              },
+              {
+                "id": 3,
+                "text": "years"
+              },
+              {
+                "id": 4,
+                "text": "cages"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "fall"
+              },
+              {
+                "id": 2,
+                "text": "slip"
+              },
+              {
+                "id": 3,
+                "text": "jump"
+              },
+              {
+                "id": 4,
+                "text": "escape"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "bears"
+              },
+              {
+                "id": 2,
+                "text": "trees"
+              },
+              {
+                "id": 3,
+                "text": "children"
+              },
+              {
+                "id": 4,
+                "text": "fences"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [1, 4, 1],
+            "points": 1
+          }
+        },
+        {
+          "id": 17,
+          "type": "groups-choice",
+          "title": "The car accident",
+          "text": "You could hear the sound of the %s getting nearer. Many people had gathered round the two cars. Some of them were crying.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "dogs"
+              },
+              {
+                "id": 2,
+                "text": "ambulance"
+              },
+              {
+                "id": 3,
+                "text": "demonstrators"
+              },
+              {
+                "id": 4,
+                "text": "thunder"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [2],
+            "points": 1
+          }
+        },
+        {
+          "id": 18,
+          "type": "groups-choice",
+          "title": "Splitting the bill",
+          "text": "They had spent all evening enjoying the Friday taco. Linda had bought all the %s and was waiting for everyone to transfer the %s.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "ingredients"
+              },
+              {
+                "id": 2,
+                "text": "books"
+              },
+              {
+                "id": 3,
+                "text": "work"
+              },
+              {
+                "id": 4,
+                "text": "telephones"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "post"
+              },
+              {
+                "id": 2,
+                "text": "keys"
+              },
+              {
+                "id": 3,
+                "text": "names"
+              },
+              {
+                "id": 4,
+                "text": "money"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [1, 4],
+            "points": 1
+          }
+        },
+        {
+          "id": 19,
+          "type": "groups-choice",
+          "title": "A late start",
+          "text": "‘We really need to get going’, said Karim. But it was a quarter of an hour before the kids were ready to get in the %s. The family took a %s through the town, so fortunately they arrived at the party just ten minutes after everyone else.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "sofa"
+              },
+              {
+                "id": 2,
+                "text": "car"
+              },
+              {
+                "id": 3,
+                "text": "stairs"
+              },
+              {
+                "id": 4,
+                "text": "luggage"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "short cut"
+              },
+              {
+                "id": 2,
+                "text": "detour"
+              },
+              {
+                "id": 3,
+                "text": "dead end"
+              },
+              {
+                "id": 4,
+                "text": "roundabout"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [2, 1],
+            "points": 1
+          }
+        },
+        {
+          "id": 20,
+          "type": "groups-choice",
+          "title": "A suspicious email",
+          "text": "Maria had received an email from a sender she did not know. So she tried to find out whether this was someone she could phone or write to %s she opened the attachment, but she could not find any contact information. That made her %s that the email was from someone trying to trick her into revealing her payment information, %s she deleted it.",
+          "options": [
+            [
+              {
+                "id": 1,
+                "text": "that"
+              },
+              {
+                "id": 2,
+                "text": "because"
+              },
+              {
+                "id": 3,
+                "text": "for"
+              },
+              {
+                "id": 4,
+                "text": "before"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "suspect"
+              },
+              {
+                "id": 2,
+                "text": "deny"
+              },
+              {
+                "id": 3,
+                "text": "plan"
+              },
+              {
+                "id": 4,
+                "text": "remember"
+              }
+            ],
+            [
+              {
+                "id": 1,
+                "text": "because"
+              },
+              {
+                "id": 2,
+                "text": "then"
+              },
+              {
+                "id": 3,
+                "text": "so"
+              },
+              {
+                "id": 4,
+                "text": "when"
+              }
+            ]
+          ],
+          "answer": {
+            "value": [4, 1, 3],
+            "points": 1
+          }
+        }
+      ],
+      "funnel": {
+        "baseScore": 0,
+        "type": "BASE"
+      }
+    }
+  ]
+}

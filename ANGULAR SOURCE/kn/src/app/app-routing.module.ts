@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '@core/components/home/home.component';
+import { QuestionsModule } from '@features/questions/questions.module';
+import { ChangeLessonGuard } from 'change-lesson.guard';
+import { LessonResolverService } from 'lesson-resolver.service';
 import { StatisticsPageComponent } from '@features/questions/pages/statistics-page/statistics-page.component';
 import { RouteResolverService } from '@features/questions/services/route-resolver.service';
 
@@ -10,29 +13,58 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'samletesten',
-    loadChildren: () =>
-      import('./features/questions/questions.module').then((m) => m.QuestionsModule),
-  },
-  {
     path: 'lesetesten',
-    loadChildren: () =>
-      import('./features/questions/questions.module').then((m) => m.QuestionsModule),
-  },
-  {
-    path: 'digitaltesten',
-    loadChildren: () =>
-      import('./features/questions/questions.module').then((m) => m.QuestionsModule),
-  },
-  {
-    path: 'muntligtesten',
-    loadChildren: () =>
-      import('./features/questions/questions.module').then((m) => m.QuestionsModule),
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
   },
   {
     path: 'regnetesten',
-    loadChildren: () =>
-      import('./features/questions/questions.module').then((m) => m.QuestionsModule),
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
+  },
+  {
+    path: 'digitaltesten',
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
+  },
+  {
+    path: 'muntligtesten',
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
+  },
+  {
+    path: 'leseskrivesjekken',
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
+  },
+  {
+    path: 'regnesjekken',
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
+  },
+  {
+    path: 'datasjekken',
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
+  },
+  {
+    path: 'muntligsjekken',
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
+  },
+  {
+    path: 'samletesten',
+    loadChildren: () => QuestionsModule,
+    resolve: { lessonPath: LessonResolverService },
+    canActivate: [ChangeLessonGuard],
   },
   {
     path: 'statistikk',
@@ -44,5 +76,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  providers: [LessonResolverService, ChangeLessonGuard],
 })
 export class AppRoutingModule {}
