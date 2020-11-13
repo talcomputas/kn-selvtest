@@ -59,7 +59,7 @@ export class QuestionsService {
     this.initContent();
   }
 
-  get changes$(): Observable<void> {
+  get changes$(): Observable<boolean> {
     return this.content.changes;
   }
 

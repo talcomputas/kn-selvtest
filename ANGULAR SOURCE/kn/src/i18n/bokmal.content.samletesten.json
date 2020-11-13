@@ -2,7 +2,7 @@
   "intro": {
     "label": "Samletesten",
     "title": "Samletesten",
-    "text": "For debugging og testing",
+    "text": "For debugging og testing. Denne testen inneholder alle type spørsmål som finnes i de forskjellige testene/sjekkene. Denne siden vil ikke vises i produksjon!",
     "image": "reading-exam.svg"
   },
   "result": {

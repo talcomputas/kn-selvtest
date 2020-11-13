@@ -1,8 +1,14 @@
 <button mat-raised-button [matMenuTriggerFor]="menu" class="toolbar__menubutton">
   <span>{{ 'language.' + selectedLanguage | content }}</span>
 </button>
+<ng-template #noRadio> radio_button_unchecked </ng-template>
 <mat-menu class="toolbar__menu" #menu="matMenu">
-  <button *ngFor="let ctx of content.getCtxList()" (click)="onLanguageChange(ctx)" mat-menu-item>
+  <button *ngFor="let ctx of languageList" (click)="onLanguageChange(ctx)" mat-menu-item>
+    <mat-icon [color]="selectedLanguage === ctx ? 'primary' : 'no-color'">
+      <ng-container *ngIf="selectedLanguage === ctx; else noRadio"
+        >radio_button_checked</ng-container
+      >
+    </mat-icon>
     <span>{{ 'language.' + ctx | content }}</span>
   </button>
 </mat-menu>

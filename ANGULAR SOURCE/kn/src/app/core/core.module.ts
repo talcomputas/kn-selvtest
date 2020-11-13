@@ -56,7 +56,7 @@ export class CoreModule {
 
     contentService.set('nb', nbSystem);
     contentService.set('nn', nnSystem);
-    contentService.set('en', enSystem);
+    // contentService.set('en', enSystem);
     contentService.setCtx('nb');
   }
 

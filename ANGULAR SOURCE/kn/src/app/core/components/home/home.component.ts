@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ContentService } from '@content/services/content.service';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +7,14 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./home.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements OnInit {
-  constructor() {}
+export class HomeComponent {
+  selectedLanguage: string;
+  languageList: string[];
 
-  ngOnInit(): void {}
+  constructor(public contentService: ContentService) {
+    this.contentService.changes.subscribe((changed: boolean) => {
+      this.languageList = this.contentService.getCtxList();
+      this.selectedLanguage = this.contentService.getCtx();
+    });
+  }
 }

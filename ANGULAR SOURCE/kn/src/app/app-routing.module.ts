@@ -11,6 +11,7 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    resolve: { lessonPath: LessonResolverService },
   },
   {
     path: 'lesetesten',
