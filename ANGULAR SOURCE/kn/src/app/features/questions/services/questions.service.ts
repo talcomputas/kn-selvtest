@@ -221,8 +221,11 @@ export class QuestionsService {
   }
 
   private getQuestion(id: number): QuestionsUnionType {
-    // @ts-ignore
-    return this.questionsDictionary.get(id);
+    const result = this.questionsDictionary.get(id);
+    if (!result) {
+      throw new Error('Could not get question with id: ' + id);
+    }
+    return result;
   }
 
   public getScore(answers: { [key: string]: any }): number {
