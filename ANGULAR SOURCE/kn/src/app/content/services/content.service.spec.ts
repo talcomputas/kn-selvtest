@@ -69,16 +69,15 @@ describe('ContentService', () => {
     expect(contentService.get('ary2.foo')).toEqual([0, 2, 17]);
   });
 
-  /* it('should throwError when trying to find non-existing key', () => {
+  it('should throwError when trying to find non-existing key', () => {
     expect(() => {
-      ;
-    }).toThrow('Parsing is not possible');
-  }); */
+      contentService.get('notfound');
+    }).toThrowError('ContentParser: Could not find content with key: notfound');
+  });
 
-  /*   it('should throw an error if called without a number', () => {
-    // tslint:disable-next-line: only-arrow-functions
-    expect(function () {
-      contentService.get('fail');
-    }).toThrow();
-  }); */
+  it('should throwError when trying to find nested non-existing key', () => {
+    expect(() => {
+      contentService.get('result.notfound');
+    }).toThrowError('ContentParser: Could not find content with key: result.notfound');
+  });
 });

@@ -5,6 +5,7 @@ import { isDefined } from '../utils/utils';
 @Injectable()
 export class ContentParser {
   public getValue(target: { [key: string]: any }, key: string): any {
+    const originalKey = key;
     const keys = key.split('.');
     key = '';
     do {
@@ -17,9 +18,7 @@ export class ContentParser {
         target = target[key];
         key = '';
       } else if (!keys.length) {
-        // @ts-ignore
-        target = undefined;
-        throwError('Parsing is not possible');
+        throw new Error('ContentParser: Could not find content with key: ' + originalKey);
       } else {
         key += '.';
       }
