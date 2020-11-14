@@ -31,11 +31,20 @@ import { QuestionMultipleDiffPoints } from '@features/questions/interfaces/quest
 import { Answer } from '@features/questions/interfaces/answer.interface';
 import { Options } from '@features/questions/interfaces/options.interface';
 import { Option } from '@features/questions/interfaces/option.interface';
+import { QuestionSingleComponent } from '@features/questions/components/question-single/question-single.component';
 
 @Injectable()
 export class QuestionsService {
-  // @ts-ignore
-  private readonly currentQuestion$ = new BehaviorSubject<QuestionsUnionType>(null);
+  private readonly currentQuestion$ = new BehaviorSubject<QuestionsUnionType>({
+    id: 0,
+    type: QuestionType.SINGLE,
+    text: '',
+    answer: {
+      value: 0,
+      points: 0,
+    },
+    options: [{ id: 0 }],
+  });
   private readonly currentLength$ = new BehaviorSubject<number>(0);
 
   private readonly questionsDictionary = new Map<number, QuestionsUnionType>();

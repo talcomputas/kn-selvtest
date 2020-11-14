@@ -43,8 +43,11 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
   ) {
     this.page$ = this.route.paramMap.pipe(
       map((params: ParamMap) => {
-        // @ts-ignore
-        return +params.get('page');
+        const pageNumber = params.get('page');
+        if (pageNumber) {
+          return +pageNumber;
+        }
+        return 0;
       }),
     );
     this.index$ = this.page$.pipe(
