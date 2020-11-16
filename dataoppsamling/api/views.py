@@ -85,24 +85,26 @@ def itemdata():
     fromDate = request.args.get('fromdate')
     toDate = request.args.get('todate')
 
-    inFormat = '%b %d %Y'
-    outFormat = '%Y-%m-%d'
+    return jsonify(getDataBetweenDates(fromDate, toDate, test)), 201
 
-    fromDate = " ".join(fromDate.split(" ", 4)[1:4])
-    fromDate = datetime.strptime(fromDate, inFormat)
-    fromDate = datetime.strftime(fromDate, outFormat)
+@app.route("/api/summary", methods=["GET"])
+def summary(): 
+    fromDate = request.args.get('fromdate')
+    toDate = request.args.get('todate')
 
-    toDate = " ".join(toDate.split(" ", 4)[1:4])
-    toDate = datetime.strptime(toDate, inFormat)
-    toDate = datetime.strftime(toDate, outFormat)
+    result = getDataBetweenDates(fromDate, toDate)
+
+    print(result)
+
+def getDataBetweenDates(fromDate, toDate, test): 
+    fromDate = formatDate(fromDate)
+    toDate = formatDate(toDate)
 
     useQuery = "USE kompetansenorge;"
     selectQuery = "SELECT * FROM itemdata WHERE "
     if test != "alle":
         selectQuery += "name = '" + test + "' AND "
-    selectQuery += "datecreated >= '" + fromDate + "' AND datecreated <= '" + toDate + "';"
-
-    print(selectQuery)
+    selectQuery += "datecreated >= '" + fromDate + "' AND datecreated <= " + toDate + "';" 
 
     cursor, conn = connection()
     query = cursor.execute(useQuery+selectQuery, multi=True)
@@ -118,4 +120,11 @@ def itemdata():
     conn.commit()
     conn.close()
 
-    return jsonify(result), 201
+    return result
+
+def formatDate(date):
+    inFormat = '%b %d %Y'
+    outFormat = '%Y-%m-%d'
+    date = " ".join(date.split(" ", 4)[1:4])
+    date = date.strptime(date, inFormat)
+    return date.strftime(date, outFormat)
