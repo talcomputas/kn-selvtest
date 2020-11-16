@@ -32,6 +32,7 @@ import { Answer } from '@features/questions/interfaces/answer.interface';
 import { Options } from '@features/questions/interfaces/options.interface';
 import { Option } from '@features/questions/interfaces/option.interface';
 import { QuestionSingleComponent } from '@features/questions/components/question-single/question-single.component';
+import { Utils } from '@content/utils/utils';
 
 @Injectable()
 export class QuestionsService {
@@ -355,7 +356,7 @@ export class QuestionsService {
 
   public getResultAnswer(question: QuestionsUnionType, selectedValue: any): ResultAnswer {
     const selectOption = (value: any, options: { id: any }[]) => {
-      return options.find((option) => option.id === value);
+      return Utils.ensure(options.find((option) => option.id === value));
     };
 
     const { id, answer, type } = question;
@@ -412,13 +413,11 @@ export class QuestionsService {
 
         const correct: Option[] = [];
         values.forEach((val, index) => {
-          // @ts-ignore
           correct.push(selectOption(val, options[index]));
         });
 
         const selected: Option[] = [];
         selectedValue.forEach((val: number, index: number) => {
-          // @ts-ignore
           selected.push(selectOption(val, options[index]));
         });
         const isCorrect = JSON.stringify(correct) === JSON.stringify(selected);
@@ -464,9 +463,7 @@ export class QuestionsService {
         return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
       }
       default: {
-        throwError('QuestionType not Found');
-        // @ts-ignore
-        return null;
+        throw new Error('QuestionType not Found');
       }
     }
   }
