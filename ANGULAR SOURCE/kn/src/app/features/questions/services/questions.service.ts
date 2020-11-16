@@ -120,10 +120,11 @@ export class QuestionsService {
       ],
       [],
     );
-    const level = this.levels
-      .sort((a: Level, b: Level) => b.minScore - a.minScore)
-      .find((l: Level) => score >= l.minScore);
-    // @ts-ignore
+    const level = Utils.ensure(
+      this.levels
+        .sort((a: Level, b: Level) => b.minScore - a.minScore)
+        .find((l: Level) => score >= l.minScore),
+    );
     return { level, score, maxScore, data };
   }
 
