@@ -20,9 +20,14 @@
 .toolbar {
   display: flex;
   height: 91px;
+  justify-content: center;
+  align-items: center;
   &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
-      width: 168px; // same as kn
+      min-width: 200px; // same as kn
     }
   }
   &__spacer {
