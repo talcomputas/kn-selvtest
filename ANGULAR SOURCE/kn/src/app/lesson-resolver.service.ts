@@ -37,6 +37,9 @@ import nbdatasjekken from '@i18n/bokmal.content.datasjekk.json';
 import nndatasjekken from '@i18n/nynorsk.content.datasjekk.json';
 import endatasjekken from '@i18n/engelsk.content.datasjekk.json';
 
+import nbsamletesten from '@i18n/bokmal.content.samletesten.json';
+import { throwError } from 'rxjs';
+
 @Injectable()
 export class LessonResolverService implements Resolve<string> {
   public path: string;
@@ -44,7 +47,7 @@ export class LessonResolverService implements Resolve<string> {
   constructor(public contentService: ContentService) {}
 
   resolve(route: ActivatedRouteSnapshot): string {
-    this.path = route.url[0].path;
+    this.path = route.url && route.url[0] && route.url[0].path ? route.url[0].path : '';
 
     this.configureContentService(this.path, this.contentService);
 
@@ -52,6 +55,7 @@ export class LessonResolverService implements Resolve<string> {
   }
 
   private configureContentService(path: string, contentService: ContentService) {
+    contentService.unset('en');
     switch (path) {
       case 'lesetesten':
         contentService.set('nb', { ...nbcontent, ...nbsystem, ...nblesetesten });
@@ -88,7 +92,18 @@ export class LessonResolverService implements Resolve<string> {
         contentService.set('nn', { ...nncontent, ...nnsystem, ...nnmuntligsjekken });
         contentService.set('en', { ...encontent, ...ensystem, ...enmuntligsjekken });
         break;
+      case 'samletesten':
+        contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbsamletesten });
+        contentService.unset('en');
+        contentService.unset('nb');
+        break;
+      case '':
+        contentService.set('nb', { ...nbcontent, ...nbsystem });
+        contentService.set('nn', { ...nncontent, ...nnsystem });
+        contentService.set('en', { ...encontent, ...ensystem });
+        break;
       default:
+        throwError('Content undecided in LessonResolverService');
         contentService.set('nb', { ...nbcontent, ...nbsystem });
         contentService.set('nn', { ...nncontent, ...nnsystem });
         contentService.set('en', { ...encontent, ...ensystem });

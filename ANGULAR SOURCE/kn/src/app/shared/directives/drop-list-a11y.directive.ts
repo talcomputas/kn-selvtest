@@ -79,19 +79,19 @@ export class DropListA11yDirective implements AfterContentInit, FocusableOption 
     const data = this.cdkDropList.data;
     const lastDataIndex = (data && data.length - 1) || 0;
 
-    const currIndex = manager.activeItemIndex;
-    const prevIndex = currIndex > 0 ? currIndex - 1 : 0;
-    const nextIndex = currIndex < lastDataIndex ? currIndex + 1 : lastDataIndex;
+    const currIndex = manager.activeItemIndex ? manager.activeItemIndex : 0;
+    const prevIndex = currIndex && currIndex > 0 ? currIndex - 1 : 0;
+    const nextIndex = currIndex && currIndex < lastDataIndex ? currIndex + 1 : lastDataIndex;
 
     switch (keyCode) {
-      case "ArrowUp" || "Up":
+      case 'ArrowUp' || 'Up':
         moveItemInArray(data, currIndex, prevIndex);
         this.cdkDropList.dropped.emit();
         setTimeout(() => manager.setActiveItem(prevIndex));
         event.preventDefault();
         break;
 
-      case "ArrowDown" || "Down":
+      case 'ArrowDown' || 'Down':
         moveItemInArray(data, currIndex, nextIndex);
         event.preventDefault();
         break;

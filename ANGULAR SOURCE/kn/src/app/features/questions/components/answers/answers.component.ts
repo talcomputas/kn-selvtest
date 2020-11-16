@@ -2,8 +2,6 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 import { ResultAnswer } from '@features/questions/interfaces/result-answer.interface';
 import { QuestionType } from '@features/questions/enums/question-type.enum';
 import { SpeechType } from '@features/questions/enums/speech-type.enum';
-import { isNumeric } from '@features/questions/utils/is-numeric.utils';
-import { getSplitText } from '@features/questions/utils/split-text.utils';
 
 @Component({
   selector: 'app-answers',
@@ -14,8 +12,6 @@ import { getSplitText } from '@features/questions/utils/split-text.utils';
 export class AnswersComponent {
   public readonly QuestionType = QuestionType;
   public readonly SpeechType = SpeechType;
-  isNumeric = isNumeric;
-  getSplitText = getSplitText;
 
   @Output()
   public readonly close = new EventEmitter<void>();
@@ -25,5 +21,31 @@ export class AnswersComponent {
 
   public onPrint(): void {
     window.print();
+  }
+
+  getSplitText(value: string): any[] {
+    const ary = value.split('%s');
+
+    let result = [];
+
+    for (let i = 0; i < ary.length; i++) {
+      if (ary[i] === '' && i < ary.length - 1) {
+        result.push(i);
+      } else {
+        result.push(ary[i]);
+        if (i < ary.length - 1) {
+          result.push(i);
+        }
+      }
+    }
+
+    result = result.filter((e) => {
+      return e === 0 || e;
+    });
+    return result;
+  }
+
+  isNumeric(value: any): boolean {
+    return /^\d+$/.test(value);
   }
 }

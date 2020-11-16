@@ -56,8 +56,8 @@
       </div>
     </div>
   </div>
-  <div style="background-color: lightcoral">
-    <!-- TODO: remove this when in production -->
+  <!-- TODO: remove this when in production -->
+  <div *ngIf="testing" style="background-color: lightcoral">
     <table>
       <tr>
         <td>result.score</td>

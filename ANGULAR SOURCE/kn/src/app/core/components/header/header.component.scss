@@ -1,22 +1,22 @@
-@import 'variables';
-@import 'mixins';
+.header-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
 
-:host {
-  display: block;
-  background-color: $white;
-  padding: 10px;
-  height: 90px;
-  border-bottom: 1px solid $grey-light;
-
-  @include breakpoint($tablet-large) {
-    height: 56px;
-    padding: 0 15px;
+  .logo {
+    width: 210px;
+    img {
+      display: block;
+      width: 100%;
+      max-width: 352px; /*actual image width*/
+      min-width: 100px;
+      height: auto; /* maintain aspect ratio*/
+      margin: auto; /*optional centering of image*/
+    }
   }
+}
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
+.spacer {
+  flex: 1 1 auto;
 }

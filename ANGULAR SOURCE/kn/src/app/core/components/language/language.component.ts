@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { ContentService } from '@content/services/content.service';
 
 @Component({
@@ -8,9 +8,17 @@ import { ContentService } from '@content/services/content.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LanguageComponent {
-  constructor(public content: ContentService) {}
+  selectedLanguage: string;
+  languageList: string[];
 
-  select(ctx: string) {
-    this.content.setCtx(ctx);
+  constructor(public contentService: ContentService) {
+    this.contentService.changes.subscribe((changed: boolean) => {
+      this.languageList = this.contentService.getCtxList();
+      this.selectedLanguage = this.contentService.getCtx();
+    });
+  }
+
+  onLanguageChange(ctx: string) {
+    this.contentService.setCtx(ctx);
   }
 }

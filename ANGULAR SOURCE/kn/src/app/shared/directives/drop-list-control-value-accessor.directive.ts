@@ -23,7 +23,7 @@ export class DropListControlValueAccessorDirective<T = { id: any }>
   ngOnInit(): void {
     this.cdkDropList.dropped
       .pipe(takeUntil(this.destroy$))
-      .subscribe(() => this.onChange(this.cdkDropList.data.map((item) => item.id)));
+      .subscribe(() => this.onChange(this.cdkDropList.data.map((item: any) => item.id)));
   }
 
   ngOnDestroy(): void {
@@ -52,6 +52,6 @@ export class DropListControlValueAccessorDirective<T = { id: any }>
       return;
     }
 
-    this.cdkDropList.data.sort((a, b) => value.indexOf(a.id) - value.indexOf(b.id));
+    this.cdkDropList.data.sort((a: any, b: any) => value.indexOf(a.id) - value.indexOf(b.id));
   }
 }

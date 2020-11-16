@@ -9,20 +9,51 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NoCacheHeadersInterceptor } from '@shared/interceptors/nocache.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpRequestInterceptor } from 'interceptors/http-request.interceptor';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { StatisticsService } from '@features/questions/services/statistics.service';
 import { StatisticsApiService } from '@features/questions/services/statistics-api.service';
 
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { LayoutDirective } from '@shared/directives/layout.directive';
+import { LanguageComponent } from '@core/components/language/language.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+
+const material = [
+  MatMenuModule,
+  MatProgressSpinnerModule,
+  MatIconModule,
+  MatButtonModule,
+  MatToolbarModule,
+  MatCardModule,
+  MatButtonModule,
+  MatCardModule,
+  MatIconModule,
+  MatListModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatInputModule,
+  MatSelectModule,
+  MatOptionModule,
+];
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LayoutDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule.forRoot(),
     AngularDraggableModule,
     BrowserAnimationsModule,
-    MatProgressSpinnerModule,
+    material,
   ],
+  exports: [material],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
@@ -37,6 +68,6 @@ import { StatisticsApiService } from '@features/questions/services/statistics-ap
     StatisticsService,
     StatisticsApiService,
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent, LanguageComponent],
 })
 export class AppModule {}

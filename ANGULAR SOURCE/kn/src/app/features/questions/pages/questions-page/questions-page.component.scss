@@ -4,13 +4,22 @@
   display: block;
 
   .top-nav {
-    margin: -20px 0 0;
-    padding: 0 0 20px;
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    flex-direction: row;
 
-    app-progress {
+    .progress-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .progress-text {
+      margin: 0 1rem 0 1rem;
+    }
+
+    .app-progress {
       width: 48%;
     }
 
@@ -18,7 +27,7 @@
       flex-direction: column;
       margin: -10px 0 0;
 
-      app-progress {
+      .app-progress {
         width: 100%;
       }
     }

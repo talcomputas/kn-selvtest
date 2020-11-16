@@ -5,37 +5,43 @@ import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable()
 export class ContentService {
-  private readonly changes$ = new BehaviorSubject<void>(null);
+  private readonly changes$ = new BehaviorSubject<boolean>(false);
   private readonly contentMap = new Map<string, object>();
   private ctx: string; // nn or nb
 
   constructor(private parser: ContentParser) {}
 
-  get changes(): Observable<void> {
+  get changes(): Observable<boolean> {
     return this.changes$.asObservable();
   }
 
   set(ctx: string, data: object): void {
     let content = this.contentMap.get(ctx);
     content = content ? mergeDeep(content, data) : data;
+    // @ts-ignore
     this.contentMap.set(ctx, content);
-    this.changes$.next();
+    this.changes$.next(true);
   }
 
   get(key: string): any {
     if (!isDefined(key) || !key.length) {
       throw new Error(`Parameter "key" required`);
     }
+    // @ts-ignore
     return this.getParsedResult(this.contentMap.get(this.ctx), key);
   }
 
   setCtx(ctx: string) {
     this.ctx = ctx;
-    this.changes$.next();
+    this.changes$.next(true);
   }
 
   getCtx(): string {
     return this.ctx;
+  }
+
+  unset(key: string): void {
+    this.contentMap.delete(key);
   }
 
   getCtxList(): string[] {

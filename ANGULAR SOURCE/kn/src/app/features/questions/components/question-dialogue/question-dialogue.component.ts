@@ -6,6 +6,7 @@ import { SpeechBase } from '@features/questions/interfaces/speech-base.interface
 import { SpeechFunnel } from '@features/questions/interfaces/speech-funnel.interface';
 import { SpeechSelect } from '@features/questions/interfaces/speech-select.interface';
 import { SpeechType } from '@features/questions/enums/speech-type.enum';
+import { Utils } from '@content/utils/utils';
 
 @Component({
   selector: 'app-question-dialogue',
@@ -46,7 +47,7 @@ export class QuestionDialogueComponent
   }
 
   getById(id: string): SpeechBase | SpeechFunnel | SpeechSelect {
-    return this.question.speech.find((item) => item.id === id);
+    return Utils.ensure(this.question.speech.find((item) => item.id === id));
   }
 
   private finish(): void {
@@ -54,9 +55,12 @@ export class QuestionDialogueComponent
   }
 
   private initSpeech(): void {
-    this.speech = this.question.speech.find(
-      (item) => item.type === SpeechType.INTRO || item.type === SpeechType.QUESTION,
+    this.speech = Utils.ensure(
+      this.question.speech.find(
+        (item) => item.type === SpeechType.INTRO || item.type === SpeechType.QUESTION,
+      ),
     );
+    // @ts-ignore
     this.backgroundImage =
       this.question.image &&
       this.sanitizer.bypassSecurityTrustStyle(`url(assets/images/${this.question.image})`);

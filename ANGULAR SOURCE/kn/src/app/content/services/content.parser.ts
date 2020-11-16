@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
+import { throwError } from 'rxjs';
 import { isDefined } from '../utils/utils';
 
 @Injectable()
 export class ContentParser {
-  public getValue(target: object, key: string): any {
+  public getValue(target: { [key: string]: any }, key: string): any {
+    const originalKey = key;
     const keys = key.split('.');
     key = '';
     do {
@@ -16,7 +18,7 @@ export class ContentParser {
         target = target[key];
         key = '';
       } else if (!keys.length) {
-        target = undefined;
+        throw new Error('ContentParser: Could not find content with key: ' + originalKey);
       } else {
         key += '.';
       }

@@ -29,6 +29,9 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
   public readonly length$: Observable<number>;
   public readonly question$: Observable<QuestionsUnionType>;
 
+  public numberOfQuestions = 0;
+  public questionIndex = 0;
+
   public showTransition: boolean;
   path: string;
 
@@ -38,10 +41,23 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
     private cdRef: ChangeDetectorRef,
     private questionsService: QuestionsService,
   ) {
-    this.page$ = this.route.paramMap.pipe(map((params: ParamMap) => +params.get('page')));
-    this.index$ = this.page$.pipe(map((page: number) => page - 1));
+    this.page$ = this.route.paramMap.pipe(
+      map((params: ParamMap) => {
+        // @ts-ignore
+        return +params.get('page');
+      }),
+    );
+    this.index$ = this.page$.pipe(
+      map((page: number) => {
+        this.questionIndex = page;
+        return page - 1;
+      }),
+    );
     this.question$ = this.questionsService.question$;
     this.length$ = this.questionsService.length$;
+    this.questionsService.length$.subscribe((nr: number) => {
+      this.numberOfQuestions = nr;
+    });
   }
 
   ngOnInit(): void {
@@ -51,11 +67,9 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.destroyed$))
       .subscribe(() => this.cdRef.markForCheck());
 
-    this.index$
-      .pipe(takeUntil(this.destroyed$))
-      .subscribe((index: number) =>
-        this.questionsService.update(index, this.questions.value, this.path),
-      );
+    this.index$.pipe(takeUntil(this.destroyed$)).subscribe((index: number) => {
+      return this.questionsService.update(index, this.questions.value, this.path);
+    });
 
     this.question$.pipe(takeUntil(this.destroyed$)).subscribe((question: QuestionsUnionType) => {
       this.handleTransition(question);
@@ -70,7 +84,12 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
   }
 
   finish(): void {
+    // @ts-ignore
     this.questionsService.update(null, this.questions.value, this.path);
+  }
+
+  getProgressAsPercent(): number {
+    return Math.ceil((this.questionIndex / this.numberOfQuestions) * 100);
   }
 
   private handleTransition(question: QuestionsUnionType): void {

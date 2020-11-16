@@ -1,7 +1,8 @@
 {
   "language": {
     "nn": "Nynorsk",
-    "nb": "Bokmål"
+    "nb": "Bokmål",
+    "en": "Engelsk"
   },
   "actions": {
     "start": "Start",
