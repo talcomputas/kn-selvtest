@@ -19,11 +19,12 @@ import { QuestionType } from '@features/questions/enums/question-type.enum';
 import { ResultAnswer } from '@features/questions/interfaces/result-answer.interface';
 import { QuestionMultiple } from '@features/questions/interfaces/question-multiple.interface';
 import { QuestionGroupsChoice } from '@features/questions/interfaces/question-groups-choice.interface';
+import { QuestionCode } from '@features/questions/interfaces/question-code.interface';
+import { QuestionDialogue } from '@features/questions/interfaces/question-dialogue.interface';
+import { SpeechType } from '@features/questions/enums/speech-type.enum';
 
 describe('QuestionService', () => {
-  // let contentParser = ContentParser;
   let httpClientSpy: { get: jasmine.Spy };
-  // let contentService: ContentService;
   beforeEach(() => {
     httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
     TestBed.configureTestingModule({
@@ -622,17 +623,622 @@ describe('QuestionService', () => {
     expect(result).toEqual(expectedResult);
   });
 
-  /*   it('QuestionGroupsChoice getScore should report correct score for answers', () => {
+  it('QuestionCode getResult connect answers should report as connect', () => {
     const contentService = TestBed.inject(ContentService);
     const nbsamletesten: Lesson = nbsamletestenRaw as Lesson;
     contentService.set('nb', nbsamletesten);
     contentService.setCtx('nb');
     const questionsService = TestBed.inject(QuestionsService);
+    const question: QuestionCode = {
+      id: 7,
+      text: 'foo',
+      type: QuestionType.CODE,
+      answer: {
+        value: 2,
+        points: 10,
+      },
+    };
+    const result: ResultAnswer = questionsService.getResultAnswer(question, 2);
+    expect(result).toEqual({
+      id: 7,
+      type: QuestionType.CODE,
+      correct: 2,
+      selected: 2,
+      isCorrect: true,
+      text: 'foo',
+    });
+  });
 
-    const answers = {};
-    const result = questionsService.getScore(answers);
-    const expectedResult = 69;
+  it('QuestionCode getResult inconnect answers should report as inconnect', () => {
+    const contentService = TestBed.inject(ContentService);
+    const nbsamletesten: Lesson = nbsamletestenRaw as Lesson;
+    contentService.set('nb', nbsamletesten);
+    contentService.setCtx('nb');
+    const questionsService = TestBed.inject(QuestionsService);
+    const question: QuestionCode = {
+      id: 7,
+      text: 'foo',
+      type: QuestionType.CODE,
+      answer: {
+        value: 2,
+        points: 10,
+      },
+    };
+    const result: ResultAnswer = questionsService.getResultAnswer(question, 5);
+    expect(result).toEqual({
+      id: 7,
+      type: QuestionType.CODE,
+      correct: 2,
+      selected: 5,
+      isCorrect: false,
+      text: 'foo',
+    });
+  });
 
-    expect(result).toEqual(expectedResult);
-  }); */
+  it('QuestionDialogue getResult connect answers should report as connect', () => {
+    const contentService = TestBed.inject(ContentService);
+    const nbsamletesten: Lesson = nbsamletestenRaw as Lesson;
+    contentService.set('nb', nbsamletesten);
+    contentService.setCtx('nb');
+    const questionsService = TestBed.inject(QuestionsService);
+    const question: QuestionDialogue = {
+      id: 3,
+      type: QuestionType.DIALOGUE,
+      answer: {
+        value: ['D17F5', 'D17F10'],
+        points: 10,
+      },
+      speech: [
+        {
+          id: 'D17F2',
+          person: 'Sebastian',
+          text:
+            'Du skal hjelpe vennen din med å lage en Instagram-profil, så han kan delta på sosiale medier.',
+          type: SpeechType.INTRO,
+          next: 'D17F1',
+        },
+        {
+          id: 'D17F1',
+          person: 'Sebastian',
+          text: 'Hei, jeg skal opprette en Instagram-profil. Hva slags passord er det best å ha?',
+          type: SpeechType.QUESTION,
+          options: ['D17F3', 'D17F4', 'D17F5'],
+        },
+        {
+          id: 'D17F3',
+          person: 'Player',
+          text: 'Et som består av flere tilfeldige tall og bokstaver.',
+          type: SpeechType.OPTION,
+          next: 'D17F8',
+        },
+        {
+          id: 'D17F4',
+          person: 'Player',
+          text: 'Et som består av forskjellige tegn og tall.',
+          type: SpeechType.OPTION,
+          next: 'D17F8',
+        },
+        {
+          id: 'D17F5',
+          person: 'Player',
+          text: 'Et som består av forskjellige ord etter hverandre med sammenheng.',
+          type: SpeechType.OPTION,
+          next: 'D17F6',
+        },
+        {
+          id: 'D17F8',
+          person: 'Sebastian',
+          text:
+            'Det er ikke det jeg har hørt, men du vet når det står "husk meg". Når burde man IKKE bruke det?',
+          type: SpeechType.QUESTION,
+          options: ['D17F10', 'D17F11', 'D17F12'],
+        },
+        {
+          id: 'D17F6',
+          person: 'Sebastian',
+          text:
+            'Wow, det visste jeg ikke! Her står det også at jeg kan trykke på "husk meg". Når burde man IKKE bruke det?',
+          type: SpeechType.QUESTION,
+          options: ['D17F10', 'D17F11', 'D17F12'],
+        },
+        {
+          id: 'D17F10',
+          person: 'Player',
+          text: 'Hvis flere bruker samme enhet.',
+          type: SpeechType.OPTION,
+          next: 'D17F13',
+        },
+        {
+          id: 'D17F11',
+          person: 'Player',
+          text: 'Når man har dårlig tid.',
+          type: SpeechType.OPTION,
+          next: 'D17F17',
+        },
+        {
+          id: 'D17F12',
+          person: 'Player',
+          text: 'Om man lett glemmer passord.',
+          type: SpeechType.OPTION,
+          next: 'D17F17',
+        },
+        {
+          id: 'D17F13',
+          person: 'Sebastian',
+          text: 'Skjønner. Kan du hjelpe meg med å opprette en profil på Instagram?',
+          type: SpeechType.COMPLETION,
+        },
+        {
+          id: 'D17F17',
+          person: 'Sebastian',
+          text:
+            'Det høres ikke logisk ut, men greit. Kan du hjelpe meg med å opprette en profil på Instagram?',
+          type: SpeechType.COMPLETION,
+        },
+      ],
+    };
+
+    const result: ResultAnswer = questionsService.getResultAnswer(question, ['D17F5', 'D17F10']);
+    expect(result).toEqual({
+      id: 3,
+      type: QuestionType.DIALOGUE,
+      speech: [
+        {
+          id: 'D17F2',
+          person: 'Sebastian',
+          text:
+            'Du skal hjelpe vennen din med å lage en Instagram-profil, så han kan delta på sosiale medier.',
+          type: SpeechType.INTRO,
+          next: 'D17F1',
+        },
+        {
+          id: 'D17F1',
+          person: 'Sebastian',
+          text: 'Hei, jeg skal opprette en Instagram-profil. Hva slags passord er det best å ha?',
+          type: SpeechType.QUESTION,
+          options: ['D17F3', 'D17F4', 'D17F5'],
+        },
+        {
+          id: 'D17F3',
+          person: 'Player',
+          text: 'Et som består av flere tilfeldige tall og bokstaver.',
+          type: SpeechType.OPTION,
+          next: 'D17F8',
+        },
+        {
+          id: 'D17F4',
+          person: 'Player',
+          text: 'Et som består av forskjellige tegn og tall.',
+          type: SpeechType.OPTION,
+          next: 'D17F8',
+        },
+        {
+          id: 'D17F5',
+          person: 'Player',
+          text: 'Et som består av forskjellige ord etter hverandre med sammenheng.',
+          type: SpeechType.OPTION,
+          next: 'D17F6',
+        },
+        {
+          id: 'D17F8',
+          person: 'Sebastian',
+          text:
+            'Det er ikke det jeg har hørt, men du vet når det står "husk meg". Når burde man IKKE bruke det?',
+          type: SpeechType.QUESTION,
+          options: ['D17F10', 'D17F11', 'D17F12'],
+        },
+        {
+          id: 'D17F6',
+          person: 'Sebastian',
+          text:
+            'Wow, det visste jeg ikke! Her står det også at jeg kan trykke på "husk meg". Når burde man IKKE bruke det?',
+          type: SpeechType.QUESTION,
+          options: ['D17F10', 'D17F11', 'D17F12'],
+        },
+        {
+          id: 'D17F10',
+          person: 'Player',
+          text: 'Hvis flere bruker samme enhet.',
+          type: SpeechType.OPTION,
+          next: 'D17F13',
+        },
+        {
+          id: 'D17F11',
+          person: 'Player',
+          text: 'Når man har dårlig tid.',
+          type: SpeechType.OPTION,
+          next: 'D17F17',
+        },
+        {
+          id: 'D17F12',
+          person: 'Player',
+          text: 'Om man lett glemmer passord.',
+          type: SpeechType.OPTION,
+          next: 'D17F17',
+        },
+        {
+          id: 'D17F13',
+          person: 'Sebastian',
+          text: 'Skjønner. Kan du hjelpe meg med å opprette en profil på Instagram?',
+          type: SpeechType.COMPLETION,
+        },
+        {
+          id: 'D17F17',
+          person: 'Sebastian',
+          text:
+            'Det høres ikke logisk ut, men greit. Kan du hjelpe meg med å opprette en profil på Instagram?',
+          type: SpeechType.COMPLETION,
+        },
+      ],
+      selected: [
+        {
+          id: 'D17F1',
+          person: 'Sebastian',
+          text: 'Hei, jeg skal opprette en Instagram-profil. Hva slags passord er det best å ha?',
+          type: 'question',
+          options: ['D17F3', 'D17F4', 'D17F5'],
+        },
+        {
+          id: 'D17F5',
+          person: 'Player',
+          text: 'Et som består av forskjellige ord etter hverandre med sammenheng.',
+          type: 'option',
+          next: 'D17F6',
+        },
+        {
+          id: 'D17F6',
+          person: 'Sebastian',
+          text:
+            'Wow, det visste jeg ikke! Her står det også at jeg kan trykke på "husk meg". Når burde man IKKE bruke det?',
+          type: 'question',
+          options: ['D17F10', 'D17F11', 'D17F12'],
+        },
+        {
+          id: 'D17F10',
+          person: 'Player',
+          text: 'Hvis flere bruker samme enhet.',
+          type: 'option',
+          next: 'D17F13',
+        },
+        {
+          id: 'D17F13',
+          person: 'Sebastian',
+          text: 'Skjønner. Kan du hjelpe meg med å opprette en profil på Instagram?',
+          type: 'completion',
+        },
+      ],
+      correct: [
+        {
+          id: 'D17F1',
+          person: 'Sebastian',
+          text: 'Hei, jeg skal opprette en Instagram-profil. Hva slags passord er det best å ha?',
+          type: 'question',
+          options: ['D17F3', 'D17F4', 'D17F5'],
+        },
+        {
+          id: 'D17F5',
+          person: 'Player',
+          text: 'Et som består av forskjellige ord etter hverandre med sammenheng.',
+          type: 'option',
+          next: 'D17F6',
+        },
+        {
+          id: 'D17F6',
+          person: 'Sebastian',
+          text:
+            'Wow, det visste jeg ikke! Her står det også at jeg kan trykke på "husk meg". Når burde man IKKE bruke det?',
+          type: 'question',
+          options: ['D17F10', 'D17F11', 'D17F12'],
+        },
+        {
+          id: 'D17F10',
+          person: 'Player',
+          text: 'Hvis flere bruker samme enhet.',
+          type: 'option',
+          next: 'D17F13',
+        },
+        {
+          id: 'D17F13',
+          person: 'Sebastian',
+          text: 'Skjønner. Kan du hjelpe meg med å opprette en profil på Instagram?',
+          type: 'completion',
+        },
+      ],
+      isCorrect: true,
+    });
+  });
+
+  it('QuestionDialogue getResult inconnect answers should report as inconnect', () => {
+    const contentService = TestBed.inject(ContentService);
+    const nbsamletesten: Lesson = nbsamletestenRaw as Lesson;
+    contentService.set('nb', nbsamletesten);
+    contentService.setCtx('nb');
+    const questionsService = TestBed.inject(QuestionsService);
+    const question: QuestionDialogue = {
+      id: 3,
+      type: QuestionType.DIALOGUE,
+      answer: {
+        value: ['D17F5', 'D17F10'],
+        points: 10,
+      },
+      speech: [
+        {
+          id: 'D17F2',
+          person: 'Sebastian',
+          text:
+            'Du skal hjelpe vennen din med å lage en Instagram-profil, så han kan delta på sosiale medier.',
+          type: SpeechType.INTRO,
+          next: 'D17F1',
+        },
+        {
+          id: 'D17F1',
+          person: 'Sebastian',
+          text: 'Hei, jeg skal opprette en Instagram-profil. Hva slags passord er det best å ha?',
+          type: SpeechType.QUESTION,
+          options: ['D17F3', 'D17F4', 'D17F5'],
+        },
+        {
+          id: 'D17F3',
+          person: 'Player',
+          text: 'Et som består av flere tilfeldige tall og bokstaver.',
+          type: SpeechType.OPTION,
+          next: 'D17F8',
+        },
+        {
+          id: 'D17F4',
+          person: 'Player',
+          text: 'Et som består av forskjellige tegn og tall.',
+          type: SpeechType.OPTION,
+          next: 'D17F8',
+        },
+        {
+          id: 'D17F5',
+          person: 'Player',
+          text: 'Et som består av forskjellige ord etter hverandre med sammenheng.',
+          type: SpeechType.OPTION,
+          next: 'D17F6',
+        },
+        {
+          id: 'D17F8',
+          person: 'Sebastian',
+          text:
+            'Det er ikke det jeg har hørt, men du vet når det står "husk meg". Når burde man IKKE bruke det?',
+          type: SpeechType.QUESTION,
+          options: ['D17F10', 'D17F11', 'D17F12'],
+        },
+        {
+          id: 'D17F6',
+          person: 'Sebastian',
+          text:
+            'Wow, det visste jeg ikke! Her står det også at jeg kan trykke på "husk meg". Når burde man IKKE bruke det?',
+          type: SpeechType.QUESTION,
+          options: ['D17F10', 'D17F11', 'D17F12'],
+        },
+        {
+          id: 'D17F10',
+          person: 'Player',
+          text: 'Hvis flere bruker samme enhet.',
+          type: SpeechType.OPTION,
+          next: 'D17F13',
+        },
+        {
+          id: 'D17F11',
+          person: 'Player',
+          text: 'Når man har dårlig tid.',
+          type: SpeechType.OPTION,
+          next: 'D17F17',
+        },
+        {
+          id: 'D17F12',
+          person: 'Player',
+          text: 'Om man lett glemmer passord.',
+          type: SpeechType.OPTION,
+          next: 'D17F17',
+        },
+        {
+          id: 'D17F13',
+          person: 'Sebastian',
+          text: 'Skjønner. Kan du hjelpe meg med å opprette en profil på Instagram?',
+          type: SpeechType.COMPLETION,
+        },
+        {
+          id: 'D17F17',
+          person: 'Sebastian',
+          text:
+            'Det høres ikke logisk ut, men greit. Kan du hjelpe meg med å opprette en profil på Instagram?',
+          type: SpeechType.COMPLETION,
+        },
+      ],
+    };
+
+    const result: ResultAnswer = questionsService.getResultAnswer(question, ['D17F3', 'D17F11']);
+    expect(result).toEqual({
+      id: 3,
+      type: QuestionType.DIALOGUE,
+      speech: [
+        {
+          id: 'D17F2',
+          person: 'Sebastian',
+          text:
+            'Du skal hjelpe vennen din med å lage en Instagram-profil, så han kan delta på sosiale medier.',
+          type: SpeechType.INTRO,
+          next: 'D17F1',
+        },
+        {
+          id: 'D17F1',
+          person: 'Sebastian',
+          text: 'Hei, jeg skal opprette en Instagram-profil. Hva slags passord er det best å ha?',
+          type: SpeechType.QUESTION,
+          options: ['D17F3', 'D17F4', 'D17F5'],
+        },
+        {
+          id: 'D17F3',
+          person: 'Player',
+          text: 'Et som består av flere tilfeldige tall og bokstaver.',
+          type: SpeechType.OPTION,
+          next: 'D17F8',
+        },
+        {
+          id: 'D17F4',
+          person: 'Player',
+          text: 'Et som består av forskjellige tegn og tall.',
+          type: SpeechType.OPTION,
+          next: 'D17F8',
+        },
+        {
+          id: 'D17F5',
+          person: 'Player',
+          text: 'Et som består av forskjellige ord etter hverandre med sammenheng.',
+          type: SpeechType.OPTION,
+          next: 'D17F6',
+        },
+        {
+          id: 'D17F8',
+          person: 'Sebastian',
+          text:
+            'Det er ikke det jeg har hørt, men du vet når det står "husk meg". Når burde man IKKE bruke det?',
+          type: SpeechType.QUESTION,
+          options: ['D17F10', 'D17F11', 'D17F12'],
+        },
+        {
+          id: 'D17F6',
+          person: 'Sebastian',
+          text:
+            'Wow, det visste jeg ikke! Her står det også at jeg kan trykke på "husk meg". Når burde man IKKE bruke det?',
+          type: SpeechType.QUESTION,
+          options: ['D17F10', 'D17F11', 'D17F12'],
+        },
+        {
+          id: 'D17F10',
+          person: 'Player',
+          text: 'Hvis flere bruker samme enhet.',
+          type: SpeechType.OPTION,
+          next: 'D17F13',
+        },
+        {
+          id: 'D17F11',
+          person: 'Player',
+          text: 'Når man har dårlig tid.',
+          type: SpeechType.OPTION,
+          next: 'D17F17',
+        },
+        {
+          id: 'D17F12',
+          person: 'Player',
+          text: 'Om man lett glemmer passord.',
+          type: SpeechType.OPTION,
+          next: 'D17F17',
+        },
+        {
+          id: 'D17F13',
+          person: 'Sebastian',
+          text: 'Skjønner. Kan du hjelpe meg med å opprette en profil på Instagram?',
+          type: SpeechType.COMPLETION,
+        },
+        {
+          id: 'D17F17',
+          person: 'Sebastian',
+          text:
+            'Det høres ikke logisk ut, men greit. Kan du hjelpe meg med å opprette en profil på Instagram?',
+          type: SpeechType.COMPLETION,
+        },
+      ],
+      selected: [
+        {
+          id: 'D17F1',
+          person: 'Sebastian',
+          text: 'Hei, jeg skal opprette en Instagram-profil. Hva slags passord er det best å ha?',
+          type: 'question',
+          options: ['D17F3', 'D17F4', 'D17F5'],
+        },
+        {
+          id: 'D17F3',
+          person: 'Player',
+          text: 'Et som består av flere tilfeldige tall og bokstaver.',
+          type: SpeechType.OPTION,
+          next: 'D17F8',
+        },
+        {
+          id: 'D17F8',
+          person: 'Sebastian',
+          text:
+            'Det er ikke det jeg har hørt, men du vet når det står "husk meg". Når burde man IKKE bruke det?',
+          type: SpeechType.QUESTION,
+          options: ['D17F10', 'D17F11', 'D17F12'],
+        },
+        {
+          id: 'D17F11',
+          person: 'Player',
+          text: 'Når man har dårlig tid.',
+          type: SpeechType.OPTION,
+          next: 'D17F17',
+        },
+        {
+          id: 'D17F17',
+          person: 'Sebastian',
+          text:
+            'Det høres ikke logisk ut, men greit. Kan du hjelpe meg med å opprette en profil på Instagram?',
+          type: SpeechType.COMPLETION,
+        },
+      ],
+      correct: [
+        {
+          id: 'D17F1',
+          person: 'Sebastian',
+          text: 'Hei, jeg skal opprette en Instagram-profil. Hva slags passord er det best å ha?',
+          type: 'question',
+          options: ['D17F3', 'D17F4', 'D17F5'],
+        },
+        {
+          id: 'D17F5',
+          person: 'Player',
+          text: 'Et som består av forskjellige ord etter hverandre med sammenheng.',
+          type: 'option',
+          next: 'D17F6',
+        },
+        {
+          id: 'D17F6',
+          person: 'Sebastian',
+          text:
+            'Wow, det visste jeg ikke! Her står det også at jeg kan trykke på "husk meg". Når burde man IKKE bruke det?',
+          type: 'question',
+          options: ['D17F10', 'D17F11', 'D17F12'],
+        },
+        {
+          id: 'D17F10',
+          person: 'Player',
+          text: 'Hvis flere bruker samme enhet.',
+          type: 'option',
+          next: 'D17F13',
+        },
+        {
+          id: 'D17F13',
+          person: 'Sebastian',
+          text: 'Skjønner. Kan du hjelpe meg med å opprette en profil på Instagram?',
+          type: 'completion',
+        },
+      ],
+      isCorrect: false,
+    });
+  });
+
+  /*it('QuestionHotspot getResult connect answers should report as connect', () => {});
+
+  it('QuestionHotspot getResult inconnect answers should report as inconnect', () => {});
+
+  it('QuestionMultipleDiffPoints getResult connect answers should report as connect', () => {});
+
+  it('QuestionMultipleDiffPoints getResult inconnect answers should report as inconnect', () => {});
+
+  it('QuestionRanking getResult connect answers should report as connect', () => {});
+
+  it('QuestionRanking getResult inconnect answers should report as inconnect', () => {});
+
+  it('QuestionSlider getResult connect answers should report as connect', () => {});
+
+  it('QuestionSlider getResult inconnect answers should report as inconnect', () => {});
+
+  it('QuestionGrading getResult connect answers should report as connect', () => {});
+
+  it('QuestionGrading getResult inconnect answers should report as inconnect', () => {}); */
 });
