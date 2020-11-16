@@ -55,6 +55,8 @@ import {
 } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -97,6 +99,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatInputModule,
     MatSelectModule,
     MatOptionModule,
+    MatCardModule,
+    MatDividerModule,
   ],
   providers: [
     QuestionsService,
@@ -106,19 +110,11 @@ import { MatSelectModule } from '@angular/material/select';
   ],
 })
 export class QuestionsModule {
-  constructor(
-    contentService: ContentService,
-    statisticsService: StatisticsService,
-    titleService: Title,
-  ) {
+  constructor(contentService: ContentService, statisticsService: StatisticsService) {
     contentService.set('nb', { ...nbContent, ...nbSystemContent });
     contentService.set('nn', { ...nnContent, ...nnSystemContent });
     contentService.set('en', { ...enContent, ...enSystemContent });
 
     statisticsService.initUser();
-
-    contentService.changes.subscribe(() =>
-      titleService.setTitle(`Kompetanse Norge - ${contentService.get('intro.title')}`),
-    );
   }
 }

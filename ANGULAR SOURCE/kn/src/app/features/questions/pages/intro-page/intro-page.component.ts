@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { ContentService } from '@content/services/content.service';
 
@@ -11,7 +12,15 @@ import { ContentService } from '@content/services/content.service';
 })
 export class IntroPageComponent implements OnInit {
   path: string;
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    public contentService: ContentService,
+    titleService: Title,
+  ) {
+    this.contentService.changes.subscribe(() =>
+      titleService.setTitle(`Kompetanse Norge - ${contentService.get('intro.title')}`),
+    );
+  }
 
   ngOnInit(): void {
     this.path = this.activatedRoute.snapshot.data.path;
