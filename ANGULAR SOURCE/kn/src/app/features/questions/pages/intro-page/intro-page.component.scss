@@ -1,7 +1,7 @@
 @import 'variables';
 @import 'mixins';
 
-:host {
+/* :host {
   .label {
     transform: translate(-5px, -4px);
   }
@@ -56,7 +56,7 @@
       font-weight: bold;
     }
   }
-}
+} */
 
 .intro {
   &__header {
@@ -80,15 +80,12 @@
 }
 
 .mat-card {
-  // padding: 0 0 1rem 0;
-  // background-color: cyan;
+  padding-top: 0;
   .mat-card-header {
-    background-color: antiquewhite;
     border-radius: 4px;
   }
   .mat-card-content {
     margin-top: 1rem;
-    //background-color: darkkhaki;
   }
 }
 
@@ -107,9 +104,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.mat-raised-button {
-  /* width: 11rem;
-  height: 3rem; */
 }
