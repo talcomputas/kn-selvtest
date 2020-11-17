@@ -48,16 +48,12 @@ import { QuestionGradingComponent } from '@features/questions/components/questio
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatOptionModule } from '@angular/material/core';
-import {
-  MAT_DIALOG_DEFAULT_OPTIONS,
-  MatDialogModule,
-  MatDialogRef,
-} from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
-
+import { CalculatorComponent } from '@features/questions/components/calculator/calculator.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 @NgModule({
   declarations: [
     IntroPageComponent,
@@ -73,6 +69,7 @@ import { MatDividerModule } from '@angular/material/divider';
     ResultPageComponent,
     AnswersComponent,
     TransitionComponent,
+    CalculatorComponent,
     QuestionSliderComponent,
     QuestionMultipleDiffPointsComponent,
     QuestionGroupsChoiceComponent,
@@ -102,6 +99,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatCardModule,
     MatDividerModule,
     MatDialogModule,
+    MatExpansionModule,
   ],
   providers: [
     QuestionsService,

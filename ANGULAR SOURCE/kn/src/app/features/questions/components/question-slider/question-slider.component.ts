@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, OnChanges } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
 import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
 import { SliderOption } from '@features/questions/interfaces/slider-option.interface';
@@ -20,6 +21,10 @@ export class QuestionSliderComponent
   thumbLabel = true;
   tickInterval = 1;
 
+  constructor(public dialog: MatDialog) {
+    super();
+  }
+
   ngOnInit(): void {
     // this.toggleCalculator();
   }
@@ -34,6 +39,7 @@ export class QuestionSliderComponent
   }
 
   toggleCalculator(): void {
+    // this.dialog.open(DialogCalculatorDialog);
     this.calculatorVisible = !this.calculatorVisible;
   }
 
@@ -49,3 +55,9 @@ export class QuestionSliderComponent
     return 0;
   }
 }
+
+@Component({
+  selector: 'dialog-elements-example-dialog',
+  templateUrl: 'dialog-calculator.html',
+})
+export class DialogCalculatorDialog {}

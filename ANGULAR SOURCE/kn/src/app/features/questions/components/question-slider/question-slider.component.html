@@ -49,11 +49,20 @@
       </mat-form-field>
     </div>
 
-    <button *ngIf="question.calculator" mat-raised-button (click)="toggleCalculator()">
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Kalkulator</mat-panel-title>
+          <!-- <mat-panel-description>
+            Currently I am {{ panelOpenState ? 'open' : 'closed' }}
+          </mat-panel-description> -->
+        </mat-expansion-panel-header>
+        <app-calculator [visible]="panelOpenState"></app-calculator>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <!--  <button *ngIf="question.calculator" mat-raised-button (click)="toggleCalculator()">
       Åpne Kalkulator
-    </button>
-    <div>
-      <app-calculator [visible]="calculatorVisible"></app-calculator>
-    </div>
+    </button> -->
+    <!--  <div></div> -->
   </div>
 </div>
