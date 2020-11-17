@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Result } from '@features/questions/interfaces/result.interface';
 import { QuestionsService } from '@features/questions/services/questions.service';
@@ -26,7 +26,7 @@ export class ResultPageComponent implements OnInit, OnDestroy {
   private qbIdNn: string;
 
   path: string;
-  testing = false;
+  testing = true;
 
   constructor(
     private questionsService: QuestionsService,
@@ -63,19 +63,24 @@ export class ResultPageComponent implements OnInit, OnDestroy {
     } else if (window.location.href.indexOf('lesetesten') > -1) {
       this.qbIdNb = 'wzy4jqo0hw';
       this.qbIdNn = '562ajj0nzs';
-    } else {
-      console.warn('unknown questback ID');
+    } else if (window.location.href.indexOf('samletesten') > -1) {
+      this.qbIdNb = 'non_existing';
+      this.qbIdNn = 'non_existing';
     }
 
-    if (this.content.getCtx() === 'nb') {
-      this.openNbPopup();
-    } else {
-      this.openNnPopup();
+    if (this.qbIdNb && this.qbIdNn) {
+      if (this.content.getCtx() === 'nb') {
+        this.openNbPopup();
+      } else {
+        this.openNnPopup();
+      }
     }
   }
 
   openNbPopup() {
     questback.popup.create('https://response.questback.com/vox/' + this.qbIdNb, {
+      width: 530,
+      height: 'auto',
       title: 'Vinn et gavekort',
       text:
         // tslint:disable-next-line:max-line-length
@@ -96,6 +101,8 @@ export class ResultPageComponent implements OnInit, OnDestroy {
 
   openNnPopup() {
     questback.popup.create('https://response.questback.com/vox/' + this.qbIdNn, {
+      width: 530,
+      height: 'auto',
       title: 'Vinn et gavekort',
       text:
         // tslint:disable-next-line:max-line-length

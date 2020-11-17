@@ -101,6 +101,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatOptionModule,
     MatCardModule,
     MatDividerModule,
+    MatDialogModule,
   ],
   providers: [
     QuestionsService,
