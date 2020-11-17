@@ -20,6 +20,7 @@ export class QuestionSliderComponent
   defaultStep = 1;
   thumbLabel = true;
   tickInterval = 1;
+  panelOpenState = false;
 
   constructor(public dialog: MatDialog) {
     super();
