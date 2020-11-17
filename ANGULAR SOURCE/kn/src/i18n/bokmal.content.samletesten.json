@@ -37,6 +37,7 @@
           "type": "slider",
           "text": "Hvilket tall peker pilen på?",
           "image": "Skala_tall2.png",
+          "calculator": true,
           "answer": {
             "value": 130,
             "points": 1

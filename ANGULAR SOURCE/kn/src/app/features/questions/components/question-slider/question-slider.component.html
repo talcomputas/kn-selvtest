@@ -49,7 +49,9 @@
       </mat-form-field>
     </div>
 
-    <button class="secondary" *ngIf="question.calculator" (click)="toggleCalculator()"></button>
+    <button *ngIf="question.calculator" mat-raised-button (click)="toggleCalculator()">
+      Åpne Kalkulator
+    </button>
     <div>
       <app-calculator [visible]="calculatorVisible"></app-calculator>
     </div>

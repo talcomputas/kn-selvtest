@@ -9,7 +9,9 @@ import { SliderOption } from '@features/questions/interfaces/slider-option.inter
   styleUrls: ['./question-slider.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class QuestionSliderComponent extends QuestionComponentBaseDirective<QuestionSlider> {
+export class QuestionSliderComponent
+  extends QuestionComponentBaseDirective<QuestionSlider>
+  implements OnInit {
   calculatorVisible: boolean;
 
   autoTicks = false;
@@ -17,6 +19,10 @@ export class QuestionSliderComponent extends QuestionComponentBaseDirective<Ques
   defaultStep = 1;
   thumbLabel = true;
   tickInterval = 1;
+
+  ngOnInit(): void {
+    // this.toggleCalculator();
+  }
 
   onUserChange(changeContext: number): void {
     this.control.patchValue(changeContext);

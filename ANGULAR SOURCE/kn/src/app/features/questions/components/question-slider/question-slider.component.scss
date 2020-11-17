@@ -1,6 +1,15 @@
 @use "~@material/slider";
 @include slider.core-styles();
 
+.image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+  }
+}
+
 .slider {
   background: #dedede;
   height: 10px;

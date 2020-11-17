@@ -3,7 +3,66 @@
   width: 300px;
 }
 
-.maindisplay {
+.display {
+  background: lightgrey;
+  height: 100px;
+  .subdisplay {
+    height: 35px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1rem;
+  }
+  .maindisplay {
+    height: 65px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1rem;
+    background-color: aliceblue;
+  }
+}
+
+.keypad {
+  height: 300px;
+  // background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+}
+
+.row {
+  // border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  height: calc(100% / 5);
+  //display: block;
+  .row-1 {
+    // background-color: green;
+    width: 50%;
+    text-align: center;
+  }
+  .row-4 {
+    width: 25%;
+    text-align: center;
+  }
+  .row-3 {
+    width: calc(100% / 3);
+    text-align: center;
+  }
+}
+.keys {
+  // border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  button {
+    width: 100%;
+  }
+}
+
+/* .maindisplay {
   background: lightgrey;
   height: calc(100% / 3);
   padding: 5% !important;
@@ -17,7 +76,7 @@
   border-bottom: 1px solid black;
   height: 25%;
   font-size: 1rem;
-  overflow: auto;
+  overflow: none;
 }
 
 .keypad {
@@ -38,4 +97,4 @@
 
 .one-line {
   display: inline-block;
-}
+} */
