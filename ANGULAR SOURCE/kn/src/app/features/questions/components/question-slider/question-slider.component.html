@@ -43,9 +43,9 @@
           [min]="question.options.floor"
           #input
           maxlength="10"
-          placeholder="Ex. Nougat"
+          placeholder=""
         />
-        <mat-error *ngIf="control.invalid">Ugyldig verdi</mat-error>
+        <mat-error *ngIf="control && control.invalid">Ugyldig verdi</mat-error>
       </mat-form-field>
     </div>
 

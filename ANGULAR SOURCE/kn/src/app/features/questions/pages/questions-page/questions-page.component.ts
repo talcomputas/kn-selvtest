@@ -121,16 +121,14 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
 
     if (question.type === QuestionType.SLIDER) {
       const q = question as QuestionSlider;
-      if (q.options.ceil && q.options.floor) {
-        this.questions.addControl(
-          key,
-          new FormControl(null, [
-            Validators.required,
-            Validators.min(q.options.floor),
-            Validators.max(q.options.ceil),
-          ]),
-        );
-      }
+      this.questions.addControl(
+        key,
+        new FormControl(null, [
+          Validators.required,
+          Validators.min(q.options.floor),
+          Validators.max(q.options.ceil),
+        ]),
+      );
       return;
     }
 
