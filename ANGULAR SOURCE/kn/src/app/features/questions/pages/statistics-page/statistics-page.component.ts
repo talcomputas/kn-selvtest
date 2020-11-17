@@ -77,6 +77,60 @@ export class StatisticsPageComponent implements OnInit {
       });
   }
 
+  exportTestsPerDate() {
+    this.statisticsService.getTestsPerDay(
+      this.fromDateControl.value.toString(),
+      this.toDateControl.value.toString(),
+    ).subscribe(data => {
+      data = JSON.parse(data);
+      const dates: Array<string> = [];
+      const tests: Array<string> = [];
+      Object.keys(data).forEach(line => {
+        const tmp = line.split('-');
+        const date = tmp[0];
+        const test = tmp[1];
+        if (!dates.includes(date)) dates.push(date);
+        if (!tests.includes(test)) tests.push(test);
+      });
+
+      const csv: any[][] = new Array(dates.length)
+        .fill(0)
+        .map(() => new Array(tests.length + 1));
+
+      for (let i = 0; i < dates.length; i++) {
+        csv[i][0] = dates[i]
+      }
+
+      Object.keys(data).forEach(dateTest => {
+        const val = data[dateTest]
+
+        const tmp = dateTest.split("-");
+        const date = tmp[0];
+        const test = tmp[1];
+        const c = tests.indexOf(test)
+        const r = dates.indexOf(date);
+        csv[r][c+1] = val;
+      })
+
+      tests.unshift("dato")
+
+      const csvOptions = {
+        fieldSeparator: ',',
+        quoteStrings: '',
+        decimalSeparator: '.',
+        showLabels: true,
+        showTitle: true,
+        title: 'Statistikk',
+        useBom: true,
+        noDownload: false,
+        headers: tests,
+      };
+
+      // tslint:disable-next-line:no-unused-expression
+      new AngularCsv(csv, 'Test', csvOptions);
+    });
+  }
+
   private removeCommas(itemData: any): JSON {
     itemData = JSON.parse(itemData);
     Object.keys(itemData).forEach(line => {
@@ -88,15 +142,6 @@ export class StatisticsPageComponent implements OnInit {
     });
 
     return itemData;
-  }
-
-  exportTestsPerDate() {
-    this.statisticsService.getTestsPerDay(
-      this.fromDateControl.value.toString(),
-      this.toDateControl.value.toString()
-    ).subscribe(data => {
-      console.log(data);
-    })
   }
 
   exportTest() {
