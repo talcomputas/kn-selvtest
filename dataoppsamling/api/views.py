@@ -105,7 +105,6 @@ def getNumberOfTestsPerDate(fromDate, toDate, test, seperateOnTests = False):
     data = getDataBetweenDates(fromDate, toDate, test)
     allTests = getAllTests()
     dateRange = calcDateRange(fromDate, toDate)
-    print(allTests)
     outFormat = '%d.%m.%Y'
 
     result = {}
@@ -115,7 +114,6 @@ def getNumberOfTestsPerDate(fromDate, toDate, test, seperateOnTests = False):
         if seperateOnTests:
             for test in allTests:
                 entryName = date + '-' + test
-                print(entryName)
                 result[entryName] = 0
         else:
             result[entryName] = 0

@@ -67,4 +67,8 @@ export class StatisticsService {
   getTotalTestsPerDay(fromDate: string, toDate: string): Observable<any> {
     return this.statisticsApiService.getTotalTestsPerDay(fromDate, toDate);
   }
+
+  getTestsPerDay(fromDate: string, toDate: string): Observable<any> {
+    return this.statisticsApiService.getTestsPerDay(fromDate, toDate);
+  }
 }

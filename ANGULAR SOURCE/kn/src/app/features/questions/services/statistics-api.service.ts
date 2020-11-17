@@ -64,4 +64,15 @@ export class StatisticsApiService {
       params,
     });
   }
+
+  getTestsPerDay(fromDate: string, toDate: string) {
+    const params = new HttpParams()
+      .set('fromdate', fromDate)
+      .set('todate', toDate);
+
+    return this.http.get(`${environment.STATISTICS_API}testsperday`, {
+      responseType: 'text',
+      params,
+    });
+  }
 }

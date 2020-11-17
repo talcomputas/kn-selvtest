@@ -22,7 +22,7 @@ export class StatisticsPageComponent implements OnInit {
   fromDateControl = new FormControl(new Date());
   toDateControl = new FormControl(new Date());
 
-  csvOptions = {
+  itemDataCsvOptions = {
     fieldSeparator: ',',
     quoteStrings: '',
     decimalSeparator: '.',
@@ -34,6 +34,17 @@ export class StatisticsPageComponent implements OnInit {
     headers: ['answer', 'correct', 'correctanswer', 'datecreated', 'id', 'itemid', 'name', 'time', 'timeout', 'totaltime', 'uid', 'ver'],
   };
 
+  defaultCsvOptions = {
+    fieldSeparator: ',',
+    quoteStrings: '',
+    decimalSeparator: '.',
+    showLabels: true,
+    showTitle: true,
+    title: 'Statistikk',
+    useBom: true,
+    noDownload: false,
+  };
+
   constructor(private statisticsService: StatisticsService) {
   }
 
@@ -43,9 +54,9 @@ export class StatisticsPageComponent implements OnInit {
       this.toDateControl.value.toString(),
       this.selectedTest)
       .subscribe(itemData => {
-        itemData = this.removeCommas(itemData)
+        itemData = this.removeCommas(itemData);
         // tslint:disable-next-line:no-unused-expression
-        new AngularCsv(itemData, 'Statistikk', this.csvOptions);
+        new AngularCsv(itemData, 'Statistikk', this.itemDataCsvOptions);
       });
   }
 
@@ -58,11 +69,11 @@ export class StatisticsPageComponent implements OnInit {
       this.fromDateControl.value.toString(),
       this.toDateControl.value.toString())
       .subscribe(itemData => {
-        itemData = this.removeCommas(itemData)
+        itemData = this.removeCommas(itemData);
 
         console.log(itemData);
         // tslint:disable-next-line:no-unused-expression
-        new AngularCsv(itemData, 'Summary')
+        new AngularCsv(itemData, 'Summary', this.defaultCsvOptions);
       });
   }
 
@@ -79,4 +90,44 @@ export class StatisticsPageComponent implements OnInit {
     return itemData;
   }
 
+  exportTestsPerDate() {
+    this.statisticsService.getTestsPerDay(
+      this.fromDateControl.value.toString(),
+      this.toDateControl.value.toString()
+    ).subscribe(data => {
+      console.log(data);
+    })
+  }
+
+  exportTest() {
+    const csvOptions = {
+      fieldSeparator: ',',
+      quoteStrings: '',
+      decimalSeparator: '.',
+      showLabels: true,
+      showTitle: true,
+      title: 'Statistikk',
+      useBom: true,
+      noDownload: false,
+      headers: ['dato', 'lesetesten', 'digitaltesten', 'regnetesten', 'test1', 'test2'],
+    };
+
+    const data: Array<Array<any>> = [
+      ['01.11.2020', this.rnd(), this.rnd(), this.rnd(), this.rnd(), this.rnd()],
+      ['02.11.2020', this.rnd(), this.rnd(), this.rnd(), this.rnd(), this.rnd()],
+      ['03.11.2020', this.rnd(), this.rnd(), this.rnd(), this.rnd(), this.rnd()],
+      ['04.11.2020', this.rnd(), this.rnd(), this.rnd(), this.rnd(), this.rnd()],
+      ['05.11.2020', this.rnd(), this.rnd(), this.rnd(), this.rnd(), this.rnd()],
+      ['06.11.2020', this.rnd(), this.rnd(), this.rnd(), this.rnd(), this.rnd()],
+      ['07.11.2020', this.rnd(), this.rnd(), this.rnd(), this.rnd(), this.rnd()],
+      ['08.11.2020', this.rnd(), this.rnd(), this.rnd(), this.rnd(), this.rnd()],
+    ];
+
+    // tslint:disable-next-line:no-unused-expression
+    new AngularCsv(data, 'Test', csvOptions);
+  }
+
+  rnd(): number {
+    return Math.floor(Math.random() * 100);
+  }
 }
