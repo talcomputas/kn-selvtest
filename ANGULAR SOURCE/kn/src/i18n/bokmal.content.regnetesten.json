@@ -72,7 +72,8 @@
           "options": {
             "id": 1,
             "floor": 100,
-            "ceil": 150
+            "ceil": 150,
+            "steps": 1
           }
         },
         {
@@ -88,7 +89,8 @@
           "options": {
             "id": 1,
             "floor": 0,
-            "ceil": 50
+            "ceil": 50,
+            "steps": 1
           }
         },
         {
@@ -103,7 +105,8 @@
           "options": {
             "id": 1,
             "floor": 0,
-            "ceil": 50
+            "ceil": 100,
+            "steps": 1
           }
         },
         {
@@ -174,7 +177,8 @@
           "options": {
             "id": 1,
             "floor": 8,
-            "ceil": 50
+            "ceil": 50,
+            "steps": 1
           }
         },
         {
@@ -242,7 +246,8 @@
           "options": {
             "id": 1,
             "floor": 20,
-            "ceil": 50
+            "ceil": 50,
+            "steps": 1
           }
         },
         {
@@ -311,7 +316,8 @@
           "options": {
             "id": 1,
             "floor": 200,
-            "ceil": 300
+            "ceil": 300,
+            "steps": 1
           }
         },
         {
@@ -351,7 +357,8 @@
           "options": {
             "id": 1,
             "floor": 1200,
-            "ceil": 1300
+            "ceil": 1300,
+            "steps": 1
           }
         },
         {
@@ -636,7 +643,8 @@
           "options": {
             "id": 1,
             "floor": 1,
-            "ceil": 150
+            "ceil": 150,
+            "steps": 1
           }
         },
         {
@@ -651,7 +659,8 @@
           "options": {
             "id": 1,
             "floor": 18,
-            "ceil": 23
+            "ceil": 23,
+            "steps": 1
           }
         },
         {
@@ -667,7 +676,8 @@
           "options": {
             "id": 1,
             "floor": 20,
-            "ceil": 50
+            "ceil": 50,
+            "steps": 1
           }
         },
         {
@@ -683,7 +693,8 @@
           "options": {
             "id": 1,
             "floor": 160,
-            "ceil": 240
+            "ceil": 240,
+            "steps": 1
           }
         },
         {

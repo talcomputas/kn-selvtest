@@ -34,6 +34,22 @@
       "questions": [
         {
           "id": 1,
+          "type": "slider",
+          "text": "Hvilket tall peker pilen på?",
+          "image": "Skala_tall2.png",
+          "answer": {
+            "value": 130,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 100,
+            "ceil": 150,
+            "steps": 1
+          }
+        },
+        {
+          "id": 2,
           "type": "groups-choice",
           "title": "Drømmen om en bondegård",
           "text": "Henrik bladde fram til sidene med boligannonser. Leiligheten deres var %s for liten for dem, så nå lette de etter %s større. De ville gjerne flytte ut på landet. De lette etter en liten %s hvor det var plass til å ha et par %s.",
@@ -116,21 +132,7 @@
             "points": 1
           }
         },
-        {
-          "id": 2,
-          "type": "slider",
-          "text": "Hvilket tall peker pilen på?",
-          "image": "Skala_tall2.png",
-          "answer": {
-            "value": 130,
-            "points": 1
-          },
-          "options": {
-            "id": 1,
-            "floor": 100,
-            "ceil": 150
-          }
-        },
+
         {
           "id": 3,
           "type": "single",

@@ -14,16 +14,25 @@ export class QuestionSliderComponent extends QuestionComponentBaseDirective<Ques
 
   autoTicks = false;
   showTicks = true;
-  step = 1;
+  defaultStep = 1;
   thumbLabel = true;
-  tickInterval = 10;
+  tickInterval = 1;
 
   onUserChange(changeContext: number): void {
     this.control.patchValue(changeContext);
   }
 
+  onInputChange(value: any): void {
+    // this.control.patchValue(value.target.value);
+    this.onUserChange(value.target.value);
+  }
+
   toggleCalculator(): void {
     this.calculatorVisible = !this.calculatorVisible;
+  }
+
+  getStepInterval() {
+    return this.question.options.steps ? this.question.options.steps : this.tickInterval;
   }
 
   getSliderTickInterval(): number | 'auto' {

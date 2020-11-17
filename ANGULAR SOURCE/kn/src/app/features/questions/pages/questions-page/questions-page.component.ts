@@ -13,6 +13,7 @@ import { QuestionType } from '@features/questions/enums/question-type.enum';
 import { QuestionsService } from '@features/questions/services/questions.service';
 import { QuestionsUnionType } from '@features/questions/types/questions-union.type';
 import { QuestionGroupsChoice } from '@features/questions/interfaces/question-groups-choice.interface';
+import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
 
 @Component({
   selector: 'app-questions-page',
@@ -115,6 +116,21 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
         skills.push(new FormControl('', Validators.required));
       });
       this.questions.addControl(key, skills);
+      return;
+    }
+
+    if (question.type === QuestionType.SLIDER) {
+      const q = question as QuestionSlider;
+      if (q.options.ceil && q.options.floor) {
+        this.questions.addControl(
+          key,
+          new FormControl(null, [
+            Validators.required,
+            Validators.min(q.options.floor),
+            Validators.max(q.options.ceil),
+          ]),
+        );
+      }
       return;
     }
 
