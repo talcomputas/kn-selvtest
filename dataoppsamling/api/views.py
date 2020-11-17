@@ -87,14 +87,29 @@ def itemdata():
 
     return jsonify(getDataBetweenDates(fromDate, toDate, test)), 201
 
-@app.route("/api/summary", methods=["GET"])
+@app.route("/api/totaltestsperday", methods=["GET"])
 def summary(): 
     fromDate = request.args.get('fromdate')
     toDate = request.args.get('todate')
 
-    result = getDataBetweenDates(fromDate, toDate)
+    result = getDataBetweenDates(fromDate, toDate, "alle")
 
-    print(result)
+    totTestsPerDay = {}
+    uids = []
+
+    for line in result:
+        uid = line['uid']
+        testName = line['name']
+        date = datetime.strftime(line['datecreated'], '%d.%m.%Y')
+        if uid not in uids:
+            uids.append(uid)
+            totTestsPerDay[date] = 0
+
+        if date in totTestsPerDay:
+            totTestsPerDay[date] += 1
+
+
+    return jsonify(totTestsPerDay), 201
 
 def getDataBetweenDates(fromDate, toDate, test): 
     fromDate = formatDate(fromDate)
@@ -104,7 +119,7 @@ def getDataBetweenDates(fromDate, toDate, test):
     selectQuery = "SELECT * FROM itemdata WHERE "
     if test != "alle":
         selectQuery += "name = '" + test + "' AND "
-    selectQuery += "datecreated >= '" + fromDate + "' AND datecreated <= " + toDate + "';" 
+    selectQuery += "datecreated >= '" + fromDate + "' AND datecreated <= '" + toDate + "';" 
 
     cursor, conn = connection()
     query = cursor.execute(useQuery+selectQuery, multi=True)
@@ -122,9 +137,13 @@ def getDataBetweenDates(fromDate, toDate, test):
 
     return result
 
-def formatDate(date):
+def formatDate(date, nbFormat = False):
     inFormat = '%b %d %Y'
     outFormat = '%Y-%m-%d'
+    if nbFormat:
+        outFormat = '%d.%m.%Y'
     date = " ".join(date.split(" ", 4)[1:4])
-    date = date.strptime(date, inFormat)
-    return date.strftime(date, outFormat)
+    date = datetime.strptime(date, inFormat)
+    return datetime.strftime(date, outFormat)
+
+

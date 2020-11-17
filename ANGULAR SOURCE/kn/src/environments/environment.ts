@@ -7,7 +7,8 @@ export const environment = {
   qbId_nb: '',
   qbId_nn: '',
   name: 'lesetesten',
-  STATISTICS_API: 'https://dataoppsamling.azurewebsites.net/api/',
+  // STATISTICS_API: 'https://dataoppsamling.azurewebsites.net/api/',
+  STATISTICS_API: 'http://localhost:5000/api/',
 };
 
 /*

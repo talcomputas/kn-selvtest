@@ -5,7 +5,8 @@ import { environment } from '@env/environment';
 
 @Injectable()
 export class StatisticsApiService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   public getUserId(): Observable<{ id: string }> {
     return this.http.get<{ id: string }>(`${environment.STATISTICS_API}submituser`);
@@ -41,15 +42,26 @@ export class StatisticsApiService {
   getItemData(
     fromDate: string,
     toDate: string,
-    test: string
+    test: string,
   ) {
     const params = new HttpParams()
       .set('fromdate', fromDate)
       .set('todate', toDate)
-      .set('test', test)
-    return this.http.get(`${environment.STATISTICS_API}itemdata`,{
+      .set('test', test);
+    return this.http.get(`${environment.STATISTICS_API}itemdata`, {
       responseType: 'text',
-      params
-    } )
+      params,
+    });
+  }
+
+  getTotalTestsPerDay(fromDate: string, toDate: string) {
+    const params = new HttpParams()
+      .set('fromdate', fromDate)
+      .set('todate', toDate);
+
+    return this.http.get(`${environment.STATISTICS_API}totaltestsperday`, {
+      responseType: 'text',
+      params,
+    });
   }
 }

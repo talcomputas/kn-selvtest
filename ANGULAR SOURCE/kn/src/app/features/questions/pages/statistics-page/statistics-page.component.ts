@@ -24,7 +24,7 @@ export class StatisticsPageComponent implements OnInit {
 
   csvOptions = {
     fieldSeparator: ',',
-    quoteStrings: "",
+    quoteStrings: '',
     decimalSeparator: '.',
     showLabels: true,
     showTitle: true,
@@ -43,14 +43,7 @@ export class StatisticsPageComponent implements OnInit {
       this.toDateControl.value.toString(),
       this.selectedTest)
       .subscribe(itemData => {
-        itemData = JSON.parse(itemData);
-        Object.keys(itemData).forEach(line => {
-          Object.keys(itemData[line]).forEach(value => {
-            if (itemData[line][value]) {
-              itemData[line][value] = itemData[line][value].toString().replaceAll(',', ' ')
-            }
-          })
-        })
+        itemData = this.removeCommas(itemData)
         // tslint:disable-next-line:no-unused-expression
         new AngularCsv(itemData, 'Statistikk', this.csvOptions);
       });
@@ -59,5 +52,31 @@ export class StatisticsPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  exportTotalTestsPerDay() {
+    this.statisticsService.getTotalTestsPerDay(
+      this.fromDateControl.value.toString(),
+      this.toDateControl.value.toString())
+      .subscribe(itemData => {
+        itemData = this.removeCommas(itemData)
+
+        console.log(itemData);
+        // tslint:disable-next-line:no-unused-expression
+        new AngularCsv(itemData, 'Summary')
+      });
+  }
+
+  private removeCommas(itemData: any): JSON {
+    itemData = JSON.parse(itemData);
+    Object.keys(itemData).forEach(line => {
+      Object.keys(itemData[line]).forEach(value => {
+        if (itemData[line][value]) {
+          itemData[line][value] = itemData[line][value].toString().replaceAll(',', ' ');
+        }
+      });
+    });
+
+    return itemData;
+  }
 
 }
