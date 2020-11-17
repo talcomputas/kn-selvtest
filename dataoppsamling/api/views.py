@@ -4,10 +4,10 @@ from flask import request
 from flask.json import jsonify
 from . import app
 from .connect import connection
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import json
-
+from operator import attrgetter
 
 @app.route("/")
 def home():
@@ -88,28 +88,81 @@ def itemdata():
     return jsonify(getDataBetweenDates(fromDate, toDate, test)), 201
 
 @app.route("/api/totaltestsperday", methods=["GET"])
-def summary(): 
+def totalTestsPerDay(): 
     fromDate = request.args.get('fromdate')
     toDate = request.args.get('todate')
 
-    result = getDataBetweenDates(fromDate, toDate, "alle")
+    return jsonify(getNumberOfTestsPerDate(fromDate, toDate, "alle")), 201
 
-    totTestsPerDay = {}
+@app.route("/api/testsperday", methods=["GET"])
+def testsPerDay():
+    fromDate = request.args.get('fromdate')
+    toDate = request.args.get('todate')
+
+    return jsonify(getNumberOfTestsPerDate(fromDate, toDate, "alle", True)), 201
+
+def getNumberOfTestsPerDate(fromDate, toDate, test, seperateOnTests = False):
+    data = getDataBetweenDates(fromDate, toDate, test)
+    allTests = getAllTests()
+    dateRange = calcDateRange(fromDate, toDate)
+    print(allTests)
+    outFormat = '%d.%m.%Y'
+
+    result = {}
+    for date in dateRange:
+        date = datetime.strftime(date, outFormat)
+        entryName = date
+        if seperateOnTests:
+            for test in allTests:
+                entryName = date + '-' + test
+                print(entryName)
+                result[entryName] = 0
+        else:
+            result[entryName] = 0
+
     uids = []
-
-    for line in result:
+    for line in data:
         uid = line['uid']
         testName = line['name']
-        date = datetime.strftime(line['datecreated'], '%d.%m.%Y')
+        date = datetime.strftime(line['datecreated'], outFormat)
+        entryName = date
+        if seperateOnTests:
+            entryName = date + "-" + testName
+        
         if uid not in uids:
             uids.append(uid)
-            totTestsPerDay[date] = 0
+            result[entryName] += 1
 
-        if date in totTestsPerDay:
-            totTestsPerDay[date] += 1
+    return result
 
+def calcDateRange(minDate, maxDate):
+    dateFormat = '%b %d %Y'
+    minDate = trimDate(minDate)
+    minDate = datetime.strptime(minDate, dateFormat)
+    maxDate = trimDate(maxDate)
+    maxDate = datetime.strptime(maxDate, dateFormat)
 
-    return jsonify(totTestsPerDay), 201
+    numDays = (maxDate - minDate).days + 1
+    
+    return [maxDate - timedelta(days=x) for x in range(numDays)]
+
+def getAllTests():
+    cursor, conn = connection()
+    result = cursor.execute("USE kompetansenorge; SELECT DISTINCT(name) FROM itemdata", multi=True)
+
+    for cur in result:
+        print("cursor", cur)
+        if cur.with_rows:
+            result = [dict((cur.description[i][0], value)
+                for i, value in enumerate(row)) for row in cur.fetchall()]
+
+    tests = []
+    for test in result:
+        test = test['name']
+        if test and test != 'undefined':
+            tests.append(test) 
+    
+    return tests
 
 def getDataBetweenDates(fromDate, toDate, test): 
     fromDate = formatDate(fromDate)
@@ -142,8 +195,9 @@ def formatDate(date, nbFormat = False):
     outFormat = '%Y-%m-%d'
     if nbFormat:
         outFormat = '%d.%m.%Y'
-    date = " ".join(date.split(" ", 4)[1:4])
+    date = trimDate(date)
     date = datetime.strptime(date, inFormat)
     return datetime.strftime(date, outFormat)
 
-
+def trimDate(date):
+    return " ".join(date.split(" ", 4)[1:4])
