@@ -26,7 +26,7 @@ export class ResultPageComponent implements OnInit, OnDestroy {
   private qbIdNn: string;
 
   path: string;
-  testing = true;
+  testing = false;
 
   constructor(
     private questionsService: QuestionsService,
