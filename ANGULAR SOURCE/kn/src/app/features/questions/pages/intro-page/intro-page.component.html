@@ -41,14 +41,14 @@
   <mat-card-actions>
     <button
       *ngIf="!hasExample"
-      color="accent"
+      color="primary"
       mat-raised-button
       routerLink="/{{ path }}/sporsmal/1"
       aria-label="Start testen"
     >
       {{ 'actions.start' | content }}
     </button>
-    <button *ngIf="hasExample" color="accent" mat-raised-button routerLink="/{{ path }}/eksempel">
+    <button *ngIf="hasExample" color="primary" mat-raised-button routerLink="/{{ path }}/eksempel">
       {{ 'actions.example' | content }}
     </button>
   </mat-card-actions>

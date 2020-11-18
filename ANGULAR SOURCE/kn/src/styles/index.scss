@@ -16,12 +16,13 @@
 
 @import './custom-components-theme.scss';
 
+@import './kn_palette';
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$kn-color-primary: mat-palette($mat-indigo);
-$kn-color-accent: mat-palette($mat-pink, A200, A100, A400);
-
+$kn-color-primary: mat-palette($kn-turquoise);
+// $kn-color-accent: mat-palette($kn-orange, A200, A100, A400);
+$kn-color-accent: mat-palette($kn-orange);
 // The warn palette is optional (defaults to red).
 $kn-color-warn: mat-palette($mat-red);
 
