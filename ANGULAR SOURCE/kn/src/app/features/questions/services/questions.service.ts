@@ -409,7 +409,7 @@ export class QuestionsService {
       }
 
       case QuestionType.GROUPS_CHOICE: {
-        const { text, options } = question as QuestionGroupsChoice;
+        const { text, options, title } = question as QuestionGroupsChoice;
         const values = answer.value as number[];
 
         const correct: Option[] = [];
@@ -429,6 +429,7 @@ export class QuestionsService {
           correct,
           selected,
           isCorrect,
+          title,
         } as ResultAnswer;
       }
 

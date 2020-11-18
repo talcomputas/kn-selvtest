@@ -12,4 +12,5 @@ export interface ResultAnswer<O = any> {
   speech?: Array<SpeechSelect | SpeechFunnel | SpeechBase>;
   text?: string;
   image?: string;
+  title?: string;
 }
