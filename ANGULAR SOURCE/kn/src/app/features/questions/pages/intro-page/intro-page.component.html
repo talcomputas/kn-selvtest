@@ -33,7 +33,7 @@
     <mat-card-title class="intro__header__title">{{ 'intro.title' | content }}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <p class="info">{{ 'intro.text' | content }}</p>
+    <p class="info" [innerHTML]="'intro.text' | content"></p>
     <img src="assets/images/{{ 'intro.image' | content }}" alt="Intro image" />
   </mat-card-content>
   <mat-divider></mat-divider>
