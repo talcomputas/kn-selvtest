@@ -112,7 +112,7 @@ describe('QuestionService', () => {
       });
     });
 
-    expect(questionsService.getMaxScore(questions)).toEqual(8);
+    expect(questionsService.getMaxScore(questions)).toEqual(11);
   });
 
   it('QuestionSingle getResult correct answers should report as correct', () => {
