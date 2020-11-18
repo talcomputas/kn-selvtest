@@ -22,5 +22,7 @@
   "questions": "Question",
   "answers": "Answer",
   "answersTitle": "Your answers",
-  "testIsOver": "Testen complete"
+  "testIsOver": "Testen complete",
+  "your_answer": "You answered",
+  "correct_answer": "Correct answer"
 }

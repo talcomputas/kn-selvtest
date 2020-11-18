@@ -22,5 +22,7 @@
   "questions": "Spørsmål",
   "answers": "Svar",
   "answersTitle": "Dine svar",
-  "testIsOver": "Testen er over"
+  "testIsOver": "Testen er over",
+  "your_answer": "Du svarte",
+  "correct_answer": "Korrekt svar"
 }
