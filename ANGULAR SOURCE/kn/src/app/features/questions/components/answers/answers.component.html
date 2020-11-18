@@ -97,15 +97,15 @@
               <span *ngIf="isNumeric(snippet)">
                 <mat-radio-group aria-label="Select an option" class="groups-choice">
                   <span *ngIf="item.correct[snippet].id === item.selected[snippet].id">
-                    <mat-radio-button class="groups-choice-correct"
+                    <mat-radio-button class="groups-choice-correct groups-choice-radio-button"
                       >{{ item.correct[snippet].text }}
                     </mat-radio-button>
                   </span>
                   <span *ngIf="item.correct[snippet].id !== item.selected[snippet].id">
-                    <mat-radio-button class="groups-choice-neutral"
+                    <mat-radio-button class="groups-choice-correct groups-choice-radio-button"
                       >{{ item.correct[snippet].text }}
                     </mat-radio-button>
-                    <mat-radio-button class="groups-choice-incorrect"
+                    <mat-radio-button class="groups-choice-incorrect groups-choice-radio-button"
                       >{{ item.selected[snippet].text }}
                     </mat-radio-button>
                   </span>

@@ -13,7 +13,6 @@ import { StatisticsApiService } from './services/statistics-api.service';
 import { IntroPageComponent } from './pages/intro-page/intro-page.component';
 import { ResultPageComponent } from './pages/result-page/result-page.component';
 import { QuestionsPageComponent } from './pages/questions-page/questions-page.component';
-import { AnswersComponent } from './components/answers/answers.component';
 import { QuestionCodeComponent } from './components/question-code/question-code.component';
 import { QuestionRankingComponent } from './components/question-ranking/question-ranking.component';
 import { QuestionDialogueComponent } from './components/question-dialogue/question-dialogue.component';
@@ -55,6 +54,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { CalculatorComponent } from '@features/questions/components/calculator/calculator.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { ExamplePageComponent } from '@features/questions/pages/example/example-page.component';
+import { AnswersComponent } from '@features/questions/components/answers/answers.component';
+import { AnswerDialogComponentComponent } from './components/answer-dialog/answer-dialog-component.component';
 @NgModule({
   declarations: [
     IntroPageComponent,
@@ -76,6 +77,7 @@ import { ExamplePageComponent } from '@features/questions/pages/example/example-
     QuestionGroupsChoiceComponent,
     StatisticsPageComponent,
     ExamplePageComponent,
+    AnswerDialogComponentComponent,
   ],
   imports: [
     CommonModule,

@@ -5,9 +5,10 @@ import { QuestionsService } from '@features/questions/services/questions.service
 import { ActivatedRoute } from '@angular/router';
 import { takeUntil } from 'rxjs/operators';
 import { ContentService } from '@content/services/content.service';
-import { QuestionType } from '@features/questions/enums/question-type.enum';
 import tester from './test.tester.json';
 import sjekker from './test.sjekker.json';
+import { MatDialog } from '@angular/material/dialog';
+import { AnswerDialogComponentComponent } from '@features/questions/components/answer-dialog/answer-dialog-component.component';
 
 declare var questback: any;
 
@@ -32,10 +33,11 @@ export class ResultPageComponent implements OnInit, OnDestroy {
     private questionsService: QuestionsService,
     private activatedRoute: ActivatedRoute,
     public content: ContentService,
+    public dialog: MatDialog,
   ) {
     if (this.testing) {
-      this.result = sjekker as any;
-      // this.result = tester as any;
+      //this.result = sjekker as any;
+      this.result = tester as any;
     } else {
       this.result = this.questionsService.result();
 
@@ -47,7 +49,24 @@ export class ResultPageComponent implements OnInit, OnDestroy {
     }
   }
 
+  /*   openDialog(): void {
+    const dialogRef = this.dialog.open(AnswerDialogComponentComponent, {
+      panelClass: 'custom-dialog-container',
+      maxWidth: '98vw',
+      minHeight: 'calc(100vh - 90px)',
+      height: 'auto',
+      data: {
+        result: this.result.data,
+      },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
+    });
+  } */
+
   ngOnInit() {
+    // this.showAnswers = true;
     this.path = this.activatedRoute.snapshot.data.path;
 
     // environment not working
