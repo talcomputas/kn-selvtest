@@ -4,7 +4,7 @@
     <ng-container *ngIf="showAnswers">
       <div class="print-content">
         <h2 [innerHTML]="'intro.title' | content"></h2>
-
+        <div class="">{{ result.score }} av {{ result.maxScore }} mulige poeng</div>
         <app-level
           [percentage]="(result.score / result.maxScore) * 100"
           [level]="result.level.id"
@@ -59,27 +59,7 @@
       </div>
     </div>
   </div>
-  <!-- TODO: remove this when in production -->
-  <div *ngIf="testing" style="background-color: lightcoral">
-    <table>
-      <tr>
-        <td>result.score</td>
-        <td>{{ result.score }}</td>
-      </tr>
-      <tr>
-        <td>result.maxScore</td>
-        <td>{{ result.maxScore }}</td>
-      </tr>
-      <tr>
-        <td>result.level.id</td>
-        <td>{{ result.level.id }}</td>
-      </tr>
-      <tr>
-        <td>result.level</td>
-        <td>{{ result.level | json }}</td>
-      </tr>
-    </table>
-  </div>
+
   <footer app-card-footer *ngIf="showAnswers">
     <div class="actions">
       <button app-stroked-button app-color="primary" (click)="showAnswers = false">
