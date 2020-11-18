@@ -4,12 +4,7 @@
   </mat-card-header>
   <mat-card-content>
     <div class="info-text">{{ 'example.text' | content }}</div>
-    <app-question-groupschoice
-      [question]="question"
-      [limit]="question?.answer?.value?.length"
-      [form]="group"
-    >
-    </app-question-groupschoice>
+    <app-question-groupschoice [question]="question" [form]="group"> </app-question-groupschoice>
   </mat-card-content>
   <mat-card-actions>
     <button
