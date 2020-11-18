@@ -49,7 +49,7 @@
       </mat-form-field>
     </div>
 
-    <mat-accordion>
+    <mat-accordion *ngIf="question.calculator">
       <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
         <mat-expansion-panel-header>
           <mat-panel-title>Kalkulator</mat-panel-title>
