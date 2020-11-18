@@ -478,6 +478,7 @@ describe('QuestionService', () => {
         },
       ],
       isCorrect: true,
+      title: 'Drømmen om en bondegård',
     };
 
     expect(result).toEqual(expectedResult);
@@ -618,6 +619,7 @@ describe('QuestionService', () => {
         },
       ],
       isCorrect: false,
+      title: 'Drømmen om en bondegård',
     };
 
     expect(result).toEqual(expectedResult);
