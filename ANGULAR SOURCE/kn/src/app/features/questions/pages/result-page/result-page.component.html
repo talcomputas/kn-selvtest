@@ -21,8 +21,8 @@
       </div>
 
       {{ 'answersTitle' | content }}
-      <button app-icon-button class="close" (click)="showAnswers = false">
-        <i app-svg-icon="close"></i>
+      <button mat-icon-button class="close" (click)="showAnswers = false">
+        <mat-icon>close</mat-icon>
       </button>
     </ng-container>
   </div>
@@ -47,12 +47,12 @@
         <p>{{ result.level.text }}</p>
         <div class="buttons">
           <a
-            app-stroked-button
+            mat-raised-button
             target="_blank"
             href="https://www.kompetansenorge.no/test-deg-selv/rad-og-tips-for-a-bli-bedre/"
             >{{ 'actions.getAdvice' | content }}</a
           >
-          <button app-stroked-button (click)="showAnswers = true">
+          <button mat-raised-button (click)="showAnswers = true">
             {{ 'actions.reviewAnswers' | content }}
           </button>
         </div>
@@ -62,7 +62,7 @@
 
   <footer app-card-footer *ngIf="showAnswers">
     <div class="actions">
-      <button app-stroked-button app-color="primary" (click)="showAnswers = false">
+      <button mat-raised-button color="primary" (click)="showAnswers = false">
         {{ 'actions.backToResult' | content }}
       </button>
     </div>
