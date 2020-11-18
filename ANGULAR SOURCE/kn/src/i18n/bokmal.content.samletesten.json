@@ -51,6 +51,22 @@
         },
         {
           "id": 2,
+          "type": "slider",
+          "text": "I ei tønne er det plass til 120 liter. Tønna er bare ¾ full.\n\nHvor mange liter er det i tønna?",
+          "image": "Tonne.png",
+          "answer": {
+            "value": 90,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 0,
+            "ceil": 100,
+            "steps": 1
+          }
+        },
+        {
+          "id": 3,
           "type": "groups-choice",
           "title": "Drømmen om en bondegård",
           "text": "Henrik bladde fram til sidene med boligannonser. Leiligheten deres var %s for liten for dem, så nå lette de etter %s større. De ville gjerne flytte ut på landet. De lette etter en liten %s hvor det var plass til å ha et par %s.",
@@ -135,7 +151,7 @@
         },
 
         {
-          "id": 3,
+          "id": 4,
           "type": "single",
           "text": "Kvar er det <b>IKKJE</b> mogleg å kjøpe dataspel?",
           "image": "8M2yA4GoH0iDztqRhbR37Q.png",
@@ -163,7 +179,7 @@
           ]
         },
         {
-          "id": 4,
+          "id": 5,
           "type": "multiple",
           "text": "Hvordan kan sosiale medier gi målrettet reklame tilpasset den enkelte? <b>(Velg to alternativ)</b>",
           "image": "LELQTPLlHU22QRdBWfFlsA.png",
@@ -187,7 +203,7 @@
           }
         },
         {
-          "id": 5,
+          "id": 6,
           "type": "hotspot",
           "text": "Hvor trykker du for å søke etter en bestemt tv-serie?",
           "image": "CbJojWjnkuqk6OK9Jgg.png?v=2",
@@ -227,7 +243,7 @@
           ]
         },
         {
-          "id": 6,
+          "id": 7,
           "type": "dialogue",
           "image": "sebastian.jpg",
           "answer": {
@@ -320,7 +336,7 @@
           ]
         },
         {
-          "id": 7,
+          "id": 8,
           "type": "code",
           "text": "Hvor mange av feltene er det obligatorisk å fylle ut?",
           "image": "U5mlJh904U6Zev981wk1jQ.png?v=2",
@@ -330,7 +346,7 @@
           }
         },
         {
-          "id": 8,
+          "id": 9,
           "type": "ranking",
           "text": "Dra og slipp passordene i riktig rekkefølge. Sett det sikreste øverst.",
           "image": "7nwRTybRAEy2bzXj4kT4g.png",
@@ -356,6 +372,50 @@
             "value": [2, 4, 1, 3],
             "points": 1
           }
+        },
+        {
+          "id": 10,
+          "type": "slider",
+          "text": "I ei tønne er det plass til 120 liter. Tønna er bare ¾ full.\n\nHvor mange liter er det i tønna?",
+          "image": "Tonne.png",
+          "answer": {
+            "value": 90,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 0,
+            "ceil": 100,
+            "steps": 1
+          }
+        },
+        {
+          "id": 11,
+          "type": "single",
+          "text": "Anita er 1,60 m høy.\n\nHvor høy er Wilhelm?",
+          "image": "Størrelse.png",
+          "answer": {
+            "value": 3,
+            "points": 1
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "0,80 m"
+            },
+            {
+              "id": 2,
+              "text": "1,00 m"
+            },
+            {
+              "id": 3,
+              "text": "1,20 m"
+            },
+            {
+              "id": 4,
+              "text": "1,40 m"
+            }
+          ]
         }
       ],
       "funnel": {

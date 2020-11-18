@@ -58,7 +58,7 @@ export class QuestionSliderComponent
 }
 
 @Component({
-  selector: 'dialog-elements-example-dialog',
+  selector: 'app-calculator-component',
   templateUrl: 'dialog-calculator.html',
 })
-export class DialogCalculatorDialog {}
+export class DialogCalculatorDialogComponent {}
