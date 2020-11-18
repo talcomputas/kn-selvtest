@@ -5,6 +5,34 @@
     "text": "For debugging og testing. Denne testen inneholder alle type spørsmål som finnes i de forskjellige testene/sjekkene. Denne siden vil ikke vises i produksjon!",
     "image": "reading-exam.svg"
   },
+  "example": {
+    "title": "Lesetesten - Eksempel",
+    "text": "I denne testen skal du lese noen korte tekster uten bruk av hjelpemidler. Klikk på det ordet du mener passer best i teksten. Du kan endre på valget ved å trykke på ett av de andre ordene. Ett alternativ er riktig. Her er det fire alternativer i hver setning, og ordene kneet og krykker er valgt fordi de passer best.",
+    "question": {
+      "id": 1,
+      "type": "groups-choice",
+      "title": "Kneskade",
+      "text": "Anders har skadet kneet i en skiulykke. Om en uke skal han opereres. Etter operasjonen skal %s trenes opp. Fysioterapeuten hans mener han må bruke %s i ca. 3 måneder.",
+      "options": [
+        [
+          { "id": 1, "text": "underarmen" },
+          { "id": 2, "text": "kneet" },
+          { "id": 3, "text": "hjernen" },
+          { "id": 4, "text": "føttene" }
+        ],
+        [
+          { "id": 1, "text": "stylter" },
+          { "id": 2, "text": "krykker" },
+          { "id": 3, "text": "skøyter" },
+          { "id": 4, "text": "rulleski" }
+        ]
+      ],
+      "answer": {
+        "value": [2, 2],
+        "points": 1
+      }
+    }
+  },
   "result": {
     "image": "digitaltesten-data-check.svg",
     "levels": {

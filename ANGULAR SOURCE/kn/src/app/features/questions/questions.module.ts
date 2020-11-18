@@ -54,6 +54,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { CalculatorComponent } from '@features/questions/components/calculator/calculator.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { ExamplePageComponent } from '@features/questions/pages/example/example-page.component';
 @NgModule({
   declarations: [
     IntroPageComponent,
@@ -74,6 +75,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     QuestionMultipleDiffPointsComponent,
     QuestionGroupsChoiceComponent,
     StatisticsPageComponent,
+    ExamplePageComponent,
   ],
   imports: [
     CommonModule,

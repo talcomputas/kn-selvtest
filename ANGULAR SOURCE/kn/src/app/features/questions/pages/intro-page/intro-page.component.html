@@ -37,14 +37,19 @@
     <img src="assets/images/{{ 'intro.image' | content }}" alt="Intro image" />
   </mat-card-content>
   <mat-divider></mat-divider>
+
   <mat-card-actions>
     <button
+      *ngIf="!hasExample"
       color="accent"
       mat-raised-button
       routerLink="/{{ path }}/sporsmal/1"
       aria-label="Start testen"
     >
       {{ 'actions.start' | content }}
+    </button>
+    <button *ngIf="hasExample" color="accent" mat-raised-button routerLink="/{{ path }}/eksempel">
+      {{ 'actions.example' | content }}
     </button>
   </mat-card-actions>
 </mat-card>
