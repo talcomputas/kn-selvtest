@@ -1,43 +1,48 @@
 <div *ngIf="!question?.video && question?.image as imageUrl" class="image">
-  <img [src]="'assets/images/' + imageUrl" alt="{{question?.text}}">
+  <img [src]="'assets/images/' + imageUrl" alt="{{ question?.text }}" />
 </div>
 
 <div *ngIf="!question?.image && question?.video as video" class="video">
-  <video [src]="'assets/videos/' + video.url"
-         [autoplay]="video.autoplay"
-         [controls]="video.controls"
-         [loop]="video.loop">
-  </video>
+  <video
+    [src]="'assets/videos/' + video.url"
+    [autoplay]="video.autoplay"
+    [controls]="video.controls"
+    [loop]="video.loop"
+  ></video>
 </div>
 
 <div class="content" [class.no-media]="!question?.image && !question?.video">
   <div class="content-inner">
-    <h2 *ngIf="question?.title as title" class="title">{{title}}</h2>
+    <h2 *ngIf="question?.title as title" class="title">{{ title }}</h2>
     <p *ngIf="question?.text as text" [innerHTML]="text" class="text"></p>
   </div>
 
   <span class="flex-spacer"></span>
 
   <div [formGroup]="form">
-    <div *ngIf="options?.length"
-         class="ranking"
-         cdkDropList
-         cdkDropListLockAxis="y"
-         aria-dropeffect="move"
-         appDropListControlValueAccessor
-         appDropListA11y
-         [formControl]="control"
-         [cdkDropListData]="options"
-         (cdkDropListDropped)="drop($event)">
-      <button *ngFor="let item of options"
-              cdkDrag
-              appDragA11y
-              app-raised-button
-              app-color="primary"
-              aria-grabbed="true"
-              draggable="true"
-              class="item">
-        {{item?.text}}
+    <div
+      *ngIf="options?.length"
+      class="ranking"
+      cdkDropList
+      cdkDropListLockAxis="y"
+      aria-dropeffect="move"
+      appDropListControlValueAccessor
+      appDropListA11y
+      [formControl]="control"
+      [cdkDropListData]="options"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <button
+        *ngFor="let item of options"
+        cdkDrag
+        appDragA11y
+        mat-raised-button
+        color="primary"
+        aria-grabbed="true"
+        draggable="true"
+        class="item"
+      >
+        {{ item?.text }}
       </button>
     </div>
   </div>
