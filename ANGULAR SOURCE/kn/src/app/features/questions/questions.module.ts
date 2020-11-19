@@ -12,7 +12,10 @@ import { StatisticsService } from './services/statistics.service';
 import { StatisticsApiService } from './services/statistics-api.service';
 import { IntroPageComponent } from './pages/intro-page/intro-page.component';
 import { ResultPageComponent } from './pages/result-page/result-page.component';
-import { QuestionsPageComponent } from './pages/questions-page/questions-page.component';
+import {
+  CountdownDialogComponent,
+  QuestionsPageComponent,
+} from './pages/questions-page/questions-page.component';
 import { QuestionCodeComponent } from './components/question-code/question-code.component';
 import { QuestionRankingComponent } from './components/question-ranking/question-ranking.component';
 import { QuestionDialogueComponent } from './components/question-dialogue/question-dialogue.component';
@@ -36,26 +39,30 @@ import enSystemContent from '@i18n/engelsk.system.json';
 import { QuestionSliderComponent } from './components/question-slider/question-slider.component';
 import { QuestionMultipleDiffPointsComponent } from './components/question-multiple-diff-points/question-multiple-diff-points.component';
 import { QuestionGroupsChoiceComponent } from '@features/questions/components/question-groups-choice/question-groups-choice.component';
+
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { StatisticsPageComponent } from './pages/statistics-page/statistics-page.component';
-import { QuestionGradingComponent } from '@features/questions/components/question-grading/question-grading.component';
-import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatOptionModule } from '@angular/material/core';
 import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule } from '@angular/material/dialog';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
-import { CalculatorComponent } from '@features/questions/components/calculator/calculator.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+
+import { StatisticsPageComponent } from './pages/statistics-page/statistics-page.component';
+import { QuestionGradingComponent } from '@features/questions/components/question-grading/question-grading.component';
+import { CalculatorComponent } from '@features/questions/components/calculator/calculator.component';
 import { ExamplePageComponent } from '@features/questions/pages/example/example-page.component';
 import { AnswersComponent } from '@features/questions/components/answers/answers.component';
 import { AnswerDialogComponentComponent } from './components/answer-dialog/answer-dialog-component.component';
+import { CountdownModule } from 'ngx-countdown';
+import { ContentPipe } from '@content/pipes/content.pipe';
 @NgModule({
   declarations: [
     IntroPageComponent,
@@ -78,6 +85,7 @@ import { AnswerDialogComponentComponent } from './components/answer-dialog/answe
     StatisticsPageComponent,
     ExamplePageComponent,
     AnswerDialogComponentComponent,
+    CountdownDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -104,11 +112,14 @@ import { AnswerDialogComponentComponent } from './components/answer-dialog/answe
     MatDividerModule,
     MatDialogModule,
     MatExpansionModule,
+    CountdownModule,
   ],
+  exports: [MatIconModule, CountdownDialogComponent],
   providers: [
     QuestionsService,
     StatisticsService,
     StatisticsApiService,
+    CountdownDialogComponent,
     { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } },
   ],
 })

@@ -33,6 +33,7 @@
       }
     }
   },
+  "timer": 10,
   "result": {
     "image": "lesetesten-data-check.svg",
     "levels": {
