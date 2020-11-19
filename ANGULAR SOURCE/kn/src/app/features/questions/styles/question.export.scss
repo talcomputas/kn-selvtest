@@ -17,6 +17,7 @@
     @include breakpoint($tablet-large) {
       max-width: 100%;
       text-align: center;
+      margin: 0 !important;
     }
   }
 }
@@ -73,6 +74,7 @@
 
     @include breakpoint($tablet-large) {
       flex-direction: column;
+      background: orange;
 
       > * {
         max-width: none;
