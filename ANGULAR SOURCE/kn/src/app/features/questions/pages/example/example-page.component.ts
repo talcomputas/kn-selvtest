@@ -36,10 +36,7 @@ export class ExamplePageComponent implements OnInit, OnDestroy {
     }
   }
 
-  ngOnDestroy(): void {
-    console.log('destory EVERYTHING');
-    // throw new Error('Method not implemented.');
-  }
+  ngOnDestroy(): void {}
 
   hasSound(key: string) {
     let retVal = false;
