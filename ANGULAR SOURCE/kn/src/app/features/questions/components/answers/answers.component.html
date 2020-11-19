@@ -15,8 +15,8 @@
     <div class="counter">{{ i + 1 }}/{{ data?.length }}</div>
     <ng-container [ngSwitch]="true">
       <div class="question-single" *ngSwitchCase="QuestionType.SINGLE === item.type">
-        <span class="correct-mark" *ngIf="item.isCorrect">✔</span>
-        <span class="incorrect-mark" *ngIf="!item.isCorrect">✖</span>
+        <span class="correct-mark" *ngIf="item.isCorrect"><mat-icon>done</mat-icon></span>
+        <span class="incorrect-mark" *ngIf="!item.isCorrect"><mat-icon>clear</mat-icon></span>
 
         <p class="text" [innerHTML]="item.text"></p>
 
@@ -70,8 +70,8 @@
         class="question-code"
         *ngSwitchCase="QuestionType.CODE === item.type || QuestionType.SLIDER === item.type"
       >
-        <span class="correct-mark" *ngIf="item.isCorrect">✔</span>
-        <span class="incorrect-mark" *ngIf="!item.isCorrect">✖</span>
+        <span class="correct-mark" *ngIf="item.isCorrect"><mat-icon>done</mat-icon></span>
+        <span class="incorrect-mark" *ngIf="!item.isCorrect"><mat-icon>clear</mat-icon></span>
 
         <p class="text" [innerHTML]="item.text"></p>
 
@@ -88,8 +88,8 @@
       </div>
 
       <div class="question-groups-choice" *ngSwitchCase="QuestionType.GROUPS_CHOICE === item.type">
-        <span class="correct-mark" *ngIf="item.isCorrect">✔</span>
-        <span class="incorrect-mark" *ngIf="!item.isCorrect">✖</span>
+        <span class="correct-mark" *ngIf="item.isCorrect"><mat-icon>done</mat-icon></span>
+        <span class="incorrect-mark" *ngIf="!item.isCorrect"><mat-icon>clear</mat-icon></span>
 
         <p class="text">
           <span *ngIf="item?.text as text" class="text">
@@ -121,8 +121,8 @@
         *ngSwitchCase="QuestionType.RANKING === item.type || QuestionType.MULTIPLE === item.type"
         class="question-multiple"
       >
-        <span class="correct-mark" *ngIf="item.isCorrect">✔</span>
-        <span class="incorrect-mark" *ngIf="!item.isCorrect">✖</span>
+        <span class="correct-mark" *ngIf="item.isCorrect"><mat-icon>done</mat-icon></span>
+        <span class="incorrect-mark" *ngIf="!item.isCorrect"><mat-icon>clear</mat-icon></span>
 
         <p class="text" [innerHTML]="item.text"></p>
 
@@ -146,8 +146,8 @@
       </div>
 
       <div class="question-hotspot" *ngSwitchCase="QuestionType.HOTSPOT === item.type">
-        <span class="correct-mark" *ngIf="item.isCorrect">✔</span>
-        <span class="incorrect-mark" *ngIf="!item.isCorrect">✖</span>
+        <span class="correct-mark" *ngIf="item.isCorrect"><mat-icon>done</mat-icon></span>
+        <span class="incorrect-mark" *ngIf="!item.isCorrect"><mat-icon>clear</mat-icon></span>
 
         <p class="text" [innerHTML]="item.text"></p>
 
@@ -191,8 +191,8 @@
       </div>
 
       <div class="question-dialogue" *ngSwitchCase="QuestionType.DIALOGUE === item.type">
-        <span class="correct-mark" *ngIf="item.isCorrect">✔</span>
-        <span class="incorrect-mark" *ngIf="!item.isCorrect">✖</span>
+        <span class="correct-mark" *ngIf="item.isCorrect"><mat-icon>done</mat-icon></span>
+        <span class="incorrect-mark" *ngIf="!item.isCorrect"><mat-icon>clear</mat-icon></span>
 
         <div class="value" [style.justify-content]="item.isCorrect ? 'center' : 'space-between'">
           <ng-container *ngIf="item.isCorrect">

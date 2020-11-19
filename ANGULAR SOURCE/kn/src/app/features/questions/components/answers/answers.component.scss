@@ -45,18 +45,9 @@
 
   .controls {
     margin-top: -15px;
-
+    display: flex;
+    justify-content: flex-end;
     .print {
-      margin: 0 0 0 auto;
-      @extend %stroked-button--primary;
-
-      &.cdk-focused {
-        @extend %stroked-button--primary-focused;
-      }
-
-      .svg-icon {
-        margin-right: 10px;
-      }
     }
   }
 
@@ -342,11 +333,11 @@
 }
 
 .groups-choice .mat-radio-button.groups-choice-correct.mat-radio-checked {
-  background-color: $green-dark;
+  background-color: #669933; //kn-korrekt.main
   color: white;
 }
 
 .groups-choice .mat-radio-button.groups-choice-incorrect.mat-radio-checked {
-  background-color: $red;
+  background-color: #ab1c1c; //mat-galt.main;
   color: white;
 }
