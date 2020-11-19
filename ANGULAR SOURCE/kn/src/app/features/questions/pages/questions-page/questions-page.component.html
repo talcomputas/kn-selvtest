@@ -4,7 +4,11 @@
   <div app-card-content [formGroup]="questions">
     <div class="top-nav">
       <div class="progress-container">
-        <mat-progress-bar mode="determinate" [value]="getProgressAsPercent()"></mat-progress-bar>
+        <mat-progress-bar
+          mode="determinate"
+          color="accent"
+          [value]="getProgressAsPercent()"
+        ></mat-progress-bar>
         <span class="progress-text mat-h3">{{
           (index$ | async) + 1 + '/' + (length$ | async)
         }}</span>
