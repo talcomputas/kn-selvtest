@@ -40,4 +40,23 @@ export class ExamplePageComponent implements OnInit, OnDestroy {
     console.log('destory EVERYTHING');
     // throw new Error('Method not implemented.');
   }
+
+  hasSound(key: string) {
+    let retVal = false;
+    try {
+      this.contentService.get(key);
+      retVal = true;
+    } catch (error) {
+      retVal = false;
+    }
+    return retVal;
+  }
+
+  playSound(contentKey: string) {
+    const fileName = this.contentService.get(contentKey);
+    const audio = new Audio();
+    audio.src = '/assets/sounds/' + fileName;
+    audio.load();
+    audio.play();
+  }
 }

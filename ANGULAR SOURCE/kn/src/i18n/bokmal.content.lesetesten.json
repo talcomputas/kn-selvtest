@@ -3,11 +3,13 @@
     "label": "Lesetesten",
     "title": "Lesetesten",
     "text": "Dette er en kort lesetest som måler lesehastigheten din. Testen stopper automatisk etter 10 minutter. Det er mange oppgaver, så det er viktig å svare raskt og riktig.",
-    "image": "reading-exam.svg"
+    "image": "reading-exam.svg",
+    "sound": "Lesetest_intro.mp3"
   },
   "example": {
     "title": "Lesetesten - Eksempel",
     "text": "I denne testen skal du lese noen korte tekster uten bruk av hjelpemidler. Klikk på det ordet du mener passer best i teksten. Du kan endre på valget ved å trykke på ett av de andre ordene. Ett alternativ er riktig.",
+    "sound": "lesetest_02.mp3",
     "question": {
       "id": 1,
       "type": "groups-choice",

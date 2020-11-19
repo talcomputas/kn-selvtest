@@ -40,6 +40,16 @@
 
   <mat-card-actions>
     <button
+      *ngIf="hasSound('intro.sound')"
+      mat-icon-button
+      color="primary"
+      aria-label="Example icon button with a vertical three dot icon"
+      (click)="playSound('intro.sound')"
+    >
+      <mat-icon>volume_up</mat-icon>
+    </button>
+
+    <button
       *ngIf="!hasExample"
       color="primary"
       mat-raised-button
