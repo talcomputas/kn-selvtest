@@ -35,9 +35,9 @@ import nbdatasjekkenRaw from '@i18n/bokmal.content.datasjekk.json';
 import nndatasjekkenRaw from '@i18n/nynorsk.content.datasjekk.json';
 import endatasjekkenRaw from '@i18n/engelsk.content.datasjekk.json';
 
-import nbmuntligsjekkenRaw from '@i18n/bokmal.content.muntligsjekken.json';
-import nnmuntligsjekkenRaw from '@i18n/nynorsk.content.muntligsjekken.json';
-import enmuntligsjekkenRaw from '@i18n/engelsk.content.muntligsjekken.json';
+import nbMuntligSjekkenRaw from '@i18n/bokmal.content.muntligsjekken.json';
+import nnMuntligSjekkenRaw from '@i18n/nynorsk.content.muntligsjekken.json';
+import enMuntligSjekkenRaw from '@i18n/engelsk.content.muntligsjekken.json';
 
 import nbsamltetestenRaw from '@i18n/bokmal.content.samletesten.json';
 
@@ -76,9 +76,9 @@ export class RouteResolverService implements Resolve<any> {
     const nndatasjekken: Lesson = nndatasjekkenRaw as Lesson;
     const endatasjekken: Lesson = endatasjekkenRaw as Lesson;
 
-    const nbmuntligsjekken: Lesson = nbmuntligsjekkenRaw as Lesson;
-    const nnmuntligsjekken: Lesson = nnmuntligsjekkenRaw as Lesson;
-    const enmuntligsjekken: Lesson = enmuntligsjekkenRaw as Lesson;
+    const nbMuntligSjekken: Lesson = nbMuntligSjekkenRaw as Lesson;
+    const nnMuntligSjekken: Lesson = nnMuntligSjekkenRaw as Lesson;
+    const enMuntligSjekken: Lesson = enMuntligSjekkenRaw as Lesson;
 
     const nbsamltetesten: Lesson = nbsamltetestenRaw as Lesson;
 
@@ -104,7 +104,6 @@ export class RouteResolverService implements Resolve<any> {
         this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbleseskrivesjekken });
         this.contentService.set('nn', { ...nncontent, ...nnsystem, ...nnleseskrivesjekken });
         this.contentService.set('en', { ...encontent, ...ensystem, ...enleseskrivesjekken });
-
         break;
       case 'regnesjekken':
         this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbregnesjekken });
@@ -117,9 +116,9 @@ export class RouteResolverService implements Resolve<any> {
         this.contentService.set('en', { ...encontent, ...ensystem, ...endatasjekken });
         break;
       case 'muntligsjekken':
-        this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbmuntligsjekken });
-        this.contentService.set('nn', { ...nncontent, ...nnsystem, ...nnmuntligsjekken });
-        this.contentService.set('en', { ...encontent, ...ensystem, ...enmuntligsjekken });
+        this.contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbMuntligSjekken });
+        this.contentService.set('nn', { ...nncontent, ...nnsystem, ...nnMuntligSjekken });
+        this.contentService.set('en', { ...encontent, ...ensystem, ...enMuntligSjekken });
         break;
 
       case 'samletesten':
