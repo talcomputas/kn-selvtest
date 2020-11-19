@@ -101,6 +101,59 @@ def testsPerDay():
 
     return jsonify(getNumberOfTestsPerDate(fromDate, toDate, "alle", True)), 201
 
+@app.route("/api/correctanswers", methods=["GET"])
+def correctAnswers():
+    fromDate = request.args.get('fromdate')
+    toDate = request.args.get('todate')
+
+    data = getDataBetweenDates(fromDate, toDate, "alle")
+
+    allTests = getAllTests()
+
+    answerDict = getAnswersIdPerTest(data, allTests)
+
+    result = {}
+    for key, val in answerDict.items():
+        for v in val:
+            entryName = key + "-" + v 
+            result[entryName] = [0, 0]
+
+    for line in data:
+        testName = line['name']
+        answerId = line['itemid']
+        correct = line['correct']
+        entryName = testName + "-" + answerId
+        if correct == "true":
+            result[entryName][0] += 1
+        result[entryName][1] += 1 
+
+    return jsonify(calcAverage(result)), 201
+    
+def calcAverage(data):
+    avgs = {}
+    for key, val in data.items():
+        if val[1] != 0:
+            avgs[key] = val[0]/val[1]
+        else:
+            val = 0
+
+    return avgs
+
+def getAnswersIdPerTest(data, allTests):
+    result = {}
+    for test in allTests:
+        result[test] = []
+
+
+    for line in data:
+        testName = line['name']
+        answerId = line['itemid']
+        if answerId not in result[testName]:
+            result[testName].append(answerId)
+
+    return result
+
+
 def getNumberOfTestsPerDate(fromDate, toDate, test, seperateOnTests = False):
     data = getDataBetweenDates(fromDate, toDate, test)
     allTests = getAllTests()
