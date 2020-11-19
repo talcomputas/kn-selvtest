@@ -110,3 +110,8 @@ body.xsmall {
     }
   }
 }
+
+// Hide sound toolbar, it is not working anyway due to licence issues
+#PAFTOOLBAR {
+  display: none;
+}
