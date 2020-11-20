@@ -1,5 +1,5 @@
 .calculatorFrame {
-  height: 370px;
+  height: 400px;
   width: 300px;
   background-color: rgb(40, 59, 68, 0.2);
   border-radius: 5px 5px 5px 5px;
@@ -8,10 +8,10 @@
   border-radius: 5px 5px 0 0;
   background: rgb(40, 59, 68);
   font-size: 2em;
-  height: 70px;
+  height: 100px;
   color: white;
   .subdisplay {
-    height: 5px;
+    height: 35px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -63,18 +63,17 @@
     width: 100%;
     background-color: rgb(101, 112, 118);
     color: white;
+    font-size: 1.57em;
   }
 }
 .top-function-keys {
   button {
     background-color: rgb(65, 81, 88);
-    color: white;
   }
 }
 .operator-keys {
   button {
-    background-color: rgb(255, 159, 10);
-    color: white;
+    background-color: rgb(224, 120, 10);
   }
 }
 /* .maindisplay {
