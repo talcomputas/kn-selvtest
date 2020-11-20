@@ -85,9 +85,6 @@ def itemdata():
     fromDate = request.args.get('fromdate')
     toDate = request.args.get('todate')
 
-    if not test:
-        test = "alle"
-
     return jsonify(getDataBetweenDates(fromDate, toDate, test)), 201
 
 @app.route("/api/totaltestsperday", methods=["GET"])

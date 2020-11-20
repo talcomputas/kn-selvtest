@@ -17,7 +17,7 @@ export class StatisticsPageComponent implements OnInit {
   @ViewChild(MatDatepicker) fromDate: MatDatepicker<Date>;
   @ViewChild(MatDatepicker) toDate: MatDatepicker<Date>;
 
-  selectedTest = 'regnesjekk';
+  selectedTest = 'alle';
 
   fromDateControl = new FormControl(new Date());
   toDateControl = new FormControl(new Date());
@@ -43,9 +43,25 @@ export class StatisticsPageComponent implements OnInit {
       this.toDateControl.value.toString(),
       this.selectedTest)
       .subscribe(itemData => {
+        console.log(itemData);
         itemData = this.removeCommas(itemData);
+
+        console.log(itemData);
+
+        const csvOptions = {
+          fieldSeparator: ',',
+          quoteStrings: '',
+          decimalSeparator: '.',
+          showLabels: true,
+          showTitle: true,
+          title: 'Statistikk',
+          useBom: true,
+          noDownload: false,
+          headers: ['answer', 'correct', 'correctanswer', 'datecreated', 'id', 'itemid', 'name', 'time', 'timeout', 'totaltime', 'uid', 'ver'],
+        };
+
         // tslint:disable-next-line:no-unused-expression
-        new AngularCsv(itemData, 'Statistikk', this.itemDataCsvOptions);
+        new AngularCsv(itemData, 'Statistikk', csvOptions);
       });
   }
 
