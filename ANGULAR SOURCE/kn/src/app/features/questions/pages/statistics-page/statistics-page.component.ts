@@ -3,8 +3,6 @@ import { StatisticsService } from '@features/questions/services/statistics.servi
 import { MatDatepicker } from '@angular/material/datepicker';
 import { FormControl } from '@angular/forms';
 import { AngularCsv } from 'angular-csv-ext/dist/Angular-csv';
-import { MatSelect } from '@angular/material/select';
-import { Statistics } from '@features/questions/interfaces/statistics.interface';
 
 @Component({
   selector: 'app-statistics-page',
@@ -72,6 +70,7 @@ export class StatisticsPageComponent implements OnInit {
       this.toDateControl.value.toString())
       .subscribe(itemData => {
         itemData = this.removeCommas(itemData);
+
 
         const dates: Array<string> = [];
         Object.keys(itemData).forEach(item => {
