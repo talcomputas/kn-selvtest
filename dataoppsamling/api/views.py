@@ -4,10 +4,10 @@ from flask import request
 from flask.json import jsonify
 from . import app
 from .connect import connection
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import json
-
+from operator import attrgetter
 
 @app.route("/")
 def home():
@@ -85,24 +85,145 @@ def itemdata():
     fromDate = request.args.get('fromdate')
     toDate = request.args.get('todate')
 
-    inFormat = '%b %d %Y'
-    outFormat = '%Y-%m-%d'
+    return jsonify(getDataBetweenDates(fromDate, toDate, test)), 201
 
-    fromDate = " ".join(fromDate.split(" ", 4)[1:4])
-    fromDate = datetime.strptime(fromDate, inFormat)
-    fromDate = datetime.strftime(fromDate, outFormat)
+@app.route("/api/totaltestsperday", methods=["GET"])
+def totalTestsPerDay(): 
+    fromDate = request.args.get('fromdate')
+    toDate = request.args.get('todate')
 
-    toDate = " ".join(toDate.split(" ", 4)[1:4])
-    toDate = datetime.strptime(toDate, inFormat)
-    toDate = datetime.strftime(toDate, outFormat)
+    return jsonify(getNumberOfTestsPerDate(fromDate, toDate, "alle")), 201
+
+@app.route("/api/testsperday", methods=["GET"])
+def testsPerDay():
+    fromDate = request.args.get('fromdate')
+    toDate = request.args.get('todate')
+
+    return jsonify(getNumberOfTestsPerDate(fromDate, toDate, "alle", True)), 201
+
+@app.route("/api/correctanswers", methods=["GET"])
+def correctAnswers():
+    fromDate = request.args.get('fromdate')
+    toDate = request.args.get('todate')
+
+    data = getDataBetweenDates(fromDate, toDate, "alle")
+
+    allTests = getAllTests()
+
+    answerDict = getAnswersIdPerTest(data, allTests)
+
+    result = {}
+    for key, val in answerDict.items():
+        for v in val:
+            entryName = key + "-" + v 
+            result[entryName] = [0, 0]
+
+    for line in data:
+        testName = line['name']
+        answerId = line['itemid']
+        correct = line['correct']
+        entryName = testName + "-" + answerId
+        if correct == "true":
+            result[entryName][0] += 1
+        result[entryName][1] += 1 
+
+    return jsonify(calcAverage(result)), 201
+    
+def calcAverage(data):
+    avgs = {}
+    for key, val in data.items():
+        if val[1] != 0:
+            avgs[key] = val[0]/val[1]
+        else:
+            val = 0
+
+    return avgs
+
+def getAnswersIdPerTest(data, allTests):
+    result = {}
+    for test in allTests:
+        result[test] = []
+
+
+    for line in data:
+        testName = line['name']
+        answerId = line['itemid']
+        if answerId not in result[testName]:
+            result[testName].append(answerId)
+
+    return result
+
+
+def getNumberOfTestsPerDate(fromDate, toDate, test, seperateOnTests = False):
+    data = getDataBetweenDates(fromDate, toDate, test)
+    allTests = getAllTests()
+    dateRange = calcDateRange(fromDate, toDate)
+    outFormat = '%d.%m.%Y'
+
+    result = {}
+    for date in dateRange:
+        date = datetime.strftime(date, outFormat)
+        entryName = date
+        if seperateOnTests:
+            for test in allTests:
+                entryName = date + '-' + test
+                result[entryName] = 0
+        else:
+            result[entryName] = 0
+
+    uids = []
+    for line in data:
+        uid = line['uid']
+        testName = line['name']
+        date = datetime.strftime(line['datecreated'], outFormat)
+        entryName = date
+        if seperateOnTests:
+            entryName = date + "-" + testName
+        
+        if uid not in uids:
+            uids.append(uid)
+            result[entryName] += 1
+
+    return result
+
+def calcDateRange(minDate, maxDate):
+    dateFormat = '%b %d %Y'
+    minDate = trimDate(minDate)
+    minDate = datetime.strptime(minDate, dateFormat)
+    maxDate = trimDate(maxDate)
+    maxDate = datetime.strptime(maxDate, dateFormat)
+
+    numDays = (maxDate - minDate).days + 1
+    
+    return [maxDate - timedelta(days=x) for x in range(numDays)]
+
+def getAllTests():
+    cursor, conn = connection()
+    result = cursor.execute("USE kompetansenorge; SELECT DISTINCT(name) FROM itemdata", multi=True)
+
+    for cur in result:
+        print("cursor", cur)
+        if cur.with_rows:
+            result = [dict((cur.description[i][0], value)
+                for i, value in enumerate(row)) for row in cur.fetchall()]
+
+    tests = []
+    for test in result:
+        test = test['name']
+        if test and test != 'undefined':
+            tests.append(test) 
+    
+    return tests
+
+def getDataBetweenDates(fromDate, toDate, test): 
+    fromDate = formatDate(fromDate)
+    toDate = formatDate(toDate)
 
     useQuery = "USE kompetansenorge;"
     selectQuery = "SELECT * FROM itemdata WHERE "
     if test != "alle":
         selectQuery += "name = '" + test + "' AND "
-    selectQuery += "datecreated >= '" + fromDate + "' AND datecreated <= '" + toDate + "';"
-
-    print(selectQuery)
+    selectQuery += "datecreated >= '" + fromDate + "' AND datecreated <= '" + toDate + "';" 
 
     cursor, conn = connection()
     query = cursor.execute(useQuery+selectQuery, multi=True)
@@ -118,4 +239,16 @@ def itemdata():
     conn.commit()
     conn.close()
 
-    return jsonify(result), 201
+    return result
+
+def formatDate(date, nbFormat = False):
+    inFormat = '%b %d %Y'
+    outFormat = '%Y-%m-%d'
+    if nbFormat:
+        outFormat = '%d.%m.%Y'
+    date = trimDate(date)
+    date = datetime.strptime(date, inFormat)
+    return datetime.strftime(date, outFormat)
+
+def trimDate(date):
+    return " ".join(date.split(" ", 4)[1:4])
