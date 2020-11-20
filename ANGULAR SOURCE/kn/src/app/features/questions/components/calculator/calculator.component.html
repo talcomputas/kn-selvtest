@@ -9,11 +9,11 @@
   </div>
   <div class="keypad">
     <div class="row">
-      <div class="keys ackey one-line row-1">
+      <div class="keys ackey one-line row-1 top-function-keys">
         <button mat-raised-button (click)="allClear()">AC</button>
       </div>
-      <div class="keys opkey one-line row-1">
-        <button mat-raised-button (click)="pressKey('/')">/</button>
+      <div class="keys opkey one-line row-1 top-function-keys">
+        <button mat-raised-button top-function-keys (click)="pressKey('/')">/</button>
       </div>
     </div>
     <div class="row">
@@ -26,7 +26,7 @@
       <div class="keys numkey one-line row-4">
         <button mat-raised-button (click)="pressKey('9')">9</button>
       </div>
-      <div class="keys opkey one-line row-4">
+      <div class="keys opkey one-line row-4 operator-keys">
         <button mat-raised-button (click)="pressKey('x')">x</button>
       </div>
     </div>
@@ -40,7 +40,7 @@
       <div class="keys numkey one-line row-4">
         <button mat-raised-button (click)="pressKey('6')">6</button>
       </div>
-      <div class="keys opkey one-line row-4">
+      <div class="keys opkey one-line row-4 operator-keys">
         <button mat-raised-button (click)="pressKey('-')">-</button>
       </div>
     </div>
@@ -54,7 +54,7 @@
       <div class="keys numkey one-line row-4">
         <button mat-raised-button (click)="pressKey('3')">3</button>
       </div>
-      <div class="keys opkey one-line row-4">
+      <div class="keys opkey one-line row-4 operator-keys">
         <button mat-raised-button (click)="pressKey('+')">+</button>
       </div>
     </div>
@@ -65,7 +65,7 @@
       <div class="keys numkey one-line row-3">
         <button mat-raised-button (click)="pressKey('.')">.</button>
       </div>
-      <div class="keys equalkey one-line row-3">
+      <div class="keys equalkey one-line row-3 operator-keys">
         <button mat-raised-button (click)="getAnswer()">=</button>
       </div>
     </div>
