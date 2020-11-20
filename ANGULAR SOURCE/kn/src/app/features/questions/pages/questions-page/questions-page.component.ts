@@ -6,13 +6,16 @@ import {
   OnInit,
 } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
 import { QuestionType } from '@features/questions/enums/question-type.enum';
 import { QuestionsService } from '@features/questions/services/questions.service';
 import { QuestionsUnionType } from '@features/questions/types/questions-union.type';
 import { QuestionGroupsChoice } from '@features/questions/interfaces/question-groups-choice.interface';
+import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
+import { ContentService } from '@content/services/content.service';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-questions-page',
@@ -40,11 +43,17 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private cdRef: ChangeDetectorRef,
     private questionsService: QuestionsService,
+    private router: Router,
+    private content: ContentService,
+    private countdownDialog: MatDialog,
   ) {
     this.page$ = this.route.paramMap.pipe(
       map((params: ParamMap) => {
-        // @ts-ignore
-        return +params.get('page');
+        const pageNumber = params.get('page');
+        if (pageNumber) {
+          return +pageNumber;
+        }
+        return 0;
       }),
     );
     this.index$ = this.page$.pipe(
@@ -58,6 +67,21 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
     this.questionsService.length$.subscribe((nr: number) => {
       this.numberOfQuestions = nr;
     });
+  }
+
+  hasTimer(): boolean {
+    let retVal = false;
+    try {
+      if (this.content.get('timer')) {
+        retVal = true;
+      } else {
+        retVal = false;
+      }
+    } catch (error) {
+      retVal = false;
+    }
+
+    return retVal;
   }
 
   ngOnInit(): void {
@@ -75,6 +99,24 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
       this.handleTransition(question);
       this.addFormControl(question);
     });
+  }
+
+  handleCountdown($event: any) {
+    if ($event.action === 'done') {
+      this.destroyed$.next();
+      this.destroyed$.complete();
+      this.questionsService.detach();
+
+      const dialogRef = this.countdownDialog.open(CountdownDialogComponent, {
+        width: '250px',
+        data: { name: 'foo', animal: 'bar' },
+      });
+
+      dialogRef.afterClosed().subscribe((result) => {
+        console.log('The dialog was closed');
+        this.router.navigate(['/lesetesten']);
+      });
+    }
   }
 
   ngOnDestroy(): void {
@@ -115,6 +157,31 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
       return;
     }
 
+    if (question.type === QuestionType.SLIDER) {
+      const q = question as QuestionSlider;
+      this.questions.addControl(
+        key,
+        new FormControl(null, [
+          Validators.required,
+          Validators.min(q.options.floor),
+          Validators.max(q.options.ceil),
+        ]),
+      );
+      return;
+    }
+
     this.questions.addControl(key, new FormControl(null, [Validators.required]));
+  }
+}
+
+@Component({
+  selector: 'app-countdown-dialog',
+  templateUrl: 'countdown-dialog.html',
+})
+export class CountdownDialogComponent {
+  constructor(public dialogRef: MatDialogRef<CountdownDialogComponent>) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 }

@@ -18,7 +18,6 @@ import { LevelComponent } from './components/level/level.component';
 import { ScreenReaderComponent } from './components/screen-reader/screen-reader.component';
 import { ButtonModule } from '../uikit/button/button.module';
 import { AudioComponent } from './components/audio/audio.component';
-import { CalculatorComponent } from './components/calculator/calculator.component';
 import { AngularDraggableModule } from 'angular2-draggable';
 import { MaterialModule } from 'material.module';
 
@@ -38,7 +37,6 @@ import { MaterialModule } from 'material.module';
     LevelComponent,
     ScreenReaderComponent,
     AudioComponent,
-    CalculatorComponent,
   ],
   imports: [CommonModule, ButtonModule, AngularDraggableModule, MaterialModule],
   exports: [
@@ -56,7 +54,6 @@ import { MaterialModule } from 'material.module';
     LevelComponent,
     ScreenReaderComponent,
     AudioComponent,
-    CalculatorComponent,
   ],
 })
 export class SharedModule {

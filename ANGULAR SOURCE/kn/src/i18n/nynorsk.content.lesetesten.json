@@ -3,8 +3,39 @@
     "label": "Lesetesten",
     "title": "Lesetesten",
     "text": "Dette er en kort lesetest som måler lesehastigheten din. Testen stopper automatisk etter 10 minutter. Det er mange oppgaver, så det er viktig å svare raskt og riktig.",
-    "image": "reading-exam.svg"
+    "image": "reading-exam.svg",
+    "sound": "Lesetest_intro.mp3"
   },
+  "example": {
+    "title": "Lesetesten - Døme",
+    "text": "I denne testen skal du lese nokre korte tekstar utan å bruke hjelpemiddel. Klikk på det ordet du meiner passar best i teksten. Du kan endre valet ditt ved å trykkje på eit av dei andre orda. Eitt av alternativa er rett. Her er det fire alternativ i kvar setning, og orda kneet og krykkjer er valde fordi dei passar best.",
+    "sound": "lesetest_02.mp3",
+    "question": {
+      "id": 1,
+      "type": "groups-choice",
+      "title": "Kneskade",
+      "text": "Anders har skada kneet i ei skiulukke. Han skal opererast om ei veke. Etter operasjonen skal %s trenast opp. Fysioterapeuten hans meiner at han må bruke %s i om lag 3 månader.",
+      "options": [
+        [
+          { "id": 1, "text": "underarmen" },
+          { "id": 2, "text": "kneet" },
+          { "id": 3, "text": "hjernen" },
+          { "id": 4, "text": "føtene" }
+        ],
+        [
+          { "id": 1, "text": "stylter" },
+          { "id": 2, "text": "krykkjer" },
+          { "id": 3, "text": "skøyter" },
+          { "id": 4, "text": "rulleski" }
+        ]
+      ],
+      "answer": {
+        "value": [2, 2],
+        "points": 1
+      }
+    }
+  },
+  "timer": 10,
   "result": {
     "image": "lesetesten-data-check.svg",
     "levels": {

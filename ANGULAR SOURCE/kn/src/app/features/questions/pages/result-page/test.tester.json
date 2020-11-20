@@ -24,7 +24,8 @@
         { "id": 2, "text": "restaurant" },
         { "id": 2, "text": "hester" }
       ],
-      "isCorrect": false
+      "isCorrect": false,
+      "title": "Drømmen om en bondegård"
     },
     {
       "id": 2,

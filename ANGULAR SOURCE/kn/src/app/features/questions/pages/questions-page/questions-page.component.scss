@@ -1,5 +1,13 @@
 @import 'mixins';
 
+.card-header {
+  display: flex;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
 :host {
   display: block;
 
@@ -7,6 +15,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    margin-bottom: 3rem;
 
     .progress-container {
       display: flex;

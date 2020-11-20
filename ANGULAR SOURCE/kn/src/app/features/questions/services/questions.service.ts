@@ -31,11 +31,21 @@ import { QuestionMultipleDiffPoints } from '@features/questions/interfaces/quest
 import { Answer } from '@features/questions/interfaces/answer.interface';
 import { Options } from '@features/questions/interfaces/options.interface';
 import { Option } from '@features/questions/interfaces/option.interface';
+import { QuestionSingleComponent } from '@features/questions/components/question-single/question-single.component';
+import { Utils } from '@content/utils/utils';
 
 @Injectable()
 export class QuestionsService {
-  // @ts-ignore
-  private readonly currentQuestion$ = new BehaviorSubject<QuestionsUnionType>(null);
+  private readonly currentQuestion$ = new BehaviorSubject<QuestionsUnionType>({
+    id: 0,
+    type: QuestionType.SINGLE,
+    text: '',
+    answer: {
+      value: 0,
+      points: 0,
+    },
+    options: [{ id: 0 }],
+  });
   private readonly currentLength$ = new BehaviorSubject<number>(0);
 
   private readonly questionsDictionary = new Map<number, QuestionsUnionType>();
@@ -110,10 +120,11 @@ export class QuestionsService {
       ],
       [],
     );
-    const level = this.levels
-      .sort((a: Level, b: Level) => b.minScore - a.minScore)
-      .find((l: Level) => score >= l.minScore);
-    // @ts-ignore
+    const level = Utils.ensure(
+      this.levels
+        .sort((a: Level, b: Level) => b.minScore - a.minScore)
+        .find((l: Level) => score >= l.minScore),
+    );
     return { level, score, maxScore, data };
   }
 
@@ -212,8 +223,11 @@ export class QuestionsService {
   }
 
   private getQuestion(id: number): QuestionsUnionType {
-    // @ts-ignore
-    return this.questionsDictionary.get(id);
+    const result = this.questionsDictionary.get(id);
+    if (!result) {
+      throw new Error('Could not get question with id: ' + id);
+    }
+    return result;
   }
 
   public getScore(answers: { [key: string]: any }): number {
@@ -343,7 +357,7 @@ export class QuestionsService {
 
   public getResultAnswer(question: QuestionsUnionType, selectedValue: any): ResultAnswer {
     const selectOption = (value: any, options: { id: any }[]) => {
-      return options.find((option) => option.id === value);
+      return Utils.ensure(options.find((option) => option.id === value));
     };
 
     const { id, answer, type } = question;
@@ -395,18 +409,16 @@ export class QuestionsService {
       }
 
       case QuestionType.GROUPS_CHOICE: {
-        const { text, options } = question as QuestionGroupsChoice;
+        const { text, options, title } = question as QuestionGroupsChoice;
         const values = answer.value as number[];
 
         const correct: Option[] = [];
         values.forEach((val, index) => {
-          // @ts-ignore
           correct.push(selectOption(val, options[index]));
         });
 
         const selected: Option[] = [];
         selectedValue.forEach((val: number, index: number) => {
-          // @ts-ignore
           selected.push(selectOption(val, options[index]));
         });
         const isCorrect = JSON.stringify(correct) === JSON.stringify(selected);
@@ -417,6 +429,7 @@ export class QuestionsService {
           correct,
           selected,
           isCorrect,
+          title,
         } as ResultAnswer;
       }
 
@@ -452,9 +465,7 @@ export class QuestionsService {
         return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
       }
       default: {
-        throwError('QuestionType not Found');
-        // @ts-ignore
-        return null;
+        throw new Error('QuestionType not Found');
       }
     }
   }

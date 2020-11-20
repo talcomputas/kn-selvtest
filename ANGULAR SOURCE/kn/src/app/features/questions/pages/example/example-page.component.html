@@ -1,1 +1,28 @@
-<p>ExamplePageComponent works</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title class="intro__header__title">{{ 'example.title' | content }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="info-text">{{ 'example.text' | content }}</div>
+    <app-question-groupschoice [question]="question" [form]="group"> </app-question-groupschoice>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      *ngIf="hasSound('example.sound')"
+      mat-icon-button
+      color="primary"
+      aria-label="Example icon button with a vertical three dot icon"
+      (click)="playSound('example.sound')"
+    >
+      <mat-icon>volume_up</mat-icon>
+    </button>
+    <button
+      color="accent"
+      mat-raised-button
+      routerLink="/{{ path }}/sporsmal/1"
+      aria-label="Start testen"
+    >
+      {{ 'actions.start' | content }}
+    </button>
+  </mat-card-actions>
+</mat-card>

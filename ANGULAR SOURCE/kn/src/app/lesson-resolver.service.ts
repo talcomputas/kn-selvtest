@@ -13,8 +13,9 @@ import ensystem from '@i18n/engelsk.system.json';
 import nbdigitaltesten from '@i18n/bokmal.content.digitaltesten.json';
 import nndigitaltesten from '@i18n/nynorsk.content.digitaltesten.json';
 
-import nblesetesten from '@i18n/bokmal.content.lesetesten.json';
-import nnlesetesten from '@i18n/nynorsk.content.lesetesten.json';
+import nbLeseTesten from '@i18n/bokmal.content.lesetesten.json';
+import nnLeseTesten from '@i18n/nynorsk.content.lesetesten.json';
+import enLeseTesten from '@i18n/engelsk.content.lesetesten.json';
 
 import nbmuntligtesten from '@i18n/bokmal.content.muntligtesten.json';
 import nnmuntligtesten from '@i18n/nynorsk.content.muntligtesten.json';
@@ -29,9 +30,9 @@ import nbleseskrivesjekken from '@i18n/bokmal.content.leseskrivesjekken.json';
 import nnleseskrivesjekken from '@i18n/nynorsk.content.leseskrivesjekken.json';
 import enleseskrivesjekken from '@i18n/engelsk.content.leseskrivesjekken.json';
 
-import nbmuntligsjekken from '@i18n/bokmal.content.muntligsjekken.json';
-import nnmuntligsjekken from '@i18n/nynorsk.content.muntligsjekken.json';
-import enmuntligsjekken from '@i18n/engelsk.content.muntligsjekken.json';
+import nbMuntligSjekken from '@i18n/bokmal.content.muntligsjekken.json';
+import nnMuntligSjekken from '@i18n/nynorsk.content.muntligsjekken.json';
+import enMuntligSjekken from '@i18n/engelsk.content.muntligsjekken.json';
 
 import nbdatasjekken from '@i18n/bokmal.content.datasjekk.json';
 import nndatasjekken from '@i18n/nynorsk.content.datasjekk.json';
@@ -58,8 +59,9 @@ export class LessonResolverService implements Resolve<string> {
     contentService.unset('en');
     switch (path) {
       case 'lesetesten':
-        contentService.set('nb', { ...nbcontent, ...nbsystem, ...nblesetesten });
-        contentService.set('nn', { ...nncontent, ...nnsystem, ...nnlesetesten });
+        contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbLeseTesten });
+        contentService.set('nn', { ...nncontent, ...nnsystem, ...nnLeseTesten });
+        contentService.set('en', { ...encontent, ...ensystem, ...enLeseTesten });
         break;
       case 'digitaltesten':
         contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbdigitaltesten });
@@ -88,9 +90,9 @@ export class LessonResolverService implements Resolve<string> {
         contentService.set('en', { ...encontent, ...ensystem, ...endatasjekken });
         break;
       case 'muntligsjekken':
-        contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbmuntligsjekken });
-        contentService.set('nn', { ...nncontent, ...nnsystem, ...nnmuntligsjekken });
-        contentService.set('en', { ...encontent, ...ensystem, ...enmuntligsjekken });
+        contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbMuntligSjekken });
+        contentService.set('nn', { ...nncontent, ...nnsystem, ...nnMuntligSjekken });
+        contentService.set('en', { ...encontent, ...ensystem, ...enMuntligSjekken });
         break;
       case 'samletesten':
         contentService.set('nb', { ...nbcontent, ...nbsystem, ...nbsamletesten });

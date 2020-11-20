@@ -8,6 +8,7 @@
     "start": "Start",
     "back": "Back",
     "next": "Next",
+    "example": "Example",
     "reviewAnswers": "Review your answers",
     "getAdvice": "Get advice and tips to improve",
     "backToResult": "View result",
@@ -21,5 +22,7 @@
   "questions": "Question",
   "answers": "Answer",
   "answersTitle": "Your answers",
-  "testIsOver": "Testen complete"
+  "testIsOver": "Testen complete",
+  "your_answer": "You answered",
+  "correct_answer": "Correct answer"
 }

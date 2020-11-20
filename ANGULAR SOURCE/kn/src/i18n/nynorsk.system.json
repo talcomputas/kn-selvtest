@@ -8,6 +8,7 @@
     "start": "Start",
     "back": "Tilbake",
     "next": "Neste",
+    "example": "Eksempel",
     "reviewAnswers": "Sjå gjennom svara dine i testen",
     "getAdvice": "Få råd og tips for å bli betre",
     "backToResult": "Sjå resultatet",
@@ -21,5 +22,7 @@
   "questions": "Spørsmål",
   "answers": "Svar",
   "answersTitle": "Svara dine",
-  "testIsOver": "Testen er over"
+  "testIsOver": "Testen er over",
+  "your_answer": "Du svarte",
+  "correct_answer": "Korrekt svar"
 }

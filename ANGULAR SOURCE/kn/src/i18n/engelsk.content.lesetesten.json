@@ -5,6 +5,35 @@
     "text": "This short reading test assesses your reading speed. The test will stop automatically after 10 minutes. As it contains many tasks, remember to do the tasks fast and correct. This 10-minute reading test will give you an indication of how well you read.",
     "image": "reading-exam.svg"
   },
+  "example": {
+    "title": "Reading test - Example",
+    "text": "In this test, your task is to read short texts without using any aid. Click on the word that you think fits best to the text.  You can alter your choice by choosing one of the other words. Only one alternative is correct. Here there are four alternatives in each sentence, and the the words knee and crutches is selected because they fits best",
+    "question": {
+      "id": 1,
+      "type": "groups-choice",
+      "title": "Knee damage",
+      "text": "Anders hurt his knee during a ski accident. In a week he will be operated. After the operation, he will need to train up the %s. His physiotherapist advises him to use %s for 3 months.",
+      "options": [
+        [
+          { "id": 1, "text": "forearm" },
+          { "id": 2, "text": "knee" },
+          { "id": 3, "text": "brain" },
+          { "id": 4, "text": "feet" }
+        ],
+        [
+          { "id": 1, "text": "stilts" },
+          { "id": 2, "text": "crutches" },
+          { "id": 3, "text": "skate" },
+          { "id": 4, "text": "rollerskis" }
+        ]
+      ],
+      "answer": {
+        "value": [2, 2],
+        "points": 1
+      }
+    }
+  },
+  "timer": 10,
   "result": {
     "image": "lesetesten-data-check.svg",
     "levels": {

@@ -1,4 +1,4 @@
-<app-card>
+<!-- <app-card>
   <div app-card-label>
     <app-label
       imgUrl="assets/images/ribbon-puzzle.svg"
@@ -25,4 +25,41 @@
       </button>
     </div>
   </footer>
-</app-card>
+</app-card> -->
+
+<mat-card class="intro">
+  <mat-card-header class="intro__header">
+    <div mat-card-avatar class="intro__header__logo"></div>
+    <mat-card-title class="intro__header__title">{{ 'intro.title' | content }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="info" [innerHTML]="'intro.text' | content"></p>
+    <img src="assets/images/{{ 'intro.image' | content }}" alt="Intro image" />
+  </mat-card-content>
+  <mat-divider></mat-divider>
+
+  <mat-card-actions>
+    <button
+      *ngIf="hasSound('intro.sound')"
+      mat-icon-button
+      color="primary"
+      aria-label="Example icon button with a vertical three dot icon"
+      (click)="playSound('intro.sound')"
+    >
+      <mat-icon>volume_up</mat-icon>
+    </button>
+
+    <button
+      *ngIf="!hasExample"
+      color="primary"
+      mat-raised-button
+      routerLink="/{{ path }}/sporsmal/1"
+      aria-label="Start testen"
+    >
+      {{ 'actions.start' | content }}
+    </button>
+    <button *ngIf="hasExample" color="primary" mat-raised-button routerLink="/{{ path }}/eksempel">
+      {{ 'actions.example' | content }}
+    </button>
+  </mat-card-actions>
+</mat-card>

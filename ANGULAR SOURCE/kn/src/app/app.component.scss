@@ -20,9 +20,14 @@
 .toolbar {
   display: flex;
   height: 91px;
+  justify-content: center;
+  align-items: center;
   &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
-      width: 168px; // same as kn
+      min-width: 200px; // same as kn
     }
   }
   &__spacer {
@@ -35,7 +40,8 @@
 .content {
   //border-radius: 2px;
   //background-color: #ffffff;
-  box-shadow: 0 13px 20px 0 rgba(90, 110, 136, 0.08);
+  // box-shadow: 0 13px 20px 0 rgba(90, 110, 136, 0.08);
+  //background-color: cyan;
   flex-grow: 1;
 }
 

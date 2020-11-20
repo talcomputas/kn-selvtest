@@ -60,10 +60,12 @@ export class QuestionDialogueComponent
         (item) => item.type === SpeechType.INTRO || item.type === SpeechType.QUESTION,
       ),
     );
-    // @ts-ignore
-    this.backgroundImage =
-      this.question.image &&
-      this.sanitizer.bypassSecurityTrustStyle(`url(assets/images/${this.question.image})`);
+    if (this.question.image) {
+      this.backgroundImage = this.sanitizer.bypassSecurityTrustStyle(
+        `url(assets/images/${this.question.image})`,
+      );
+    }
+
     this.value = [];
   }
 }

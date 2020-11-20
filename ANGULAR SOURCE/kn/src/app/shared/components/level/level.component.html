@@ -1,19 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" viewBox="0 0 200 200">
   <linearGradient id="linear-gradient">
-    <stop offset="0%" stop-color="gold"/>
-    <stop offset="100%" stop-color="teal"/>
+    <stop offset="0%" stop-color="red" />
+    <stop offset="50%" stop-color="yellow" />
+    <stop offset="100%" stop-color="green" />
   </linearGradient>
 
-  <path stroke="#ccc" d="M41 149.5a77 77 0 1 1 117.93 0" fill="none" stroke-linecap="round"
-        [attr.stroke-width]="strokeWidth"/>
+  <path
+    stroke="#ccc"
+    d="M41 149.5a77 77 0 1 1 117.93 0"
+    fill="none"
+    stroke-linecap="round"
+    [attr.stroke-width]="strokeWidth"
+  />
 
-  <path stroke="url(#linear-gradient)" d="M41 149.5a77 77 0 1 1 117.93 0" fill="none" stroke-linecap="round"
-        [attr.stroke-dasharray]="strokeDasharray"
-        [attr.stroke-width]="scaleStrokeWidth"
-        [attr.stroke-dashoffset]="value"/>
+  <path
+    stroke="url(#linear-gradient)"
+    d="M41 149.5a77 77 0 1 1 117.93 0"
+    fill="none"
+    stroke-linecap="round"
+    [attr.stroke-dasharray]="strokeDasharray"
+    [attr.stroke-width]="scaleStrokeWidth"
+    [attr.stroke-dashoffset]="value"
+  />
 
   <line stroke="#fff" stroke-width="2" x1="42" x2="53" y1="38" y2="49.5"></line>
   <line stroke="#fff" stroke-width="2" x1="158" x2="147" y1="38" y2="49.5"></line>
-  <text x="50%" y="55%" fill="#000" font-size="50px" text-anchor="middle" stroke-width="2px">{{level}}</text>
-  <text x="50%" y="80%" fill="#000" text-anchor="middle">{{text}}</text>
+  <text x="50%" y="55%" fill="#000" font-size="50px" text-anchor="middle" stroke-width="2px">
+    {{ level }}
+  </text>
+  <text x="50%" y="80%" fill="#000" text-anchor="middle">{{ text }}</text>
 </svg>

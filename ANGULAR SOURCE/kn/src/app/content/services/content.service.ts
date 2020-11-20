@@ -16,10 +16,9 @@ export class ContentService {
   }
 
   set(ctx: string, data: object): void {
-    let content = this.contentMap.get(ctx);
-    content = content ? mergeDeep(content, data) : data;
-    // @ts-ignore
-    this.contentMap.set(ctx, content);
+    const content = this.contentMap.get(ctx);
+    const contentMerged = content ? mergeDeep(content, data) : data;
+    this.contentMap.set(ctx, contentMerged);
     this.changes$.next(true);
   }
 
@@ -27,8 +26,11 @@ export class ContentService {
     if (!isDefined(key) || !key.length) {
       throw new Error(`Parameter "key" required`);
     }
-    // @ts-ignore
-    return this.getParsedResult(this.contentMap.get(this.ctx), key);
+    const exists = this.contentMap.get(this.ctx);
+    if (exists) {
+      return this.getParsedResult(exists, key);
+    }
+    throw new Error('ContentService: Could not find content with key: ' + key);
   }
 
   setCtx(ctx: string) {

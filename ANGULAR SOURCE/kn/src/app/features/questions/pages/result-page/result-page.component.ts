@@ -1,13 +1,14 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Result } from '@features/questions/interfaces/result.interface';
 import { QuestionsService } from '@features/questions/services/questions.service';
 import { ActivatedRoute } from '@angular/router';
 import { takeUntil } from 'rxjs/operators';
 import { ContentService } from '@content/services/content.service';
-import { QuestionType } from '@features/questions/enums/question-type.enum';
 import tester from './test.tester.json';
 import sjekker from './test.sjekker.json';
+import { MatDialog } from '@angular/material/dialog';
+import { AnswerDialogComponentComponent } from '@features/questions/components/answer-dialog/answer-dialog-component.component';
 
 declare var questback: any;
 
@@ -32,10 +33,11 @@ export class ResultPageComponent implements OnInit, OnDestroy {
     private questionsService: QuestionsService,
     private activatedRoute: ActivatedRoute,
     public content: ContentService,
+    public dialog: MatDialog,
   ) {
     if (this.testing) {
-      this.result = sjekker as any;
-      // this.result = tester as any;
+      //this.result = sjekker as any;
+      this.result = tester as any;
     } else {
       this.result = this.questionsService.result();
 
@@ -47,7 +49,24 @@ export class ResultPageComponent implements OnInit, OnDestroy {
     }
   }
 
+  /*   openDialog(): void {
+    const dialogRef = this.dialog.open(AnswerDialogComponentComponent, {
+      panelClass: 'custom-dialog-container',
+      maxWidth: '98vw',
+      minHeight: 'calc(100vh - 90px)',
+      height: 'auto',
+      data: {
+        result: this.result.data,
+      },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
+    });
+  } */
+
   ngOnInit() {
+    // this.showAnswers = true;
     this.path = this.activatedRoute.snapshot.data.path;
 
     // environment not working
@@ -63,19 +82,24 @@ export class ResultPageComponent implements OnInit, OnDestroy {
     } else if (window.location.href.indexOf('lesetesten') > -1) {
       this.qbIdNb = 'wzy4jqo0hw';
       this.qbIdNn = '562ajj0nzs';
-    } else {
-      console.warn('unknown questback ID');
+    } else if (window.location.href.indexOf('samletesten') > -1) {
+      this.qbIdNb = 'non_existing';
+      this.qbIdNn = 'non_existing';
     }
 
-    if (this.content.getCtx() === 'nb') {
-      this.openNbPopup();
-    } else {
-      this.openNnPopup();
+    if (this.qbIdNb && this.qbIdNn) {
+      if (this.content.getCtx() === 'nb') {
+        this.openNbPopup();
+      } else {
+        this.openNnPopup();
+      }
     }
   }
 
   openNbPopup() {
     questback.popup.create('https://response.questback.com/vox/' + this.qbIdNb, {
+      width: 530,
+      height: 'auto',
       title: 'Vinn et gavekort',
       text:
         // tslint:disable-next-line:max-line-length
@@ -96,6 +120,8 @@ export class ResultPageComponent implements OnInit, OnDestroy {
 
   openNnPopup() {
     questback.popup.create('https://response.questback.com/vox/' + this.qbIdNn, {
+      width: 530,
+      height: 'auto',
       title: 'Vinn et gavekort',
       text:
         // tslint:disable-next-line:max-line-length

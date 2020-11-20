@@ -53,7 +53,7 @@
               "text": "Ja"
             }
           ],
-          "text": "Kan du fÃ¸lge en enkel arbeidsinstruksjon gitt muntlig?"
+          "text": "Kan du følge en enkel arbeidsinstruksjon gitt muntlig?"
         },
         {
           "id": 2,
@@ -721,7 +721,7 @@
       ],
       "funnel": {
         "baseScore": 0,
-        "type": "base"
+        "type": "BASE"
       }
     }
   ]

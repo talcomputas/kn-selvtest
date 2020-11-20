@@ -1,7 +1,7 @@
 @import 'variables';
 @import 'mixins';
 
-:host {
+/* :host {
   .label {
     transform: translate(-5px, -4px);
   }
@@ -56,4 +56,52 @@
       font-weight: bold;
     }
   }
+} */
+
+.intro {
+  &__header {
+    display: flex;
+    height: 76px;
+    align-items: center;
+    &__logo {
+      background: url('/assets/images/sprite.svg') no-repeat;
+      background-size: 3332px 3439px;
+      background-position: -2975px -2978px;
+      width: 50px;
+      border-radius: 0;
+      height: 76px;
+      margin-left: 25px;
+      margin-top: -4px;
+    }
+
+    &__title {
+    }
+  }
+}
+
+.mat-card {
+  padding-top: 0;
+  .mat-card-header {
+    border-radius: 4px;
+  }
+  .mat-card-content {
+    margin-top: 1rem;
+  }
+}
+
+.mat-card-content {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    padding: 0 20px;
+  }
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

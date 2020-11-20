@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, OnChanges } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
 import { QuestionSlider } from '@features/questions/interfaces/question-slider.interface';
 import { SliderOption } from '@features/questions/interfaces/slider-option.interface';
@@ -9,21 +10,42 @@ import { SliderOption } from '@features/questions/interfaces/slider-option.inter
   styleUrls: ['./question-slider.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class QuestionSliderComponent extends QuestionComponentBaseDirective<QuestionSlider> {
+export class QuestionSliderComponent
+  extends QuestionComponentBaseDirective<QuestionSlider>
+  implements OnInit {
   calculatorVisible: boolean;
 
   autoTicks = false;
   showTicks = true;
-  step = 1;
+  defaultStep = 1;
   thumbLabel = true;
-  tickInterval = 10;
+  tickInterval = 1;
+  panelOpenState = false;
+
+  constructor(public dialog: MatDialog) {
+    super();
+  }
+
+  ngOnInit(): void {
+    // this.toggleCalculator();
+  }
 
   onUserChange(changeContext: number): void {
     this.control.patchValue(changeContext);
   }
 
+  onInputChange(value: any): void {
+    // this.control.patchValue(value.target.value);
+    this.onUserChange(value.target.value);
+  }
+
   toggleCalculator(): void {
+    // this.dialog.open(DialogCalculatorDialog);
     this.calculatorVisible = !this.calculatorVisible;
+  }
+
+  getStepInterval() {
+    return this.question.options.steps ? this.question.options.steps : this.tickInterval;
   }
 
   getSliderTickInterval(): number | 'auto' {
@@ -34,3 +56,9 @@ export class QuestionSliderComponent extends QuestionComponentBaseDirective<Ques
     return 0;
   }
 }
+
+@Component({
+  selector: 'app-calculator-component',
+  templateUrl: 'dialog-calculator.html',
+})
+export class DialogCalculatorDialogComponent {}
