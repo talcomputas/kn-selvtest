@@ -20,7 +20,6 @@ export class StatisticsPageComponent implements OnInit {
   fromDateControl = new FormControl(new Date());
   toDateControl = new FormControl(new Date());
 
-
   defaultCsvOptions = {
     fieldSeparator: ',',
     quoteStrings: '',
