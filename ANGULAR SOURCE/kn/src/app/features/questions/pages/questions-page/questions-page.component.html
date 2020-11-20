@@ -39,13 +39,13 @@
       >
       </app-question-slider>
 
-      <app-question-multiple
+      <app-question-multiple-diff-points
         *ngSwitchCase="QuestionType.MULTIPLE_DIFF_POINTS"
         [question]="question"
         [limit]="question?.answer?.value?.length"
         [form]="questions"
       >
-      </app-question-multiple>
+      </app-question-multiple-diff-points>
 
       <app-question-multiple
         *ngSwitchCase="QuestionType.MULTIPLE"
@@ -146,7 +146,7 @@
       >
         {{ 'actions.next' | content }} <mat-icon>arrow_forward</mat-icon>
       </button>
-      <!-- <code>{{ questions.value | json }}</code> -->
+      <code>{{ questions.value | json }}</code>
     </div>
   </footer>
 </app-card>

@@ -398,14 +398,20 @@ export class QuestionsService {
 
       case QuestionType.MULTIPLE_DIFF_POINTS: {
         const { text, options } = question as QuestionMultipleDiffPoints;
-        const values = answer.value as number[];
-        const correct = values.map((v) => selectOption(v, options));
 
-        const selected = selectedValue.map((v: number) => {
-          return selectOption(v, options);
-        });
-        const isCorrect = compareMultiple(selectedValue, values);
-        return { id, type, text, correct, selected, isCorrect } as ResultAnswer;
+        const points = question.answer.points as number[];
+        const maxPoint = Math.max(...points);
+        const indexOfMax = points.indexOf(maxPoint);
+
+        const values = question.answer.value as number[];
+        let correct = false;
+        if (values[indexOfMax] === selectedValue) {
+          correct = true;
+        }
+
+        const selected = Utils.ensure(options.find((option) => option.id === selectedValue));
+
+        return { id, type, text, correct, selected, isCorrect: correct } as ResultAnswer;
       }
 
       case QuestionType.GROUPS_CHOICE: {
@@ -551,7 +557,31 @@ export class QuestionsService {
       }
 
       case QuestionType.MULTIPLE_DIFF_POINTS: {
-        return compareMultiple(selectedValue, correctValue as number[]);
+        /** We determine if the question is correct with the following logic.
+         * 1. We assume the index of the highest value in the points array must be
+         *    the most correct (highest values) answer. Other answers must therefore
+         *    be  valued less, and therefore "incorrect"
+         * 2. First we find the index of the max value in the points array
+         * 3. This index must correspond to the same index in the answer value array.
+         *    That answer must be the correct one. But we do not need to use the answer values array,
+         *    we just use the highest index from 2.
+         * 3. If the user has selected a value with the same index as in 1., we
+         *    must assume that the answer is correct.
+         * 4. If the user has selected a value with a different index, we must assume
+         *    the answer could be better, therefore we mark it as incorrect.
+         */
+
+        const points = question.answer.points as number[];
+
+        const maxPoint = Math.max(...points);
+        const indexOfMax = points.indexOf(maxPoint);
+
+        if (selectedValue - 1 === indexOfMax) {
+          // Selected the highest valued answer;
+          return true;
+        }
+        // Did not select the highest valued answer;
+        return false;
       }
       default:
         throwError('isCorrectAnswer: Could not determine true or false answer');
@@ -616,19 +646,17 @@ export class QuestionsService {
     return (isCorrect && answer.points) || 0;
   }
 
-  private multipleChoiceDiffPoints<T>(
-    answer: { points: number[]; value: T[] },
-    selection: T[],
-    sorting = false,
+  // Used only after the test to get the points for the answer
+  private multipleChoiceDiffPoints(
+    answer: { points: number[]; value: number[] },
+    selection: number,
   ): number {
     if (!answer) {
       return 0;
     }
 
-    const isCorrect = compareMultiple(answer.value, selection, sorting);
-    return 1;
-    // TODO fix this logic
-    // return (isCorrect && answer.points) || 0;
+    const selectedIndex = Utils.ensure(answer.value.indexOf(selection));
+    return answer.points[selectedIndex];
   }
 
   private groupChoicePoints<T>(answer: { points: number; value: number[] }, selection: number[]) {

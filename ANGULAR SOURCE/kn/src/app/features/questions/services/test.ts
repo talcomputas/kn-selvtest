@@ -257,7 +257,7 @@ const nnregnesjekken: Lesson = nnregnesjekkenRaw as Lesson;
 
 const nnleseskrivesjekken: Lesson = samleSjekken as Lesson;
 
-const q1 = samleSjekken.modules[0].questions[0] as QuestionSingle;
+/* const q1 = samleSjekken.modules[0].questions[0] as QuestionSingle;
 const p11 = q1.answer.value;
 const p111 = q1.answer.points;
 
@@ -295,4 +295,4 @@ const p999 = q9.answer.value;
 
 const q10 = samleSjekken.modules[0].questions[8] as QuestionGrading;
 const p100 = q10.answer.points;
-const p1000 = q10.answer.value;
+const p1000 = q10.answer.value; */
