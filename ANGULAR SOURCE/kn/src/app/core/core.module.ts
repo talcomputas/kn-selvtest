@@ -24,6 +24,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, LogoComponent, LanguageComponent, HomeComponent],
   imports: [
@@ -43,6 +44,7 @@ import { MatIconModule } from '@angular/material/icon';
     LayoutModule,
     MatMenuModule,
     MatIconModule,
+    MatTableModule
   ],
   exports: [LanguageComponent],
   providers: [],

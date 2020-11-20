@@ -6,6 +6,7 @@
     "image": "reading-exam.svg",
     "sound": "Lesetest_intro.mp3"
   },
+
   "example": {
     "title": "Lesetesten - Eksempel",
     "text": "I denne testen skal du lese noen korte tekster uten bruk av hjelpemidler. Klikk på det ordet du mener passer best i teksten. Du kan endre på valget ved å trykke på ett av de andre ordene. Ett alternativ er riktig.",
@@ -35,6 +36,7 @@
       }
     }
   },
+  "timer": 10,
   "result": {
     "image": "lesetesten-data-check.svg",
     "levels": {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { StatisticsApiService } from '@features/questions/services/statistics-api.service';
-import { Observable } from 'rxjs';
+import { from, Observable } from 'rxjs';
 
 @Injectable()
 export class StatisticsService {
@@ -9,7 +9,8 @@ export class StatisticsService {
   private questionId: number;
   private userId: string;
 
-  constructor(private statisticsApiService: StatisticsApiService) {}
+  constructor(private statisticsApiService: StatisticsApiService) {
+  }
 
   initUser(): void {
     this.statisticsApiService
@@ -60,9 +61,14 @@ export class StatisticsService {
   }
 
   getBaseData(fromDate: string, toDate: string, test: string): Observable<any> {
-    console.log(fromDate);
-    console.log(toDate);
-    console.log(test);
     return this.statisticsApiService.getItemData(fromDate, toDate, test);
+  }
+
+  getTotalTestsPerDay(fromDate: string, toDate: string): Observable<any> {
+    return this.statisticsApiService.getTotalTestsPerDay(fromDate, toDate);
+  }
+
+  getTestsPerDay(fromDate: string, toDate: string): Observable<any> {
+    return this.statisticsApiService.getTestsPerDay(fromDate, toDate);
   }
 }

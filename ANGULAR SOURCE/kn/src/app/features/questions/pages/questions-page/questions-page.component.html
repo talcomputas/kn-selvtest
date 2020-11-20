@@ -1,5 +1,13 @@
 <app-card *ngIf="question$ | async as question">
-  <div app-card-header>{{ 'intro.title' | content }}</div>
+  <div app-card-header>
+    {{ 'intro.title' | content }}
+    <span class="spacer"></span>
+    <countdown
+      *ngIf="hasTimer()"
+      [config]="{ leftTime: 20, format: 'mm:ss' }"
+      (event)="handleCountdown($event)"
+    ></countdown>
+  </div>
 
   <div app-card-content [formGroup]="questions">
     <div class="top-nav">
@@ -138,7 +146,7 @@
       >
         {{ 'actions.next' | content }} <mat-icon>arrow_forward</mat-icon>
       </button>
-      <!-- <code>{{ questions.value | json }}</code> -->
+      <code>{{ questions.value | json }}</code>
     </div>
   </footer>
 </app-card>
