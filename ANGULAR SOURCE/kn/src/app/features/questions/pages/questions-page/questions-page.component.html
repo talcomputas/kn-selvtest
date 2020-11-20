@@ -4,7 +4,7 @@
     <span class="spacer"></span>
     <countdown
       *ngIf="hasTimer()"
-      [config]="{ leftTime: 20, format: 'mm:ss' }"
+      [config]="{ leftTime: 600, format: 'mm:ss' }"
       (event)="handleCountdown($event)"
     ></countdown>
   </div>
