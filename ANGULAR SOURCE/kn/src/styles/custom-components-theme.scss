@@ -1,9 +1,11 @@
 @import './toolbar-component-theme.scss';
-@import './radiogroup-component-theme.scss';
-@import './radiobutton-component-theme.scss';
+// @import './radiogroup-component-theme.scss';
+// @import './radiobutton-component-theme.scss';
+// @import './togglegroup-component-theme.scss';
 
 @mixin custom-components-theme($theme) {
   @include toolbar-component-theme($theme);
-  @include radiogroup-component-theme($theme);
-  @include radiobutton-component-theme($theme);
+  // @include radiogroup-component-theme($theme);
+  // @include radiobutton-component-theme($theme);
+  // @include togglegroup-component-theme($theme);
 }

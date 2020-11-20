@@ -95,21 +95,23 @@
           <span *ngIf="item?.text as text" class="text">
             <span *ngFor="let snippet of getSplitText(item.text); let ix = index">
               <span *ngIf="isNumeric(snippet)">
-                <mat-radio-group aria-label="Select an option" class="groups-choice">
-                  <span *ngIf="item.correct[snippet].id === item.selected[snippet].id">
-                    <mat-radio-button class="groups-choice-correct groups-choice-radio-button"
+                <span *ngIf="item.correct[snippet].id === item.selected[snippet].id">
+                  <mat-button-toggle-group aria-label="Select an option" class="groups-choice">
+                    <mat-button-toggle class="groups-choice-correct"
                       >{{ item.correct[snippet].text }}
-                    </mat-radio-button>
-                  </span>
-                  <span *ngIf="item.correct[snippet].id !== item.selected[snippet].id">
-                    <mat-radio-button class="groups-choice-correct groups-choice-radio-button"
+                    </mat-button-toggle>
+                  </mat-button-toggle-group>
+                </span>
+                <span *ngIf="item.correct[snippet].id !== item.selected[snippet].id">
+                  <mat-button-toggle-group aria-label="Select an option" class="groups-choice">
+                    <mat-button-toggle class="groups-choice-correct"
                       >{{ item.correct[snippet].text }}
-                    </mat-radio-button>
-                    <mat-radio-button class="groups-choice-incorrect groups-choice-radio-button"
+                    </mat-button-toggle>
+                    <mat-button-toggle class="groups-choice-incorrect"
                       >{{ item.selected[snippet].text }}
-                    </mat-radio-button>
-                  </span>
-                </mat-radio-group>
+                    </mat-button-toggle>
+                  </mat-button-toggle-group>
+                </span>
               </span>
               <span *ngIf="!isNumeric(snippet)">{{ snippet }}</span>
             </span>

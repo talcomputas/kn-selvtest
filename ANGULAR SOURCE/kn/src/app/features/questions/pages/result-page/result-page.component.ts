@@ -44,6 +44,7 @@ export class ResultPageComponent implements OnInit, OnDestroy {
       this.questionsService.attach();
       this.questionsService.changes$.pipe(takeUntil(this.destroyed$)).subscribe(() => {
         this.result = this.questionsService.result();
+        // console.log(JSON.stringify(this.result));
         return this.result;
       });
     }

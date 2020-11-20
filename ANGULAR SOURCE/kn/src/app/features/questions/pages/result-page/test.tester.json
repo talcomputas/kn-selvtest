@@ -5,24 +5,48 @@
     "text": "Digitale ferdigheter på nivå 3 innebærer å være en reflektert bruker av sammensatte digitale verktøy og tjenester. Fordi utviklingen innen digitale ferdigheter går fort, er det allikevel slik at vi må regne med å lære nye verktøy og tjenester.",
     "minScore": 3
   },
-  "score": 6,
-  "maxScore": 8,
+  "score": 14,
+  "maxScore": 14,
   "data": [
     {
       "id": 1,
       "type": "groups-choice",
       "text": "Henrik bladde fram til sidene med boligannonser. Leiligheten deres var %s for liten for dem, så nå lette de etter %s større. De ville gjerne flytte ut på landet. De lette etter en liten %s hvor det var plass til å ha et par %s.",
       "correct": [
-        { "id": 4, "text": "blitt" },
-        { "id": 2, "text": "noe" },
-        { "id": 3, "text": "gård" },
-        { "id": 2, "text": "hester" }
+        {
+          "id": 4,
+          "text": "blitt"
+        },
+        {
+          "id": 2,
+          "text": "noe"
+        },
+        {
+          "id": 3,
+          "text": "gård"
+        },
+        {
+          "id": 2,
+          "text": "hester"
+        }
       ],
       "selected": [
-        { "id": 1, "text": "innredet" },
-        { "id": 1, "text": "det" },
-        { "id": 2, "text": "restaurant" },
-        { "id": 2, "text": "hester" }
+        {
+          "id": 2,
+          "text": "noe"
+        },
+        {
+          "id": 4,
+          "text": "blitt"
+        },
+        {
+          "id": 3,
+          "text": "gård"
+        },
+        {
+          "id": 2,
+          "text": "hester"
+        }
       ],
       "isCorrect": false,
       "title": "Drømmen om en bondegård"
@@ -32,42 +56,80 @@
       "type": "slider",
       "text": "Hvilket tall peker pilen på?",
       "correct": 130,
-      "selected": 124,
-      "isCorrect": false
+      "selected": "130",
+      "isCorrect": true
     },
     {
       "id": 3,
-      "type": "single",
-      "text": "Kvar er det <b>IKKJE</b> mogleg å kjøpe dataspel?",
-      "correct": { "id": 4, "text": "På YouTube" },
-      "selected": { "id": 4, "text": "På YouTube" },
+      "type": "slider",
+      "text": "I ei tønne er det plass til 120 liter. Tønna er bare ¾ full.\n\nHvor mange liter er det i tønna?",
+      "correct": 90,
+      "selected": 90,
       "isCorrect": true
     },
     {
       "id": 4,
-      "type": "multiple",
-      "text": "Hvordan kan sosiale medier gi målrettet reklame tilpasset den enkelte? <b>(Velg to alternativ)</b>",
-      "correct": [
-        { "id": 1, "text": "De sjekker hvor mobilen din har vært" },
-        { "id": 2, "text": "De sjekker språket på mobilen din" }
-      ],
-      "selected": [
-        { "id": 1, "text": "De sjekker hvor mobilen din har vært" },
-        { "id": 2, "text": "De sjekker språket på mobilen din" }
-      ],
+      "type": "single",
+      "text": "Kvar er det <b>IKKJE</b> mogleg å kjøpe dataspel?",
+      "correct": {
+        "id": 4,
+        "text": "På YouTube"
+      },
+      "selected": {
+        "id": 4,
+        "text": "På YouTube"
+      },
       "isCorrect": true
     },
     {
       "id": 5,
+      "type": "multiple",
+      "text": "Hvordan kan sosiale medier gi målrettet reklame tilpasset den enkelte? <b>(Velg to alternativ)</b>",
+      "correct": [
+        {
+          "id": 1,
+          "text": "De sjekker hvor mobilen din har vært"
+        },
+        {
+          "id": 2,
+          "text": "De sjekker språket på mobilen din"
+        }
+      ],
+      "selected": [
+        {
+          "id": 1,
+          "text": "De sjekker hvor mobilen din har vært"
+        },
+        {
+          "id": 2,
+          "text": "De sjekker språket på mobilen din"
+        }
+      ],
+      "isCorrect": true
+    },
+    {
+      "id": 6,
       "type": "hotspot",
       "text": "Hvor trykker du for å søke etter en bestemt tv-serie?",
-      "correct": { "id": 2, "x": 29, "y": 79, "width": 15, "height": 17 },
-      "selected": { "id": 2, "x": 29, "y": 79, "width": 15, "height": 17 },
+      "correct": {
+        "id": 2,
+        "x": 29,
+        "y": 79,
+        "width": 15,
+        "height": 17
+      },
+      "selected": {
+        "id": 2,
+        "x": 29,
+        "y": 79,
+        "width": 15,
+        "height": 17
+      },
       "isCorrect": true,
       "image": "CbJojWjnkuqk6OK9Jgg.png?v=2"
     },
     {
-      "id": 6,
+      "id": 7,
       "type": "dialogue",
       "speech": [
         {
@@ -228,7 +290,7 @@
       "isCorrect": true
     },
     {
-      "id": 7,
+      "id": 8,
       "type": "code",
       "text": "Hvor mange av feltene er det obligatorisk å fylle ut?",
       "correct": 2,
@@ -236,20 +298,106 @@
       "isCorrect": true
     },
     {
-      "id": 8,
+      "id": 9,
       "type": "ranking",
       "text": "Dra og slipp passordene i riktig rekkefølge. Sett det sikreste øverst.",
       "correct": [
-        { "id": 2, "text": "Kebab1Lompe2Med3Grønnsaker4" },
-        { "id": 4, "text": "BatWoman62" },
-        { "id": 1, "text": "hemmelig123" },
-        { "id": 3, "text": "passord" }
+        {
+          "id": 2,
+          "text": "Kebab1Lompe2Med3Grønnsaker4"
+        },
+        {
+          "id": 4,
+          "text": "BatWoman62"
+        },
+        {
+          "id": 1,
+          "text": "hemmelig123"
+        },
+        {
+          "id": 3,
+          "text": "passord"
+        }
       ],
       "selected": [
-        { "id": 3, "text": "passord" },
-        { "id": 1, "text": "hemmelig123" },
-        { "id": 2, "text": "Kebab1Lompe2Med3Grønnsaker4" },
-        { "id": 4, "text": "BatWoman62" }
+        {
+          "id": 2,
+          "text": "Kebab1Lompe2Med3Grønnsaker4"
+        },
+        {
+          "id": 4,
+          "text": "BatWoman62"
+        },
+        {
+          "id": 1,
+          "text": "hemmelig123"
+        },
+        {
+          "id": 3,
+          "text": "passord"
+        }
+      ],
+      "isCorrect": true
+    },
+    {
+      "id": 10,
+      "type": "single",
+      "text": "Anita er 1,60 m høy.\n\nHvor høy er Wilhelm?",
+      "correct": {
+        "id": 3,
+        "text": "1,20 m"
+      },
+      "selected": {
+        "id": 3,
+        "text": "1,20 m"
+      },
+      "isCorrect": true
+    },
+    {
+      "id": 11,
+      "type": "multiple-diff-points",
+      "text": "Forstår du prislapper på varer i matbutikken?",
+      "correct": [
+        {
+          "id": 1,
+          "text": "Nei"
+        },
+        {
+          "id": 2,
+          "text": "Ja"
+        }
+      ],
+      "selected": [
+        {
+          "id": 2,
+          "text": "Ja"
+        }
+      ],
+      "isCorrect": false
+    },
+    {
+      "id": 12,
+      "type": "multiple-diff-points",
+      "text": "Kan du følge en enkel arbeidsinstruksjon gitt muntlig?",
+      "correct": [
+        {
+          "id": 1,
+          "text": "Nei"
+        },
+        {
+          "id": 2,
+          "text": "Ikke alltid"
+        },
+        {
+          "id": 3,
+          "text": "Ja"
+        }
+      ],
+      "selected": [
+        {
+          "id": 3,
+          "text": "Ja"
+        }
       ],
       "isCorrect": false
     }

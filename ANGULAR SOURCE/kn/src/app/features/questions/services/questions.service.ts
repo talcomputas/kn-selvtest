@@ -459,7 +459,7 @@ export class QuestionsService {
 
       case QuestionType.SLIDER: {
         const { text } = question as QuestionSlider;
-        const isCorrect = selectedValue === answer.value;
+        const isCorrect = parseInt(selectedValue, 10) === answer.value;
         const selected = selectedValue;
         const correct = answer.value;
         return { id, type, text, correct, selected, isCorrect } as ResultAnswer;

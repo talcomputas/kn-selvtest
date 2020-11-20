@@ -403,22 +403,6 @@
         },
         {
           "id": 10,
-          "type": "slider",
-          "text": "I ei tønne er det plass til 120 liter. Tønna er bare ¾ full.\n\nHvor mange liter er det i tønna?",
-          "image": "Tonne.png",
-          "answer": {
-            "value": 90,
-            "points": 1
-          },
-          "options": {
-            "id": 1,
-            "floor": 0,
-            "ceil": 100,
-            "steps": 1
-          }
-        },
-        {
-          "id": 11,
           "type": "single",
           "text": "Anita er 1,60 m høy.\n\nHvor høy er Wilhelm?",
           "image": "Størrelse.png",
@@ -444,6 +428,48 @@
               "text": "1,40 m"
             }
           ]
+        },
+        {
+          "id": 11,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [1, 2],
+            "points": [0, 2]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ja"
+            }
+          ],
+          "text": "Forstår du prislapper på varer i matbutikken?"
+        },
+        {
+          "id": 12,
+          "type": "multiple-diff-points",
+          "answer": {
+            "value": [1, 2, 3],
+            "points": [0, 1, 2]
+          },
+          "options": [
+            {
+              "id": 1,
+              "text": "Nei"
+            },
+            {
+              "id": 2,
+              "text": "Ikke alltid"
+            },
+            {
+              "id": 3,
+              "text": "Ja"
+            }
+          ],
+          "text": "Kan du følge en enkel arbeidsinstruksjon gitt muntlig?"
         }
       ],
       "funnel": {

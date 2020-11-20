@@ -4,7 +4,7 @@
     <ng-container *ngIf="showAnswers">
       <div class="print-content">
         <h2 [innerHTML]="'intro.title' | content"></h2>
-        <div class="">{{ result.score }} av {{ result.maxScore }} mulige poeng</div>
+        <div class="score mat-title">{{ result.score }} av {{ result.maxScore }} mulige poeng</div>
         <app-level
           [percentage]="(result.score / result.maxScore) * 100"
           [level]="result.level.id"
@@ -35,7 +35,7 @@
         text="{{ 'level' | content }}"
       >
       </app-level>
-
+      <div class="score mat-title">{{ result.score }} av {{ result.maxScore }} mulige poeng</div>
       <div class="description">
         <div class="image">
           <img
