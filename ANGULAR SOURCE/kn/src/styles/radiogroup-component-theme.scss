@@ -2,8 +2,4 @@
 
 @mixin radiogroup-component-theme($config-or-theme) {
   $config: mat-get-color-config($config-or-theme);
-  .mat-radio-group.groups-choice {
-    display: inline-flex;
-    flex-wrap: wrap;
-  }
 }

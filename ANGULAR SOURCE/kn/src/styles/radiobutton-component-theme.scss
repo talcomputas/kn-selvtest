@@ -4,32 +4,4 @@
 
 @mixin radiobutton-component-theme($config-or-theme) {
   $config: mat-get-color-config($config-or-theme);
-
-  .mat-radio-button.groups-choice-radio-button {
-    margin: $mat-button-margin;
-    min-width: $mat-button-min-width;
-    line-height: $mat-button-line-height;
-    padding: 0 0.2rem;
-    border: 2px solid rgb(214, 227, 240);
-    border-radius: 16px;
-
-    .mat-radio-label {
-      display: flex;
-      justify-content: center;
-      .mat-radio-container {
-        display: none;
-      }
-      .mat-radio-label-content {
-        padding: 0;
-      }
-    }
-    &.mat-radio-checked {
-      background-color: #2274b9;
-      border: 2px solid #2274b9;
-      color: white;
-    }
-    &:hover {
-      border: 2px solid #149dc4;
-    }
-  }
 }

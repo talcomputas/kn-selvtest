@@ -14,7 +14,7 @@ export class ExamplePageComponent implements OnInit, OnDestroy {
   path: string;
   question: QuestionGroupsChoice; // TODO: should not be hard-coded!
   public readonly QuestionType = QuestionType;
-  public readonly group = new FormGroup({});
+  public group = new FormGroup({});
   constructor(
     private activatedRoute: ActivatedRoute,
     questionsService: QuestionsService,

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnChanges, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit } from '@angular/core';
 import { QuestionComponentBaseDirective } from '@features/questions/components/question-component-base.directive';
 import { QuestionGroupsChoice } from '@features/questions/interfaces/question-groups-choice.interface';
 @Component({
@@ -13,8 +13,21 @@ export class QuestionGroupsChoiceComponent
   questionId: number;
   splitAry: any[];
 
+  @Input()
+  isDisabled = false;
+
   constructor() {
     super();
+  }
+
+  ngOnInit(): void {
+    this.questionId = this.question.id;
+    if (this.isDisabled === true) {
+      this.control.disable();
+    }
+  }
+  ngOnChanges(): void {
+    super.ngOnChanges();
   }
 
   getSplitText(value: string): any[] {
@@ -41,12 +54,5 @@ export class QuestionGroupsChoiceComponent
 
   isNumeric(value: any): boolean {
     return /^\d+$/.test(value);
-  }
-
-  ngOnInit(): void {
-    this.questionId = this.question.id;
-  }
-  ngOnChanges(): void {
-    super.ngOnChanges();
   }
 }

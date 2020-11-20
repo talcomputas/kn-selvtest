@@ -62,39 +62,6 @@
       "questions": [
         {
           "id": 1,
-          "type": "slider",
-          "text": "Hvilket tall peker pilen på?",
-          "image": "Skala_tall2.png",
-          "calculator": true,
-          "answer": {
-            "value": 130,
-            "points": 1
-          },
-          "options": {
-            "id": 1,
-            "floor": 100,
-            "ceil": 150,
-            "steps": 1
-          }
-        },
-        {
-          "id": 2,
-          "type": "slider",
-          "text": "I ei tønne er det plass til 120 liter. Tønna er bare ¾ full.\n\nHvor mange liter er det i tønna?",
-          "image": "Tonne.png",
-          "answer": {
-            "value": 90,
-            "points": 1
-          },
-          "options": {
-            "id": 1,
-            "floor": 0,
-            "ceil": 100,
-            "steps": 1
-          }
-        },
-        {
-          "id": 3,
           "type": "groups-choice",
           "title": "Drømmen om en bondegård",
           "text": "Henrik bladde fram til sidene med boligannonser. Leiligheten deres var %s for liten for dem, så nå lette de etter %s større. De ville gjerne flytte ut på landet. De lette etter en liten %s hvor det var plass til å ha et par %s.",
@@ -175,6 +142,39 @@
           "answer": {
             "value": [4, 2, 3, 2],
             "points": 1
+          }
+        },
+        {
+          "id": 2,
+          "type": "slider",
+          "text": "Hvilket tall peker pilen på?",
+          "image": "Skala_tall2.png",
+          "calculator": true,
+          "answer": {
+            "value": 130,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 100,
+            "ceil": 150,
+            "steps": 1
+          }
+        },
+        {
+          "id": 3,
+          "type": "slider",
+          "text": "I ei tønne er det plass til 120 liter. Tønna er bare ¾ full.\n\nHvor mange liter er det i tønna?",
+          "image": "Tonne.png",
+          "answer": {
+            "value": 90,
+            "points": 1
+          },
+          "options": {
+            "id": 1,
+            "floor": 0,
+            "ceil": 100,
+            "steps": 1
           }
         },
 

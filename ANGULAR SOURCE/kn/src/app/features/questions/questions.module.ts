@@ -54,6 +54,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 import { StatisticsPageComponent } from './pages/statistics-page/statistics-page.component';
 import { QuestionGradingComponent } from '@features/questions/components/question-grading/question-grading.component';
@@ -112,6 +113,7 @@ import { ContentPipe } from '@content/pipes/content.pipe';
     MatDividerModule,
     MatDialogModule,
     MatExpansionModule,
+    MatButtonToggleModule,
     CountdownModule,
   ],
   exports: [MatIconModule, CountdownDialogComponent],

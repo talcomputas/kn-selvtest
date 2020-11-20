@@ -151,7 +151,7 @@ export class QuestionsPageComponent implements OnInit, OnDestroy {
       const q = question as QuestionGroupsChoice;
       const skills = new FormArray([]);
       q.options.forEach(() => {
-        skills.push(new FormControl('', Validators.required));
+        skills.push(new FormControl(null, Validators.required));
       });
       this.questions.addControl(key, skills);
       return;
