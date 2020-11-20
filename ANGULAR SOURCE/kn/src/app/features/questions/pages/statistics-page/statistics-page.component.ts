@@ -43,10 +43,7 @@ export class StatisticsPageComponent implements OnInit {
       this.toDateControl.value.toString(),
       this.selectedTest)
       .subscribe(itemData => {
-        console.log(itemData);
         itemData = this.removeCommas(itemData);
-
-        console.log(itemData);
 
         const csvOptions = {
           fieldSeparator: ',',
